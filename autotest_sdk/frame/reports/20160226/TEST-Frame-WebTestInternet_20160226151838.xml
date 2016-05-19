@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Frame::WebTestInternet" skipped="0" failures="1" errors="0" tests="1" assertions="5" time="61.315957">
+  <testcase name="test_内存信息 ZLBF_4.1.10" classname="Frame::WebTestInternet" assertions="5" time="61.315957">
+    <failure type="test_内存信息 ZLBF_4.1.10" message="Permission denied @ unlink_internal - locationnotificationsview.xml">
+Failure:
+test_内存信息 ZLBF_4.1.10(Frame::WebTestInternet) [frame_internet_single.rb:77]:
+Permission denied @ unlink_internal - locationnotificationsview.xml
+    </failure>
+  </testcase>
+</testsuite>

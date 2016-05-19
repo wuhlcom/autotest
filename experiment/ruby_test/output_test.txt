@@ -1,0 +1,15 @@
+"dddddd"
+"dddddddddddd"
+"dudu1111111111111111111111"
+ddddddddddddddddddddddddddddddddddd
+E:/Automation/ruby_test/STDOUT_test.rb:259:in `<top (required)>'E:/Automation/ruby_test/STDOUT_test.rb:259:in `<top (required)>'
+: : 
+undefined local variable or method `no_method' for main:Objectundefined local variable or method `no_method' for main:Object
+ ( (
+NameErrorNameError
+)
+)
+	from -e:1:in `load'
+	from -e:1:in `load'
+	from -e:1:in `<main>'
+	from -e:1:in `<main>'

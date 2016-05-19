@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Frame::WebTestInternet" skipped="0" failures="1" errors="0" tests="1" assertions="25" time="304.912898">
+  <testcase name="test_网络开关-开启 ZLBF_5.1.33" classname="Frame::WebTestInternet" assertions="25" time="304.912898">
+    <failure type="test_网络开关-开启 ZLBF_5.1.33" message="启用客户端知路测试sdgsdgk网络后客户端知路测试sdgsdgk不能连接网络!">
+Failure:
+test_网络开关-开启 ZLBF_5.1.33(Frame::WebTestInternet) [(eval):246]:
+启用客户端知路测试sdgsdgk网络后客户端知路测试sdgsdgk不能连接网络!
+    </failure>
+  </testcase>
+</testsuite>

@@ -1,0 +1,21 @@
+Initialize UCP Server!
+UDP server started!
+Current Time is 2015-09-28 12:28:16 +0800!
+UDP server address 10.10.10.57,port 15801
+Recieved message from Client 10.10.10.24:15701
+Client Message:client
+Recieved message from Client 10.10.10.24:15701
+Client Message:client
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/htmltags-1.1.8/lib/htmltags/socket.rb:162:in `recvfrom'C:/Ruby193/lib/ruby/gems/1.9.1/gems/htmltags-1.1.8/lib/htmltags/socket.rb:162:in `recvfrom'
+: : 
+InterruptInterrupt
+
+
+	from C:/Ruby193/lib/ruby/gems/1.9.1/gems/htmltags-1.1.8/lib/htmltags/socket.rb:162:in `block in run'
+	from C:/Ruby193/lib/ruby/gems/1.9.1/gems/htmltags-1.1.8/lib/htmltags/socket.rb:162:in `block in run'
+	from C:/Ruby193/lib/ruby/gems/1.9.1/gems/htmltags-1.1.8/lib/htmltags/socket.rb:161:in `loop'
+	from C:/Ruby193/lib/ruby/gems/1.9.1/gems/htmltags-1.1.8/lib/htmltags/socket.rb:161:in `loop'
+	from C:/Ruby193/lib/ruby/gems/1.9.1/gems/htmltags-1.1.8/lib/htmltags/socket.rb:161:in `run'
+	from C:/Ruby193/lib/ruby/gems/1.9.1/gems/htmltags-1.1.8/lib/htmltags/socket.rb:161:in `run'
+	from E:/AutoTest/UDPServer/UDPServer.rb:9:in `<main>'
+	from E:/AutoTest/UDPServer/UDPServer.rb:9:in `<main>'

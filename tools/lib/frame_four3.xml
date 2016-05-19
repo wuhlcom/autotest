@@ -1,0 +1,12 @@
+<TestSuites>
+  <TestSuite>
+    <name>internet</name>
+    <path>../../frame</path>
+    <TestCases>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBM_1.1.16' level='P1' result='f' tested='n'>
+        <name>智能DHCP ZLBM_1.1.16</name>
+        <path>../../frame/internet</path>
+      </TestCase>
+    </TestCases>
+  </TestSuite>
+</TestSuites>

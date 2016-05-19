@@ -1,0 +1,8 @@
+# encoding:GBK
+require 'rubygems'
+# str = `ping 192.168.200.1`
+# p str.encoding
+p str="(0% ¶ªÊ§)"
+str=~/\((\d+)\%\s*¶ªÊ§\s*\)/
+p $1
+ print str

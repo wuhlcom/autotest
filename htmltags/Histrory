@@ -1,0 +1,24 @@
+#author : wuhongliang
+1.0.6 增加minitest-reporter的日志设置，见mini_reporter_set.rb
+1.0.7 重构assertion中的核心方法assert，将字符串转成gkb
+1.0.8 增加netsh interface set/show和netsh interface ipv4 add/delete/show
+        实现网卡启用/禁用，ip地址添加/删除/查询，dns添加/查询/删除
+1.0.9 优化了代码并解决ipconfig解析回显正确的问题
+1.0.10 解决SSID为乱码时扫描解析错误:\xAD\xE5，无线网卡名如果是英文的或中英文混合的将字母统一全转成小写
+1.1.1 增加ping_rs，当能ping通给定ip时返回true,不能ping通给定ip时尝试重新获取ip,再ping给定ip,如果仍不能ping通，则ping当前网卡网关
+      如果能ping通侧返回ip信息的hash,如果网关也不能ping通尝试恢复，两者不能ping通时返回false
+      增加recover_login，当使用默认的路由器lan ip登录不上,使用网卡网关来登录并恢复路由器的默认设置
+1.1.2 增加文件比较类FileCompare
+1.1.3 修复有时windows系统dhcp模式网卡的ip与网关不一致的问题
+1.1.4 add wireshark tools methods dumpcap,capinfos.
+      Must install Wireshark Tool
+1.1.5 add devcon tools,manage the devices of pc.
+      methods:find,enable,status,disable,restart,rescan,classes
+1.1.6 Testsuit TestCase Frame added
+1.1.7 add tshark display filter;add webframe.rb;defined  methods  of ts params changed
+      add tcp socket
+1.1.8 add udp server http server
+1.1.9 add WinCmdRoute module
+1.2.0 capsulate wireshark capinfos_all get the speed....
+1.2.0.1 moify wireless connect，add tkip
+1.2.0.3 修改login_recover增加pc地址为192.168.100.1时恢复出值

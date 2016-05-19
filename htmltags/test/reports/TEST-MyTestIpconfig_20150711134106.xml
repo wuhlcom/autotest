@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="MyTestIpconfig" skipped="0" failures="0" errors="2" tests="4" assertions="1" time="20.572176">
+  <testcase name="test_instance_method" classname="MyTestIpconfig" assertions="1" time="0.121007">
+  </testcase>
+  <testcase name="test_instance_method1" classname="MyTestIpconfig" assertions="0" time="20.157153">
+    <error type="test_instance_method1" message="RuntimeError: DUT and wireless ip addr release failed：DUT-&gt;192.168.110.22,wireless-&gt;...">
+Failure:
+test_instance_method1(MyTestIpconfig) [E:/Automation/htmltags/lib/htmltags/wincmd.rb:120]:
+RuntimeError: DUT and wireless ip addr release failed：DUT-&gt;192.168.110.22,wireless-&gt;
+    E:/Automation/htmltags/lib/htmltags/wincmd.rb:120:in `ip_release'
+    ipconfing_test.rb:44:in `test_instance_method1'
+    </error>
+  </testcase>
+  <testcase name="test_instance_method2" classname="MyTestIpconfig" assertions="0" time="0.061003">
+    <error type="test_instance_method2" message="RuntimeError: disconnected:...">
+Failure:
+test_instance_method2(MyTestIpconfig) [E:/Automation/htmltags/lib/htmltags/wincmd.rb:155]:
+RuntimeError: disconnected:
+Windows IP 配置
+
+不能在 Wireless 上执行任何操作，它已断开媒体连接。
+在释放接口 Loopback Pseudo-Interface 1 时出错: 系统找不到指定的文件。
+
+
+    E:/Automation/htmltags/lib/htmltags/wincmd.rb:155:in `ip_renew'
+    ipconfing_test.rb:49:in `test_instance_method2'
+    </error>
+  </testcase>
+  <testcase name="test_show" classname="MyTestIpconfig" assertions="0" time="0.233013">
+  </testcase>
+</testsuite>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Frame::WebTestReset" skipped="0" failures="0" errors="0" tests="9" assertions="213" time="4143.0311759999995">
+  <testcase name="test_DHCPC--基本功能测试 ZLBF_6.1.1" classname="Frame::WebTestReset" assertions="21" time="315.421323">
+  </testcase>
+  <testcase name="test_DHCP服务器--更改LAN口IP地址 ZLBF_8.1.7" classname="Frame::WebTestReset" assertions="17" time="147.520312">
+  </testcase>
+  <testcase name="test_DHCP服务器-禁用与启用 ZLBF_8.1.1" classname="Frame::WebTestReset" assertions="23" time="583.114089">
+  </testcase>
+  <testcase name="test_DMZ-开启 ZLBF_18.1.1" classname="Frame::WebTestReset" assertions="25" time="361.597084">
+  </testcase>
+  <testcase name="test_LAN口状态 ZLBF_5.1.23" classname="Frame::WebTestReset" assertions="17" time="295.903549">
+  </testcase>
+  <testcase name="test_PPTP页面恢复出厂设置 ZLBF_21.1.31" classname="Frame::WebTestReset" assertions="25" time="533.32433">
+  </testcase>
+  <testcase name="test_导入配置文件 ZLBF_21.1.39" classname="Frame::WebTestReset" assertions="23" time="613.090382">
+  </testcase>
+  <testcase name="test_恢复出厂设置 ZLBF_21.1.21" classname="Frame::WebTestReset" assertions="42" time="717.0708">
+  </testcase>
+  <testcase name="test_虚拟服务器--禁用 ZLBF_17.1.9" classname="Frame::WebTestReset" assertions="20" time="575.989307">
+  </testcase>
+</testsuite>

@@ -1,0 +1,258 @@
+1¡¢APµÄ½ÓÈëÀàĞÍÑ¡ÔñÎª¾²Ì¬IP£¬±£´æÅäÖÃ£»
+2¡¢Ìí¼ÓÒ»ÌõĞéÄâ·şÎñÆ÷µÄ¹æÔò,Ğ­ÒéÑ¡ÔñTCP/UDP,ÆğÊ¼¶Ë¿ÚÉèÖÃÎª10000£¬ÖÕÖ¹¶Ë¿ÚÉèÖÃÎª10000£¬·şÎñIPµØÖ·ÉèÖÃÎªPC2µØÖ·£¬±£´æ£»
+Frame::WebTestInternet#test_ĞéÄâ·şÎñÆ÷-¹æÔò·ÇË³ĞòÉ¾³ı ZLBF_17.1.7->method_name:netsh_if_ip_show
+
+½Ó¿Ú "dut" µÄÅäÖÃ
+    DHCP ÒÑÆôÓÃ:                          ÊÇ
+    IP µØÖ·:                           192.168.100.100
+    ×ÓÍøÇ°×º:                        192.168.100.0/24 (ÑÚÂë 255.255.255.0)
+    Ä¬ÈÏÍø¹Ø:                         192.168.100.1
+    Íø¹ØÔ¾µãÊı:                       0
+    InterfaceMetric:                      20
+
+pc ip addr:192.168.100.100
+Virtual Server IP 192.168.100.100
+3¡¢ÖØ¸´²½Öè2£¬·´¸´Ìí¼ÓÊıÌõ²»Í¬¹æÔò£¬Ìí¼Ó¹æÔòÖÁÉÙ5ÌõÒÔÉÏ£¬±£´æ£»
+4¡¢·ÇË³ĞòÉ¾³ıÉèÖÃµÄËùÓĞ¹æÔò£¬ÊÇ·ñÄÜ¶Ô¹æÔòÉ¾³ı³É¹¦£¬Ê¹ÓÃiptables-t nat-L-nv²é¿´¹æÔòÊÇ·ñÊµ¼ÊÈ«²¿É¾³ı£»
+telnet router
+Frame::WebTestInternet#test_ĞéÄâ·şÎñÆ÷-¹æÔò·ÇË³ĞòÉ¾³ı ZLBF_17.1.7->method_name:init_router_obj
+
+ralink login: admin
+Password: 
+
+
+BusyBox v1.12.1 (2016-02-25 13:08:29 CST) built-in shell (ash)
+Enter 'help' for a list of built-in commands.
+
+# query port_forward chain
+Frame::WebTestInternet#test_ĞéÄâ·şÎñÆ÷-¹æÔò·ÇË³ĞòÉ¾³ı ZLBF_17.1.7->method_name:router_nat_port_forward
+Frame::WebTestInternet#test_ĞéÄâ·şÎñÆ÷-¹æÔò·ÇË³ĞòÉ¾³ı ZLBF_17.1.7->method_name:router_send_cmd
+iptables -t nat -nvL port_forward
+Chain port_forward (1 references)
+ pkts bytes target     prot opt in     out     source               destination         
+    0     0 DNAT       tcp  --  eth2.2 *       0.0.0.0/0            0.0.0.0/0           tcp dpt:10001 to:192.168.100.100:10001 
+    0     0 DNAT       udp  --  eth2.2 *       0.0.0.0/0            0.0.0.0/0           udp dpt:10001 to:192.168.100.100:10001 
+    0     0 DNAT       tcp  --  eth2.2 *       0.0.0.0/0            0.0.0.0/0           tcp dpt:10002 to:192.168.100.100:10002 
+    0     0 DNAT       udp  --  eth2.2 *       0.0.0.0/0            0.0.0.0/0           udp dpt:10002 to:192.168.100.100:10002 
+    0     0 DNAT       tcp  --  eth2.2 *       0.0.0.0/0            0.0.0.0/0           tcp dpt:10003 to:192.168.100.100:10003 
+    0     0 DNAT       udp  --  eth2.2 *       0.0.0.0/0            0.0.0.0/0           udp dpt:10003 to:192.168.100.100:10003 
+    0     0 DNAT       tcp  --  eth2.2 *       0.0.0.0/0            0.0.0.0/0           tcp dpt:10004 to:192.168.100.100:10004 
+    0     0 DNAT       udp  --  eth2.2 *       0.0.0.0/0            0.0.0.0/0           udp dpt:10004 to:192.168.100.100:10004 
+    0     0 DNAT       tcp  --  eth2.2 *       0.0.0.0/0            0.0.0.0/0           tcp dpt:10005 to:192.168.100.100:10005 
+    0     0 DNAT       udp  --  eth2.2 *       0.0.0.0/0            0.0.0.0/0           udp dpt:10005 to:192.168.100.100:10005 
+# telnet router query rules:
+["tcp dpt:10001 to:192.168.100.100:10001",
+ "udp dpt:10001 to:192.168.100.100:10001",
+ "tcp dpt:10002 to:192.168.100.100:10002",
+ "udp dpt:10002 to:192.168.100.100:10002",
+ "tcp dpt:10003 to:192.168.100.100:10003",
+ "udp dpt:10003 to:192.168.100.100:10003",
+ "tcp dpt:10004 to:192.168.100.100:10004",
+ "udp dpt:10004 to:192.168.100.100:10004",
+ "tcp dpt:10005 to:192.168.100.100:10005",
+ "udp dpt:10005 to:192.168.100.100:10005"]
+Ô¤ÆÚÅäÖÃµÄ¹æÔòÈçÏÂ:
+"tcp dpt:10001 to:192.168.100.100:10001"
+"udp dpt:10001 to:192.168.100.100:10001"
+"tcp dpt:10002 to:192.168.100.100:10002"
+"udp dpt:10002 to:192.168.100.100:10002"
+"tcp dpt:10003 to:192.168.100.100:10003"
+"udp dpt:10003 to:192.168.100.100:10003"
+"tcp dpt:10004 to:192.168.100.100:10004"
+"udp dpt:10004 to:192.168.100.100:10004"
+"tcp dpt:10005 to:192.168.100.100:10005"
+"udp dpt:10005 to:192.168.100.100:10005"
+query port_forward chain second
+Frame::WebTestInternet#test_ĞéÄâ·şÎñÆ÷-¹æÔò·ÇË³ĞòÉ¾³ı ZLBF_17.1.7->method_name:router_nat_port_forward
+Frame::WebTestInternet#test_ĞéÄâ·şÎñÆ÷-¹æÔò·ÇË³ĞòÉ¾³ı ZLBF_17.1.7->method_name:router_send_cmd
+iptables -t nat -nvL port_forward
+Chain port_forward (1 references)
+ pkts bytes target     prot opt in     out     source               destination         
+    0     0 DNAT       tcp  --  eth2.2 *       0.0.0.0/0            0.0.0.0/0           tcp dpt:10001 to:192.168.100.100:10001 
+    0     0 DNAT       udp  --  eth2.2 *       0.0.0.0/0            0.0.0.0/0           udp dpt:10001 to:192.168.100.100:10001 
+    0     0 DNAT       tcp  --  eth2.2 *       0.0.0.0/0            0.0.0.0/0           tcp dpt:10002 to:192.168.100.100:10002 
+    0     0 DNAT       udp  --  eth2.2 *       0.0.0.0/0            0.0.0.0/0           udp dpt:10002 to:192.168.100.100:10002 
+    0     0 DNAT       tcp  --  eth2.2 *       0.0.0.0/0            0.0.0.0/0           tcp dpt:10003 to:192.168.100.100:10003 
+    0     0 DNAT       udp  --  eth2.2 *       0.0.0.0/0            0.0.0.0/0           udp dpt:10003 to:192.168.100.100:10003 
+    0     0 DNAT       tcp  --  eth2.2 *       0.0.0.0/0            0.0.0.0/0           tcp dpt:10004 to:192.168.100.100:10004 
+    0     0 DNAT       udp  --  eth2.2 *       0.0.0.0/0            0.0.0.0/0           udp dpt:10004 to:192.168.100.100:10004 
+# ["tcp dpt:10001 to:192.168.100.100:10001",
+ "udp dpt:10001 to:192.168.100.100:10001",
+ "tcp dpt:10002 to:192.168.100.100:10002",
+ "udp dpt:10002 to:192.168.100.100:10002",
+ "tcp dpt:10003 to:192.168.100.100:10003",
+ "udp dpt:10003 to:192.168.100.100:10003",
+ "tcp dpt:10004 to:192.168.100.100:10004",
+ "udp dpt:10004 to:192.168.100.100:10004"]
+query port_forward chain third
+Frame::WebTestInternet#test_ĞéÄâ·şÎñÆ÷-¹æÔò·ÇË³ĞòÉ¾³ı ZLBF_17.1.7->method_name:router_nat_port_forward
+Frame::WebTestInternet#test_ĞéÄâ·şÎñÆ÷-¹æÔò·ÇË³ĞòÉ¾³ı ZLBF_17.1.7->method_name:router_send_cmd
+iptables -t nat -nvL port_forward
+Chain port_forward (1 references)
+ pkts bytes target     prot opt in     out     source               destination         
+# Frame::WebTestInternet#test_ĞéÄâ·şÎñÆ÷-¹æÔò·ÇË³ĞòÉ¾³ı ZLBF_17.1.7->method_name:logout_router
+1 »Ö¸´ÎªÄ¬ÈÏµÄ½ÓÈë·½Ê½£¬DHCP½ÓÈë
+2 É¾³ıĞéÄâ·şÎñÆ÷ÅäÖÃ
+[32m.[0mFrame::WebTestInternet#test_ĞéÄâ·şÎñÆ÷-È«²¿É¾³ı ZLBF_17.1.8->method_name:ipconfig
+
+Windows IP ÅäÖÃ
+
+   Ö÷»úÃû  . . . . . . . . . . . . . : ÖªÂ·²âÊÔsdgsdgkdsejkfjgkklj-wjekljsdskljf3sdg3
+   Ö÷ DNS ºó×º . . . . . . . . . . . : 
+   ½ÚµãÀàĞÍ  . . . . . . . . . . . . : »ìºÏ
+   IP Â·ÓÉÒÑÆôÓÃ . . . . . . . . . . : ·ñ
+   WINS ´úÀíÒÑÆôÓÃ . . . . . . . . . : ·ñ
+
+ÒÔÌ«ÍøÊÊÅäÆ÷ AP:
+
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Realtek USB FE Family Controller
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 00-E0-4C-36-14-02
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+   ±¾µØÁ´½Ó IPv6 µØÖ·. . . . . . . . : fe80::ec6d:f574:7481:635b%21(Ê×Ñ¡) 
+   IPv4 µØÖ· . . . . . . . . . . . . : 192.168.50.100(Ê×Ñ¡) 
+   ×ÓÍøÑÚÂë  . . . . . . . . . . . . : 255.255.255.0
+   Ä¬ÈÏÍø¹Ø. . . . . . . . . . . . . : 
+   DHCPv6 IAID . . . . . . . . . . . : 503373900
+   DHCPv6 ¿Í»§¶Ë DUID  . . . . . . . : 00-01-00-01-1C-21-93-0A-BC-EE-7B-75-EB-4F
+   DNS ·şÎñÆ÷  . . . . . . . . . . . : fec0:0:0:ffff::1%1
+                                       fec0:0:0:ffff::2%1
+                                       fec0:0:0:ffff::3%1
+   TCPIP ÉÏµÄ NetBIOS  . . . . . . . : ÒÑÆôÓÃ
+
+ÒÔÌ«ÍøÊÊÅäÆ÷ control:
+
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Realtek PCIe GBE Family Controller #2
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 20-F4-1B-60-51-F5
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+   ±¾µØÁ´½Ó IPv6 µØÖ·. . . . . . . . : fe80::dd6:5d32:f850:8252%19(Ê×Ñ¡) 
+   IPv4 µØÖ· . . . . . . . . . . . . : 50.50.50.50(Ê×Ñ¡) 
+   ×ÓÍøÑÚÂë  . . . . . . . . . . . . : 255.255.255.0
+   Ä¬ÈÏÍø¹Ø. . . . . . . . . . . . . : 
+   DHCPv6 IAID . . . . . . . . . . . : 455144475
+   DHCPv6 ¿Í»§¶Ë DUID  . . . . . . . : 00-01-00-01-1C-21-93-0A-BC-EE-7B-75-EB-4F
+   DNS ·şÎñÆ÷  . . . . . . . . . . . : fec0:0:0:ffff::1%1
+                                       fec0:0:0:ffff::2%1
+                                       fec0:0:0:ffff::3%1
+   TCPIP ÉÏµÄ NetBIOS  . . . . . . . : ÒÑÆôÓÃ
+
+ÒÔÌ«ÍøÊÊÅäÆ÷ dut:
+
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Realtek PCIe GBE Family Controller
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : BC-EE-7B-75-EB-4F
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ÊÇ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+   ±¾µØÁ´½Ó IPv6 µØÖ·. . . . . . . . : fe80::c819:87cf:3504:296e%18(Ê×Ñ¡) 
+   IPv4 µØÖ· . . . . . . . . . . . . : 192.168.100.100(Ê×Ñ¡) 
+   ×ÓÍøÑÚÂë  . . . . . . . . . . . . : 255.255.255.0
+   »ñµÃ×âÔ¼µÄÊ±¼ä  . . . . . . . . . : 2016Äê2ÔÂ25ÈÕ 23:41:55
+   ×âÔ¼¹ıÆÚµÄÊ±¼ä  . . . . . . . . . : 2016Äê2ÔÂ26ÈÕ 11:41:55
+   Ä¬ÈÏÍø¹Ø. . . . . . . . . . . . . : 192.168.100.1
+   DHCP ·şÎñÆ÷ . . . . . . . . . . . : 192.168.100.1
+   DHCPv6 IAID . . . . . . . . . . . : 633138811
+   DHCPv6 ¿Í»§¶Ë DUID  . . . . . . . : 00-01-00-01-1C-21-93-0A-BC-EE-7B-75-EB-4F
+   DNS ·şÎñÆ÷  . . . . . . . . . . . : 192.168.100.1
+   TCPIP ÉÏµÄ NetBIOS  . . . . . . . : ÒÑÆôÓÃ
+
+ËíµÀÊÊÅäÆ÷ Teredo Tunneling Pseudo-Interface:
+
+   Ã½Ìå×´Ì¬  . . . . . . . . . . . . : Ã½ÌåÒÑ¶Ï¿ª
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Teredo Tunneling Pseudo-Interface
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+
+ËíµÀÊÊÅäÆ÷ isatap.{248CF58B-BF93-45FC-9050-F7163BF8C880}:
+
+   Ã½Ìå×´Ì¬  . . . . . . . . . . . . : Ã½ÌåÒÑ¶Ï¿ª
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Microsoft ISATAP Adapter #2
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+
+ËíµÀÊÊÅäÆ÷ isatap.{8BAC9A05-919D-4C1B-ADC5-0DAC27A19740}:
+
+   Ã½Ìå×´Ì¬  . . . . . . . . . . . . : Ã½ÌåÒÑ¶Ï¿ª
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Microsoft ISATAP Adapter #3
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+
+ËíµÀÊÊÅäÆ÷ 6TO4 Adapter:
+
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Microsoft 6to4 Adapter
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+   IPv6 µØÖ· . . . . . . . . . . . . : 2002:3232:3232::3232:3232(Ê×Ñ¡) 
+   Ä¬ÈÏÍø¹Ø. . . . . . . . . . . . . : 
+   DNS ·şÎñÆ÷  . . . . . . . . . . . : fec0:0:0:ffff::1%1
+                                       fec0:0:0:ffff::2%1
+                                       fec0:0:0:ffff::3%1
+   TCPIP ÉÏµÄ NetBIOS  . . . . . . . : ÒÑ½ûÓÃ
+
+ËíµÀÊÊÅäÆ÷ isatap.{41FBDD5C-1EE7-4C75-ADEB-174E80C7EBC5}:
+
+   Ã½Ìå×´Ì¬  . . . . . . . . . . . . : Ã½ÌåÒÑ¶Ï¿ª
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Microsoft ISATAP Adapter #7
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+Frame::WebTestInternet#test_ĞéÄâ·şÎñÆ÷-È«²¿É¾³ı ZLBF_17.1.8->method_name:parse_ipconfig
+PC2 DRB parameter:druby://50.50.50.51:8787
+Frame::WebTestInternet#test_ĞéÄâ·şÎñÆ÷-È«²¿É¾³ı ZLBF_17.1.8->method_name:login_recover
+Frame::WebTestInternet#test_ĞéÄâ·şÎñÆ÷-È«²¿É¾³ı ZLBF_17.1.8->method_name:netsh_if_ip_show
+
+½Ó¿Ú "dut" µÄÅäÖÃ
+    DHCP ÒÑÆôÓÃ:                          ÊÇ
+    IP µØÖ·:                           192.168.100.100
+    ×ÓÍøÇ°×º:                        192.168.100.0/24 (ÑÚÂë 255.255.255.0)
+    Ä¬ÈÏÍø¹Ø:                         192.168.100.1
+    Íø¹ØÔ¾µãÊı:                       0
+    InterfaceMetric:                      20
+
+Frame::WebTestInternet#test_ĞéÄâ·şÎñÆ÷-È«²¿É¾³ı ZLBF_17.1.8->method_name:ping_recover
+Frame::WebTestInternet#test_ĞéÄâ·şÎñÆ÷-È«²¿É¾³ı ZLBF_17.1.8->method_name:netsh_if_shif
+
+dut                                      
+   ÖÖÀà:     ×¨ÓÃ             
+   ¹ÜÀí×´Ì¬: ÒÑÆôÓÃ             
+   Á¬½Ó×´Ì¬: ÒÑÁ¬½Ó             
+
+NIC state is enabled
+Frame::WebTestInternet#test_ĞéÄâ·şÎñÆ÷-È«²¿É¾³ı ZLBF_17.1.8->method_name:netsh_if_ip_show
+
+½Ó¿Ú "dut" µÄÅäÖÃ
+    DHCP ÒÑÆôÓÃ:                          ÊÇ
+    IP µØÖ·:                           192.168.100.100
+    ×ÓÍøÇ°×º:                        192.168.100.0/24 (ÑÚÂë 255.255.255.0)
+    Ä¬ÈÏÍø¹Ø:                         192.168.100.1
+    Íø¹ØÔ¾µãÊı:                       0
+    InterfaceMetric:                      20
+
+Frame::WebTestInternet#test_ĞéÄâ·şÎñÆ÷-È«²¿É¾³ı ZLBF_17.1.8->method_name:ping_default
+Frame::WebTestInternet#test_ĞéÄâ·şÎñÆ÷-È«²¿É¾³ı ZLBF_17.1.8->method_name:arp_clear
+
+ÕıÔÚ Ping 192.168.100.1 ¾ßÓĞ 32 ×Ö½ÚµÄÊı¾İ:
+À´×Ô 192.168.100.1 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä<1ms TTL=64
+À´×Ô 192.168.100.1 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä<1ms TTL=64
+À´×Ô 192.168.100.1 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä<1ms TTL=64
+À´×Ô 192.168.100.1 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä<1ms TTL=64
+À´×Ô 192.168.100.1 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä<1ms TTL=64
+
+192.168.100.1 µÄ Ping Í³¼ÆĞÅÏ¢:
+    Êı¾İ°ü: ÒÑ·¢ËÍ = 5£¬ÒÑ½ÓÊÕ = 5£¬¶ªÊ§ = 0 (0% ¶ªÊ§)£¬
+Íù·µĞĞ³ÌµÄ¹À¼ÆÊ±¼ä(ÒÔºÁÃëÎªµ¥Î»):
+    ×î¶Ì = 0ms£¬×î³¤ = 0ms£¬Æ½¾ù = 0ms
+Frame::WebTestInternet#test_ĞéÄâ·şÎñÆ÷-È«²¿É¾³ı ZLBF_17.1.8->method_name:login_default
+Enter url address!
+Enter usrname and passwd!

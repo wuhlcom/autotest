@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Frame::WebTestInternet" skipped="0" failures="0" errors="0" tests="1" assertions="19" time="463.1694">
+  <testcase name="test_WPA_WPA2-PSK混合加密密钥 ZLBF_11.1.3" classname="Frame::WebTestInternet" assertions="19" time="463.1694">
+  </testcase>
+</testsuite>
