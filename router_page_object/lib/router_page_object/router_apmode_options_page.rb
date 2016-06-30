@@ -41,12 +41,16 @@ module RouterPageObject
 						browser.refresh
 						sleep 2
 						5.times do
-								break if dev_list? && !(dev_list_element.parent.em_element.text.nil?)
+								if advance? && !(sys_version.slice(/系统版本:(.+)/, 1).nil?)
+										self.advance_link_obj.click #点击高级设置
+										sleep 6
+										break if sysset?
+								end
+								self.clear_cookies
 								self.refresh
 								sleep 2
+								login_with(@@ts_default_usr, @@ts_default_pw, url)
 						end
-						self.advance_link_obj.click #点击高级设置
-						sleep 5
 				end
 
 				#点击 网络设置 前判断网络设置是否已经被选中

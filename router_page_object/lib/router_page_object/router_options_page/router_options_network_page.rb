@@ -49,7 +49,7 @@ module RouterPageObject
 				end
 
 				#设置pptp连接
-				def set_pptp(ip, user, pwd, url, time=120)
+				def set_pptp(ip, user, pwd, url, time=80)
 						select_pptp(url)
 						pptp_input(ip, user, pwd)
 						pptp_save

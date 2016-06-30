@@ -29,8 +29,8 @@ testsuite {
 				#find_element will wait for a specified amount of time before raising a NoSuchElementError:
 				@browser.driver.manage.timeouts.implicit_wait = 2 # seconds
 				rs                                            = @browser.assert_exists
-				assert(rs, "´ò¿ªä¯ÀÀÆ÷Ê§°Ü£¡")			
-				rs_login = login_recover(@browser, @ts_default_ip)
+				assert(rs, "´ò¿ªä¯ÀÀÆ÷Ê§°Ü£¡")
+				rs_login = login_recover(@browser, @ts_powerip, @ts_default_ip)
 				assert(rs_login, "Â·ÓÉÆ÷µÇÂ¼Ê§°Ü£¡")
 				@ts_backup_directory.gsub!("\\", "/")
 		end

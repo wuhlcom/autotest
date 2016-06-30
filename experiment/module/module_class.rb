@@ -7,6 +7,14 @@ module A
 				@param=1
 		end
 end
+module A
+		p @@args=10
+		def xxx
+
+		end
+end
+p A
+p A.instance_methods(false)
 
 module B
 		def send_cmd
@@ -30,7 +38,7 @@ class Module_class
 		include A
 		include B
 end
-p obj = Module_class.new
-p obj.a_method1
-p obj.b_method0
-p obj.b_method2
+# p obj = Module_class.new
+# p obj.a_method1
+# p obj.b_method0
+# p obj.b_method2

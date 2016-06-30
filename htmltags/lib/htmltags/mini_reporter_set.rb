@@ -12,26 +12,41 @@
 
 require "minitest/reporters"
 module Minitest
-	module Reporters
-		class JUnitReporter
-			private
-			def filename_for(suite)
-				file_counter = 0
-				time         = Time.new.strftime("%Y%m%d%H%M%S")
-				filename     = "TEST-#{suite.to_s[0..240].gsub(/[^a-zA-Z0-9]+/, '-')}_#{time}.xml" #restrict max filename length, to be kind to filesystems
-				#filename =~/WebTest(\w+)_/i
-				#@reports_path = File.join(@reports_path, Regexp.last_match(1).downcase)
-				FileUtils.mkdir_p(@reports_path) unless File.exists?(@reports_path)
+  module Reporters
+    class MyJUnitReporter<JUnitReporter
+      private
+      def filename_for(suite)
+        file_counter = 0
+        time         = Time.new.strftime("%Y%m%d%H%M%S")
+        filename     = "TEST-#{suite.to_s[0..240].gsub(/[^a-zA-Z0-9]+/, '-')}_#{time}.xml" #restrict max filename length, to be kind to filesystems
+        FileUtils.mkdir_p(@reports_path) unless File.exists?(@reports_path)
 
-				while File.exists?(File.join(@reports_path, filename)) # restrict number of tries, to avoid infinite loops
-					file_counter += 1
-					filename     = "TEST-#{suite}-#{file_counter}.xml"
-					puts "Too many duplicate files, overwriting earlier report #{filename}" and break if file_counter >= 99
-				end
-				File.join(@reports_path, filename)
-			end
-		end
-	end
+        while File.exists?(File.join(@reports_path, filename)) # restrict number of tries, to avoid infinite loops
+          file_counter += 1
+          filename     = "TEST-#{suite}-#{file_counter}.xml"
+          puts "Too many duplicate files, overwriting earlier report #{filename}" and break if file_counter >= 99
+        end
+        File.join(@reports_path, filename)
+      end
+    end
+
+    class MyHtmlReporter<HtmlReporter
+    end
+
+  end
 end
-# Minitest::Reporters.use! [Minitest::Reporters::SpecReporter.new, Minitest::Reporters::JUnitReporter.new("reports",false)]
-Minitest::Reporters.use! [Minitest::Reporters::DefaultReporter.new(:color => true), Minitest::Reporters::JUnitReporter.new("reports/#{$report_date}", false)]
+
+templates_path ="#{File.dirname(__FILE__)}/templates/index.html.erb"
+log_time       = Time.new.strftime("%Y%m%d%H%M%S")
+args           ={title:           "测试结果".encode("GBK"),
+                 reports_dir:     "html_reports/#{$report_date}",
+                 erb_template:    templates_path,
+                 output_filename: "index_#{log_time}.html"
+}
+reporters      = [
+    Minitest::Reporters::SpecReporter.new,
+    Minitest::Reporters::HtmlReporter.new(args),
+    Minitest::Reporters::MyJUnitReporter.new("reports/#{$report_date}", false)
+]
+Minitest::Reporters.use!(reporters)
+

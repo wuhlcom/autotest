@@ -1,0 +1,14 @@
+[2016-06-15 17:23:33] 1 µÇÂ¼Éè±¸
+ZLBF_21.1.40
+
+[2016-06-15 17:23:33] 2 ×¢ÏúµÇÂ¼
+[31mF[0m  test_×¢Ïú¹¦ÄÜ²âÊÔ ZLBF_21.1.74                                       [31m FAIL[0m (0.01s)
+Minitest::Assertion:         ²âÊÔÊ§°ÜÁË
+        C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/htmltags-1.2.1/lib/htmltags/assertions.rb:22:in `assert'
+        (eval):27:in `block in process2'
+        E:/autotest/frame_test/public_instance_variable.rb:673:in `operate'
+        (eval):26:in `process2'
+        E:/autotest/frame_test/frame_system.rb:63:in `block (3 levels) in <class:WebTestSystem>'
+
+
+Frame::WebTestAttack

@@ -1,185 +1,324 @@
 #encoding:utf-8
-# s = "11211111"
-# h = {"a"=>"b"}
-# p s.sub(/2/,h.to_s)
-#
-#
-# s ="    testcase{\n      @attr = {\n        \"level\" => \"\",\n        \"name\" => \"\",\n        \"auto\" => \"\"\n     }\n    def prepare\n\n    end\n\n    def process\n      operate(\"1\") {\n      }\n    end\n\n    def clearup\n\n    end\n\n    }\n"
-# p s=~/(\{\s*\"level\"\s*.*\"auto\"\s*=>\s*\"\"\s*\})/im
-# # p $1
-#  # p s=~/\{\s*\\n\s*\\\"level\\\"\s*=>.*\\\"auto\\\"\s*=>\s*\\\"\s*\\\"\\n\s*\}/im
-# print s.sub(/\{\s*\"level\"\s*.*\"auto\"\s*=>\s*\"\"\s*\}/im,{"a"=>"b","c"=>"qos","e"=>"f"}.to_s)
-# file_path="c:/11"
-# p File.extname(file_path)
-# p File.basename(file_path,".*")
+require 'htmltags'
+rs  = "无线系统信息摘要
+(时间: 2016/3/28 17:08:12 中国标准时间)
 
-# @ts_default_ip="192.168.100.1"
-# p @ts_default_ip.sub(/\.\qos+$/,'.10')
-# p "ftp_test".split("aa")
-# h1 = {}
-# p h1["dut"]
-# h2={"dut"=>{:ip=>""}}
-# p nil=~/nil/
-# s1= "192.168.10.80"
-# s2="192.168.10.90"
-# s3="192.168.10.80"
-# p s3>=s1
-# p s3<=s2
-# s1="123456"
-# p s1[-1]
-# p s1[-2]
-# p s1[-3..-1]
-# p s1[1,2]
-# p s1[-1,2]
-# p s1[-3,2]
-# p s1[-1..1]
-#
-# p s="\u7CFB\u7EDF\u7248\u672C\uFF1AV100R003SPC016 MAC\uFF1A78:A3:51:03:9E:99"
-# @ts_lan_mac_pattern1 = /([\qos|a-f]{2}:[\qos|a-f]{2}:[\qos|a-f]{2}:[\qos|a-f]{2}:[\qos|a-f]{2}:[\qos|a-f]{2})/iu
-# p @ts_lan_mac_pattern1=~s
-# p s=~@ts_lan_mac_pattern1
-# p mac = Regexp.last_match(1)
-# p mac.gsub(":","")[-6..-1]
-# t = "1",2,3
-# p t
-# str="1"
-# str.succ!
 
-# @tc_channel               = "2412MHz (Channel 1)"
-# @tc_channel               = "2472MHz (Channel 13)"
-# # p @tc_channel_value_arr= "1".upto("13").to_a
-# @tc_channel_value_arr=[]
-# @tc_channel_arr=[]
-# "1".upto("13")do |channel|
-# 	frequance = (2407+5*channel.to_i)
-# 	frequance_channel="#{frequance}MHz (Channel #{channel})"
-# 	p frequance_channel
-# 	@tc_channel_value_arr<<channel
-# 	@tc_channel_arr<<frequance_channel
-# end
-# p @tc_channel_value_arr
-# p @tc_channel_arr
+======================================================================= 
+============================== 显示驱动程序 =========================== 
+=======================================================================
 
-# 10.times do |x|
-# 	@qos=x
-# end
-# p @qos
-# # p "1".nil?
-# @ts_tag_mem_cache_reg  = /缓存内存\s*：\s*[1-9]+\s*M/m
-# @ts_tag_mem_useful_reg = /可用内存\s*：\s*[1-9]+\s*M/m
-# @ts_tag_mem_useful_reg = /可用内存：([1-9]+\qos+M)/mu
-# p @ts_tag_mem_useful_reg.source
-# p "\u5185\u5B58\u603B\u91CF\uFF1A57M\n\u53EF\u7528\u5185\u5B58\uFF1A30M\n\u7F13\u5B58\u5185\u5B58\uFF1A13M"
-# p "\u5185\u5B58\u603B\u91CF\uFF1A57M\n\u53EF\u7528\u5185\u5B58\uFF1A30M\n\u7F13\u5B58\u5185\u5B58\uFF1A13M".encode("GBK")
-# # p /\u53EF\u7528\u5185\u5B58\s*\uFF1A\s*[1-9]+\s*M/im =~ "\u5185\u5B58\u603B\u91CF\uFF1A57M\n\u53EF\u7528\u5185\u5B58\uFF1A30M\n\u7F13\u5B58\u5185\u5B58\uFF1A13M"
-# p @ts_tag_mem_useful_reg=~ "\u5185\u5B58\u603B\u91CF\uFF1A57M\n\u53EF\u7528\u5185\u5B58\uFF1A30M\n\u7F13\u5B58\u5185\u5B58\uFF1A13M"
-# # p Regexp.last_match(1)
-# @ts_ip_reg             = /[1-9]{1,3}\.\qos{1,3}\.\qos{1,3}\.\qos{1,3}/
-# ip = "180.97.33.108"
-# p @ts_ip_reg=~ip
-# p /[1-9]{1,3}/=~"180"
-# p /[1-2]\qos{0,2}\.\qos{1,3}\.\qos{1,3}\.[1-2]\qos{0,2}/=~"180.97.33.108"
-#
-# p /[1-9]\qos{0,2}\.\qos{1,3}\.\qos{1,3}\.[1-9]\qos{0,2}/=~"180.97.33.12"
-# p /[1-9]\qos{0,2}\.\qos{1,3}\.\qos{1,3}\.[1-9]\qos{0,2}/=~"55.97.33.108"
-# C:\Ruby193\bin\ruby.exe -e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift) E:/Automation/htmltags/lib/htmltags/wireshark.rb
-# #<Test:0x25df118>->method_name:dumpcap_a
-# p "qos://$RECYCLE.BIN qos://BugReport.txt qos://IPOPLogs qos://IPOPV4.1.EXE qos://IxChariot6.7瀹屾暣 qos://Microsoft Office 2010鍏嶅簭鍒楀彿涓撲笟姝ｅ紡鐗坃99D.COM qos://Microsoft Office 2010鍏嶅簭鍒楀彿涓撲笟姝ｅ紡鐗坃99D.COM1 qos://Microsoft Office 2010鍏嶅簭鍒楀彿涓撲笟姝ｅ紡鐗坃99D.COM1.zip qos://MSOCache qos://MyDrivers qos://ProcessExplorer qos://Program Files qos://Program Files (x86) qos://RECYCLER qos://remote_00001_20150909105822.pcap qos://SecureCRT qos://SecureCrt7.0_zh_CN_x86_x84_patch.zip qos://SecureCRT7.0娉ㄥ唽鏈�qos://SecureCRTLogs qos://System Volume Information qos://test1_00001_20150909175255.pcap qos://test1_00001_20150909175414.pcap qos://Test2-vm-WinXP-1.rar qos://Test2-vm-WinXP-2 qos://test2_00001_20150909201535.pcap qos://test2_00001_20150909202923.pcap qos://tftpd32-29 qos://timeout_test.log qos://Windows_7_Loader qos://Xml缇庡寲鏍煎紡鍖栧伐鍏穇1.0 qos://Xml缇庡寲鏍煎紡鍖栧伐鍏穇1.0.zip qos://~WanDrv6.Temp.zHVlX qos://鍒犻櫎涓存椂鏂囦欢.bat qos://娉ㄥ唽琛ㄥ浠�reg qos://鐢ㄦ埛鐩綍 qos://绾㈣溁铚撴姄鍥剧簿鐏礯2.2.0.6".encode("GBK")
-# E:/Automation/htmltags/lib/htmltags/wireshark.rb:88:in ``': No such file or directory - dumpcap -i "dut" -w "qos:/test_local.pcap" -b "filesize:100" -b "files:2" -a "duration:5" -f "ether src host 20:F4:1B:80:00:02" (Errno::ENOENT)
-# 	from E:/Automation/htmltags/lib/htmltags/wireshark.rb:88:in `dumpcap_a'
-# from E:/Automation/htmltags/lib/htmltags/wireshark.rb:164:in `<top (required)>'
-# 	from -e:1:in `load'
-# 	from -e:1:in `<main>'
-#
-# Process finished with exit code 1
 
-# p "10.10.10.200".succ
-# p "0"+"9"
-# rs =`ping qq.com`
-#
-# # p rs
-# @ts_ssid_test_pre="TT"
-# tc_time                = Time.now.strftime("_%Y%m%qos%H%M%S")
-# p @tc_newssid            = @ts_ssid_test_pre+tc_time
-# if  "2"=~/\d/ && "3"=~/\d/ && "a"=~/\d/
-# 	p 1
-# end
-# #
-# config_file="RT2880_Settings.dat"
-# content    = ""
-# open(config_file, "r") { |f|
-# 		puts "输出配置文件内容:".encode("GBK")
-# 		# f.set_encoding 'utf-8','GBK'
-# 		# f.tap { |f| f.set_encoding 'GBK', 'utf-8' }
-# 		content = f.read
-# 		p content
-# 		 p content = content.force_encoding("ascii")
-# 		# content.delete("o")
-# 		# content.split("\n")
-#
-# 		 # p	 content = content.force_encoding("GBK")
-# 		# p	 content = content.force_encoding("utf-8")
-# 		# p content.encode("UTF-8", {:ivalid => :replace})
-# 		# p arr_new = content.delete(/\x/)
-# 		p arr = content.split("\n")
-# 		#  arr_new = arr.delete(/\x/)
-# 		# p content = arr_new.join("\n")
-# 		# content = content.sub(/RouterRandom=.*WebInit/, "")
-#
-# }
+接口名称: wireless
 
-# config_file="RT2880_Settings.dat"
-# content    = ""
-# open(config_file, "r") { |f|
-# 		puts "输出配置文件内容:".encode("GBK")
-# 		p content = f.read
-# 		p content = content.force_encoding("utf-8")
-# 		content =content.encode("utf-8", {:ivalid => :replace})
-# 		p arr = content.split("\n")
-# }
-#  p "\nDefault\nRouterRandom=\x9Db\u0012\xD3,\x92r\xFC o\u007F\x9B+\u0005I`\nWebInit=1\n".encode( 'GBK', invalid: :replace ).split( "\n" )
-# ip= "10.10.10.1"
-# ip=~/(\d+)\./
-# p i = Regexp.last_match(1)
-# p ip_arr = ip.split(".")
-# p ip_arr_clone = ip_arr.clone
-# ip_arr[2]="3"
-# p "="*30
-# p ip_arr
-# p ip_arr_clone
-# p ip_arr.join(".")
-# # p new_arr_ip.join(".")a
-# a= 100
-# p "#{a}"
+    驱动程序                  : TP-LINK Wireless USB Adapter
+    供应商                    : Ralink Technology, Corp.
+    提供程序                  : MediaTek, Inc.
+    日期                      : 2015/9/21
+    版本                      : 5.1.24.0
+    INF 文件                  : C:\Windows\INF\oem8.inf
+    文件                      : 6 total
+                                C:\Windows\system32\DRIVERS\netr28ux.sys
+                                C:\Windows\system32\DRIVERS\FW_7662.bin
+                                C:\Windows\system32\DRIVERS\Patch_7662.bin
+                                C:\Windows\system32\drivers\vwifibus.sys
+                                C:\Windows\system32\RaCoInstx.dll
+                                C:\Windows\system32\RaCoInst.dat
+    类型                      : 本机 Wi-Fi 驱动程序
+    支持的无线电类型          : 802.11b 802.11a 802.11g 802.11n 任何无线电类型
+    支持 FIPS 140-2 模式: 是
+    支持的承载网络  : 是
+    基础结构模式中支持的身份验证和密码:
+                                开放式             无
+                                开放式             WEP-40bit
+                                开放式             WEP-104 位
+                                开放式             WEP
+                                共享式             WEP-40bit
+                                共享式             WEP-104 位
+                                共享式             WEP
+                                WPA - 企业        TKIP
+                                WPA - 企业        CCMP
+                                WPA - 个人        TKIP
+                                WPA - 个人        CCMP
+                                WPA2 - 企业       TKIP
+                                WPA2 - 企业       CCMP
+                                WPA2 - 个人       TKIP
+                                WPA2 - 个人       CCMP
+                                供应商定义的          TKIP
+                                供应商定义的          CCMP
+                                WPA2 - 企业       供应商定义的
+                                WPA2 - 企业       供应商定义的
+                                供应商定义的          供应商定义的
+                                供应商定义的          供应商定义的
+                                供应商定义的          供应商定义的
+    临时模式中支持的身份验证和密码:
+                                开放式             无
+                                开放式             WEP-40bit
+                                开放式             WEP-104 位
+                                开放式             WEP
+                                WPA2 - 个人       CCMP
+                                供应商定义的          供应商定义的
 
-# p tc_mac ="00:11:22:33:44:00"
-# 34.times do
-#   p tc_mac = tc_mac.succ
-# end
-# Expected:
-# p "\u5F02\u5E38".encode("GBK")
-# # Actual:
-# p "\u6B63\u5E38".encode("GBK")
-#
-# # Expected:
-# 	p	"\u5931\u6548".encode("GBK")
-# # Actual:
-# 	p	"\u751F\u6548".encode("GBK")
-# # Expected:
-# 		p "DHCP\u5730\u5740\u683C\u5F0F\u6709\u8BEF".encode("GBK")
-# Actual:
-# 		p "\u8BF7\u8F93\u5165DHCP\u5F00\u59CB\u5730\u5740".encode("GBK")
-# p "DHCP\u5730\u5740\u683C\u5F0F\u6709\u8BEF".encode("GBK")
-# p "\u8BF7\u8F93\u5165DHCP\u5F00\u59CB\u5730\u5740".encode("GBK")
-# p "IP\u5730\u5740\u683C\u5F0F\u9519\u8BEF".encode("GBK")
-# p "\u8BF7\u8F93\u5165 IP \u5730\u5740".encode("GBK")
 
-# p "\u7F51\u5173\u683C\u5F0F\u6709\u8BEF".encode("GBK")
-# p "\u8BF7\u8F93\u5165\u7F51\u5173".encode("GBK")
+======================================================================= 
+============================= 显示接口 ================================ 
+=======================================================================
+
+
+系统上有 1 个接口: 
+
+    名称                   : wireless
+    描述                   : TP-LINK Wireless USB Adapter
+    GUID                   : 4273a807-ff78-4712-8af3-ab1bfec814ea
+    物理地址               : 14:75:90:f8:63:9a
+    状态                   : 已断开连接
+
+    承载网络状态  : 不可用
+
+
+======================================================================= 
+=========================== 显示承载网络 ======================= 
+=======================================================================
+
+
+承载网络设置 
+----------------------- 
+    模式                   : 已启用
+    设置              : <未配置>
+
+承载网络状态   
+--------------------- 
+    状态                 : 不可用
+
+
+======================================================================= 
+============================= 显示设置 ================================ 
+=======================================================================
+
+
+无线局域网配置
+--------------------- 
+    显示可见网络列表中的阻止网络: 否
+
+    在配置 GP 的网络上仅使用 GP 配置文件: 否
+
+    在 WLAN 服务中允许承载网络模式: 是
+
+    允许共享用户凭据用于网络身份验证: 是
+
+    阻止时间段: 未配置。
+
+    在接口“wireless”上已启用自动配置逻辑
+
+
+======================================================================= 
+============================== 显示筛选器 ============================= 
+=======================================================================
+
+
+系统上的允许列表(组策略) 
+--------------------------------------- 
+    <无>
+
+系统上的允许列表(用户) 
+------------------------------- 
+    <无>
+
+系统上的阻止列表(组策略) 
+--------------------------------------- 
+    <无>
+
+系统上的阻止列表(用户) 
+------------------------------- 
+    <无>
+
+
+======================================================================= 
+=========================== 显示 CREATEALLUSER ======================== 
+=======================================================================
+
+
+允许所有人创建所有用户配置文件。
+
+
+======================================================================= 
+============================= 显示配置文件 ============================ 
+=======================================================================
+
+
+接口 wireless 上的配置文件: 
+
+
+组策略配置文件(只读)
+---------------------------------
+    <无>
+
+用户配置文件
+-------------
+    所有用户配置文件 : autotest_1094
+
+
+======================================================================= 
+========================== 显示配置文件名称=* ======================= 
+=======================================================================
+
+
+接口 wireless 上的配置文件 autotest_1094: 
+======================================================================= 
+
+已应用: 所有用户配置文件
+
+配置文件信息
+------------------- 
+    版本                   : 1
+    类型                   : 无线局域网
+    名称                   : autotest_1094
+    控制选项               : 
+        连接模式           : 自动连接
+        网络广播           : 只在网络广播时连接
+        AutoSwitch         : 请勿切换到其他网络
+
+连接设置
+--------------------- 
+    SSID 数目              : 1
+    SSID 名称              :“autotest_1094”
+    网络类型               : 结构
+    无线电类型             : [ 任何无线电类型 ]
+    供应商扩展名           : 不存在
+
+安全设置
+----------------- 
+    身份验证         : WPA2 - 个人
+    密码                 : CCMP
+    安全密钥               : 存在
+
+
+======================================================================= 
+======================= 显示网络模式 MODE=BSSID ====================== 
+=======================================================================
+
+ 
+接口名称 : wireless 
+当前有 39 个网络可见。 
+
+SSID 1 : 
+    Network type            : 结构
+    身份验证                : WPA2 - 个人
+    加密                    : CCMP 
+    BSSID 1               : 6c:72:20:cc:09:6d
+         信号               : 100%
+         无线电类型         : 802.11n
+         频道               : 6 
+         基本速率(Mbps)     : 1 2 5.5 11
+         其他速率(Mbps)     : 6 9 12 18 24 36 48 54
+    BSSID 2               : e8:de:27:f7:93:b5
+         信号               : 100%
+         无线电类型         : 802.11n
+         频道               : 6 
+         基本速率(Mbps)     : 1 2 5.5 11
+         其他速率(Mbps)     : 6 9 12 18 24 36 48 54
+    BSSID 3               : e8:de:27:f7:93:b6
+         信号               : 90%
+         无线电类型         : 802.11n
+         频道               : 153 
+         基本速率(Mbps)     : 6 12 24
+         其他速率(Mbps)     : 9 18 36 48 54
+
+SSID 2 : wifitest_lxm03
+    Network type            : 结构
+    身份验证                : WPA2 - 个人
+    加密                    : CCMP 
+    BSSID 1               : c0:61:18:28:a7:56
+         信号               : 100%
+         无线电类型         : 802.11n
+         频道               : 6 
+         基本速率(Mbps)     : 1 2 5.5 11
+         其他速率(Mbps)     : 6 9 12 18 24 36 48 54
+
+SSID 3 : wifitest_autotest2
+    Network type            : 结构
+    身份验证                : WPA2 - 个人
+    加密                    : CCMP 
+    BSSID 1               : 3c:1e:04:90:05:90
+         信号               : 100%
+         无线电类型         : 802.11n
+         频道               : 9 
+         基本速率(Mbps)     : 1 2 5.5 11
+         其他速率(Mbps)     : 6 9 12 18 24 36 48 54
+"
+arr = rs.split(/显示网络模式\sMODE=BSSID/)[1].split(/SSID\s\d+\s:/)
+# Network type            : 结构
+# 身份验证                : WPA2 - 个人
+# 加密                    : CCMP
+# BSSID 1               : 6c:72:20:cc:09:6d
+# 信号               : 100%
+# 无线电类型         : 802.11n
+# 频道               : 6
+# 基本速率(Mbps)     : 1 2 5.5 11
+# 其他速率(Mbps)     : 6 9 12 18 24 36 48 54
+# BSSID 2               : e8:de:27:f7:93:b5
+# 信号               : 100%
+# 无线电类型         : 802.11n
+# 频道               : 6
+# 基本速率(Mbps)     : 1 2 5.5 11
+# 其他速率(Mbps)     : 6 9 12 18 24 36 48 54
+# BSSID 3               : e8:de:27:f7:93:b6
+# 信号               : 90%
+# 无线电类型         : 802.11n
+# 频道               : 153
+# 基本速率(Mbps)     : 6 12 24
+# 其他速率(Mbps)     : 9 18 36 48 54
+arr.each_with_index do |bss, index|
+		next if index == 0
+		arr_two   = bss.split("BSSID")
+		bssids_arr= []
+		arr_head  = arr_two[0].split("\n")
+		arr_two.each_with_index do |item, index|
+				next if index ==0
+				item_arr = item.split("\n")
+				/\s*(?<bssid>\d+)\s+:/ =~ item_arr[0]
+				/\d+\s+:\s+(?<mac>[0-9a-f]{2}:[0-9a-f]{2}:[0-9a-f]{2}:[0-9a-f]{2}:[0-9a-f]{2}:[0-9a-f]{2})/i =~ item_arr[0]
+				/\s+\u4FE1\u53F7\s+:\s+(?<signal>.+)/i =~ item_arr[1]
+				/\s+\u65E0\u7EBF\u7535\u7C7B\u578B\s+:\s+(?<wiless_type>.+)/i =~ item_arr[2]
+				/\s+\u9891\u9053\s+:\s+(?<channel>.+)/i =~ item_arr[3]
+				/\s+\u57FA\u672C\u901F\u7387\(Mbps\)\s+:\s+(?<basic_speed>.+)/i =~ item_arr[4]
+				/\s+\u5176\u4ED6\u901F\u7387\(Mbps\)\s+:\s+(?<other_speed>.+)/i =~ item_arr[5]
+				bssid_hash = {
+						bssid:        bssid.strip,
+						mac:          mac.strip,
+						signal:       signal.strip,
+						wirelss_type: wiless_type.strip,
+						channel:      channel.strip,
+						basic_speed:  basic_speed.strip,
+						other_speed:  other_speed.strip
+				}
+				bssids_arr << bssid_hash
+		end
+
+		ssid = arr_head[0].strip unless arr_head[0].nil?
+		if /Network\s+type\s+:\s+(?<struct>.+)/u=~arr_head[1]
+				if struct=~/\u7ED3\u6784/ #结构
+						network_type = "struct"
+				else
+						network_type=struct
+				end
+		end
+		# "    \u8EAB\u4EFD\u9A8C\u8BC1                : WPA2 - \u4E2A\u4EBA"
+		if /身份验证\s+:\s+(?<identify>.+)/=~arr_head[2]
+				if identify=="WPA2 - \u4E2A\u4EBA" #结构
+						identify = "WPA2PSK"
+				elsif identify=="WPA2 - \u4E2A\u4EBA" #结构
+						identify = "WPAPSK"
+				else
+						identify=identify
+				end
+		end
+		# "    \u52A0\u5BC6                    : CCMP "
+		/\u52A0\u5BC6\s+:\s+(?<aumode>.+)/=~arr_head[3]
+		p ssid_hash = {ssid: ssid.strip, network_type: network_type.strip, identify: identify.strip, au_mode: aumode.strip, bssids: bssids_arr}
+end
 #
-# p "\u6587\u4EF6\u548C\u6587\u4EF6\u5939\u4E3A\u82F1\u6587\u6587\u540D\u79F0 ZLBF_13.1.12".encode("GBK")
-# p "\u7F51\u5173\u683C\u5F0F\u6709\u8BEF".encode("GBK")
-# p  "\u8BF7\u8F93\u5165\u7F51\u5173".encode("GBK")
-p "\u5F02\u5E38".encode("GBK")
-p  "\u6B63\u5E38".encode("GBK")
-p "\u4E00\u6B21".encode("GBK")
+# p "\u5BC6\u7801\u53EA\u80FD\u662F\u6570\u5B57,\u5B57\u6BCD\u548C\u62EC\u53F7\u5185\u7E14\u957F\u5EA6\u662F8-63\u4E2A\u5B57\u7B26\u4E4B\u95F4".encode("GBK")
+# p "\u5BC6\u7801\u53EA\u80FD\u662F\u6570\u5B57\u548C\u5B57\u6BCD\u4E0B\u5212\u7EBF".encode("GBK")
+ p "\u4E24\u6B21\u5BC6\u7801\u4E0D\u4E00\u81F4".encode("GBK")
+ p "\u7528\u6237\u540D\u548C\u5BC6\u7801\u4E0D\u80FD\u4E3A\u7A7A".encode("GBK")

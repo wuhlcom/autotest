@@ -74,7 +74,7 @@ class Wireshark < MiniTest::Unit::TestCase
 				p rs = @tc_dumpcap.tshark_display_filter_fields(args)
 		end
 
-		def test_remotecap
+		def testremotecap
 				DRb.start_service
 				@ts_drb_server2 = "druby://50.50.50.57:8787"
 				@tc_dumpcap     = DRbObject.new_with_uri(@ts_drb_server2)
@@ -108,6 +108,10 @@ class Wireshark < MiniTest::Unit::TestCase
 				# 		p taskkill("ping.exe")
 				# end
 
+		end
+
+		def test_dumpcap
+				print dumpcap_intf_d
 		end
 
 

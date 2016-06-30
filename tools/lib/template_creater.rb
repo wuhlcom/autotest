@@ -38,156 +38,171 @@ require 'fileutils'
 require "rexml/document"
 require './parser_excel'
 module TestTool
-		class Template
+    class Template
 
-				attr_accessor :doc, :root_el
+        attr_accessor :doc, :root_el
 
-				def initialize()
-						@doc         = REXML::Document.new #创建XML内容
-						@root_el     = @doc.add_element("TestSuites")
-						current_path = File.dirname(File.expand_path(__FILE__))
-						@tcs_path    = current_path+"/tcs"
-						#新建目录
-						File.exist?(@tcs_path) || Dir.mkdir(@tcs_path)
-						##删除当前目录下的子目录和文件，不包含当前目录
-						files = Dir.glob(@tcs_path+"/*")
-						FileUtils.rm_rf(files, :verbose => true) if File.exist?(@tcs_path)
-				end
+        def initialize()
+            @doc         = REXML::Document.new #创建XML内容
+            @root_el     = @doc.add_element("TestSuites")
+            current_path = File.dirname(File.expand_path(__FILE__))
+            @tcs_path    = current_path+"/tcs"
+            #新建目录
+            File.exist?(@tcs_path) || Dir.mkdir(@tcs_path)
+            ##删除当前目录下的子目录和文件，不包含当前目录
+            files = Dir.glob(@tcs_path+"/*")
+            FileUtils.rm_rf(files, :verbose => true) if File.exist?(@tcs_path)
+        end
 
-				# <xx namespace="xxx">
-				def add_ns(uri="http://www.microsoft.com/networking/WLAN/profile/v1")
-						@root_el.add_namespace(uri)
-				end
+        # <xx namespace="xxx">
+        def add_ns(uri="http://www.microsoft.com/networking/WLAN/profile/v1")
+            @root_el.add_namespace(uri)
+        end
 
-				#在根节点下添加节点
-				def root_add_el(el_name)
-						@root_el.add_element(el_name)
-				end
+        #在根节点下添加节点
+        def root_add_el(el_name)
+            @root_el.add_element(el_name)
+        end
 
-				#添加节点
-				def add_el(el, el_name)
-						el.add_element(el_name)
-				end
+        #添加节点
+        def add_el(el, el_name)
+            el.add_element(el_name)
+        end
 
-				#添加文本节点内容
-				def add_txt(el, txt)
-						el.add_text(txt)
-				end
+        #添加文本节点内容
+        def add_txt(el, txt)
+            el.add_text(txt)
+        end
 
-				#添加name节点
-				def add_name(ssid_name, el_name="name")
-						element = root_add_el(el_name)
-						add_txt(element, ssid_name)
-				end
+        #添加name节点
+        def add_name(ssid_name, el_name="name")
+            element = root_add_el(el_name)
+            add_txt(element, ssid_name)
+        end
 
-				#添加TestSuite节点
-				# <TestSuites>
-				#   <TestSuite>
-				#   </TestSuite>
-				#</TestSuites>
-				def add_testsuit(ts_name, ts_path, el_name="TestSuite")
-						testsuite = root_add_el(el_name)
-						add_ts_name_path(testsuite, ts_name, ts_path)
-						testsuite
-				end
+        #添加TestSuite节点
+        # <TestSuites>
+        #   <TestSuite>
+        #   </TestSuite>
+        #</TestSuites>
+        def add_testsuit(ts_name, ts_path, el_name="TestSuite")
+            testsuite = root_add_el(el_name)
+            add_ts_name_path(testsuite, ts_name, ts_path)
+            testsuite
+        end
 
-				# <TestSuites>
-				#   <TestSuite>
-				#     <name></name>
-				#     <path></path>
-				#   </TestSuite>
-				#</TestSuites>
-				def add_ts_name_path(ts_el, ts_name, tspath)
-						ts_name_el = add_el(ts_el, "name")
-						add_txt(ts_name_el, ts_name)
-						ts_path_el = add_el(ts_el, "path")
-						add_txt(ts_path_el, tspath)
-				end
+        # <TestSuites>
+        #   <TestSuite>
+        #     <name></name>
+        #     <path></path>
+        #   </TestSuite>
+        #</TestSuites>
+        def add_ts_name_path(ts_el, ts_name, tspath)
+            ts_name_el = add_el(ts_el, "name")
+            add_txt(ts_name_el, ts_name)
+            ts_path_el = add_el(ts_el, "path")
+            add_txt(ts_path_el, tspath)
+        end
 
-				# <TestSuites>
-				#   <TestSuite>
-				#     <name></name>
-				#     <path></path>
-				#     <TestCases></TestCases>
-				#   </TestSuite>
-				#</TestSuites>
-				def add_testcases(ts_name, ts_path, el_name="TestCases")
-						testsuite = add_testsuit(ts_name, ts_path)
-						tcs_el    = add_el(testsuite, el_name)
-				end
+        # <TestSuites>
+        #   <TestSuite>
+        #     <name></name>
+        #     <path></path>
+        #     <TestCases></TestCases>
+        #   </TestSuite>
+        #</TestSuites>
+        def add_testcases(ts_name, ts_path, el_name="TestCases")
+            testsuite = add_testsuit(ts_name, ts_path)
+            tcs_el    = add_el(testsuite, el_name)
+        end
 
-				# <TestCases "x"="","y"="","z"="">
-				def add_tcattr(testcase_el, args="")
-						default_args = {
-								"auto"      => "n",
-								"result"    => "f",
-								"executed"  => 'n',
-								"tested"    => "n",
-								"beginTime" => "",
-								"endTime"   => ""
-						}
-						if args.empty?
-								args = default_args
-						else
-								args.merge!(default_args).delete_if { |key, _value| key=="path"||key=="steps" }
-						end
-						testcase_el.add_attributes(args)
-				end
+        # <TestCases "x"="","y"="","z"="">
+        def add_tcattr(testcase_el, args="")
+            default_args = {
+                "auto"      => "n",
+                "result"    => "f",
+                "executed"  => 'n',
+                "tested"    => "n",
+                "beginTime" => "",
+                "endTime"   => ""
+            }
+            if args.empty?
+                args = default_args
+            else
+                args.merge!(default_args).delete_if { |key, _value| key=="path"||key=="steps"|| key=="module"}
+            end
+            testcase_el.add_attributes(args)
+        end
 
-				# <TestSuites>
-				#   <TestSuite>
-				#     <name></name>
-				#     <path></path>
-				#     <TestCases "x"="","y"="","z"="">
-				#        <TestCase>
-				#          <name></name>
-				#          <path></path>
-				#        <TestCase>
-				#     </TestCases>
-				#   </TestSuite>
-				#</TestSuites>
-				#tc_names
-				# -- Array,tc_names
-				#attr_args
-				# --Array,tc_attr
-				def add_testcase(xmlpath, ts_name, ts_path, tc_names, tc_path, attr_args, el_name="TestCase")
-						testcases = add_testcases(ts_name, ts_path)
-						tc_names.each_with_index { |tc_name, index|
-								testcase = add_el(testcases, el_name)
-								add_tcattr(testcase, attr_args[index])
-								add_tc_name_path(testcase, tc_name, tc_path)
-						}
-						save_xml(xmlpath)
-				end
+        # <TestSuites>
+        #   <TestSuite>
+        #     <name></name>
+        #     <path></path>
+        #     <TestCases "x"="","y"="","z"="">
+        #        <TestCase>
+        #          <name></name>
+        #          <path></path>
+        #        <TestCase>
+        #     </TestCases>
+        #   </TestSuite>
+        #</TestSuites>
+        #tc_names
+        # -- Array,tc_names
+        #attr_args
+        # --Array,tc_attr
+        def add_testcase(xmlpath, ts_name, ts_path, tc_names, tc_path, tc_module, attr_args, el_name="TestCase")
+            testcases = add_testcases(ts_name, ts_path)
+            tc_names.each_with_index { |tc_name, index|
+                testcase = add_el(testcases, el_name)
+                add_tcattr(testcase, attr_args[index])
+                add_tc_name_path(testcase, tc_name, tc_path, tc_module)
+            }
+            save_xml(xmlpath)
+        end
 
-				#        <TestCase>
-				#          <name></name>
-				#          <path></path>
-				#        <TestCase>
-				def add_tc_name_path(testcase, tc_name, tc_path)
-						ts_name_el = add_el(testcase, "name")
-						add_txt(ts_name_el, tc_name)
-						ts_path_el = add_el(testcase, "path")
-						add_txt(ts_path_el, tc_path)
-				end
+        #通过读取实际路径中脚本数据来生成xml add by liluping 2016/06/28
+        def add_testcase_for_path(xmlpath, ts_name, ts_path, tc_hash, el_name="TestCase")
+            testcases = add_testcases(ts_name, ts_path)
+            tc_hash.each { |key, value|
+                tc_path  = value["path"]
+                tc_module = value["module"]
+                testcase = add_el(testcases, el_name)
+                add_tcattr(testcase, value)
+                add_tc_name_path(testcase, key, tc_path, tc_module)
+            }
+            save_xml(xmlpath)
+        end
 
-				def total_xml(args)
-						#add_ts_name_path(ts_name, tspath)
-				end
+        #        <TestCase>
+        #          <name></name>
+        #          <path></path>
+        #        <TestCase>
+        def add_tc_name_path(testcase, tc_name, tc_path, tc_module)
+            ts_name_el = add_el(testcase, "name")
+            add_txt(ts_name_el, tc_name)
+            ts_path_el = add_el(testcase, "path")
+            add_txt(ts_path_el, tc_path)
+            ts_module_el = add_el(testcase, "module")
+            add_txt(ts_module_el, tc_module)
+        end
 
-				#保存xml
-				def save_xml(xmlpath)
-						open(xmlpath, "w") { |file|
-								file.puts @doc.write()
-						}
-				end
+        def total_xml(args)
+            #add_ts_name_path(ts_name, tspath)
+        end
 
-				#生成脚本模板的内容
-				def creat_tc_template(tc_name, steps, tc_info)
-						time           = Time.new.strftime("%Y-%m-%d %H:%M:%S")
-						author_default = "wuhongliang"
-						step_info      = create_operation(steps)
-						content        = <<"EOF";
+        #保存xml
+        def save_xml(xmlpath)
+            open(xmlpath, "w") { |file|
+                file.puts @doc.write()
+            }
+        end
+
+        #生成脚本模板的内容
+        def creat_tc_template(tc_name, steps, tc_info)
+            time           = Time.new.strftime("%Y-%m-%d %H:%M:%S")
+            author_default = "wuhongliang"
+            step_info      = create_operation(steps)
+            content        = <<"EOF";
 #
 # description:
 # author:#{author_default}
@@ -218,108 +233,136 @@ module TestTool
 
     }
 EOF
-						content = content.sub(/\{\s*\"level\"\s*.*\"auto\"\s*=>\s*\"\"\s*\}/im, tc_info.to_s)
-						filepath=@tcs_path+"/"+tc_name+".rb"
-						File.open(filepath, "w+") { |file|
-								file.puts content
-						}
-				end
+            content = content.sub(/\{\s*\"level\"\s*.*\"auto\"\s*=>\s*\"\"\s*\}/im, tc_info.to_s)
+            filepath=@tcs_path+"/"+tc_name+".rb"
+            File.open(filepath, "w+") { |file|
+                file.puts content
+            }
+        end
 
-				#生成脚本步骤
-				def create_operation(steps)
-						steps     = steps.split("\n")
-						step_info = ""
-						steps.each { |step|
-								step_info += "operate(\"#{step.strip}\") {
+        #生成脚本步骤
+        def create_operation(steps)
+            steps     = steps.split("\n")
+            step_info = ""
+            steps.each { |step|
+                step_info += "operate(\"#{step.strip}\") {
 
 }\n\n"
-						}
-						step_info
-				end
+            }
+            step_info
+        end
 
-				# args = {
-				#   tcname=>{"id"=>xxx,"level"=>xxx,"path"=>xxx,"steps"=>xxx},
-				#   tcname=>{"id"=>xxx,"level"=>xxx,"path"=>xxx,"steps"=>xxx}
-				# }
-				def create_multi_tc_temp(args)
-						args.each do |tc_name, tc_info|
-								steps  = tc_info["steps"]
-								tc_info= tc_info.delete_if { |key, _value| key=="path"|| key=="steps" }
-								creat_tc_template(tc_name, steps, tc_info)
-						end
-				end
+        # args = {
+        #   tcname=>{"id"=>xxx,"level"=>xxx,"path"=>xxx,"steps"=>xxx},
+        #   tcname=>{"id"=>xxx,"level"=>xxx,"path"=>xxx,"steps"=>xxx}
+        # }
+        def create_multi_tc_temp(args)
+            args.each do |tc_name, tc_info|
+                steps  = tc_info["steps"]
+                tc_info= tc_info.delete_if { |key, _value| key=="path"|| key=="steps" }
+                creat_tc_template(tc_name, steps, tc_info)
+            end
+        end
 
-		end
+    end
 end
 
 if $0==__FILE__
+=begin
+    #############################解析excel文件############################################
+    file_name="基线用例-2015.8.21.xls"
+    begin
+        p exel_file = File.expand_path("../../../#{file_name}", __FILE__)
+        p exel_file.encode("GBK")
 
-		#############################解析excel文件############################################
-		file_name="基线用例_2016.xls"
-		begin
-				p exel_file = File.expand_path("../../../#{file_name}", __FILE__)
-				p exel_file.encode("GBK")
-				# p File.exists?(exel_file)
-				excelobj =TestTool::Excel.new(exel_file)
-				args     ={
-						:condition     => "四期".encode("GBK"), #转成gbk
-						:condition_col => "G", #过滤条件列
-						# :condition_col => "F",  #过滤条件列
+        # p File.exists?(exel_file)
+        excelobj =TestTool::Excel.new(exel_file)
+        args     ={
+            :condition     => "四期".encode("GBK"), #转成gbk
+            :condition_col => "G", #过滤条件列
+            # :condition_col => "F",  #过滤条件列
 
-						:id_col        => ["D", "E"], #id列
-						# :id_col        => ["D"], #id列
-						:line          => "2", #从哪一行开始查找
+            :id_col        => ["D", "E"], #id列
+            # :id_col        => ["D"], #id列
+            :line          => "2", #从哪一行开始查找
 
-						:level_col     => "F", #用例优先级
-						# :level_col     => "E",#用例优先级
+            :level_col     => "F", #用例优先级
+            # :level_col     => "E",#用例优先级
 
-						:lines         => "1000", #到哪一行结束
-						:sheet_index   => 1, #表单编号
-						:tc_path       => File.dirname(__FILE__),
+            :lines         => "1000", #到哪一行结束
+            :sheet_index   => 1, #表单编号
+            :tc_path       => File.dirname(__FILE__),
 
-						:step_col      => "j" #操作步骤列
-						# :step_col      => "H"   #操作步骤列
-				}
+            :step_col      => "j" #操作步骤列
+            # :step_col      => "H"   #操作步骤列
+        }
 
-				excelobj.create_tcname(args)
-				testcases_hash = excelobj.testcase_hash
-				p "用例数量:#{testcases_hash.keys.size}".encode("GBK")
+        excelobj.create_tcname(args)
+        p testcases_hash = excelobj.testcase_hash
+        p "用例数量:#{testcases_hash.keys.size}".encode("GBK")
 
-				# testcases_hash.each { |key, value|
-				#  	print key.encode("GBK"), "=>", value, "\n"
-				#  }
-				#print testcase["点击向导进入到向导页面 ZLBF_3.1.4"]["steps"].encode("GBK")
-				excelobj.close_excel()
-		rescue => ex
-				puts ex.backtrace.join("\n")
-				# excel.Quit
-				excelobj.close_excel()
-		end
+        # testcases_hash.each { |key, value|
+        #  	print key.encode("GBK"), "=>", value, "\n"
+        #  }
+        #print testcase["点击向导进入到向导页面 ZLBF_3.1.4"]["steps"].encode("GBK")
+        excelobj.close_excel()
+    rescue => ex
+        puts ex.backtrace.join("\n")
+        # excel.Quit
+        excelobj.close_excel()
+    end
 
-		attr_args = {
-				"auto"      => "n",
-				"result"    => "f",
-				"executed"  => 'n',
-				"tested"    => "n",
-				"beginTime" => "",
-				"endTime"   => ""
-		}
-		xml       = TestTool::Template.new()
+    attr_args = {
+        "auto"      => "n",
+        "result"    => "f",
+        "executed"  => 'n',
+        "tested"    => "n",
+        "beginTime" => "",
+        "endTime"   => ""
+    }
+    xml       = TestTool::Template.new()
 
-		######################create tc templates####################
-		#注意先创建tc模板再创建xml,因为创建xml会修改testcases_hash的内容会导致创建tc_temp失败
-		p "######################create tc templates####################"
-		xml.create_multi_tc_temp(testcases_hash)
+    ######################create tc templates####################
+    #注意先创建tc模板再创建xml,因为创建xml会修改testcases_hash的内容会导致创建tc_temp失败
+    p "######################create tc templates####################"
+    xml.create_multi_tc_temp(testcases_hash)
 
-		######################创建xml文件####################
-		p "######################创建xml文件####################".encode("GBK")
-		passwd_xml = "frame_four.xml"
-		ts_name    = "internet"
-		ts_path    = "../../frame"
-		tc_names   = testcases_hash.keys
-		attr_args  = testcases_hash.values
-		tc_path    = "../../frame/internet"
-		#tc_names = ["tc1", "tc2", "tc3", "tc4"]
-		#tc_paths = ["tc1_path", "tc2_path", "tc3_path", "tc4_path"]
-		xml.add_testcase(passwd_xml, ts_name, ts_path, tc_names, tc_path, attr_args)
+    ######################创建xml文件####################
+    p "######################创建xml文件####################".encode("GBK")
+    passwd_xml = "frame_four.xml"
+    ts_name    = "internet"
+    ts_path    = "../../frame"
+    tc_names   = testcases_hash.keys
+    attr_args  = testcases_hash.values #只能读出id，auto
+    tc_path    = "../../frame/internet" #根据实际路径读出
+    tc_module  = "test"
+    #tc_names = ["tc1", "tc2", "tc3", "tc4"]
+    #tc_paths = ["tc1_path", "tc2_path", "tc3_path", "tc4_path"]
+    xml.add_testcase(passwd_xml, ts_name, ts_path, tc_names, tc_path, tc_module, attr_args)
+=end
+    ###########################################################################
+    #通过读取实际路径中脚本数据来生成xml
+    xml      = TestTool::Template.new()
+    tcs_path = File.expand_path("../../../frame/reset", __FILE__)
+    rs       = Dir.glob("#{tcs_path}/**/*.rb")
+
+    passwd_xml = "frame_all_reset.xml"
+    ts_name    = "reset"
+    ts_path    = "../../frame"
+    tc_hash    = {}
+    rs.each do |item|
+        tc_name          = item.slice(/.+\/(.+\.rb)/, 1)
+        tc_hash[tc_name] = []
+    end
+
+    rs.each do |item|
+        tc_path          = item.slice(/(.+)\/.+\.rb/, 1)
+        tc_path          = tc_path.gsub(/.+\/autotest/, "../..")
+        tc_name          = item.slice(/.+\/(.+\.rb)/, 1)
+        tc_id            = tc_name.slice(/\s*(ZL.+)\.rb/i, 1)
+        tc_module        = tc_name.slice(/ZL.+_\w_(.+)_/i, 1)
+        tc_hash[tc_name] = {"id" => tc_id, "level" => "P1", "path" => tc_path, "auto" => "y", "module" => tc_module}
+    end
+    xml.add_testcase_for_path(passwd_xml, ts_name, ts_path, tc_hash)
+
 end

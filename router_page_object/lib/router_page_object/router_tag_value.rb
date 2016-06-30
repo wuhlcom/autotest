@@ -114,6 +114,7 @@ module PageObject
 		@@ts_ap_mask_static         = "staip_netmask"
 		@@ts_ap_gateway_static      = "staip_gateway"
 		@@ts_ap_dns1_static         = "wan_dns1"
+		@@ts_ap_ver_info            = "top_product"
 		############### dut内网 ################
 		@@ts_wifi_switch            = "wifiswitch"
 		############### dut外网 ################
@@ -322,6 +323,8 @@ module PageObject
 		@@ts_tag_edit               = "edit"
 		@@ts_tag_ip_back            = "back_ip"
 		@@ts_tag_mac_table          = "macfilter_table"
+		@@ts_tag_edit_mac           = "edit_mac"
+		@@ts_tag_mac_display        = "tab3"
 		####remote web access
 		@@ts_tag_op_remote          = "webtoroute"
 		@@ts_tag_op_web_accbtn      = "on-off"
@@ -562,6 +565,7 @@ module PageObject
 		@@ts_tag_syschanel        = "WIRELESS-2GCH"
 		@@ts_tag_syschanel_5g     = "WIRELESS-5GCH"
 		@@ts_tag_sysencry         = "WIRELESS-ENCRY"
+		@@ts_tag_wifi_details     = "wifi_details"
 
 		@@ts_tag_mode_iframe        = "modeselect.asp"
 		@@ts_tag_apmode             = "imodel_type_ap"

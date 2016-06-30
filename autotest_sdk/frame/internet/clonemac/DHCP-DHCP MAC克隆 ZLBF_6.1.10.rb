@@ -98,7 +98,7 @@ testcase {
 				operate("2.选择“使用计算机MAC地址”查看地址文本框中显示MAC地址是否与登录主机的MAC地址一致，保存；") {
 						puts "PC MAC address: #{@ts_pc_mac}"
 						puts "Router Wan default MAC address: #{@ts_wan_mac}"
-						refute_equal(@ts_pc_mac, @ts_wan_mac, "WAN MAC与PC MAC一样可能已经克隆了!")
+						# refute_equal(@ts_pc_mac, @ts_wan_mac, "WAN MAC与PC MAC一样可能已经克隆了!")
 						@browser.link(id: @ts_tag_options).wait_until_present(@tc_wait_time)
 						@browser.link(id: @ts_tag_options).click
 						@advance_iframe = @browser.iframe(src: @ts_tag_advance_src)

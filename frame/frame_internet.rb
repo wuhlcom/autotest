@@ -39,9 +39,7 @@ module Frame
 				tcs_el = @ts_el.elements["TestCases"]
 				tc_el  = tcs_el.elements.each("TestCase") { |tc|
 						tc_name = tc.elements["name"].text
-						next if tc_name =~ /3_4G|中继|桥|无线WAN|bridge|repeater|升|内存信息|处理器信息|总带宽速率测试 ZLBF_27.1.3|DHCP服务器-DHCP地址和wan口地址在同一网段 ZLBF_8.1.7/i
 						tc_path = tc.elements["path"].text
-						next if tc_path =~ /bridge|file_share/
 						tc_abs_path = File.absolute_path(tc_path, __FILE__)
 						tc_file     = tc_abs_path+"/"+tc_name+".rb"
 						if File.exist?(tc_file) && tc.attributes["auto"]=~/y/i

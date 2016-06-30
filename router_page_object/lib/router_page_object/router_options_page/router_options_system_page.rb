@@ -61,10 +61,18 @@ module RouterPageObject
 				#高级设置-系统设置-定时重启
 				def open_restart_page(url)
 						open_options_page(url)
-						sysset
-						sleep 2
+						open_sysset_page
 						restart
 						sleep 2
+				end
+
+				#打开系统设置页面
+				def open_sysset_page
+						3.times do
+								sysset
+								sleep 2
+								break if update?
+						end
 				end
 
 				#清空时间并关闭状态开关
@@ -118,24 +126,21 @@ module RouterPageObject
 
 				#系统设置-配置恢复页面
 				def select_recover
-						sysset
-						sleep 2
+						open_sysset_page
 						recover
 						sleep 2
 				end
 
 				#系统设置-固件升级页面
 				def select_update
-						sysset
-						sleep 2
+						open_sysset_page
 						update
 						sleep 2
 				end
 
 				#系统设置-文件共享页面
 				def select_fileshare
-						sysset
-						sleep 2
+						open_sysset_page
 						file_share
 						sleep 2
 				end
@@ -143,8 +148,7 @@ module RouterPageObject
 				#打开高级设置-系统设置-外网访问WEB
 				def select_web_access(url)
 						open_options_page(url)
-						sysset
-						sleep 2
+						open_sysset_page
 						web_access
 						sleep 2
 				end
@@ -162,7 +166,7 @@ module RouterPageObject
 				end
 
 				#点击恢复出厂按钮-确认恢复出厂
-				def recover_btn(time=120)
+				def recover_btn(time=90)
 						reset
 						sleep 2
 						self.reset_confirm
@@ -248,8 +252,7 @@ module RouterPageObject
 				#选择域名设置
 				def select_domain(url)
 						open_options_page(url)
-						sysset
-						sleep 2
+						open_sysset_page
 						domain
 						sleep 2
 				end

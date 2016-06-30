@@ -25,8 +25,7 @@ testsuite {
 				@browser.driver.manage.timeouts.implicit_wait = 2 # seconds
 				rs                                            = @browser.assert_exists
 				assert(rs, "´ò¿ªä¯ÀÀÆ÷Ê§°Ü£¡")
-
-				rs_login = login_recover(@browser, @ts_default_ip)
+				rs_login = login_recover(@browser, @ts_powerip, @ts_default_ip)
 				assert(rs_login, "Â·ÓÉÆ÷µÇÂ¼Ê§°Ü£¡")
 
 				#"\u7CFB\u7EDF\u7248\u672C\uFF1A V100R003SPC010 MAC\uFF1A00:0C:43:76:20:66"

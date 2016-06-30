@@ -1,3 +1,4 @@
+#encoding:utf-8
 # class LoginPage
 #   include PageObject
 #   page_url "www.baidu.com"
@@ -13,19 +14,20 @@
 
 require 'Page-Object'
 class Baidu_Page
-  include PageObject
-  page_url "www.baidu.com" #¶¨ÒåÁË¸ÃÒ³ÃæµÄurl
-  text_field "keyword", id: "kw" #ÔªËØµÄ¶¨Î»ÓëÃüÃû·½·¨1
-  button(:check, :id => "su") #ÔªËØµÄ¶¨Î»ÓëÃüÃû·½·¨2
+		include PageObject
+		page_url "www.baidu.com" #å®šä¹‰äº†è¯¥é¡µé¢çš„url
+		text_field "keyword", id: "kw" #å…ƒç´ çš„å®šä½ä¸å‘½åæ–¹æ³•1
+		button(:check, :id => "su") #å…ƒç´ çš„å®šä½ä¸å‘½åæ–¹æ³•2
 end
 
-require 'watir-webdriver'
-# require_relative 'baidu_page' # requireÄ¬ÈÏ¼ÓÔØlibÏÂµÄ£¬Èç¹ûÒª¼ÓÔØÆäËûÎÄ¼ş¼ĞµÄ¿ÉÒÔÊ¹ÓÃrequire_relative
-class Test
-  browser=Watir::Browser.new :firefox
-  page= Baidu_Page.new(browser,true) #ÕâÀïÊÇpage-objectµÄ³õÊ¼»¯·½·¨´«ËÍÒ»¸ö#browserµÄ¶ÔÏó£¬ÈôÎªtrueÇÒ¸ÃpageÀàÖĞpage_url´æÔÚÖµ£¬Ôò³õÊ¼»¯µÄÍ¬Ê±Í¨¹ıbrowser
-  #È¥·ÃÎÊpage_url¡£Ò²¿ÉÒÔpage= Baidu_Page.new(browser)£¬È»ºóÍ¨¹ıÏÂ·½×¢ÊÍÄÇÖÖÈ¥·ÃÎÊ#URL¡£
-  #page.navigate_to 'www.baidu.com'
-  page.keyword='sb'
-  page.check
-end
+# require 'watir-webdriver'
+# require_relative 'baidu_page' # requireé»˜è®¤åŠ è½½libä¸‹çš„ï¼Œå¦‚æœè¦åŠ è½½å…¶ä»–æ–‡ä»¶å¤¹çš„å¯ä»¥ä½¿ç”¨require_relative
+# class Test
+browser     = Watir::Browser.new :firefox
+page        = Baidu_Page.new(browser, true) #è¿™é‡Œæ˜¯page-objectçš„åˆå§‹åŒ–æ–¹æ³•ä¼ é€ä¸€ä¸ª#browserçš„å¯¹è±¡ï¼Œè‹¥ä¸ºtrueä¸”è¯¥pageç±»ä¸­page_urlå­˜åœ¨å€¼ï¼Œåˆ™åˆå§‹åŒ–çš„åŒæ—¶é€šè¿‡browser
+#å»è®¿é—®page_urlã€‚ä¹Ÿå¯ä»¥page= Baidu_Page.new(browser)ï¼Œç„¶åé€šè¿‡ä¸‹æ–¹æ³¨é‡Šé‚£ç§å»è®¿é—®#URLã€‚
+#page.navigate_to 'www.baidu.com'
+page.keyword='sb'
+page.check
+# end
+

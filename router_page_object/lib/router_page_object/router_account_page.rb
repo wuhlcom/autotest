@@ -24,12 +24,16 @@ module RouterPageObject
 						self.refresh
 						sleep 2
 						5.times do
-								break if dev_list? && !(dev_list_element.parent.em_element.text.nil?)
+								if advance? && !(sys_version.slice(/系统版本:(.+)/, 1).nil?)
+										self.acount_config
+										sleep 3
+										break if pwconfirm?
+								end
+								self.clear_cookies
 								self.refresh
 								sleep 2
+								login_with(@@ts_default_usr, @@ts_default_pw, url)
 						end
-						self.acount_config
-						sleep 3
 				end
 
 				#关闭模式界面

@@ -41,6 +41,10 @@ testcase {
 			# 	flag = (errinfo=~/#{@tc_usr_pw_err}|#{@tc_usr_pw_null}/)
 			# 	assert(flag, "输入错误帐户或密码登录成功了！")
 			# end
+				puts
+				puts "ZLBF_21.1.36"
+				puts
+				assert(true)
 		}
 	end
 	

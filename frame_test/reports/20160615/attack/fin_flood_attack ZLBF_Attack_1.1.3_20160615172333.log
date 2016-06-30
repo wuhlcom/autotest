@@ -1,0 +1,22 @@
+[2016-06-15 17:23:33] 1 ÉèÖÃÍâÍøDHCP½ÓÈë
+
+ZLBF_Attack_1.1.3
+
+[32m.[0m  test_fin_flood_attack ZLBF_Attack_1.1.3                        [32m PASS[0m (0.01s)
+
+                     | 0.03 s
+Slowest tests:
+0.01 s	Frame::WebTestAttack#test_fin_flood_attack ZLBF_Attack_1.1.3
+0.01 s	Frame::WebTestSystem#test_×¢Ïú¹¦ÄÜ²âÊÔ ZLBF_21.1.74
+0.01 s	Frame::WebTestAttack#test_arp_reply_attack ZLBF_Attack_1.1.1
+0.01 s	Frame::WebTestAttack#test_arp_request_attack ZLBF_Attack_1.1.2
+0.00 s	Frame::WebTestSystem#test_µÇÂ¼¹¦ÄÜ²âÊÔ ZLBF_21.1.36
+0.00 s	Frame::WebTestSystem#test_Ä¬ÈÏÃÜÂë²âÊÔ ZLBF_21.1.49
+Slowest suites:
+0.02 s	Frame::WebTestAttack
+0.01 s	Frame::WebTestSystem
+
+Finished in 0.09111s
+6 tests, 7 assertions, [31m1 failures, 0 errors, [0m[33m0 skips[0m
+Writing HTML reports to E:/autotest/frame_test/html_reports/20160615
+Writing XML reports to E:/autotest/frame_test/reports/20160615

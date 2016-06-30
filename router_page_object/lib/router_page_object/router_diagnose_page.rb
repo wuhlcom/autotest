@@ -28,8 +28,8 @@ module RouterPageObject
 				#初始化页面为诊断页面
 				def initialize_diag(browserobj, detect_time=60)
 						@browserobj  =browserobj
-						main_page = MainPage.new(@browserobj)
-						main_page.netdect_page
+						self.refresh
+						self.netdect_page
 						router_diaging="路由器正在检测中"
 						puts "sleeping #{detect_time} seconds for diagnose..."
 						sleep detect_time
@@ -38,7 +38,6 @@ module RouterPageObject
 						#通过句柄来切换不同的windows窗口
 						@browserobj.driver.switch_to.window(@tc_handles[1])
 						sleep 2
-						# self.navigate_to(@browserobj.url)
 				end
 
 				#切换页面

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Frame::WebTestSystem" skipped="0" failures="0" errors="0" tests="3" assertions="4" time="0.02019030000155908">
+  <testcase name="test_默认密码测试 ZLBF_21.1.49" classname="Frame::WebTestSystem" assertions="1" time="0.011632941001153085">
+  </testcase>
+  <testcase name="test_登录功能测试 ZLBF_21.1.36" classname="Frame::WebTestSystem" assertions="1" time="0.003735734000656521">
+  </testcase>
+  <testcase name="test_注销功能测试 ZLBF_21.1.74" classname="Frame::WebTestSystem" assertions="2" time="0.004821624999749474">
+  </testcase>
+</testsuite>

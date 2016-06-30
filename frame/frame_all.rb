@@ -29,4 +29,5 @@ ensure
 		load "#{curr_path}/frame_backup.rb"
 		load "#{curr_path}/frame_reset.rb"
 		load "#{curr_path}/frame_apmode.rb"
+		load "#{curr_path}/frame_attack.rb"
 end

@@ -133,12 +133,16 @@ module RouterPageObject
 						self.refresh
 						sleep 2
 						5.times do
-								break if dev_list? && !(dev_list_element.parent.em_element.text.nil?)
+								if advance? && !(sys_version.slice(/系统版本:(.+)/, 1).nil?)
+										self.wifi_span_obj.click
+										sleep 8
+										break if wifi_basic?
+								end
+								self.clear_cookies
 								self.refresh
 								sleep 2
+								login_with(@@ts_default_usr, @@ts_default_pw, url)
 						end
-						self.wifi_span_obj.click
-						sleep 8
 				end
 
 				#关闭无线设置界面

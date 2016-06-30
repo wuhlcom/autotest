@@ -30,8 +30,8 @@ module RouterPageObject
 				#初始化页面为诊断页面
 				def initialize_diagadv(browserobj, detect_time=60)
 						@browserobj  =browserobj
-						main_page = MainPage.new(@browserobj)
-						main_page.netdect_page
+						self.refresh
+						self.netdect_page
 						#得个@browserobj对象下各个窗口对象的句柄对象
 						tc_handles = @browserobj.driver.window_handles
 						#通过句柄来切换不同的windows窗口

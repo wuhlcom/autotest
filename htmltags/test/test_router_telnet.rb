@@ -35,7 +35,7 @@ class MyTestRouterTelnet < MiniTest::Unit::TestCase
 				ip = "192.168.100.1"
 				telnet_init(ip, user="root", password="zl4321")
 				# telnet_send_cmd("firstboot")
-				# sleep 1
+				#  sleep 1
 				# telnet_send_cmd("y")
 				# sleep 1
 				t1 = Time.now
@@ -43,9 +43,6 @@ class MyTestRouterTelnet < MiniTest::Unit::TestCase
 				t2 = Time.now
 				p t2-t1
 				p "1111"
-				# p exp_run_time(cmd="uptime")
-				# init_router_obj(ip, usr="root", pw="zl4321")
-				# p get_router_uptime(timeout=10)
 		end
 
 		def testiwconfig
@@ -55,7 +52,7 @@ class MyTestRouterTelnet < MiniTest::Unit::TestCase
 				p router_iwconfig()
 		end
 
-		def test_ifconfig
+		def testifconfig
 				ip   = "192.168.100.1"
 				intf = "eth0.22"
 				init_router_obj(ip, usr="root", pw="zl4321")
@@ -78,6 +75,14 @@ class MyTestRouterTelnet < MiniTest::Unit::TestCase
 				# 		/Ethernet\s+HWaddr\s+(?<mac>[\d+|a-f]{2}:[\d+|a-f]{2}:[\d+|a-f]{2}:[\d+|a-f]{2}:[\d+|a-f]{2}:[\d+|a-f]{2})/i=~str
 				# 		p wan_info[:mac]=mac
 				# end
+		end
+
+		def test_ps
+				# udhcpc、udhcpd、lighttpd、dnsmasq、ntpd
+				ip   = "192.168.100.1"
+				init_router_obj(ip, usr="root", pw="zl4321")
+				rs = router_attack_ps("xxx")
+				p rs
 		end
 
 end

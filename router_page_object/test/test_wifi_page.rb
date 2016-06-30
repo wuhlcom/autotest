@@ -17,8 +17,12 @@ class Test<MiniTest::Unit::TestCase
 				#登录
 				@wifi_page.login_with(usrname, passwd, url)
 				@wifi_page.open_wifi_page(@browser.url)
-				@wifi_page.close_wifi_page
+				# @wifi_page.close_wifi_page
 				# @wifi_page.select_wifi_basic
 				# # @wifi_page.select_2g_set
+
+				p @wifi_page.ssid1_sw
+				@wifi_page.ssid2_sw="ON"
+
 		end
 end

@@ -29,8 +29,8 @@ module RouterPageObject
 
 				#判断登录界面是否存在
 				def login_with_exists(url)
-						self.navigate_to url
-						sleep 1
+						# self.navigate_to url
+						# sleep 1
 						username_element.exists?
 				end
 		end

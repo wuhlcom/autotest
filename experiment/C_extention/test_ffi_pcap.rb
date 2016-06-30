@@ -1,7 +1,7 @@
 # Examples
 # Reading ICMP packets from a live interface.
 require 'ffi/pcap'
-pcap = FFI::PCap::Live.new(:dev     => '\\Device\\NPF_{C3FC08EA-71A1-4DE5-957F-4B9648D96562}',
+p pcap = FFI::PCap::Live.new(:dev     => '\\Device\\NPF_{C3FC08EA-71A1-4DE5-957F-4B9648D96562}',
                            :timeout => 1,
                            :promisc => true,
                            :handler => FFI::PCap::Handler)
@@ -25,7 +25,7 @@ end
 
 # Replaying packets from a pcap dump file on a live interface:
 
-live = FFI::PCap::Live.new(:device => '\\Device\\NPF_{C3FC08EA-71A1-4DE5-957F-4B9648D96562}')
+p live = FFI::PCap::Live.new(:device => '\\Device\\NPF_{C3FC08EA-71A1-4DE5-957F-4B9648D96562}')
 # offline = FFI::PCap::Offline.new("./foo.cap")
 #
 # if live.datalink == offline.datalink

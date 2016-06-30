@@ -63,14 +63,23 @@ require 'fileutils'
 # p file_name = File.basename(@ts_ftp_srv_file, ".*")
 # Dir.glob("#{file_dir}/*") { |filename|
 # 	filename=~/#{file_name}/ && FileUtils.rm_f(filename) #rm_rf要慎用
-# }
-p __FILE__
-p File.dirname(__FILE__)
-# p File.expand_path("../../../bin", File.dirname(__FILE__))
+# # }
+# p __FILE__
+#  File.dirname(__FILE__)
+# # p File.expand_path("../../../bin", File.dirname(__FILE__))
 # p File.expand_path("../../bin", File.dirname(__FILE__))
 # p File.expand_path(".../bin", File.dirname(__FILE__))
-p File.expand_path("../bin", File.dirname(__FILE__))
-p File.expand_path("./bin", File.dirname(__FILE__))
+# p File.expand_path("../bin", File.dirname(__FILE__))
+# p File.expand_path("./bin", File.dirname(__FILE__))
 # p File.expand_path("/bin", File.dirname(__FILE__))
 # p File.expand_path("../../bin", "/tmp/x")   #=> "/bin"
 # p Dir.glob(File.dirname(__FILE__)+"/*")
+dir = "D:\\webdownloads\\config"
+unless File.exists?(dir)
+		File.mkdir dir
+end
+p path = dir.gsub("\\","\/")+"/*"
+p files = Dir.glob(path)
+# FileUtils.rm files
+filename = "222"
+filename=~/222/ && FileUtils.rm(files) #ujtf

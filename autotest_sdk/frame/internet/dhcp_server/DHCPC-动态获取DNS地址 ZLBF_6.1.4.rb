@@ -16,9 +16,8 @@ testcase {
 
 				operate("1 打开外网连接设置") {
 				}
-
-				operate("2 设置外网连接方式") {
-				}
+				# operate("2 设置外网连接方式") {
+				# }
 				operate("3 设置外网DHCP接入") {
 						#查看WAN接入方式是否为DHCP
 						@browser.span(id: @ts_tag_status).wait_until_present(@tc_wait_time)

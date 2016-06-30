@@ -7,8 +7,12 @@ class MiniTest_test < MiniTest::Unit::TestCase
 # to set up fixture information.
 		i_suck_and_my_tests_are_order_dependent!
 
+		def before_setup
+				p "#{__method__.to_s}"
+		end
+
 		def setup
-				# Do nothing
+				p "#{__method__.to_s}"
 		end
 
 		def test_2
@@ -41,7 +45,7 @@ class MiniTest_test < MiniTest::Unit::TestCase
 		# down fixture information.
 
 		def teardown
-				# Do nothing
+				p "#{__method__.to_s}"
 		end
 
 # Fake ftp_test

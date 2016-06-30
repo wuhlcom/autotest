@@ -8,10 +8,10 @@ module TestTool
 
         #将用例存入excel中
         def write_excel(excel_file_dir, excel_name, excel_sheet)
-            excel_path    = excel_file_dir+"/#{excel_name}" #excel存放路径
-            creater = TestTool::CreateExcel.new(excel_path, excel_sheet, false)
+            excel_path = excel_file_dir+"/#{excel_name}" #excel存放路径
+            creater    = TestTool::CreateExcel.new(excel_path, excel_sheet, false)
             begin
-                args    = {
+                args = {
                     :index   => 1,
                     :xml_dir => excel_sheet,
                 }
@@ -29,10 +29,10 @@ module TestTool
         #得到需执行的脚本用例，即excel中是否执行字段为"Y"的用例
         def get_execute_tcs(excel_file_dir, excel_name, excel_sheet)
             execute_arr = []
-            excel_path    = excel_file_dir+"/#{excel_name}" #excel存放路径
-            creater        = TestTool::CreateExcel.new(excel_path, excel_sheet, false)
+            excel_path  = excel_file_dir+"/#{excel_name}" #excel存放路径
+            creater     = TestTool::CreateExcel.new(excel_path, excel_sheet, false)
             begin
-                args = {
+                args        = {
                     :index   => 1,
                     :xml_dir => excel_sheet,
                 }
@@ -58,16 +58,23 @@ module TestTool
                 obj.change_tc_auto_byname(key, value, "y", xml)
             end
         end
+
+        #获取所有NG的日志
+        def ng_excel(log_dir)
+            current        = File.expand_path("./reports/#{log_dir}")
+            xml_path_arr   = Dir.glob("#{current}/*.xml")
+            failures_log   = TestTool::XML.get_failure(xml_path_arr)
+        end
     end
 end
 
 if __FILE__ ==$0
+    xml_obj  = TestTool::ExcelToXml.new
+
     excel_sheet    = "用例" #excel的sheet名
     excel_file     = "excel_switch_xml"
     excel_name     = "#{excel_file}.xlsx" #excel文件名
     excel_file_dir = File.dirname(File.expand_path(__FILE__))
-
-    xml_obj = TestTool::ExcelToXml.new
     # xml_obj.write_excel(excel_file_dir, excel_name, excel_sheet)
     tc_names = xml_obj.get_execute_tcs(excel_file_dir, excel_name, excel_sheet)
     xml_obj.excel_switch_xml(tc_names)

@@ -82,6 +82,8 @@ module RouterPageObject
 						paragraph(:mac_filter_err_msg, id: @@ts_tag_err_msg, frame: frame) #mac过滤错误提示
 						div(:mac_items_max, class_name: @@ts_tag_aui_content, frame: frame) #条目超出限制提示
 						link(:mac_hint_close, class_name: @@ts_ip_hint_close, frame: frame) #关闭提示信息
+						div(:edit_mac, id: @@ts_tag_edit_mac, frame: frame) #用于判断mac编辑界面是否隐藏
+						div(:mac_display, id: @@ts_tag_mac_display, frame: frame) #用于判断mac过滤界面是否隐藏
 				end
 		end
 
@@ -152,13 +154,25 @@ module RouterPageObject
 				def mac_filter_save(time=6)
 						self.mac_save
 						sleep time
+						if edit_mac_element.element.style !~ /none/ #防止因点击失败而导致脚本NG
+								self.mac_save
+								sleep time
+						end
 				end
+
+				#打开安全设置页面
+				 def open_security_page
+						 3.times do
+								 security_settings #安全设置
+								 sleep 3
+								 break if firewall?
+						 end
+				 end
 
 				#mac过滤，关闭总开关并删除所有过滤规则步骤
 				def macfilter_close_sw_del_all(url)
 						open_options_page(url)
-						security_settings #安全设置
-						sleep 2
+						open_security_page
 						firewall_click
 						open_switch("on", "off", "on", "off")
 						macfilter_click
@@ -266,8 +280,7 @@ module RouterPageObject
 				#url过滤关闭总开关并删除所有规则步骤
 				def urlfilter_close_sw_del_all_step(url)
 						open_options_page(url)
-						security_settings #安全设置
-						sleep 2
+						open_security_page
 						firewall_click
 						open_switch("on", "off", "off", "on")
 						urlfilter_click
@@ -366,8 +379,7 @@ module RouterPageObject
 				#ip过滤关闭总开关并删除所有条目步骤
 				def ipfilter_close_sw_del_all_step(url)
 						open_options_page(url)
-						security_settings #安全设置
-						sleep 3
+						open_security_page
 						firewall_click
 						open_switch("on", "on", "off", "off")
 						ipfilter_click #ip过滤
@@ -380,13 +392,18 @@ module RouterPageObject
 				#打开高级设置-进入安全设置
 				def open_security_page_step(url)
 						open_options_page(url)
-						security_settings #安全设置
-						sleep 2
+						open_security_page
 				end
 
 				#点击添加MAC规则
 				def mac_filter_add
 						self.mac_add_item_element.click
+						sleep 1
+						if edit_mac_element.element.style =~ /none/ #如果点击新增按钮后，未进入编辑界面，则再点击新增按钮一次
+								mac_hint_close if mac_hint_close? #如果出现提示信息，关闭之，用于超出规则条目限制时
+								self.mac_add_item_element.click
+								sleep 1
+						end
 				end
 
 		end

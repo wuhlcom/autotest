@@ -64,6 +64,27 @@ module TestTool
 						@range.value
 				end
 
+				#设置单元格，行，列的值
+				#params
+				# -args,string;"11"
+				#samples
+				# worksheet.Range('e2')['Value']= Time.now.strftime '%d/%m/%Y' #单个值
+				# worksheet.Range('a5:c5')['Value'] = ['Test', '25', 'result'] #将一个数组写入
+				# obj.set_range("11")
+				def set_range(args)
+						@range.value = args
+				end
+
+				# workbook.SaveAs'myfile.xls'
+				def saveas_workbook(file)
+						file_path = file.gsub("\/", "\\\\")
+						if @workbook.nil?
+								fail "excel workbook obj is nil"
+						else
+								@workbook.saveas(file_path)
+						end
+				end
+
 				# workbook.close#关闭
 				def close_workbook
 						@workbook.close

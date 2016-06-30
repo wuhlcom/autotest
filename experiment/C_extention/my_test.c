@@ -1,3 +1,13 @@
+/*class MyTest
+  def initialize
+    @arr=Array.new
+  end
+
+  def add(obj)
+    @arr.push(obj)
+  end
+end*/
+
 ##include "ruby.h"
 static int id_push;
 static VALUE t_init(VALUE self)

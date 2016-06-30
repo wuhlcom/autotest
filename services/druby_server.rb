@@ -111,6 +111,7 @@ class Wlan
         return ip_status
     end
 
+    #扫描网络一次
     def scan_network_once(ssid_name, nicname="wireless")
         puts "method_name:#{__method__.to_s}"
         ssid_hash ={}
@@ -120,6 +121,11 @@ class Wlan
             ssid_hash = networks[nicname][ssid_name]
         end
         {:flag => ssid_find, :ssid_hash => ssid_hash}
+    end
+
+    #启用、禁用网卡
+    def ss_network_card(nic_name, state)
+        netsh_if_setif_admin(nic_name, state)
     end
 
     def scan_network(ssid_name, nicname="wireless")
@@ -217,7 +223,7 @@ class Wlan
                 add_new_connection(rs[:ssid_hash], ssid_name, passwd, passwd_profile, nicname, dlink_a1)
             end
         else
-            fail("Can't find wifi ssid:#{ssid_name} !")
+            fail("Can't find wifi ssid:#{ssid_name}")
         end
     end
 

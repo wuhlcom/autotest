@@ -1,0 +1,11 @@
+[2016-06-28 11:57:10] 1 Ĭ���������
+
+ZLBF_21.1.34
+
+
+Frame::WebTestSystem | .
+##teamcity[testFinished name = 'test_默认密码测试 ZLBF_21.1.49' duration = '26' timestamp = '2016-06-28T11:57:10.313+0800']
+"111111111111111111"
+Frame::WebTestSystem
+
+##teamcity[testStarted name = 'test_登录功能测试 ZLBF_21.1.36' captureStandardOutput = 'true' locationHint = 'ruby_minitest_qn://Frame::WebTestSystem.test_登录功能测试 ZLBF_21.1.36' timestamp = '2016-06-28T11:57:10.315+0800']

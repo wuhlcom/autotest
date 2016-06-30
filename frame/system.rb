@@ -8,7 +8,7 @@ testsuite {
 		rs = @browser.assert_exists
 		assert(rs, "´ò¿ªä¯ÀÀÆ÷Ê§°Ü£¡")
 		unless ping(@ts_default_ip)
-			rs_login = login_recover(@browser, @ts_default_ip)
+			rs_login = login_recover(@browser, @ts_powerip, @ts_default_ip)
 			if rs_login
 				@browser.close
 				@browser = Watir::Browser.new :ff, :profile => "default"

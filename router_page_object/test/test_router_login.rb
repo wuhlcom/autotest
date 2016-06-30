@@ -14,19 +14,10 @@ class Test<MiniTest::Unit::TestCase
 				@browser = Watir::Browser.new :firefox, :profile => "default"
 				# @browser.cookies.clear
 				login_router = RouterPageObject::LoginPage.new(@browser)
-
-				dir       = File.dirname(__FILE__)
-				image_dir = "#{dir}/image"
-				unless File.exists?(image_dir)
-						Dir.mkdir(image_dir)
-				end
-
 				#登录
-				# image_path = "#{image_dir}/login.png"
-				# login_router.save_screenshot(image_path)
 				login_router.login_with(usrname, passwd, url)
-				# image_path = "#{image_dir}/login2.png"
-				# login_router.save_screenshot(image_path)
+				login_router.clear_cookies
+				login_router.refresh
 		end
 
 end

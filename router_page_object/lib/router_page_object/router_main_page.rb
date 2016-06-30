@@ -34,6 +34,7 @@ module RouterPageObject
 				link(:acount_config, id: @@ts_tag_modify_pw)#账户管理
 				span(:macinfo, id: @@ts_tag_systemver)
 				span(:dev_list, class_name: @@ts_tag_devlist) #已连接设备列表
+				span(:sys_version, id: @@ts_tag_systemver) #系统版本
 		end
 
 		class MainPage<LoginPage
@@ -68,6 +69,8 @@ module RouterPageObject
 				end
 
 				def reboot(time=120)
+						self.refresh
+						sleep 2
 						self.reboot_element.click
 						sleep 2
 						self.reboot_confirm

@@ -1,0 +1,320 @@
+[2016-06-15 18:33:28] 1 ÉèÖÃÍâÍøDHCP½ÓÈë
+
+ZLBF_Attack_1.1.3
+
+[32m.[0m  test_fin_flood_attack ZLBF_Attack_1.1.3                        [32m PASS[0m (0.01s)
+
+                     | 0.03 s
+Slowest tests:
+0.03 s	Frame::WebTestSystem#test_×¢Ïú¹¦ÄÜ²âÊÔ ZLBF_21.1.74
+0.01 s	Frame::WebTestAttack#test_fin_flood_attack ZLBF_Attack_1.1.3
+0.01 s	Frame::WebTestAttack#test_arp_request_attack ZLBF_Attack_1.1.2
+0.00 s	Frame::WebTestAttack#test_arp_reply_attack ZLBF_Attack_1.1.1
+0.00 s	Frame::WebTestSystem#test_µÇÂ¼¹¦ÄÜ²âÊÔ ZLBF_21.1.36
+0.00 s	Frame::WebTestSystem#test_Ä¬ÈÏÃÜÂë²âÊÔ ZLBF_21.1.49
+Slowest suites:
+0.03 s	Frame::WebTestSystem
+0.02 s	Frame::WebTestAttack
+
+Finished in 0.11224s
+6 tests, 7 assertions, [31m1 failures, 0 errors, [0m[33m0 skips[0m
+Writing HTML reports to E:/autotest/frame_test/html_reports/20160615
+There was an error writing the HTML report
+This may have been caused by cancelling the test run
+Use mode => :terse in the HTML reporters constructor to see less detail
+C:/Ruby23-x64/lib/ruby/2.3.0/erb.rb:864:in `eval'C:/Ruby23-x64/lib/ruby/2.3.0/erb.rb:864:in `eval'
+: : 
+(erb):17: unmatched close parenthesis: /count)  ).to_s); _erbout.concat "\n          <!--<\\%= '\xC6\xBD\xBE\xF9\xB6\xCF\xD1\xD4\xCB\xD9\xC2\xCA %.2f assertions/(erb):17: unmatched close parenthesis: /count)  ).to_s); _erbout.concat "\n          <!--<\\%= '\xC6\xBD\xBE\xF9\xB6\xCF\xD1\xD4\xCB\xD9\xC2\xCA %.2f assertions/
+ ( (
+SyntaxErrorSyntaxError
+)
+)
+(erb):17: syntax error, unexpected tSTRING_BEG, expecting ')'
+...\xD9\xC2\xCA %.2f assertions/s' % (assertions / total_time) ...
+...                               ^
+(erb):23: syntax error, unexpected tIDENTIFIER, expecting ')'
+; _erbout.concat(( 'text-info' if (failures == 0 && e...
+                        ^
+(erb):23: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+; _erbout.concat(( 'text-info' if (failures == 0 && errors ...
+                              ^
+(erb):23: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...CA\xFD:"; _erbout.concat(( '%d' % count ).to_s); _erbout.con...
+...                               ^
+(erb):24: syntax error, unexpected tIDENTIFIER, expecting ')'
+; _erbout.concat(( 'text-info' if (failures == 0 && e...
+                        ^
+(erb):24: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+; _erbout.concat(( 'text-info' if (failures == 0 && errors ...
+                              ^
+(erb):24: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...CA\xFD:"; _erbout.concat(( '%d' % passes ).to_s); _erbout.co...
+...                               ^
+(erb):25: syntax error, unexpected tIDENTIFIER, expecting ')'
+; _erbout.concat(( 'text-danger' if failures > 0 ).to...
+                        ^
+(erb):25: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+... _erbout.concat(( 'text-danger' if failures > 0 ).to_s); _er...
+...                               ^
+(erb):25: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...CA\xFD:"; _erbout.concat(( '%d' % failures ).to_s); _erbout....
+...                               ^
+(erb):26: syntax error, unexpected tIDENTIFIER, expecting ')'
+; _erbout.concat(( 'text-danger' if errors > 0 ).to_s...
+                        ^
+(erb):26: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+... _erbout.concat(( 'text-danger' if errors > 0 ).to_s); _erbo...
+...                               ^
+(erb):26: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...CA\xFD:"; _erbout.concat(( '%d' % errors ).to_s); _erbout.co...
+...                               ^
+(erb):27: syntax error, unexpected tIDENTIFIER, expecting ')'
+; _erbout.concat(( 'text-warning' if skips > 0 ).to_s...
+                        ^
+(erb):27: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+..._erbout.concat(( 'text-warning' if skips > 0 ).to_s); _erbou...
+...                               ^
+(erb):27: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...CA\xFD:"; _erbout.concat(( '%d' % skips ).to_s); _erbout.con...
+...                               ^
+(erb):27: syntax error, unexpected tIDENTIFIER, expecting ')'
+...  <!--<span class=\"<\\%= 'text-info' if (failures == 0 && e...
+...                               ^
+(erb):27: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...<span class=\"<\\%= 'text-info' if (failures == 0 && errors ...
+...                               ^
+(erb):27: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...CF\xD1\xD4\xCA\xFD:\\<\\%= '%d' % assertions %></span>-->\n ...
+...                               ^
+(erb):34: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+; _erbout.concat(( '%d' % percent_passes ).to_s); _e...
+                       ^
+(erb):37: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+; _erbout.concat(( '%d' % percent_errors_failures )....
+                       ^
+(erb):40: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+; _erbout.concat(( '%d' % percent_skipps ).to_s); _e...
+                       ^
+(erb):51: syntax error, unexpected tIDENTIFIER, expecting ')'
+; _erbout.concat(( 'text-info' if (suite[:fail_count]...
+                        ^
+(erb):51: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+; _erbout.concat(( 'text-info' if (suite[:fail_count] == 0 ...
+                              ^
+(erb):51: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...xA3\xBA"; _erbout.concat(( '%d' % suite[:test_count] ).to_s)...
+...                               ^
+(erb):53: syntax error, unexpected tIDENTIFIER, expecting ')'
+; _erbout.concat(( 'text-info' if (suite[:pass_count]...
+                        ^
+(erb):53: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+; _erbout.concat(( 'text-info' if (suite[:pass_count] == 0 ...
+                              ^
+(erb):53: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...xA3\xBA"; _erbout.concat(( '%d' % suite[:pass_count] ).to_s)...
+...                               ^
+(erb):55: syntax error, unexpected tIDENTIFIER, expecting ')'
+; _erbout.concat(( 'text-danger' if suite[:fail_count...
+                        ^
+(erb):55: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+... _erbout.concat(( 'text-danger' if suite[:fail_count] > 0 )....
+...                               ^
+(erb):55: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...xA3\xBA"; _erbout.concat(( '%d' % suite[:fail_count] ).to_s)...
+...                               ^
+(erb):57: syntax error, unexpected tIDENTIFIER, expecting ')'
+; _erbout.concat(( 'text-danger' if suite[:error_coun...
+                        ^
+(erb):57: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+... _erbout.concat(( 'text-danger' if suite[:error_count] > 0 )...
+...                               ^
+(erb):57: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...xA3\xBA"; _erbout.concat(( '%d' % suite[:error_count] ).to_s...
+...                               ^
+(erb):59: syntax error, unexpected tIDENTIFIER, expecting ')'
+; _erbout.concat(( 'text-warning' if suite[:skip_coun...
+                        ^
+(erb):59: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+..._erbout.concat(( 'text-warning' if suite[:skip_count] > 0 )....
+...                               ^
+(erb):59: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...xCA\xFD"; _erbout.concat(( '%d' % suite[:skip_count] ).to_s)...
+...                               ^
+(erb):59: syntax error, unexpected tIDENTIFIER, expecting ')'
+...<!--  <span class=\"<\\%= 'text-info' if (failures == 0 && e...
+...                               ^
+(erb):59: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...<span class=\"<\\%= 'text-info' if (failures == 0 && errors ...
+...                               ^
+(erb):59: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...1\xD4\xCA\xFD\xA3\xBA<\\%= '%d' % suite[:assertion_count] %>...
+...                               ^
+(erb):63: no .<digit> floating literal anymore; put 0 before dot
+; _erbout.concat(( '%.4fs' % suite[:time] ).to_s); ...
+                      ^
+(erb):63: syntax error, unexpected '.'
+; _erbout.concat(( '%.4fs' % suite[:time] ).to_s); ...
+                      ^
+(erb):80: no .<digit> floating literal anymore; put 0 before dot
+...A3\xBA "; _erbout.concat(( ('%.6fs' % test.time) ).to_s); _e...
+...                               ^
+(erb):80: syntax error, unexpected '.'
+...A3\xBA "; _erbout.concat(( ('%.6fs' % test.time) ).to_s); _e...
+...                               ^
+(erb):80: unterminated string meets end of file
+(erb):80: syntax error, unexpected end-of-input, expecting ')'
+; _erbout.force_encoding(__ENCODING__)
+                                      ^(erb):17: syntax error, unexpected tSTRING_BEG, expecting ')'
+...\xD9\xC2\xCA %.2f assertions/s' % (assertions / total_time) ...
+...                               ^
+(erb):23: syntax error, unexpected tIDENTIFIER, expecting ')'
+; _erbout.concat(( 'text-info' if (failures == 0 && e...
+                        ^
+(erb):23: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+; _erbout.concat(( 'text-info' if (failures == 0 && errors ...
+                              ^
+(erb):23: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...CA\xFD:"; _erbout.concat(( '%d' % count ).to_s); _erbout.con...
+...                               ^
+(erb):24: syntax error, unexpected tIDENTIFIER, expecting ')'
+; _erbout.concat(( 'text-info' if (failures == 0 && e...
+                        ^
+(erb):24: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+; _erbout.concat(( 'text-info' if (failures == 0 && errors ...
+                              ^
+(erb):24: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...CA\xFD:"; _erbout.concat(( '%d' % passes ).to_s); _erbout.co...
+...                               ^
+(erb):25: syntax error, unexpected tIDENTIFIER, expecting ')'
+; _erbout.concat(( 'text-danger' if failures > 0 ).to...
+                        ^
+(erb):25: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+... _erbout.concat(( 'text-danger' if failures > 0 ).to_s); _er...
+...                               ^
+(erb):25: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...CA\xFD:"; _erbout.concat(( '%d' % failures ).to_s); _erbout....
+...                               ^
+(erb):26: syntax error, unexpected tIDENTIFIER, expecting ')'
+; _erbout.concat(( 'text-danger' if errors > 0 ).to_s...
+                        ^
+(erb):26: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+... _erbout.concat(( 'text-danger' if errors > 0 ).to_s); _erbo...
+...                               ^
+(erb):26: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...CA\xFD:"; _erbout.concat(( '%d' % errors ).to_s); _erbout.co...
+...                               ^
+(erb):27: syntax error, unexpected tIDENTIFIER, expecting ')'
+; _erbout.concat(( 'text-warning' if skips > 0 ).to_s...
+                        ^
+(erb):27: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+..._erbout.concat(( 'text-warning' if skips > 0 ).to_s); _erbou...
+...                               ^
+(erb):27: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...CA\xFD:"; _erbout.concat(( '%d' % skips ).to_s); _erbout.con...
+...                               ^
+(erb):27: syntax error, unexpected tIDENTIFIER, expecting ')'
+...  <!--<span class=\"<\\%= 'text-info' if (failures == 0 && e...
+...                               ^
+(erb):27: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...<span class=\"<\\%= 'text-info' if (failures == 0 && errors ...
+...                               ^
+(erb):27: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...CF\xD1\xD4\xCA\xFD:\\<\\%= '%d' % assertions %></span>-->\n ...
+...                               ^
+(erb):34: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+; _erbout.concat(( '%d' % percent_passes ).to_s); _e...
+                       ^
+(erb):37: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+; _erbout.concat(( '%d' % percent_errors_failures )....
+                       ^
+(erb):40: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+; _erbout.concat(( '%d' % percent_skipps ).to_s); _e...
+                       ^
+(erb):51: syntax error, unexpected tIDENTIFIER, expecting ')'
+; _erbout.concat(( 'text-info' if (suite[:fail_count]...
+                        ^
+(erb):51: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+; _erbout.concat(( 'text-info' if (suite[:fail_count] == 0 ...
+                              ^
+(erb):51: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...xA3\xBA"; _erbout.concat(( '%d' % suite[:test_count] ).to_s)...
+...                               ^
+(erb):53: syntax error, unexpected tIDENTIFIER, expecting ')'
+; _erbout.concat(( 'text-info' if (suite[:pass_count]...
+                        ^
+(erb):53: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+; _erbout.concat(( 'text-info' if (suite[:pass_count] == 0 ...
+                              ^
+(erb):53: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...xA3\xBA"; _erbout.concat(( '%d' % suite[:pass_count] ).to_s)...
+...                               ^
+(erb):55: syntax error, unexpected tIDENTIFIER, expecting ')'
+; _erbout.concat(( 'text-danger' if suite[:fail_count...
+                        ^
+(erb):55: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+... _erbout.concat(( 'text-danger' if suite[:fail_count] > 0 )....
+...                               ^
+(erb):55: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...xA3\xBA"; _erbout.concat(( '%d' % suite[:fail_count] ).to_s)...
+...                               ^
+(erb):57: syntax error, unexpected tIDENTIFIER, expecting ')'
+; _erbout.concat(( 'text-danger' if suite[:error_coun...
+                        ^
+(erb):57: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+... _erbout.concat(( 'text-danger' if suite[:error_count] > 0 )...
+...                               ^
+(erb):57: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...xA3\xBA"; _erbout.concat(( '%d' % suite[:error_count] ).to_s...
+...                               ^
+(erb):59: syntax error, unexpected tIDENTIFIER, expecting ')'
+; _erbout.concat(( 'text-warning' if suite[:skip_coun...
+                        ^
+(erb):59: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+..._erbout.concat(( 'text-warning' if suite[:skip_count] > 0 )....
+...                               ^
+(erb):59: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...xCA\xFD"; _erbout.concat(( '%d' % suite[:skip_count] ).to_s)...
+...                               ^
+(erb):59: syntax error, unexpected tIDENTIFIER, expecting ')'
+...<!--  <span class=\"<\\%= 'text-info' if (failures == 0 && e...
+...                               ^
+(erb):59: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...<span class=\"<\\%= 'text-info' if (failures == 0 && errors ...
+...                               ^
+(erb):59: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...1\xD4\xCA\xFD\xA3\xBA<\\%= '%d' % suite[:assertion_count] %>...
+...                               ^
+(erb):63: no .<digit> floating literal anymore; put 0 before dot
+; _erbout.concat(( '%.4fs' % suite[:time] ).to_s); ...
+                      ^
+(erb):63: syntax error, unexpected '.'
+; _erbout.concat(( '%.4fs' % suite[:time] ).to_s); ...
+                      ^
+(erb):80: no .<digit> floating literal anymore; put 0 before dot
+...A3\xBA "; _erbout.concat(( ('%.6fs' % test.time) ).to_s); _e...
+...                               ^
+(erb):80: syntax error, unexpected '.'
+...A3\xBA "; _erbout.concat(( ('%.6fs' % test.time) ).to_s); _e...
+...                               ^
+(erb):80: unterminated string meets end of file
+(erb):80: syntax error, unexpected end-of-input, expecting ')'
+; _erbout.force_encoding(__ENCODING__)
+                                      ^
+
+
+	from C:/Ruby23-x64/lib/ruby/2.3.0/erb.rb:864:in `result'
+	from C:/Ruby23-x64/lib/ruby/2.3.0/erb.rb:864:in `result'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-reporters-1.1.9/lib/minitest/reporters/html_reporter.rb:100:in `report'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-reporters-1.1.9/lib/minitest/reporters/html_reporter.rb:100:in `report'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-reporters-1.1.9/lib/minitest/minitest_reporter_plugin.rb:26:in `each'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-reporters-1.1.9/lib/minitest/minitest_reporter_plugin.rb:26:in `each'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-reporters-1.1.9/lib/minitest/minitest_reporter_plugin.rb:26:in `report'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-reporters-1.1.9/lib/minitest/minitest_reporter_plugin.rb:26:in `report'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:658:in `each'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:658:in `each'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:658:in `report'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:658:in `report'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:140:in `run'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:140:in `run'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:62:in `block in autorun'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:62:in `block in autorun'

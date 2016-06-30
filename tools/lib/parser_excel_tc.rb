@@ -49,7 +49,7 @@ begin
 		#合并两个数组
 		tc_name_arr = rs1[:tc_name_arr]+rs2[:tc_name_arr]+rs3[:tc_name_arr]+rs4[:tc_name_arr]+rs5[:tc_name_arr]
 		#将用例名保存在txt文件中，GBK字符串排序
-		tc_name_arr.sort.each do |tc|
+		tc_name_arr.sort.each do |tc| #保存所有脚本名到文件
 				excel_tc.puts tc
 		end
 rescue => ex

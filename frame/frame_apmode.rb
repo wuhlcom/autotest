@@ -38,7 +38,6 @@ module Frame
 				tcs_el = @ts_el.elements["TestCases"]
 				tc_el  = tcs_el.elements.each("TestCase") { |tc|
 						tc_name = tc.elements["name"].text
-						# next if tc_name=~/中继|桥|3G|4G|APN|升|Repeater|Bridge/i #中继的暂不执行 2015-10-19
 						tc_path     = tc.elements["path"].text
 						tc_abs_path = File.absolute_path(tc_path, __FILE__)
 						tc_file     = tc_abs_path+"/"+tc_name+".rb"

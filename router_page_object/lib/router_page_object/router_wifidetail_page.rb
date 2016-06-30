@@ -118,8 +118,17 @@ module RouterPageObject
 				include WIFI_Detail
 				#打开WIFI详细信息页面
 				def open_wifidetail_page(url)
-						get_more_obj(url).click
-						sleep 8
+						open_systatus_page(url)
+						more_obj
+				end
+
+				#"更多"超链接对象
+				def more_obj
+						3.times do
+								self.wifi_info_element.link_element.click #link_element返回h3下的超链接对象
+								sleep 3
+								break if detail_title?
+						end
 				end
 
 				#table obj

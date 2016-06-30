@@ -13,11 +13,22 @@ class Test<MiniTest::Unit::TestCase
 				usrname  = "admin"
 				passwd   = "admin"
 				@browser = Watir::Browser.new :firefox, :profile => "default"
+				@browser.cookies.clear
+
+				lan_page = RouterPageObject::LanPage.new(@browser)
+				# lan_page.refresh
+				lan_page.login_with(usrname, passwd, url)
+				lan_page.open_lan_page(@browser.url)
 
 				options_page = RouterPageObject::OptionsPage.new(@browser)
-				options_page.login_with(usrname, passwd, url)
+				# options_page.refresh
+				sleep 5
 				options_page.open_options_page(@browser.url)
-				options_page.close_options_page
+				sleep 5
+				lan_page.open_lan_page(@browser.url)
+				# options_page.refresh
+				# sleep 5
+				# options_page.close_options_page
 				# options_page.select_pptp(@browser.url)
 				# options_page.security_settings
 				# options_page.firewall

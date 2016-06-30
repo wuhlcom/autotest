@@ -2,21 +2,22 @@
 #Ruby文件操作代码示例如下 ：
 
 #2.rb;在同一级目录建立E:/Automation/ruby_test/filecompare/rt2880_settings.dat的文件，输入一些内容
-
-file=File.open("E:/Automation/ruby_test/filecompare/rt2880_settings.dat", "r") #file=File.open("F:\\ruby\\rb\\E:/Automation/ruby_test/filecompare/rt2880_settings.dat","r")绝对路径下
-file.each_line do |line|
-	puts line.encode("GBK")
-end
+# E:\autotest\frame\downloads
+file=File.open("E:/autotest/frame/downloads/rt2880_settings.dat", "r") #file=File.open("F:\\ruby\\rb\\E:/Automation/ruby_test/filecompare/rt2880_settings.dat","r")绝对路径下
+# file.each_line do |line|
+# 	puts line.encode("GBK")
+# end
+ p File.read("E:/autotest/frame/downloads/rt2880_settings.dat")
 
 
 # another logic
 
-File.open("E:/Automation/ruby_test/filecompare/rt2880_settings.dat", "r") do |file|
-	while line=file.gets
-		puts file.lineno
-		puts line
-	end
-end
+# File.open("E:/Automation/ruby_test/filecompare/rt2880_settings.dat", "r") do |file|
+# 	while line=file.gets
+# 		puts file.lineno
+# 		puts line
+# 	end
+# end
 =begin
 # the third logic ,the code is copied from someone else ...
 

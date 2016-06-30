@@ -57,6 +57,12 @@ class Test<MiniTest::Unit::TestCase
 				# p lan_page.auti_titlebar_element.link_element.exists?
 				# p lan_page.auti_titlebar_element.link_element.text.encode("GBK")
 				# p lan_page.auti_titlebar_element.link_element.click
+
+				sleep 10
+				p "000000000000000"
+				@browser.refresh
+				sleep 3
+				p "1111111111"
 				p lan_page.close_lan?
 				# @browser.close
 		end

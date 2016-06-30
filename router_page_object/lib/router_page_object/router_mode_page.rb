@@ -29,12 +29,16 @@ module RouterPageObject
 						self.refresh #最少要先刷新两次
 						sleep 2
 						5.times do
-								break if wan?
+								if advance? && !(sys_version.slice(/系统版本:(.+)/, 1).nil?)
+										self.mode_span_obj.click
+										sleep 5
+										break if apmode?
+								end
+								self.clear_cookies
 								self.refresh
 								sleep 2
+								login_with(@@ts_default_usr, @@ts_default_pw, url)
 						end
-						self.mode_span_obj.click
-						sleep 5
 				end
 
 				#关闭模式界面
@@ -46,7 +50,7 @@ module RouterPageObject
 				end
 
 				#保存模式设置
-				def save_mode_change(time = 110)
+				def save_mode_change(time = 120)
 						save_mode
 						puts "sleeping #{time} seconds for changing router mode..."
 						sleep time

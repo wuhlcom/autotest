@@ -1,0 +1,42 @@
+#encoding:utf-8
+#根据NG日志重新生成frame_all.xml文件
+
+require './excel_to_xml'
+
+module TestTool
+		class NGTestCase < ExcelToXml
+
+				def initialize(xml_path_arr)
+						@xml_path_arr = xml_path_arr
+				end
+
+				#获取所有NG的日志
+				def ng_excel
+						fail_tcs     = {}
+						failures_log = TestTool::XML.get_failure(@xml_path_arr)
+						failures_log.each do |key, value|
+								next if value.empty?
+								key           = key.downcase
+								fail_tcs[key] = []
+						end
+						failures_log.each do |key, value|
+								next if value.empty?
+								key = key.downcase
+								value.each do |item|
+										fail_tcs[key] << item["type"]
+								end
+						end
+						fail_tcs
+				end
+		end
+end
+
+if __FILE__ ==$0
+		report_dir = "20160601" #存放日志的目录
+		report_path      = File.expand_path("./reports/#{report_dir}")
+		xml_path_arr = Dir.glob("#{report_path}/*.xml")
+
+		ng_obj     = TestTool::NGTestCase.new(xml_path_arr)
+		tc_names   = ng_obj.ng_excel
+		ng_obj.excel_switch_xml(tc_names)
+end

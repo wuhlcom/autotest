@@ -3,9 +3,9 @@ require 'ffi'
 require 'ffi/pcap'
 
 p dev    = FFI::PCap.device_names.first
-p dev    = FFI::PCap.device_names
-netp   = FFI::MemoryPointer.new(FFI::find_type(:bpf_uint32))
-maskp  = FFI::MemoryPointer.new(FFI::find_type(:bpf_uint32))
+# p dev    = FFI::PCap.device_names
+netp   = FFI::MemoryPointer.new(FFI::find_type(:pointer))
+maskp  = FFI::MemoryPointer.new(FFI::find_type(:pointer))
 errbuf = FFI::PCap::ErrorBuffer.new
 
 FFI::PCap.pcap_lookupnet dev, netp, maskp, errbuf
@@ -14,15 +14,12 @@ puts netp.get_array_of_uchar(0, 4).join('.')
 puts maskp.get_array_of_uchar(0, 4).join('.')
 
 # Example for pcap_findalldevs :
-
-require 'ffi/pcap'
-
 devices = FFI::MemoryPointer.new(:pointer)
 errbuf  = FFI::PCap::ErrorBuffer.new
 
 FFI::PCap.pcap_findalldevs(devices, errbuf)
 node = devices.get_pointer(0)
-dev  = FFI::PCap::Interface(node) # return a structure object for exploring :
+dev  = FFI::PCap::Interface.new(node) # return a structure object for exploring :
 
 dev.name
 dev.description
@@ -34,11 +31,7 @@ FFI::PCap.pcap_freealldevs(node)
 
 # LISTENING RAW PACKET
 # We¡¯ve got our active device, so let listen to packets :
-
-require 'ffi/cap'
-
 dev = FFI::PCap.device_names[1] # or another for you
-
 pcap = FFI::PCap::Live.new(:dev => dev) # for this time, listening is active, as show with stats
 
 pcap.stats
@@ -59,14 +52,15 @@ end
 
 # FILTERING
 # The filter is set before the loop. Start by the man page with lot of examples : http://www.manpagez.com/man/7/pcap-filter/
-
-set_filter = "port 80" # simple filter
+# set_filter = "port 80" # simple filter
 # Now let¡¯s look into this packet ¡­
 
 # HEXDUMP
 # Start first with a better hexdump look with ¡­ Hexdump gem :) (gem i hexdump) :
-pcap.loop(count: 2) { |t, p| Hexdump.dump(p.body); puts "\n"; };
-
+require 'hexdump'
+p "--------------------------------------------------------------------------------------"
+pcap.loop(count: 2) { |t, p| Hexdump.dump(p.body); puts "\n"; }
+p "--------------------------------------------------------------------------------------"
 # render :
 #  00000000  33 33 00 00 00 0c 74 e5 43 82 96 a2 86 dd 60 00  |33....t.C.....`.|
 # 00000010  00 00 00 9a 11 01 fe 80 00 00 00 00 00 00 1c 3e  |...............>|
@@ -100,12 +94,10 @@ end
 frame = ''
 pcap.loop(count: 1) { |t, p| frame = p.body }
 # And then initialize FFI::Packets::Eth :
-
-eth = FFI::Packets::Eth.new raw: frame
+eth = FFI::PCap::Packet.new nil,frame,raw: frame
 # and get the MAC source and destination adresse and the type :
-
-puts eth.dump
-eth.src
-eth.lookup_etype
+# puts eth._dump
+# eth.src
+# eth.lookup_etype
 # Nota : the ffi-packets gem need some adjustments (the gemspec isn¡¯t complete), you can use my fork for the moment.
 # Nota 2 : read the source of ffi/dry, ffi/pcap and ffi/packets for better understanding the usage.

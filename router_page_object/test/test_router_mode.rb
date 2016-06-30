@@ -49,13 +49,23 @@ class Test<MiniTest::Unit::TestCase
 				usrname          = "admin"
 				passwd           = "admin"
 				@browser         = Watir::Browser.new :firefox, :profile => "default"
-				@mode_page       = RouterPageObject::ModePage.new(@browser)
-				# @mode_page.save_apmode(@browser.url)
-				# @options_page = RouterPageObject::APOptionsPage.new(@browser)
+				@browser.cookies.clear
+				@browser.refresh
+				@mode_page = RouterPageObject::ModePage.new(@browser)
+				# @tc_static_args = {nicname: @ts_nicname, source: "static", ip: "192.168.100.15", mask: "255.255.255.0", gateway: @ts_default_ip}
+				# netsh_if_ip_setip(@tc_static_args)
 				@mode_page.login_with(usrname, passwd, url)
+				@mode_page.save_apmode(@browser.url)
+				# @mode_page.open_mode_page(@browser.url)
+				puts "refresh 1"
+				@mode_page.refresh
+				sleep 1
+				puts "refresh 2"
+				@mode_page.refresh
+				# @options_page = RouterPageObject::APOptionsPage.new(@browser)
 				#ap模式高级设置里只有系统设置的功能，查看打开高级设置后还有哪些功能
-				@mode_page.lan_span_obj.click
-				sleep 2
-				p @browser.iframe(src: @@ts_tag_lan_src).exists?
+				# @mode_page.lan_span_obj.click
+				# sleep 2
+				# p @browser.iframe(src: @@ts_tag_lan_src).exists?
 		end
 end
