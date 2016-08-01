@@ -1,0 +1,28 @@
+[2016-07-27 18:36:41] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-07-27 18:36:41] 2¡¢»ñÈ¡µÇÂ¼¹ÜÀíÔ±µÄidºÅºÍtokenÖµ£º
+[2016-07-27 18:36:41] 3¡¢Ö´ĞĞĞÂÔöÒ»¸ö¹ÜÀíÔ±£º
+IAMAPIsys_manager@ZHIlu.Com is not exists!
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:IAMAPIsys_manager@ZHIlu.Com
+RESULT MSG:Ìí¼Ó³É¹¦
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:IAMAPISYS_MANAGER@ZHILU.COM
+RESULT MSG:Ìí¼Ó³É¹¦
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:iamapisys_manager@zhilu.com
+RESULT MSG:Ìí¼Ó³É¹¦
+[2016-07-27 18:36:42] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+IAMAPISYS_MANAGER@ZHILU.COM is not exists!
+iamapisys_manager@zhilu.com is not exists!
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.00 s
+Slowest tests:
+1.36 s	IAM::IamManager#test_ÓÊÏäÕËºÅ´óĞ¡Ğ´ÊäÈë²âÊÔ IAM_F_SysManager_018
+Slowest suites:
+1.36 s	IAM::IamManager
+
+
+[32mFinished tests in 1.371381s, 0.7292 tests/s, 4.3752 assertions/s.[0m
+
+
+[32m1 tests, 6 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160727
+Writing XML reports to E:/autotest/iam_testcases/reports/20160727

@@ -49,7 +49,8 @@ testcase {
             sleep 1
             rs = @account_page.login_with_exists(@browser.url)
             assert(rs, "ÐÞ¸ÄÕË»§Ê§°Ü")
-            rs_login = login_no_default_ip(@browser, @tc_usr_new1, @ts_default_pw)
+            rs_login = login_no_default_ip(@browser, @tc_usr_new2, @ts_default_pw)
+            p rs_login[:flag]
             assert(rs_login[:flag], "µÇÂ¼Ê§°Ü£¡")
         }
 
@@ -63,7 +64,7 @@ testcase {
             sleep 1
             rs = @account_page.login_with_exists(@browser.url)
             assert(rs, "ÐÞ¸ÄÕË»§Ê§°Ü")
-            rs_login = login_no_default_ip(@browser, @tc_usr_new1, @ts_default_pw)
+            rs_login = login_no_default_ip(@browser, @tc_usr_new3, @ts_default_pw)
             assert(rs_login[:flag], "µÇÂ¼Ê§°Ü£¡")
         }
     end

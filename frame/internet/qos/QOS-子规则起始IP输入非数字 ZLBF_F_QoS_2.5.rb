@@ -11,7 +11,7 @@ testcase {
 				@tc_wait_time       = 2
 				#kbps
 				@tc_bandwidth_total = "100000"
-        @tc_ip_error2       = "只允许输入数字"
+        @tc_ip_error2       = "只允许输入正数"
 		end
 
 		def process
@@ -27,24 +27,14 @@ testcase {
 				operate("2、输入其他异常值，例如输入字母，汉字，特殊字符，小数，留空，0等值，点击保存，是否能保存成功") {
 						#特殊符号
 						tc_qos_ip      = "254"
-						tc_qos_err_ip  = " " #空格
 						tc_qos_err_ip2 = "地址" #中文
 						tc_qos_err_ip3 = "@" #符号
 						tc_qos_err_ip4 = "c" #字母
-
-						puts "起始IP地址无效等价类，输入无效的地址会有提示".to_gbk
-						puts "输入起始IP地址为空格".encode("GBK") #空格
 						puts "输入结束IP地址为:#{tc_qos_ip}".encode("GBK")
-						@options_page.bw_ip_min0=tc_qos_err_ip
 						@options_page.bw_ip_max0=tc_qos_ip
-            @options_page.save_traffic #保存
-						sleep @tc_wait_time
-            error_tip = @options_page.error_msg
-            puts "ERROR TIP #{error_tip}".encode("GBK")
-            assert_equal(@tc_ip_error2, error_tip, "提示信息内容错误!")
+
 
 						puts "输入起始IP地址为：#{tc_qos_err_ip2}".encode("GBK") #中文
-						puts "输入结束IP地址为:#{tc_qos_ip}".encode("GBK")
 						@options_page.bw_ip_min0=tc_qos_err_ip2
             @options_page.save_traffic #保存
             sleep @tc_wait_time
@@ -53,7 +43,6 @@ testcase {
             assert_equal(@tc_ip_error2, error_tip, "提示信息内容错误!")
 
 						puts "输入起始IP地址为：#{tc_qos_err_ip3}".encode("GBK") #符号
-						puts "输入结束IP地址为:#{tc_qos_ip}".encode("GBK")
 						@options_page.bw_ip_min0=tc_qos_err_ip3
             @options_page.save_traffic #保存
             sleep @tc_wait_time
@@ -62,7 +51,6 @@ testcase {
             assert_equal(@tc_ip_error2, error_tip, "提示信息内容错误!")
 
 						puts "输入起始IP地址为：#{tc_qos_err_ip4}".encode("GBK") #字母
-						puts "输入结束IP地址为:#{tc_qos_ip}".encode("GBK")
 						@options_page.bw_ip_min0=tc_qos_err_ip4
             @options_page.save_traffic #保存
             sleep @tc_wait_time

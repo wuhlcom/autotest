@@ -129,7 +129,7 @@ module TestTool
             if args.empty?
                 args = default_args
             else
-                args.merge!(default_args).delete_if { |key, _value| key=="path"||key=="steps"|| key=="module"}
+                args.merge!(default_args).delete_if { |key, _value| key=="path"||key=="steps"|| key=="module" }
             end
             testcase_el.add_attributes(args)
         end
@@ -164,9 +164,9 @@ module TestTool
         def add_testcase_for_path(xmlpath, ts_name, ts_path, tc_hash, el_name="TestCase")
             testcases = add_testcases(ts_name, ts_path)
             tc_hash.each { |key, value|
-                tc_path  = value["path"]
+                tc_path   = value["path"]
                 tc_module = value["module"]
-                testcase = add_el(testcases, el_name)
+                testcase  = add_el(testcases, el_name)
                 add_tcattr(testcase, value)
                 add_tc_name_path(testcase, key, tc_path, tc_module)
             }
@@ -193,7 +193,7 @@ module TestTool
         #保存xml
         def save_xml(xmlpath)
             open(xmlpath, "w") { |file|
-                file.puts @doc.write()
+                file.puts @doc.to_s
             }
         end
 
@@ -240,13 +240,14 @@ EOF
             }
         end
 
+
         #生成脚本步骤
         def create_operation(steps)
             steps     = steps.split("\n")
             step_info = ""
             steps.each { |step|
+                step      = step.encode("utf-8")
                 step_info += "operate(\"#{step.strip}\") {
-
 }\n\n"
             }
             step_info
@@ -268,36 +269,34 @@ EOF
 end
 
 if $0==__FILE__
-=begin
     #############################解析excel文件############################################
-    file_name="基线用例-2015.8.21.xls"
+    file_name="IAM用例_gaohui.xlsx"
     begin
         p exel_file = File.expand_path("../../../#{file_name}", __FILE__)
         p exel_file.encode("GBK")
-
         # p File.exists?(exel_file)
         excelobj =TestTool::Excel.new(exel_file)
         args     ={
-            :condition     => "四期".encode("GBK"), #转成gbk
-            :condition_col => "G", #过滤条件列
+            # :condition     => "一期|二期|三期|四期".encode("GBK"), #转成gbk
+            # :condition_col => "F", #过滤条件列
             # :condition_col => "F",  #过滤条件列
+            # :id_col        => ["D", "E"], #id列
+            :name_col    => "C",
+            :id_col      => ["D"], #id列
+            :line        => "2", #从哪一行开始查找
+            # :level_col     => "F", #用例优先级
+            :level_col   => "E", #用例优先级
 
-            :id_col        => ["D", "E"], #id列
-            # :id_col        => ["D"], #id列
-            :line          => "2", #从哪一行开始查找
-
-            :level_col     => "F", #用例优先级
-            # :level_col     => "E",#用例优先级
-
-            :lines         => "1000", #到哪一行结束
-            :sheet_index   => 1, #表单编号
-            :tc_path       => File.dirname(__FILE__),
-
-            :step_col      => "j" #操作步骤列
+            :lines       => "1000", #到哪一行结束
+            :sheet_index => 1, #表单编号
+            :tc_path     => File.dirname(__FILE__),
+            :step_col    => "i" #操作步骤列
             # :step_col      => "H"   #操作步骤列
         }
 
-        excelobj.create_tcname(args)
+        # excelobj.create_tcname(args) #路由器用例模板
+        p args
+        excelobj.create_tcname_no_condtion(args) #IAM用例模板
         p testcases_hash = excelobj.testcase_hash
         p "用例数量:#{testcases_hash.keys.size}".encode("GBK")
 
@@ -327,42 +326,15 @@ if $0==__FILE__
     p "######################create tc templates####################"
     xml.create_multi_tc_temp(testcases_hash)
 
-    ######################创建xml文件####################
+
     p "######################创建xml文件####################".encode("GBK")
-    passwd_xml = "frame_four.xml"
-    ts_name    = "internet"
-    ts_path    = "../../frame"
+    passwd_xml = "iam.xml"
+    ts_name    = "manager"
+    ts_path    = "../../iam_testcases"
     tc_names   = testcases_hash.keys
-    attr_args  = testcases_hash.values #只能读出id，auto
-    tc_path    = "../../frame/internet" #根据实际路径读出
-    tc_module  = "test"
+    attr_args  = testcases_hash.values
+    tc_path    = "../../iam_testcases/internet"
     #tc_names = ["tc1", "tc2", "tc3", "tc4"]
     #tc_paths = ["tc1_path", "tc2_path", "tc3_path", "tc4_path"]
-    xml.add_testcase(passwd_xml, ts_name, ts_path, tc_names, tc_path, tc_module, attr_args)
-=end
-    ###########################################################################
-    #通过读取实际路径中脚本数据来生成xml
-    xml      = TestTool::Template.new()
-    tcs_path = File.expand_path("../../../frame/reset", __FILE__)
-    rs       = Dir.glob("#{tcs_path}/**/*.rb")
-
-    passwd_xml = "frame_all_reset.xml"
-    ts_name    = "reset"
-    ts_path    = "../../frame"
-    tc_hash    = {}
-    rs.each do |item|
-        tc_name          = item.slice(/.+\/(.+\.rb)/, 1)
-        tc_hash[tc_name] = []
-    end
-
-    rs.each do |item|
-        tc_path          = item.slice(/(.+)\/.+\.rb/, 1)
-        tc_path          = tc_path.gsub(/.+\/autotest/, "../..")
-        tc_name          = item.slice(/.+\/(.+\.rb)/, 1)
-        tc_id            = tc_name.slice(/\s*(ZL.+)\.rb/i, 1)
-        tc_module        = tc_name.slice(/ZL.+_\w_(.+)_/i, 1)
-        tc_hash[tc_name] = {"id" => tc_id, "level" => "P1", "path" => tc_path, "auto" => "y", "module" => tc_module}
-    end
-    xml.add_testcase_for_path(passwd_xml, ts_name, ts_path, tc_hash)
-
+    xml.add_testcase(passwd_xml, ts_name, ts_path, tc_names, tc_path, ts_name, attr_args)
 end

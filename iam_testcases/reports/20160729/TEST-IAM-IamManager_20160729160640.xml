@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="IAM::IamManager" skipped="0" failures="1" errors="0" tests="1" assertions="7" time="0.21146156004397199">
+  <testcase name="test_输入错误的手机账号 IAM_F_SysManager_072" classname="IAM::IamManager" assertions="7" time="0.21146156004397199">
+    <failure type="test_输入错误的手机账号 IAM_F_SysManager_072" message="784: unexpected token at '&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;...">
+Failure:
+test_输入错误的手机账号 IAM_F_SysManager_072(IAM::IamManager) [iam_manager_single.rb:72]:
+784: unexpected token at '&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;&lt;head&gt;
+&lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type"&gt;
+&lt;title&gt;系统发生错误&lt;/title&gt;
+&lt;style type="text/css"&gt;
+*{ padding: 0; margin: 0; }
+html{ overflow-y: scroll; }
+body{ background: #fff; font-family: '微软雅黑'; color: #333; font-size: 16px; }
+img{ border: 0; }
+.error{ padding: 24px 48px; }
+.face{ font-size: 100px; font-weight: normal; line-height: 120px; margin-bottom: 12px; }
+h1{ font-size: 32px; line-height: 48px; }
+.error .content{ padding-top: 10px}
+.error .info{ margin-bottom: 12px; }
+.error .info .title{ margin-bottom: 3px; }
+.error .info .title h3{ color: #000; font-weight: 700; font-size: 16px; }
+.error .info .text{ line-height: 24px; }
+.copyright{ padding: 12px 48px; color: #999; }
+.copyright a{ color: #000; text-decoration: none; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class="error"&gt;
+&lt;p class="face"&gt;:(&lt;/p&gt;
+&lt;h1&gt;非法操作:1361234u234&lt;/h1&gt;
+&lt;div class="content"&gt;
+	&lt;div class="info"&gt;
+		&lt;div class="title"&gt;
+			&lt;h3&gt;错误位置&lt;/h3&gt;
+		&lt;/div&gt;
+		&lt;div class="text"&gt;
+			&lt;p&gt;FILE: /var/www/html/zlapi/ThinkPHP/Library/Think/Controller/RestController.class.php &amp;#12288;LINE: 88&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="info"&gt;
+		&lt;div class="title"&gt;
+			&lt;h3&gt;TRACE&lt;/h3&gt;
+		&lt;/div&gt;
+		&lt;div class="text"&gt;
+			&lt;p&gt;#0 /var/www/html/zlapi/ThinkPHP/Library/Think/Controller/RestController.class.php(88): E('????????????:13...')&lt;br /&gt;
+#1 [internal function]: Think\Controller\RestController-&gt;__call('1361234u234', '')&lt;br /&gt;
+#2 /var/www/html/zlapi/ThinkPHP/Library/Think/App.class.php(114): ReflectionMethod-&gt;invokeArgs(Object(iam\Controller\MobileCodeController), Array)&lt;br /&gt;
+#3 /var/www/html/zlapi/ThinkPHP/Library/Think/App.class.php(204): Think\App::exec()&lt;br /&gt;
+#4 /var/www/html/zlapi/ThinkPHP/Library/Think/Think.class.php(120): Think\App::run()&lt;br /&gt;
+#5 /var/www/html/zlapi/ThinkPHP/ThinkPHP.php(97): Think\Think::start()&lt;br /&gt;
+#6 /var/www/html/zlapi/index.php(25): require('/var/www/html/z...')&lt;br /&gt;
+#7 {main}&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="copyright"&gt;
+&lt;p&gt;&lt;a title="官方网站" href="http://www.thinkphp.cn"&gt;ThinkPHP&lt;/a&gt;&lt;sup&gt;3.2.3&lt;/sup&gt; { Fast &amp; Simple OOP PHP Framework } -- [ WE CAN DO IT JUST THINK ]&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+'
+    </failure>
+  </testcase>
+</testsuite>

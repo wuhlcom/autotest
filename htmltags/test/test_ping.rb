@@ -16,14 +16,14 @@ class Test<MiniTest::Unit::TestCase
 
 
 	def test_ping
-		ip = "192.168.111.1"
+		ip = "192.168.100.1"
 		# ip = "www.sina.com"
-		p ping_recover(ip)
+		p ping(ip)
 	end
 
-# 	def testping_recover
-# 		ip = "192.168.100.1"
-# 		# ip = "www.sina.com"
-# 		p ping_recover(ip)
-# 	end
+	def testping_recover
+ 		ip = "192.168.100.1"
+ 		# ip = "www.sina.com"
+ 		ping_recover(ip)
+ 	end
 end

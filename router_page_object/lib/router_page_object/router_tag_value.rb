@@ -114,7 +114,7 @@ module PageObject
 		@@ts_ap_mask_static         = "staip_netmask"
 		@@ts_ap_gateway_static      = "staip_gateway"
 		@@ts_ap_dns1_static         = "wan_dns1"
-		@@ts_ap_ver_info            = "top_product"
+		@@ts_ap_ver_info            = "top_product" 
 		############### dut内网 ################
 		@@ts_wifi_switch            = "wifiswitch"
 		############### dut外网 ################
@@ -522,6 +522,9 @@ module PageObject
 		@@ts_tag_export_name       = "ExportSet"
 		@@ts_tag_wan_mac           = "WAN-MAC"
 		@@ts_tag_wifi              = "setstatus"
+		@@ts_tag_status_form       = "status"
+		@@ts_tag_status_table1     = "body_header"
+		@@ts_tag_status_table2     = "formlisting"
 
 		#sys status
 		@@ts_tag_verinfo           = "version-info"

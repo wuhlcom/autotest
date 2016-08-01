@@ -1,0 +1,34 @@
+[2016-07-28 14:31:06] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-07-28 14:31:06] 2¡¢»ñÈ¡µÇÂ¼¹ÜÀíÔ±µÄidºÅºÍtokenÖµ£º
+[2016-07-28 14:31:06] 3¡¢ĞÂÔöÒ»¸ö¹ÜÀíÔ±£¬ÃÜÂëÒì³£¸ñÊ½£»
+SysManager_038@zhilutec.com is not exists!
+ĞÂÔö¹ÜÀíÔ±:¡®SysManager_038@zhilutec.com¡¯£¬ÃÜÂë³¤¶ÈÎª6
+RESULT MSG:
+[2016-07-28 14:31:06] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+delete manager:SysManager_038@zhilutec.com
+SysManager_038@zhilutec.com is not exists!
+delete manager:SysManager_0351@zhilutec.com
+SysManager_0351@zhilutec.com is not exists!
+delete manager:SysManager_0352@zhilutec.com
+SysManager_0352@zhilutec.com is not exists!
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.01 s
+Slowest tests:
+0.39 s	IAM::IamManager#test_ÃÜÂëÒì³£ÊäÈë²âÊÔ IAM_F_SysManager_038
+Slowest suites:
+0.39 s	IAM::IamManager
+
+
+[31mFinished tests in 0.411600s, 2.4295 tests/s, 2.4295 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_ÃÜÂëÒì³£ÊäÈë²âÊÔ IAM_F_SysManager_038 [(eval):37]
+Minitest::Assertion: Ìí¼Ó³¬¼¶¹ÜÀíÔ±¡®SysManager_038@zhilutec.com¡¯Ê§°Ü!.
+Expected: 1
+  Actual: nil[0m
+
+[31m1 tests, 1 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160728
+Writing XML reports to E:/autotest/iam_testcases/reports/20160728

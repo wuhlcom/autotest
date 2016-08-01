@@ -31,7 +31,7 @@ class MyTestRouterTelnet < MiniTest::Unit::TestCase
 				p get_router_uptime(timeout=10)
 		end
 
-		def test_telnet
+		def testtelnet
 				ip = "192.168.100.1"
 				telnet_init(ip, user="root", password="zl4321")
 				# telnet_send_cmd("firstboot")
@@ -77,12 +77,19 @@ class MyTestRouterTelnet < MiniTest::Unit::TestCase
 				# end
 		end
 
-		def test_ps
+		def testps
 				# udhcpc、udhcpd、lighttpd、dnsmasq、ntpd
-				ip   = "192.168.100.1"
+				ip = "192.168.100.1"
 				init_router_obj(ip, usr="root", pw="zl4321")
 				rs = router_attack_ps("xxx")
 				p rs
+		end
+
+		def test_powersw
+				ip = "192.168.100.1"
+				sw = "off"
+				init_router_obj(ip, usr="root", pw="zl4321")
+				rt_power_sw(sw)
 		end
 
 end

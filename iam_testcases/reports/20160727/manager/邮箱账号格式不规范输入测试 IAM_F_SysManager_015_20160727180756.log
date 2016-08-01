@@ -1,0 +1,53 @@
+[2016-07-27 18:07:56] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-07-27 18:07:56] 2¡¢»ñÈ¡µÇÂ¼¹ÜÀíÔ±µÄidºÅºÍtokenÖµ£º
+[2016-07-27 18:07:56] 3¡¢ÓÊÏäÕËºÅ¸ñÊ½²»¹æ·¶Ê±£¬ĞÂÔöÒ»¸öÕËºÅ£»£º
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:@zhilutec.com
+RESULT err_msg:ÕÊºÅ¸ñÊ½´íÎó
+RESULT err_code:5003
+RESULT err_desc:E_ACCOUNT_FORMAT_ERROR
+zhilukeji.com is not exists!
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:zhilukeji.com
+RESULT err_msg:ÕÊºÅ¸ñÊ½´íÎó
+RESULT err_code:5003
+RESULT err_desc:E_ACCOUNT_FORMAT_ERROR
+zhiludd@.com is not exists!
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:zhiludd@.com
+RESULT err_msg:ÕÊºÅ¸ñÊ½´íÎó
+RESULT err_code:5003
+RESULT err_desc:E_ACCOUNT_FORMAT_ERROR
+zhilxxu@zhiluteccom is not exists!
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:zhilxxu@zhiluteccom
+RESULT err_msg:ÕÊºÅ¸ñÊ½´íÎó
+RESULT err_code:5003
+RESULT err_desc:E_ACCOUNT_FORMAT_ERROR
+zhiluuu@zhilutec. is not exists!
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:zhiluuu@zhilutec.
+RESULT err_msg:ÕÊºÅ¸ñÊ½´íÎó
+RESULT err_code:5003
+RESULT err_desc:E_ACCOUNT_FORMAT_ERROR
+zhiluii@zhilutec..com is not exists!
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:zhiluii@zhilutec..com
+RESULT err_msg:ÕÊºÅ¸ñÊ½´íÎó
+RESULT err_code:5003
+RESULT err_desc:E_ACCOUNT_FORMAT_ERROR
+zhilu123@@zhilutec.com is not exists!
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:zhilu123@@zhilutec.com
+RESULT err_msg:ÕÊºÅ¸ñÊ½´íÎó
+RESULT err_code:5003
+RESULT err_desc:E_ACCOUNT_FORMAT_ERROR
+[2016-07-27 18:07:57] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.02 s
+Slowest tests:
+1.26 s	IAM::IamManager#test_ÓÊÏäÕËºÅ¸ñÊ½²»¹æ·¶ÊäÈë²âÊÔ IAM_F_SysManager_015
+Slowest suites:
+1.26 s	IAM::IamManager
+
+
+[32mFinished tests in 1.290692s, 0.7748 tests/s, 16.2703 assertions/s.[0m
+
+
+[32m1 tests, 21 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160727
+Writing XML reports to E:/autotest/iam_testcases/reports/20160727

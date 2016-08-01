@@ -1,0 +1,31 @@
+[2016-07-27 14:51:52] 1°¢sshµ«¬ºIAM∑˛ŒÒ∆˜£ª
+[2016-07-27 14:51:52] 2°¢ªÒ»°µ«¬ºπ‹¿Ì‘±µƒid∫≈∫Õtoken÷µ£∫
+[2016-07-27 14:51:52] 3°¢’À∫≈«∞∫Û¥¯ø’∏Ò ±£¨–¬‘ˆπ‹¿Ì‘±£∫
+ÃÌº”≥¨º∂π‹¿Ì‘±’ÀªßŒ™: SysManager_017@zhilutec.com 
+{"result"=>1, "msg"=>"\u6DFB\u52A0\u6210\u529F"}
+RESULT err_msg:
+RESULT err_code:
+RESULT err_desc:
+[2016-07-27 14:51:52] 1.ª÷∏¥ƒ¨»œ…Ë÷√
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.00 s
+Slowest tests:
+0.26 s	IAM::IamManager#test_” œ‰’À∫≈«∞∫Û¥¯ø’∏Ò ‰»Î≤‚ ‘ IAM_F_SysManager_017
+Slowest suites:
+0.26 s	IAM::IamManager
+
+
+[31mFinished tests in 0.291169s, 3.4344 tests/s, 3.4344 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_” œ‰’À∫≈«∞∫Û¥¯ø’∏Ò ‰»Î≤‚ ‘ IAM_F_SysManager_017 [(eval):33]
+Minitest::Assertion: ÃÌº”≥¨º∂π‹¿Ì‘± SysManager_017@zhilutec.com  ß∞‹!.
+Expected: # encoding: UTF-8
+"5003"
+  Actual: nil[0m
+
+[31m1 tests, 1 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160727
+Writing XML reports to E:/autotest/iam_testcases/reports/20160727

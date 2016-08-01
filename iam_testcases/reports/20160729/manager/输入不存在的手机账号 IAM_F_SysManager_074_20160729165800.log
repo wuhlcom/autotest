@@ -1,0 +1,29 @@
+[2016-07-29 16:58:00] 1¡¢SSHµÇÂ¼IAMÏµÍ³£»
+[2016-07-29 16:58:00] 2¡¢²»´æÔÚÊÖ»úºÅ¡¢»ñÈ¡ÊÖ»úÑéÖ¤Âë£»
+RESULT err_msg:ÊÖ»úÑéÖ¤Âë·¢ËÍÊ§°Ü
+RESULT err_code:9002
+RESULT err_desc:E_MOBILE_CODE_SEND_FAIL
+[2016-07-29 16:58:00] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.00 s
+Slowest tests:
+0.14 s	IAM::IamManager#test_ÊäÈë²»´æÔÚµÄÊÖ»úÕËºÅ IAM_F_SysManager_074
+Slowest suites:
+0.14 s	IAM::IamManager
+
+
+[31mFinished tests in 0.157524s, 6.3482 tests/s, 6.3482 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_ÊäÈë²»´æÔÚµÄÊÖ»úÕËºÅ IAM_F_SysManager_074 [(eval):24]
+Minitest::Assertion: ²»´æÔÚÊÖ»úºÅ»ñÈ¡ÑéÖ¤Âë·µ»Ø´íÎóÏûÏ¢²»ÕıÈ·!.
+Expected: # encoding: UTF-8
+"\u9A8C\u8BC1\u7801\u9519\u8BEF\u6216\u5DF2\u5931\u6548"
+  Actual: # encoding: UTF-8
+"\u624B\u673A\u9A8C\u8BC1\u7801\u53D1\u9001\u5931\u8D25"[0m
+
+[31m1 tests, 1 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160729
+Writing XML reports to E:/autotest/iam_testcases/reports/20160729

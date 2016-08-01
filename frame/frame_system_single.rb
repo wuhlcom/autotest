@@ -39,8 +39,7 @@ module Frame
 				tcs_el =@ts_el.elements["TestCases"]
 				tc_el  =tcs_el.elements.each("TestCase") { |tc|
 						tc_name = tc.elements["name"].text
-						next if tc_name !~ /ZLBF_F_System_6\.7/i
-						p tc_name
+						next if tc_name !~ /注销功能测试 ZLBF_21.1.74/
 						tc_path     = tc.elements["path"].text
 						tc_abs_path = File.absolute_path(tc_path, __FILE__)
 						tc_file     = tc_abs_path+"/"+tc_name+".rb"

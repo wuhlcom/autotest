@@ -18,8 +18,12 @@ class Float
 end
 
 
-# p 100.555.roundf(2)
+p 100.555.roundn(-2)
 # p 1123.555.round_n(-2)
 
  # p ((8-9).to_f.abs/3).roundf(2)
-p ((1050624-1048576).to_f.abs/1050624)#.roundf(2)
+p ((1050624-1048576).to_f.abs/19).roundf(2)
+
+# p 1000/3.0
+p a = 100/10.0
+p a.to_s=~/0$/

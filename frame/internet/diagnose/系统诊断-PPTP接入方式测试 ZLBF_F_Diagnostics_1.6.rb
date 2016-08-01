@@ -39,7 +39,7 @@ testcase {
 
             tc_diag_wan_status = @diagnose_page.wan_conn
             puts "WAN Port status:#{tc_diag_wan_status}".to_gbk
-            assert_equal(@ts_tag_diag_success, tc_diag_wan_status, "显示WAN口状态异常")
+            assert_equal(@ts_tag_diag_fail, tc_diag_wan_status, "显示WAN口状态异常")
 
             tc_diag_internet_status = @diagnose_page.net_status
             puts "Internet status:#{tc_diag_internet_status}".to_gbk

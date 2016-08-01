@@ -1,0 +1,24 @@
+[2016-07-29 15:53:35] 1¡¢SSHµÇÂ¼IAMÏµÍ³£»
+ĞŞ¸ÄÃÜÂëÎª12345678
+mode phone manager 18900000000 pw
+[2016-07-29 15:53:35] 2¡¢Ê¹ÓÃĞÂÃÜÂëµÇÂ¼£»
+[2016-07-29 15:53:35] 3¡¢Ê¹ÓÃ¾ÉÃÜÂëµÇÂ¼£»
+RESULT err_msg:ÕÊºÅ»òÃÜÂë´íÎó
+RESULT err_code:10001
+RESULT err_desc:E_USER_PWD_ERROR
+[2016-07-29 15:53:35] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.00 s
+Slowest tests:
+0.79 s	IAM::IamManager#test_ÊÖ»úÕËºÅÒÔĞÂµÄÃÜÂëµÇÂ½ IAM_F_SysManager_071
+Slowest suites:
+0.79 s	IAM::IamManager
+
+
+[32mFinished tests in 0.819089s, 1.2209 tests/s, 9.7669 assertions/s.[0m
+
+
+[32m1 tests, 8 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160729
+Writing XML reports to E:/autotest/iam_testcases/reports/20160729

@@ -1,0 +1,22 @@
+[2016-07-26 17:08:50] 1¡¢sshµÇÂ¼µ½IAM·şÎñÆ÷£»
+[2016-07-26 17:08:50] 2¡¢ÓÃ»§µÇÂ¼£»
+[2016-07-26 17:08:50] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[32m.[0m[32m.[0m
+                | 2.38 s
+Slowest tests:
+1.01 s	IAM::IamManager#test_ÓÊÏäÕËºÅÕı³£ÖµÊäÈë²âÊÔ IAM_F_FindPassword_004
+0.45 s	IAM::IamManager#test_ĞÂÔö³¬¼¶¹ÜÀíÔ± IAM_F_SysManager_008
+0.44 s	IAM::IamManager#test_ĞÂÔöÏµÍ³¹ÜÀíÔ± IAM_F_SysManager_009
+0.40 s	IAM::IamManager#test_ĞÂÔö¼àÊÓ¹ÜÀíÔ± IAM_F_SysManager_011
+0.39 s	IAM::IamManager#test_ĞÂÔöÅäÖÃ¹ÜÀíÔ± IAM_F_SysManager_010
+0.13 s	IAM::IamManager#test_»ñÈ¡user_id½Ó¿ÚÈÏÖ¤ IAM_F_OAuth_019
+Slowest suites:
+2.81 s	IAM::IamManager
+
+
+[32mFinished tests in 2.848561s, 2.1063 tests/s, 5.2658 assertions/s.[0m
+
+
+[32m6 tests, 15 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160726
+Writing XML reports to E:/autotest/iam_testcases/reports/20160726

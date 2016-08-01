@@ -287,6 +287,11 @@
         <path>../../frame/internet/dhcp_server</path>
         <module>LAN</module>
       </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_LAN_1.4' level='P1' result='f' tested='n'>
+        <name>DHCP服务-地址池IP分配约束测试 ZLBF_F_LAN_1.4</name>
+        <path>../../frame/internet/dhcp_server</path>
+        <module>LAN</module>
+      </TestCase>
       <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_LAN_1.3' level='P1' result='f' tested='n'>
         <name>DHCP服务-地址池正常范围大小修改 ZLBF_F_LAN_1.3</name>
         <path>../../frame/internet/dhcp_server</path>
@@ -329,6 +334,71 @@
       </TestCase>
       <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_LAN_1.6' level='P2' result='f' tested='n'>
         <name>DHCP服务-开始地址大于结束地址 ZLBF_F_LAN_1.6</name>
+        <path>../../frame/internet/dhcp_server</path>
+        <module>LAN</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_LAN_1.22' level='P1' result='f' tested='n'>
+        <name>DHCP服务-更改LAN口IP地址第一分段特殊IP ZLBF_F_LAN_1.22</name>
+        <path>../../frame/internet/dhcp_server</path>
+        <module>LAN</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_LAN_1.23' level='P1' result='f' tested='n'>
+        <name>DHCP服务-更改LAN口IP地址第一分段特殊符号 ZLBF_F_LAN_1.23</name>
+        <path>../../frame/internet/dhcp_server</path>
+        <module>LAN</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_LAN_1.20' level='P1' result='f' tested='n'>
+        <name>DHCP服务-更改LAN口IP地址第一分段边界 ZLBF_F_LAN_1.20</name>
+        <path>../../frame/internet/dhcp_server</path>
+        <module>LAN</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_LAN_1.21' level='P1' result='f' tested='n'>
+        <name>DHCP服务-更改LAN口IP地址第一分段边界异常 ZLBF_F_LAN_1.21</name>
+        <path>../../frame/internet/dhcp_server</path>
+        <module>LAN</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_LAN_1.27' level='P1' result='f' tested='n'>
+        <name>DHCP服务-更改LAN口IP地址第三分段边界 ZLBF_F_LAN_1.27</name>
+        <path>../../frame/internet/dhcp_server</path>
+        <module>LAN</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_LAN_1.28' level='P1' result='f' tested='n'>
+        <name>DHCP服务-更改LAN口IP地址第三分段边界异常 ZLBF_F_LAN_1.28</name>
+        <path>../../frame/internet/dhcp_server</path>
+        <module>LAN</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_LAN_1.29' level='P1' result='f' tested='n'>
+        <name>DHCP服务-更改LAN口IP地址第三分段边界特殊符号 ZLBF_F_LAN_1.29</name>
+        <path>../../frame/internet/dhcp_server</path>
+        <module>LAN</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_LAN_1.24' level='P1' result='f' tested='n'>
+        <name>DHCP服务-更改LAN口IP地址第二分段边界 ZLBF_F_LAN_1.24</name>
+        <path>../../frame/internet/dhcp_server</path>
+        <module>LAN</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_LAN_1.25' level='P1' result='f' tested='n'>
+        <name>DHCP服务-更改LAN口IP地址第二分段边界异常 ZLBF_F_LAN_1.25</name>
+        <path>../../frame/internet/dhcp_server</path>
+        <module>LAN</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_LAN_1.26' level='P1' result='f' tested='n'>
+        <name>DHCP服务-更改LAN口IP地址第二分段边界特殊符号 ZLBF_F_LAN_1.26</name>
+        <path>../../frame/internet/dhcp_server</path>
+        <module>LAN</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_LAN_1.30' level='P1' result='f' tested='n'>
+        <name>DHCP服务-更改LAN口IP地址第四分段边界 ZLBF_F_LAN_1.30</name>
+        <path>../../frame/internet/dhcp_server</path>
+        <module>LAN</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_LAN_1.31' level='P1' result='f' tested='n'>
+        <name>DHCP服务-更改LAN口IP地址第四分段边界异常 ZLBF_F_LAN_1.31</name>
+        <path>../../frame/internet/dhcp_server</path>
+        <module>LAN</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_LAN_1.32' level='P1' result='f' tested='n'>
+        <name>DHCP服务-更改LAN口IP地址第四分段边界特殊符号 ZLBF_F_LAN_1.32</name>
         <path>../../frame/internet/dhcp_server</path>
         <module>LAN</module>
       </TestCase>
@@ -719,8 +789,23 @@
         <path>../../frame/internet/pptp</path>
         <module>WAN</module>
       </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_QoS_3.16' level='P2' result='f' tested='n'>
+        <name>QOS-3G或4G模式下QOS验证 ZLBF_F_QoS_3.16</name>
+        <path>../../frame/internet/qos</path>
+        <module>QoS</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_QoS_3.1' level='P2' result='f' tested='n'>
+        <name>QOS-IP地址段内QOS功能测试 ZLBF_F_QoS_3.1</name>
+        <path>../../frame/internet/qos</path>
+        <module>QoS</module>
+      </TestCase>
       <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_QoS_3.11' level='P2' result='f' tested='n'>
         <name>QOS-PPPOE方式下QOS验证 ZLBF_F_QoS_3.11</name>
+        <path>../../frame/internet/qos</path>
+        <module>QoS</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_QoS_3.13' level='P4' result='f' tested='n'>
+        <name>QOS-PPTP方式下QOS验证 ZLBF_F_QoS_3.13</name>
         <path>../../frame/internet/qos</path>
         <module>QoS</module>
       </TestCase>
@@ -729,8 +814,18 @@
         <path>../../frame/internet/qos</path>
         <module>QoS</module>
       </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_QoS_3.7' level='P2' result='f' tested='n'>
+        <name>QOS-保障最小带宽与受限最大带宽测试 ZLBF_F_QoS_3.7</name>
+        <path>../../frame/internet/qos</path>
+        <module>QoS</module>
+      </TestCase>
       <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_QoS_3.4' level='P4' result='f' tested='n'>
         <name>QOS-保障最小带宽之和大于总带宽 ZLBF_F_QoS_3.4</name>
+        <path>../../frame/internet/qos</path>
+        <module>QoS</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_QoS_3.3' level='P1' result='f' tested='n'>
+        <name>QOS-保障最小带宽测试 ZLBF_F_QoS_3.3</name>
         <path>../../frame/internet/qos</path>
         <module>QoS</module>
       </TestCase>
@@ -754,8 +849,33 @@
         <path>../../frame/internet/qos</path>
         <module>QoS</module>
       </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_QoS_2.12' level='P4' result='f' tested='n'>
+        <name>QOS-子规则带宽输入大于总带宽 ZLBF_F_QoS_2.12</name>
+        <path>../../frame/internet/qos</path>
+        <module>QoS</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_QoS_2.14' level='P4' result='f' tested='n'>
+        <name>QOS-子规则带宽输入有空格 ZLBF_F_QoS_2.14</name>
+        <path>../../frame/internet/qos</path>
+        <module>QoS</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_QoS_2.11' level='P4' result='f' tested='n'>
+        <name>QOS-子规则带宽输入边界值 ZLBF_F_QoS_2.11</name>
+        <path>../../frame/internet/qos</path>
+        <module>QoS</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_QoS_2.13' level='P4' result='f' tested='n'>
+        <name>QOS-子规则带宽输入非数字 ZLBF_F_QoS_2.13</name>
+        <path>../../frame/internet/qos</path>
+        <module>QoS</module>
+      </TestCase>
       <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_QoS_2.2' level='P1' result='f' tested='n'>
         <name>QOS-子规则开启并重启 ZLBF_F_QoS_2.2</name>
+        <path>../../frame/internet/qos</path>
+        <module>QoS</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_QoS_2.15' level='P4' result='f' tested='n'>
+        <name>QOS-子规则添加满规格 ZLBF_F_QoS_2.15</name>
         <path>../../frame/internet/qos</path>
         <module>QoS</module>
       </TestCase>
@@ -766,6 +886,11 @@
       </TestCase>
       <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_QoS_2.7' level='P4' result='f' tested='n'>
         <name>QOS-子规则结束IP输入有效等价值与边界值 ZLBF_F_QoS_2.7</name>
+        <path>../../frame/internet/qos</path>
+        <module>QoS</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_QoS_2.10' level='P4' result='f' tested='n'>
+        <name>QOS-子规则结束IP输入有空格 ZLBF_F_QoS_2.10</name>
         <path>../../frame/internet/qos</path>
         <module>QoS</module>
       </TestCase>
@@ -784,6 +909,11 @@
         <path>../../frame/internet/qos</path>
         <module>QoS</module>
       </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_QoS_2.6' level='P4' result='f' tested='n'>
+        <name>QOS-子规则起始IP输入有空格 ZLBF_F_QoS_2.6</name>
+        <path>../../frame/internet/qos</path>
+        <module>QoS</module>
+      </TestCase>
       <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_QoS_2.5' level='P4' result='f' tested='n'>
         <name>QOS-子规则起始IP输入非数字 ZLBF_F_QoS_2.5</name>
         <path>../../frame/internet/qos</path>
@@ -799,13 +929,38 @@
         <path>../../frame/internet/qos</path>
         <module>QoS</module>
       </TestCase>
-      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_QoS_1.8' level='P2' result='f' tested='n'>
-        <name>QOS-总带宽速率为最大值流量测试 ZLBF_F_QoS_1.8</name>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_QoS_1.2' level='P1' result='f' tested='n'>
+        <name>QOS-开关关闭时下载流量测试 ZLBF_F_QoS_1.2</name>
+        <path>../../frame/internet/qos</path>
+        <module>QoS</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_QoS_1.6' level='P2' result='f' tested='n'>
+        <name>QOS-总带宽输入值为非数字 ZLBF_F_QoS_1.6</name>
+        <path>../../frame/internet/qos</path>
+        <module>QoS</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_QoS_1.5' level='P2' result='f' tested='n'>
+        <name>QOS-总带宽输入值有空格 ZLBF_F_QoS_1.5</name>
+        <path>../../frame/internet/qos</path>
+        <module>QoS</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_QoS_1.4' level='P2' result='f' tested='n'>
+        <name>QOS-总带宽输入无效等价值 ZLBF_F_QoS_1.4</name>
+        <path>../../frame/internet/qos</path>
+        <module>QoS</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_QoS_1.3' level='P2' result='f' tested='n'>
+        <name>QOS-总带宽输入有效等价值与边界值 ZLBF_F_QoS_1.3</name>
         <path>../../frame/internet/qos</path>
         <module>QoS</module>
       </TestCase>
       <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_QoS_1.7' level='P2' result='f' tested='n'>
-        <name>QOS-总带宽速率为最小值流量测试 ZLBF_F_QoS_1.7</name>
+        <name>QOS-总带宽速率为最大值流量测试 ZLBF_F_QoS_1.7</name>
+        <path>../../frame/internet/qos</path>
+        <module>QoS</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_QoS_1.8' level='P2' result='f' tested='n'>
+        <name>QOS-总带宽速率为最小值流量测试 ZLBF_F_QoS_1.8</name>
         <path>../../frame/internet/qos</path>
         <module>QoS</module>
       </TestCase>
@@ -816,6 +971,11 @@
       </TestCase>
       <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_QoS_3.9' level='P1' result='f' tested='n'>
         <name>QOS-清除规则测试 ZLBF_F_QoS_3.9</name>
+        <path>../../frame/internet/qos</path>
+        <module>QoS</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_QoS_3.8' level='P4' result='f' tested='n'>
+        <name>QOS-满规则带宽测试 ZLBF_F_QoS_3.8</name>
         <path>../../frame/internet/qos</path>
         <module>QoS</module>
       </TestCase>
@@ -860,97 +1020,6 @@
         <path>../../frame/internet/remote_manage</path>
         <module>RemoteAccess</module>
       </TestCase>
-      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_Outbound_1.3' level='P2' result='f' tested='n'>
-        <name>IP过滤--源IP为IP网段 ZLBF_F_Outbound_1.3</name>
-        <path>../../frame/internet/security/ip_filter</path>
-        <module>Outbound</module>
-      </TestCase>
-      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_Outbound_1.2' level='P1' result='f' tested='n'>
-        <name>IP过滤--源IP为单个IP ZLBF_F_Outbound_1.2</name>
-        <path>../../frame/internet/security/ip_filter</path>
-        <module>Outbound</module>
-      </TestCase>
-      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_Outbound_2.2' level='P2' result='f' tested='n'>
-        <name>IP过滤--目的IP为IP网段 ZLBF_F_Outbound_2.2</name>
-        <path>../../frame/internet/security/ip_filter</path>
-        <module>Outbound</module>
-      </TestCase>
-      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_Outbound_2.1' level='P1' result='f' tested='n'>
-        <name>IP过滤--目的IP为单个IP ZLBF_F_Outbound_2.1</name>
-        <path>../../frame/internet/security/ip_filter</path>
-        <module>Outbound</module>
-      </TestCase>
-      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_Outbound_1.1' level='P3' result='f' tested='n'>
-        <name>IP过滤-IP输入测试 ZLBF_F_Outbound_1.1</name>
-        <path>../../frame/internet/security/ip_filter</path>
-        <module>Outbound</module>
-      </TestCase>
-      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_Outbound_5.2' level='P2' result='f' tested='n'>
-        <name>IP过滤-全部生效测试 ZLBF_F_Outbound_5.2</name>
-        <path>../../frame/internet/security/ip_filter</path>
-        <module>Outbound</module>
-      </TestCase>
-      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_Outbound_9.3' level='P2' result='f' tested='n'>
-        <name>IP过滤-删除规则 ZLBF_F_Outbound_9.3</name>
-        <path>../../frame/internet/security/ip_filter</path>
-        <module>Outbound</module>
-      </TestCase>
-      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_Outbound_3.1' level='P2' result='f' tested='n'>
-        <name>IP过滤-协议过滤 ZLBF_F_Outbound_3.1</name>
-        <path>../../frame/internet/security/ip_filter</path>
-        <module>Outbound</module>
-      </TestCase>
-      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_Outbound_9.1' level='P3' result='f' tested='n'>
-        <name>IP过滤-应用规则测试 ZLBF_F_Outbound_9.1</name>
-        <path>../../frame/internet/security/ip_filter</path>
-        <module>Outbound</module>
-      </TestCase>
-      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_Outbound_1.4' level='P2' result='f' tested='n'>
-        <name>IP过滤-源IP为所有IP ZLBF_F_Outbound_1.4</name>
-        <path>../../frame/internet/security/ip_filter</path>
-        <module>Outbound</module>
-      </TestCase>
-      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_Outbound_7.1' level='P1' result='f' tested='n'>
-        <name>IP过滤-源端口为所有端口 ZLBF_F_Outbound_7.1</name>
-        <path>../../frame/internet/security/ip_filter</path>
-        <module>Outbound</module>
-      </TestCase>
-      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_Outbound_5.1' level='P2' result='f' tested='n'>
-        <name>IP过滤-状态测试 ZLBF_F_Outbound_5.1</name>
-        <path>../../frame/internet/security/ip_filter</path>
-        <module>Outbound</module>
-      </TestCase>
-      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_Outbound_4.1' level='P2' result='f' tested='n'>
-        <name>IP过滤-生效时间 ZLBF_F_Outbound_4.1</name>
-        <path>../../frame/internet/security/ip_filter</path>
-        <module>Outbound</module>
-      </TestCase>
-      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_Outbound_4.2' level='P3' result='f' tested='n'>
-        <name>IP过滤-生效时间输入 ZLBF_F_Outbound_4.2</name>
-        <path>../../frame/internet/security/ip_filter</path>
-        <module>Outbound</module>
-      </TestCase>
-      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_Outbound_6.1' level='P1' result='f' tested='n'>
-        <name>IP过滤-目的端口为所有端口 ZLBF_F_Outbound_6.1</name>
-        <path>../../frame/internet/security/ip_filter</path>
-        <module>Outbound</module>
-      </TestCase>
-      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_Outbound_9.2' level='P2' result='f' tested='n'>
-        <name>IP过滤-编辑规则 ZLBF_F_Outbound_9.2</name>
-        <path>../../frame/internet/security/ip_filter</path>
-        <module>Outbound</module>
-      </TestCase>
-      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_Outbound_9.4' level='P3' result='f' tested='n'>
-        <name>IP过滤-规则重复检查 ZLBF_F_Outbound_9.4</name>
-        <path>../../frame/internet/security/ip_filter</path>
-        <module>Outbound</module>
-      </TestCase>
-      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_MACFilter_1.6' level='P2' result='f'
-                tested='n'>
-        <name>MAC过滤--生效失效 ZLBF_F_MACFilter_1.6</name>
-        <path>../../frame/internet/security</path>
-        <module>MACFilter</module>
-      </TestCase>
       <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_MACFilter_1.2' level='P1' result='f'
                 tested='n'>
         <name>MAC过滤-开关为关闭 ZLBF_F_MACFilter_1.2</name>
@@ -969,6 +1038,12 @@
         <path>../../frame/internet/security</path>
         <module>MACFilter</module>
       </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_MACFilter_1.6' level='P2' result='f'
+                tested='n'>
+        <name>MAC过滤-生效失效 ZLBF_F_MACFilter_1.6</name>
+        <path>../../frame/internet/security</path>
+        <module>MACFilter</module>
+      </TestCase>
       <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_MACFilter_1.4' level='P2' result='f'
                 tested='n'>
         <name>MAC过滤-规则删除 ZLBF_F_MACFilter_1.4</name>
@@ -978,6 +1053,12 @@
       <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_MACFilter_1.3' level='P2' result='f'
                 tested='n'>
         <name>MAC过滤-规则编辑 ZLBF_F_MACFilter_1.3</name>
+        <path>../../frame/internet/security</path>
+        <module>MACFilter</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_MACFilter_2.7' level='P4' result='f'
+                tested='n'>
+        <name>MAC过滤-输入MAC大小写不一致 ZLBF_F_MACFilter_2.7</name>
         <path>../../frame/internet/security</path>
         <module>MACFilter</module>
       </TestCase>
@@ -1016,6 +1097,91 @@
         <name>MAC过滤-输入非法MAC格式 ZLBF_F_MACFilter_2.1</name>
         <path>../../frame/internet/security</path>
         <module>MACFilter</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_Outbound_1.1' level='P3' result='f' tested='n'>
+        <name>IP过滤-IP输入测试 ZLBF_F_Outbound_1.1</name>
+        <path>../../frame/internet/security/ip_filter</path>
+        <module>Outbound</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_Outbound_5.2' level='P2' result='f' tested='n'>
+        <name>IP过滤-全部生效测试 ZLBF_F_Outbound_5.2</name>
+        <path>../../frame/internet/security/ip_filter</path>
+        <module>Outbound</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_Outbound_9.3' level='P2' result='f' tested='n'>
+        <name>IP过滤-删除规则 ZLBF_F_Outbound_9.3</name>
+        <path>../../frame/internet/security/ip_filter</path>
+        <module>Outbound</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_Outbound_3.1' level='P2' result='f' tested='n'>
+        <name>IP过滤-协议过滤 ZLBF_F_Outbound_3.1</name>
+        <path>../../frame/internet/security/ip_filter</path>
+        <module>Outbound</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_Outbound_9.1' level='P3' result='f' tested='n'>
+        <name>IP过滤-应用规则测试 ZLBF_F_Outbound_9.1</name>
+        <path>../../frame/internet/security/ip_filter</path>
+        <module>Outbound</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_Outbound_1.3' level='P2' result='f' tested='n'>
+        <name>IP过滤-源IP为IP网段 ZLBF_F_Outbound_1.3</name>
+        <path>../../frame/internet/security/ip_filter</path>
+        <module>Outbound</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_Outbound_1.2' level='P1' result='f' tested='n'>
+        <name>IP过滤-源IP为单个IP ZLBF_F_Outbound_1.2</name>
+        <path>../../frame/internet/security/ip_filter</path>
+        <module>Outbound</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_Outbound_1.4' level='P2' result='f' tested='n'>
+        <name>IP过滤-源IP为所有IP ZLBF_F_Outbound_1.4</name>
+        <path>../../frame/internet/security/ip_filter</path>
+        <module>Outbound</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_Outbound_7.1' level='P1' result='f' tested='n'>
+        <name>IP过滤-源端口为所有端口 ZLBF_F_Outbound_7.1</name>
+        <path>../../frame/internet/security/ip_filter</path>
+        <module>Outbound</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_Outbound_5.1' level='P2' result='f' tested='n'>
+        <name>IP过滤-状态测试 ZLBF_F_Outbound_5.1</name>
+        <path>../../frame/internet/security/ip_filter</path>
+        <module>Outbound</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_Outbound_4.1' level='P2' result='f' tested='n'>
+        <name>IP过滤-生效时间 ZLBF_F_Outbound_4.1</name>
+        <path>../../frame/internet/security/ip_filter</path>
+        <module>Outbound</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_Outbound_4.2' level='P3' result='f' tested='n'>
+        <name>IP过滤-生效时间输入 ZLBF_F_Outbound_4.2</name>
+        <path>../../frame/internet/security/ip_filter</path>
+        <module>Outbound</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_Outbound_2.2' level='P2' result='f' tested='n'>
+        <name>IP过滤-目的IP为IP网段 ZLBF_F_Outbound_2.2</name>
+        <path>../../frame/internet/security/ip_filter</path>
+        <module>Outbound</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_Outbound_2.1' level='P1' result='f' tested='n'>
+        <name>IP过滤-目的IP为单个IP ZLBF_F_Outbound_2.1</name>
+        <path>../../frame/internet/security/ip_filter</path>
+        <module>Outbound</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_Outbound_6.1' level='P1' result='f' tested='n'>
+        <name>IP过滤-目的端口为所有端口 ZLBF_F_Outbound_6.1</name>
+        <path>../../frame/internet/security/ip_filter</path>
+        <module>Outbound</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_Outbound_9.2' level='P2' result='f' tested='n'>
+        <name>IP过滤-编辑规则 ZLBF_F_Outbound_9.2</name>
+        <path>../../frame/internet/security/ip_filter</path>
+        <module>Outbound</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_Outbound_9.4' level='P3' result='f' tested='n'>
+        <name>IP过滤-规则重复检查 ZLBF_F_Outbound_9.4</name>
+        <path>../../frame/internet/security/ip_filter</path>
+        <module>Outbound</module>
       </TestCase>
       <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_URLFilter_2.3' level='P3' result='f'
                 tested='n'>
@@ -1204,6 +1370,11 @@
       </TestCase>
       <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_System_1.9' level='P1' result='f' tested='n'>
         <name>本地升级-测试版本升低版本 ZLBF_F_System_1.9</name>
+        <path>../../frame/internet/upload</path>
+        <module>System</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_System_1.7' level='P1' result='f' tested='n'>
+        <name>本地升级-测试版本升高版本 ZLBF_F_System_1.7</name>
         <path>../../frame/internet/upload</path>
         <module>System</module>
       </TestCase>
@@ -1583,6 +1754,11 @@
     <name>system</name>
     <path>../../frame</path>
     <TestCases>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_System_6.7' level='P1' result='f' tested='n'>
+        <name>账号管理-密码不一致 ZLBF_F_System_6.7</name>
+        <path>../../frame/system</path>
+        <module>System</module>
+      </TestCase>
       <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_System_6.4' level='P3' result='f' tested='n'>
         <name>账号管理-密码长度 ZLBF_F_System_6.4</name>
         <path>../../frame/system</path>
@@ -1623,6 +1799,11 @@
         <path>../../frame/system</path>
         <module>System</module>
       </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_System_7.2' level='P4' result='f' tested='n'>
+        <name>路由器登录-不输入用户名与密码 ZLBF_F_System_7.2</name>
+        <path>../../frame/system</path>
+        <module>System</module>
+      </TestCase>
       <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_System_7.7' level='P1' result='f' tested='n'>
         <name>路由器登录-注销功能测试 ZLBF_F_System_7.7</name>
         <path>../../frame/system</path>
@@ -1633,28 +1814,18 @@
         <path>../../frame/system</path>
         <module>System</module>
       </TestCase>
-      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_System_7.1' level='P1' result='f' tested='n'>
-        <name>路由器登录-默认账户 ZLBF_F_System_7.1</name>
-        <path>../../frame/system</path>
-        <module>System</module>
-      </TestCase>
-      <TestCase auto='y' beginTime='' endTime='' executed='n' id='ZLBF_F_System_6.7' level='P1' result='f' tested='n'>
-        <name>账号管理-密码不一致 ZLBF_F_System_6.7</name>
-        <path>../../frame/system</path>
-        <module>System</module>
-      </TestCase>
-      <TestCase auto='y' beginTime='' endTime='' executed='n' id='ZLBF_F_System_7.2' level='P4' result='f' tested='n'>
-        <name>路由器登录-不输入用户名与密码 ZLBF_F_System_7.2</name>
-        <path>../../frame/system</path>
-        <module>System</module>
-      </TestCase>
-      <TestCase auto='y' beginTime='' endTime='' executed='n' id='ZLBF_F_System_7.3' level='P4' result='f' tested='n'>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_System_7.3' level='P4' result='f' tested='n'>
         <name>路由器登录-输入正确的用户名与非法的密码 ZLBF_F_System_7.3</name>
         <path>../../frame/system</path>
         <module>System</module>
       </TestCase>
-      <TestCase auto='y' beginTime='' endTime='' executed='n' id='ZLBF_F_System_7.4' level='P1' result='f' tested='n'>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_System_7.4' level='P1' result='f' tested='n'>
         <name>路由器登录-输入非法用户名与正确的密码 ZLBF_F_System_7.4</name>
+        <path>../../frame/system</path>
+        <module>System</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_F_System_7.1' level='P1' result='f' tested='n'>
+        <name>路由器登录-默认账户 ZLBF_F_System_7.1</name>
         <path>../../frame/system</path>
         <module>System</module>
       </TestCase>

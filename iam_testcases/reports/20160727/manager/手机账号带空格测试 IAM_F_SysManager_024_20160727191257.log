@@ -1,0 +1,29 @@
+[2016-07-27 19:12:57] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-07-27 19:12:57] 2¡¢»ñÈ¡µÇÂ¼¹ÜÀíÔ±µÄidºÅºÍtokenÖµ£º
+[2016-07-27 19:12:57] 3¡¢ÊÖ»úºÅÇ°´øÓĞ¿Õ¸ñÊäÈë£¬ĞÂÔöÒ»¸ö¹ÜÀíÔ±£»
+13760281500 is not exists!
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:' 13760281500'
+RESULT MSG:Ìí¼Ó³É¹¦
+13760281501 is not exists!
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:'13760281501 '
+RESULT MSG:Ìí¼Ó³É¹¦
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:'1376028 1503'
+RESULT err_msg:ÕÊºÅ¸ñÊ½´íÎó
+RESULT err_code:5003
+RESULT err_desc:E_ACCOUNT_FORMAT_ERROR
+[2016-07-27 19:12:58] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.01 s
+Slowest tests:
+0.96 s	IAM::IamManager#test_ÊÖ»úÕËºÅ´ø¿Õ¸ñ²âÊÔ IAM_F_SysManager_024
+Slowest suites:
+0.96 s	IAM::IamManager
+
+
+[32mFinished tests in 0.989958s, 1.0101 tests/s, 7.0710 assertions/s.[0m
+
+
+[32m1 tests, 7 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160727
+Writing XML reports to E:/autotest/iam_testcases/reports/20160727

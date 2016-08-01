@@ -18,11 +18,11 @@ testcase {
 				#bps
 				@tc_bandwidth_limit_bps = 1048576
 				@tc_bandwidth_total_bps = 10240000
-				# e:/Automation/frame/ftp_client.rb
-				@tc_ftp_client          = File.absolute_path("../ftp_client.rb", __FILE__)
-				@tc_cap_limit_before1   = "D:/ftpcaps/ftp_limit_before1.pcap"
-				@tc_cap_limit_before2   = "D:/ftpcaps/ftp_limit_before2.pcap"
-				@tc_cap_limit_before3   = "D:/ftpcaps/ftp_limit_before3.pcap"
+
+				@tc_ftp_client        = File.absolute_path("../ftp_client.rb", __FILE__)
+				@tc_cap_limit_before1 = "D:/ftpcaps/ftp_limit_before1.pcap"
+				@tc_cap_limit_before2 = "D:/ftpcaps/ftp_limit_before2.pcap"
+				@tc_cap_limit_before3 = "D:/ftpcaps/ftp_limit_before3.pcap"
 
 				@tc_cap_total_before1 = "D:/ftpcaps/ftp_total_before1.pcap"
 				@tc_cap_total_before2 = "D:/ftpcaps/ftp_total_before2.pcap"
@@ -38,7 +38,7 @@ testcase {
 
 		def process
 
-				operate("1、进入DUT 带宽控制页面，查看带宽大小，流量控制规则页面是否出现，是否可以设置；") {
+				operate("1、进入DUT 带宽控制页面") {
 						@wan_page = RouterPageObject::WanPage.new(@browser)
 						puts "设置接入方式为DHCP".to_gbk
 						@wan_page.set_dhcp(@browser, @browser.url)
@@ -52,15 +52,23 @@ testcase {
 						assert_match /#{@ts_wan_mode_dhcp}/, wan_type, '接入类型错误！'
 				}
 
-				operate("2、勾选“开启IP带宽控制”选项框，设置申请带宽为100000kbps；添加一条流量控制规则，如IP地址范围输入#{@ts_pc_ip}，运行模式设置受限最大带宽为#{@tc_bandwidth_limit}kbps") {
+				operate("2、勾选“开启IP带宽控制”选项框，设置申请带宽为10000kbps；") {
 						@options_page = RouterPageObject::OptionsPage.new(@browser)
 						@options_page.select_traffic_ctl(@browser.url)
 						@options_page.select_traffic_sw
 						@options_page.set_total_bw(@tc_bandwidth_total) #设置总带宽
+				}
+
+				operate("3、添加一条流量控制规则，如IP地址范围输入192.168.1.2，运行模式设置受限最大上行带宽为1000kbps") {
 						@options_page.add_item
 						@options_page.set_client_bw(1, @tc_qos_ip1, @tc_qos_ip2, @ts_tag_bandlimit, @tc_bandwidth_limit)
-						@options_page.save_traffic #保存
+				}
 
+				operate("4、设置该规则为开启状态，保存；") {
+						@options_page.save_traffic #保存
+				}
+
+				operate("5、在IP地址为192.168.1.2的PC上运行FTP下载") {
 						####配置宽带控制时,下载统计
 						file_dir = File.dirname(@ts_ftp_download)
 						#如果目录不存在则创建目录
@@ -123,11 +131,14 @@ testcase {
 						assert(rs_rate_flag, "PC带宽限制为#{@tc_bandwidth_limit}不生效")
 				}
 
-				operate("3、关闭在IP地址为#{@ts_pc_ip}的带宽限制，流量与总带宽差不多") {
+				operate("6、设置该规则为关闭状态，保存；") {
 						#取消客户端带宽限制
 						@options_page.bw_status0=@tc_item_use
 						@options_page.save_traffic #保存
 						sleep @tc_qos_time
+				}
+
+				operate("7、在IP地址为192.168.1.2的PC上运行FTP下载") {
 						####下载统计
 						file_dir = File.dirname(@ts_ftp_download)
 						#如果目录不存在则创建目录
@@ -189,12 +200,6 @@ testcase {
 						rs_rate_flag = (flag1&&flag2||flag3)||(flag1||flag2&&flag3)||(flag1&&flag3||flag2)
 						assert(rs_rate_flag, "关闭PC带宽限制功能，PC带宽仍被限制")
 				}
-
-				operate("4、重启DUT，查看步骤1、2,3结果是否仍然同上") {
-						#在其它用例已经有重启测试这里不实现重启
-				}
-
-
 		end
 
 		def clearup
@@ -219,10 +224,15 @@ testcase {
 				}
 
 				operate("2 恢复默认配置") {
-						@options_page = RouterPageObject::OptionsPage.new(@browser)
-						@options_page.select_traffic_ctl(@browser.url)
-						@options_page.unselect_traffic_sw
-						@options_page.save_traffic #保存
+						if @options_page.total_bw?
+								@options_page.unselect_traffic_sw
+								@options_page.save_traffic(10)
+						else
+								@options_page = RouterPageObject::OptionsPage.new(@browser)
+								@options_page.select_traffic_ctl(@browser.url)
+								@options_page.unselect_traffic_sw
+								@options_page.save_traffic(10)
+						end
 				}
 		end
 

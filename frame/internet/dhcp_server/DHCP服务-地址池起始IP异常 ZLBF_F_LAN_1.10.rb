@@ -9,8 +9,9 @@ testcase {
 
 
 		def prepare
-				@tc_land_starterr = "0"
-				@tc_lan_time      = 30
+				@tc_land_starterr1 = "0"
+				@tc_land_starterr2 = "255"
+				@tc_lan_time       = 30
 		end
 
 		def process
@@ -21,14 +22,14 @@ testcase {
 						@tc_lan_start_pre = @lan_page.lan_startip_pre
 				}
 
-				operate("2、更改DHCP地址范围:192.168.100.0~200；") {
-						@tc_lan_start     = @lan_page.lan_startip
-						@tc_lan_startip   = @tc_lan_start_pre+@tc_land_starterr
-						puts "修改地址池起始地址为 #{@tc_lan_startip}".to_gbk
-						@lan_page.lan_startip_set(@tc_land_starterr)
+				operate("2、地址池结束IP设置为正常IP") {
+						@tc_lan_start   = @lan_page.lan_startip
+						tc_lan_startip = @tc_lan_start_pre+@tc_land_starterr1
+						puts "修改地址池起始地址为 #{tc_lan_startip}".to_gbk
+						@lan_page.lan_startip_set(@tc_land_starterr1)
 				}
 
-				operate("3、点击保存；") {
+				operate("3、更改DHCP起始IP地址分别为:0或255；") {
 						@lan_page.save_lanset
 						puts "ERROR TIP:#{@lan_page.lan_error}".to_gbk
 						if @lan_page.lan_error==@ts_lanip_err
@@ -37,9 +38,21 @@ testcase {
 								sleep @tc_lan_time
 								assert(false, "IP地址池上边界超出范围也能保存")
 						end
-
 				}
 
+				operate("4、分别点击保存；") {
+						tc_lan_startip = @tc_lan_start_pre+@tc_land_starterr2
+						puts "修改地址池起始地址为 #{tc_lan_startip}".to_gbk
+						@lan_page.lan_startip_set(@tc_land_starterr2)
+						@lan_page.save_lanset
+						puts "ERROR TIP:#{@lan_page.lan_error}".to_gbk
+						if @lan_page.lan_error==@ts_lanip_err
+								assert_equal(@ts_lanip_err, @lan_page.lan_error.strip, "IP地址池上边界超出范围提示信息错误")
+						else
+								sleep @tc_lan_time
+								assert(false, "IP地址池上边界超出范围也能保存")
+						end
+				}
 
 		end
 

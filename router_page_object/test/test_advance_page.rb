@@ -9,14 +9,19 @@ require file_path
 class Test<MiniTest::Unit::TestCase
 
 		def test_advance_recover
-				url           = "192.168.100.1"
+				url           = "192.168.50.1"
 				usrname       = "admin"
 				passwd        = "admin"
 				@browser      = Watir::Browser.new :firefox, :profile => "default"
-				systatus_page = RouterPageObject::AdvancePage.new(@browser)
+				acc_page = RouterPageObject::AccompanyRouter.new(@browser)
 				#登录
-				systatus_page.login_with(usrname, passwd, url)
-				systatus_page.recover_factory(@browser.url)
+				# acc_page.login_with(usrname, passwd, url)
+				acc_page.login_accompany_router(url)
+				# acc_page.open_wireless_24g_page
+				acc_page.wireless_24g_options(@browser)
+
+				# p acc_page.get_version_info
+
 		end
 
 end

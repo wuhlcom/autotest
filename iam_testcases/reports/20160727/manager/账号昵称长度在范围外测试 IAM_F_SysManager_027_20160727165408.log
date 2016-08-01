@@ -1,0 +1,29 @@
+[2016-07-27 16:54:08] 1°¢sshµ«¬ºIAM∑˛ŒÒ∆˜£ª
+[2016-07-27 16:54:08] 2°¢ªÒ»°µ«¬ºπ‹¿Ì‘±µƒid∫≈∫Õtoken÷µ£∫
+[2016-07-27 16:54:08] 3°¢–¬‘ˆ“ª∏ˆπ‹¿Ì‘±£¨nicknameŒ™33∏ˆ◊÷∑˚£ª
+13760281503 is not exists!
+ÃÌº”≥¨º∂π‹¿Ì‘±’ÀªßŒ™:13760281503£¨Í«≥∆Œ™'333333333333333333333333333333333,Í«≥∆Œ™≥§∂»Œ™33'
+{"err_code"=>"5004", "err_msg"=>"\u6635\u79F0\u683C\u5F0F\u9519\u8BEF", "err_desc"=>"E_NICKNAME_FORMAT_ERROR"}
+RESULT MSG:
+[2016-07-27 16:54:08] 1.ª÷∏¥ƒ¨»œ…Ë÷√
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.00 s
+Slowest tests:
+0.17 s	IAM::IamManager#test_’À∫≈Í«≥∆≥§∂»‘⁄∑∂ŒßÕ‚≤‚ ‘ IAM_F_SysManager_027
+Slowest suites:
+0.17 s	IAM::IamManager
+
+
+[31mFinished tests in 0.187190s, 5.3422 tests/s, 5.3422 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_’À∫≈Í«≥∆≥§∂»‘⁄∑∂ŒßÕ‚≤‚ ‘ IAM_F_SysManager_027 [(eval):30]
+Minitest::Assertion: ÃÌº”≥¨º∂π‹¿Ì‘±13760281503 ß∞‹!.
+Expected: 1
+  Actual: nil[0m
+
+[31m1 tests, 1 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160727
+Writing XML reports to E:/autotest/iam_testcases/reports/20160727

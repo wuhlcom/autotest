@@ -1,0 +1,21 @@
+[2016-07-29 16:17:41] 1¡¢SSHµÇÂ¼IAMÏµÍ³£»
+[2016-07-29 16:17:41] 2¡¢²»´æÔÚÊÖ»úºÅ¡¢»ñÈ¡ÊÖ»úÑéÖ¤Âë£»
+RESULT err_msg:ÊÖ»úÑéÖ¤Âë·¢ËÍÊ§°Ü
+RESULT err_code:9002
+RESULT err_desc:E_MOBILE_CODE_SEND_FAIL
+[2016-07-29 16:17:41] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.00 s
+Slowest tests:
+0.08 s	IAM::IamManager#test_ÊäÈë²»´æÔÚµÄÊÖ»úÕËºÅ IAM_F_SysManager_074
+Slowest suites:
+0.08 s	IAM::IamManager
+
+
+[32mFinished tests in 0.093503s, 10.6948 tests/s, 32.0845 assertions/s.[0m
+
+
+[32m1 tests, 3 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160729
+Writing XML reports to E:/autotest/iam_testcases/reports/20160729

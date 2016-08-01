@@ -1,0 +1,28 @@
+[2016-07-27 15:24:47] 1°¢sshµ«¬ºIAM∑˛ŒÒ∆˜£ª
+[2016-07-27 15:24:47] 2°¢ªÒ»°µ«¬ºπ‹¿Ì‘±µƒid∫≈∫Õtoken÷µ£∫
+[2016-07-27 15:24:47] 3°¢÷¥–––¬‘ˆ“ª∏ˆπ‹¿Ì‘±£∫
+SysManager_019@zhilutec.com is not exists!
+ÃÌº”≥¨º∂π‹¿Ì‘±’ÀªßŒ™:SysManager_019@zhilutec.com
+RESULT MSG:ÃÌº”≥…π¶
+[2016-07-27 15:24:48] 4°¢÷ÿ∏¥≤Ω÷Ë3£ª
+ÃÌº”≥¨º∂π‹¿Ì‘±’ÀªßŒ™:SysManager_019@zhilutec.com
+{"err_code"=>"5006", "err_msg"=>"\u5E10\u53F7\u5DF2\u5B58\u5728", "err_desc"=>"E_ACCOUNT_EXISTS_ERROR"}
+RESULT err_msg:’ ∫≈“—¥Ê‘⁄
+RESULT err_code:5006
+RESULT err_desc:E_ACCOUNT_EXISTS_ERROR
+[2016-07-27 15:24:48] 1.ª÷∏¥ƒ¨»œ…Ë÷√
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.01 s
+Slowest tests:
+0.52 s	IAM::IamManager#test_” œ‰’À∫≈÷ÿ∏¥÷µ ‰»Î≤‚ ‘ IAM_F_SysManager_019
+Slowest suites:
+0.52 s	IAM::IamManager
+
+
+[32mFinished tests in 0.538905s, 1.8556 tests/s, 9.2781 assertions/s.[0m
+
+
+[32m1 tests, 5 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160727
+Writing XML reports to E:/autotest/iam_testcases/reports/20160727

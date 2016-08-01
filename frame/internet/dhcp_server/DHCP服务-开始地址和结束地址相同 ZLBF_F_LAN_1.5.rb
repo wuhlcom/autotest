@@ -12,7 +12,7 @@ testcase {
 				@wifi                = DRbObject.new_with_uri(@ts_drb_server)
 				@tc_wait_time        = 2
 				@tc_wireless_client  = 5
-				@tc_static_ip        = @ts_default_ip.sub(/\.\d+$/, '.123')
+				@tc_static_ip        = @ts_default_ip.sub(/\.\d+$/, '.122')
 				@tc_static_args      = {nicname: @ts_nicname, source: "static", ip: "#{@tc_static_ip}", mask: "255.255.255.0"}
 				@tc_dhcp_args        = {nicname: @ts_nicname, source: "dhcp"}
 				@tc_default_lan_start= "100"

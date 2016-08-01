@@ -51,6 +51,9 @@ testcase {
 				operate("2、输入申请带宽值为中间值#{@tc_bandwidth_mid},点击保存") {
 						@options_page.set_total_bw(@tc_bandwidth_mid) #设置总带宽
 						@options_page.save_traffic #保存
+				}
+
+				operate("3、客户端进行下载测试") {
 						####配置宽带控制下载统计
 						file_dir = File.dirname(@ts_ftp_download)
 						#如果目录不存在则创建目录

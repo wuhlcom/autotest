@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestCase003" skipped="0" failures="0" errors="0" tests="4" assertions="4" time="0.0036510800127871335">
+  <testcase name="test_ip1" classname="TestCase003" assertions="1" time="0.0008294179860968143">
+  </testcase>
+  <testcase name="test_ip2" classname="TestCase003" assertions="1" time="0.001276698021683842">
+  </testcase>
+  <testcase name="test_ip3" classname="TestCase003" assertions="1" time="0.000830444012535736">
+  </testcase>
+  <testcase name="test_ip4" classname="TestCase003" assertions="1" time="0.0007145199924707413">
+  </testcase>
+</testsuite>

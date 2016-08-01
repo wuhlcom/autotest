@@ -1,0 +1,30 @@
+[2016-07-27 11:24:50] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-07-27 11:24:50] 2¡¢»ñÈ¡µÇÂ¼¹ÜÀíÔ±µÄidºÅºÍtokenÖµ£º
+[2016-07-27 11:24:50] 3¡¢ÕËºÅÇ°ºó´ø¿Õ¸ñÊ±£¬ĞÂÔö¹ÜÀíÔ±£º
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª: sysManager017@zhilutec.com 
+RESULT err_msg:
+RESULT err_code:
+RESULT err_desc:
+[2016-07-27 11:24:51] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.00 s
+Slowest tests:
+0.31 s	IAM::IamManager#test_ÓÊÏäÕËºÅÇ°ºó´ø¿Õ¸ñÊäÈë²âÊÔ IAM_F_SysManager_017
+Slowest suites:
+0.31 s	IAM::IamManager
+
+
+[31mFinished tests in 0.328122s, 3.0476 tests/s, 3.0476 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_ÓÊÏäÕËºÅÇ°ºó´ø¿Õ¸ñÊäÈë²âÊÔ IAM_F_SysManager_017 [(eval):33]
+Minitest::Assertion: Ìí¼Ó³¬¼¶¹ÜÀíÔ± sysManager017@zhilutec.com Ê§°Ü!.
+Expected: # encoding: UTF-8
+"5003"
+  Actual: nil[0m
+
+[31m1 tests, 1 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160727
+Writing XML reports to E:/autotest/iam_testcases/reports/20160727

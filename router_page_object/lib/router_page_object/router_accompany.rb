@@ -76,7 +76,7 @@ module RouterPageObject
 				end
 
 				#保存
-				def ap_save_config(time=15)c
+				def ap_save_config(time=15)
 						ap_save
 						puts "sleep #{time} seconds for saving..."
 						sleep time
@@ -87,7 +87,7 @@ module RouterPageObject
 						ap_save_element.click #不能直接使用ap_save，原因未知
 						alter_btn(browser)
 						puts "sleep #{time} seconds for saving..."
-						sleep time
+						sleep time 
 				end
 
 				#无线2.4G配置输入
@@ -106,7 +106,8 @@ module RouterPageObject
 						input_24g_options(mode, channel, bandwidth, safe)
 						sleep 1
 						ver_info = get_version_info
-						if ver_info[:hw]=="A1" && ver_info[:fw]=="V1.00" && safe=="WPA-PSK(TKIP)"
+						p "AP硬件版本：#{ver_info[:hw]}， 固件版本：#{ver_info[:fw]}".encode("GBK")
+						if ver_info[:hw]=="A1" && ver_info[:fw]=="1.01" && safe=="WPA-PSK(TKIP)"
 								ap_save_config_other(browser)
 						else
 								ap_save_config
@@ -117,6 +118,12 @@ module RouterPageObject
 				def get_lan_ip
 						open_status_page
 						main_content_element.element.tables[3].trs[1][0].tables[0].trs[0][1].text
+				end
+
+				#获取wan口mac地址
+				def get_wan_mac
+						open_status_page
+						main_content_element.element.form(name: @@ts_tag_status_form).table(id: @@ts_tag_status_table1).trs[1][0].table(class_name: @@ts_tag_status_table2).trs[1][3].text
 				end
 
 				#修改信道步骤

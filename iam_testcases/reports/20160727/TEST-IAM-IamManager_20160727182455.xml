@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="IAM::IamManager" skipped="0" failures="0" errors="0" tests="2" assertions="7" time="0.9470126599771902">
+  <testcase name="test_邮箱账号前后带空格输入测试 IAM_F_SysManager_017" classname="IAM::IamManager" assertions="4" time="0.8469280249846634">
+  </testcase>
+  <testcase name="test_邮箱账号中间带空格输入测试 IAM_F_SysManager_017_01" classname="IAM::IamManager" assertions="3" time="0.10008463499252684">
+  </testcase>
+</testsuite>

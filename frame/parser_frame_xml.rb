@@ -354,7 +354,7 @@ module TestTool
                 root_el    = xmlobj.log_root[:root_el]
                 ts_class   = root_el.attributes["name"]
                 /\w+::WebTest(?<ts_name>\w+)/i=~ ts_class
-                root_el.elements.each("//failure") { |el|
+                root_el.elements.each("//failure|//error") { |el|
                     failure = {}
                     /^test_(?<tc_name>.+)/ =~ el.attributes["type"]
                     failure["type"]    = tc_name
@@ -405,7 +405,7 @@ end
 if __FILE__==$0
     require 'pp'
     #########################汇总xml报告############
-    report_dir  = "20160531"
+    report_dir  = "20160704"
     report_path = File.expand_path("./reports/#{report_dir}")
     xml_arr     = Dir.glob("#{report_path}/*.xml")
     log_summary = TestTool::XML.summary_log_root(xml_arr)

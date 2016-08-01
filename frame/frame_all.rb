@@ -1,3 +1,6 @@
+require 'htmltags'
+#testsuites order controll,default true means shuffle order
+Minitest.should_shuffle_suites=false
 require './parser_frame_xml'
 t1        = Time.now()
 curr_path = File.dirname(File.expand_path(__FILE__))
@@ -24,10 +27,10 @@ rescue => ex
 		p ex.message.to_s
 ensure
 		file_tc_autoy.close unless file_tc_autoy.nil?
-		load "#{curr_path}/frame_internet.rb"
-		load "#{curr_path}/frame_system.rb"
-		load "#{curr_path}/frame_backup.rb"
-		load "#{curr_path}/frame_reset.rb"
-		load "#{curr_path}/frame_apmode.rb"
-		load "#{curr_path}/frame_attack.rb"
+		require "#{curr_path}/frame_attack.rb"		
+		require "#{curr_path}/frame_system.rb"
+		require "#{curr_path}/frame_backup.rb"
+		require "#{curr_path}/frame_reset.rb"
+		require "#{curr_path}/frame_apmode.rb"
+		require "#{curr_path}/frame_internet.rb"		
 end

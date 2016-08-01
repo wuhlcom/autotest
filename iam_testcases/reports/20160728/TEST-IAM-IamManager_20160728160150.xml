@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="IAM::IamManager" skipped="0" failures="0" errors="0" tests="1" assertions="6" time="0.08175896102329716">
+  <testcase name="test_登陆后默认进入到主页面 IAM_F_SysManager_050" classname="IAM::IamManager" assertions="6" time="0.08175896102329716">
+  </testcase>
+</testsuite>

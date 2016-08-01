@@ -1,0 +1,34 @@
+[2016-07-28 14:14:36] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-07-28 14:14:36] 2¡¢»ñÈ¡µÇÂ¼¹ÜÀíÔ±µÄidºÅºÍtokenÖµ£º
+[2016-07-28 14:14:36] 3¡¢ĞÂÔöÒ»¸ö¹ÜÀíÔ±£¬ÃÜÂë¸ñÊ½ÕıÈ·£»
+0
+SysManager_035@zhilutec.com is not exists!
+ĞÂÔö¹ÜÀíÔ±:¡®SysManager_035@zhilutec.com¡¯£¬ÃÜÂë³¤¶ÈÎª6
+RESULT MSG:Ìí¼Ó³É¹¦
+1
+SysManager_0351@zhilutec.com is not exists!
+ĞÂÔö¹ÜÀíÔ±:¡®SysManager_0351@zhilutec.com¡¯£¬ÃÜÂë³¤¶ÈÎª31
+RESULT MSG:Ìí¼Ó³É¹¦
+2
+SysManager_0352@zhilutec.com is not exists!
+ĞÂÔö¹ÜÀíÔ±:¡®SysManager_0352@zhilutec.com¡¯£¬ÃÜÂë³¤¶ÈÎª11
+RESULT MSG:Ìí¼Ó³É¹¦
+[2016-07-28 14:14:37] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+delete manager:SysManager_035@zhilutec.com
+delete manager:SysManager_0351@zhilutec.com
+delete manager:SysManager_0352@zhilutec.com
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.00 s
+Slowest tests:
+1.41 s	IAM::IamManager#test_ÃÜÂëÕı³£ÊäÈë²âÊÔ IAM_F_SysManager_035
+Slowest suites:
+1.41 s	IAM::IamManager
+
+
+[32mFinished tests in 1.422273s, 0.7031 tests/s, 4.2186 assertions/s.[0m
+
+
+[32m1 tests, 6 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160728
+Writing XML reports to E:/autotest/iam_testcases/reports/20160728

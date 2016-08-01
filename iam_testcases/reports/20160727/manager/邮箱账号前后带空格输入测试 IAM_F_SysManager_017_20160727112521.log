@@ -1,0 +1,32 @@
+[2016-07-27 11:25:21] 1°¢sshµ«¬ºIAM∑˛ŒÒ∆˜£ª
+[2016-07-27 11:25:21] 2°¢ªÒ»°µ«¬ºπ‹¿Ì‘±µƒid∫≈∫Õtoken÷µ£∫
+[2016-07-27 11:25:21] 3°¢’À∫≈«∞∫Û¥¯ø’∏Ò ±£¨–¬‘ˆπ‹¿Ì‘±£∫
+ÃÌº”≥¨º∂π‹¿Ì‘±’ÀªßŒ™: sysManager017@zhilutec.com 
+{"err_code"=>"5006", "err_msg"=>"\u5E10\u53F7\u5DF2\u5B58\u5728", "err_desc"=>"E_ACCOUNT_EXISTS_ERROR"}
+RESULT err_msg:’ ∫≈“—¥Ê‘⁄
+RESULT err_code:5006
+RESULT err_desc:E_ACCOUNT_EXISTS_ERROR
+[2016-07-27 11:25:21] 1.ª÷∏¥ƒ¨»œ…Ë÷√
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.00 s
+Slowest tests:
+0.17 s	IAM::IamManager#test_” œ‰’À∫≈«∞∫Û¥¯ø’∏Ò ‰»Î≤‚ ‘ IAM_F_SysManager_017
+Slowest suites:
+0.17 s	IAM::IamManager
+
+
+[31mFinished tests in 0.182228s, 5.4876 tests/s, 5.4876 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_” œ‰’À∫≈«∞∫Û¥¯ø’∏Ò ‰»Î≤‚ ‘ IAM_F_SysManager_017 [(eval):33]
+Minitest::Assertion: ÃÌº”≥¨º∂π‹¿Ì‘± sysManager017@zhilutec.com  ß∞‹!.
+Expected: # encoding: UTF-8
+"5003"
+  Actual: # encoding: UTF-8
+"5006"[0m
+
+[31m1 tests, 1 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160727
+Writing XML reports to E:/autotest/iam_testcases/reports/20160727

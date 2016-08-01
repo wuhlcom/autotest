@@ -120,6 +120,7 @@ module HtmlTag
 
     #路由器已经登录,恢复为默认配置
     def router_recover(browser)
+      puts "[#{Time.new.strftime("%Y-%m-%d %H:%M:%S")}] #{self.to_s}->method_name:#{__method__}"
       puts "#{self.to_s}->method_name:#{__method__}"
       tag_usr_name         = "admuser"
       ts_reboot_time       = 120
@@ -160,6 +161,7 @@ module HtmlTag
     #此时pc网关地址为路由器的登录地址，
     #用网关地址登录路由器，恢复路由器出厂值
     def cip_default_recover(browser, ip, usrname, passwd)
+      puts "[#{Time.new.strftime("%Y-%m-%d %H:%M:%S")}] #{self.to_s}->method_name:#{__method__}"
       login_recover_rs = false
       puts("Recover router default dhcp server!")
       #使用非默认地址登录路由器,登录后将路由器恢复出厂值
@@ -182,21 +184,24 @@ module HtmlTag
     #路由器恢复性登录
     #第一次登录失败会断电一次然后重新登录
     def login_recover(browser, powerip, default_ip=@@default_ip, nicname="dut", usrname="admin", passwd="admin", count="5", telnetusr="root", telentpw="zl4321")
+      puts "[#{Time.new.strftime("%Y-%m-%d %H:%M:%S")}] #{self.to_s}->method_name:#{__method__}"
       power_sw_err=false
       begin
         init_router_obj(powerip, telnetusr, telentpw)
         power_on
+        logout_router #退出telnet登录
       rescue => ex
         puts "Telnet power switch #{powerip} failed!"
         puts ex.message.to_s
         power_sw_err=true
       end
       rs = login_router(browser, default_ip, usrname, passwd, nicname, count)
-      if !rs && power_sw_err
+      if !rs || power_sw_err
         begin
+          init_router_obj(powerip, telnetusr, telentpw)
           power_off_on
           puts "After power reset,sleeping 120 seconds..."
-          logout_router
+          logout_router #退出telnet登录
           sleep 120
           rs = login_router(browser, default_ip, usrname, passwd, nicname, count)
         rescue => ex
@@ -239,6 +244,7 @@ module HtmlTag
           router_mode(browser)
         else #ping通但登录失败时查询路由器线程
           begin
+            puts "Ping dut successfully,but web login failed!"
             init_router_obj(default_ip, telnetusr, telentpw)
             router_ps
             logout_router
@@ -280,7 +286,7 @@ module HtmlTag
         puts("ERROR:login_recover failed")
         login_recover_rs=false
       end
-      login_recover_rs
+      return login_recover_rs
     end
 
     #配置静态ip地址来恢复lan默认值

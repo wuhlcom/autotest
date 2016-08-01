@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="IAM::IamManager" skipped="0" failures="0" errors="0" tests="1" assertions="3" time="0.24278144902200438">
+  <testcase name="test_账号昵称长度在范围外测试 IAM_F_SysManager_027" classname="IAM::IamManager" assertions="3" time="0.24278144902200438">
+  </testcase>
+</testsuite>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="IAM::IamManager" skipped="0" failures="1" errors="0" tests="1" assertions="2" time="0.2507334989932133">
+  <testcase name="test_邮箱账号异常输入测试 IAM_F_SysManager_016" classname="IAM::IamManager" assertions="2" time="0.2507334989932133">
+    <failure type="test_邮箱账号异常输入测试 IAM_F_SysManager_016" message="URI must be ascii only &quot;http://192.168.10.9:8082/index.php/admins/index/uid/1/name/\u{ff3a}\u{ff28}\u{ff29}\u{ff2c}\u{ff35}@zhilutec.com/token/4a626859c2ef570a460e2c993e7faf4f&quot;">
+Failure:
+test_邮箱账号异常输入测试 IAM_F_SysManager_016(IAM::IamManager) [iam_manager_single.rb:85]:
+URI must be ascii only "http://192.168.10.9:8082/index.php/admins/index/uid/1/name/\u{ff3a}\u{ff28}\u{ff29}\u{ff2c}\u{ff35}@zhilutec.com/token/4a626859c2ef570a460e2c993e7faf4f"
+    </failure>
+  </testcase>
+</testsuite>

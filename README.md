@@ -11,10 +11,10 @@ Window平台自动化执行环境基本配置(2016/06/08)
 	 3.7 tardotgz 1.0.2
 	 3.8 win32console 1.3.2
   4 本地包
-     htmltags 与本svn同步到最新
-	 router-page-object 与本svn同步到最新
+     htmltags 与svn同步到最新
+	 router-page-object 与svn同步到最新
   5 第三方工具
-    Wireshark(winpcap 410,412,413均,需添加到环境变量中)
+    Wireshark(winpcap 410,412,413均可,需添加到环境变量中)
 	HyenaeFE
   6 异常处理
     `出现错误:require': cannot load such file -- ffi_c (LoadError)
@@ -22,3 +22,17 @@ Window平台自动化执行环境基本配置(2016/06/08)
      解决方法:
      1 先删除ffi,gem uninstall ffi
      2 重新安装ffi,gem install ffi --remote --platform=ruby
+  7 设备IP
+    环境1
+	执行机:control 50.50.50.55, dut->dhcp,ap->192.168.50.x
+	业务PC:control 50.50.50.56,wireless
+	继电器:50.50.50.101
+	环境2
+	执行机:control 50.50.50.50, dut->dhcp,ap->192.168.50.x
+	业务PC:control 50.50.50.51
+	继电器:50.50.50.110
+	公共环境
+	服务器：lan配置静态IP但不配置网关50.50.50.57,10.10.10.57，配置静态路由20.20.20.x和30.30.30.x,网关为10.10.10.1 wan 配置静态IP,虚拟机开启RouteOS
+	交换机：50.50.50.100,wireless
+	FileZilla Server作为FTP服务器
+	SVN服务器可用于多人开发时同步代码，快速部署环境，备份代码

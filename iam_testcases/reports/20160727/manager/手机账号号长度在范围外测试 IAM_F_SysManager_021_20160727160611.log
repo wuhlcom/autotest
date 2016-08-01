@@ -1,0 +1,33 @@
+[2016-07-27 16:06:11] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-07-27 16:06:11] 2¡¢»ñÈ¡µÇÂ¼¹ÜÀíÔ±µÄidºÅºÍtokenÖµ£º
+[2016-07-27 16:06:11] 3¡¢ÊÖ»úºÅÊäÈë´óÓÚ11Î»ºÅÂë£¬Èç¡°138265454444¡±£¬ĞÂÔö¹ÜÀíÔ±£»
+137602815771 is not exists!
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:137602815771
+{"err_code"=>"5003", "err_msg"=>"\u5E10\u53F7\u683C\u5F0F\u9519\u8BEF", "err_desc"=>"E_ACCOUNT_FORMAT_ERROR"}
+RESULT err_msg:ÕÊºÅ¸ñÊ½´íÎó
+RESULT err_code:5003
+RESULT err_desc:E_ACCOUNT_FORMAT_ERROR
+[2016-07-27 16:06:11] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.00 s
+Slowest tests:
+0.24 s	IAM::IamManager#test_ÊÖ»úÕËºÅºÅ³¤¶ÈÔÚ·¶Î§Íâ²âÊÔ IAM_F_SysManager_021
+Slowest suites:
+0.24 s	IAM::IamManager
+
+
+[31mFinished tests in 0.252877s, 3.9545 tests/s, 3.9545 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_ÊÖ»úÕËºÅºÅ³¤¶ÈÔÚ·¶Î§Íâ²âÊÔ IAM_F_SysManager_021 [(eval):34]
+Minitest::Assertion: Ìí¼ÓÖØ¸´³¬¼¶¹ÜÀíÔ±137602815771Ó¦ÌáÊ¾Ê§°Ü!.
+Expected: # encoding: UTF-8
+"5006"
+  Actual: # encoding: UTF-8
+"5003"[0m
+
+[31m1 tests, 1 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160727
+Writing XML reports to E:/autotest/iam_testcases/reports/20160727

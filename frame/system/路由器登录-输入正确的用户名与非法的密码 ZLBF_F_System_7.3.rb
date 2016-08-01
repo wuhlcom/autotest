@@ -17,7 +17,7 @@ testcase {
   def process
 
     operate("1、输入路由器的管理URL或域名；") {
-      result = ping_recover(default_ip, nicname, count)
+      result = ping_recover(@ts_default_ip)
       assert(result, "路由器无法ping通")
     }
 

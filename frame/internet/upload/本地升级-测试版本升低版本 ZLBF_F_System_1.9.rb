@@ -21,6 +21,12 @@ testcase {
             @options_page = RouterPageObject::OptionsPage.new(@browser)
             @login_page   = RouterPageObject::LoginPage.new(@browser)
             @status_page  = RouterPageObject::SystatusPage.new(@browser)
+            @status_page.open_systatus_page(@browser.url)
+            sysversion     = @status_page.get_current_software_ver
+            actual_version = @tc_upload_file_current.slice(/V\d+R\d+C\d+/i)
+            unless sysversion == actual_version
+                assert(false, "本地升级前，当前固件版本不是测试版本！")
+            end
             @options_page.update_step(@browser.url, @tc_upload_file_old)
         }
 
@@ -31,16 +37,21 @@ testcase {
             rs_login = login_no_default_ip(@browser) #重新登录
             assert(rs_login[:flag], "登录失败：#{rs_login[:message]}")
             @status_page.open_systatus_page(@browser.url)
-            sysversion = @status_page.get_current_software_ver
-            actual_version  = @tc_upload_file_old.slice(/V\d+R\d+C\d+/i)
+            sysversion     = @status_page.get_current_software_ver
+            actual_version = @tc_upload_file_old.slice(/V\d+R\d+C\d+/i)
             assert_equal(sysversion, actual_version, "降级失败！")
         }
     end
 
     def clearup
         operate("1、恢复到当前版本；") {
-            options_page = RouterPageObject::OptionsPage.new(@browser)
-            options_page.update_step(@browser.url, @tc_upload_file_current)
+            @status_page.open_systatus_page(@browser.url)
+            sysversion     = @status_page.get_current_software_ver
+            actual_version = @tc_upload_file_current.slice(/V\d+R\d+C\d+/i)
+            unless sysversion == actual_version
+                options_page = RouterPageObject::OptionsPage.new(@browser)
+                options_page.update_step(@browser.url, @tc_upload_file_current)
+            end
         }
     end
 }

@@ -21,10 +21,14 @@ testcase {
 						@mode_page.save_apmode(@browser.url) #切换到IP模式
 
 						#配置静态IP
+						#配置一个lan侧静态ip，用来登录路由器修改ssid
 						netsh_if_ip_setip(@tc_static_args)
 						@mode_page.login_mode_change(@ts_default_usr, @ts_default_pw, @ts_default_ip) #重新登录
 						@wifi_page    = RouterPageObject::WIFIPage.new(@browser)
 						wireless_info = @wifi_page.modify_ssid_mode_pwd(@browser.url, "Wireless0")
+						#网卡恢复成动态IP
+						#动态IP
+						netsh_if_ip_setip(@tc_dhcp_args)
 						flag          = "1"
 						rs1           = @wifi.connect(wireless_info[:ssid], flag, wireless_info[:pwd])
 						assert rs1, 'WIFI连接失败'

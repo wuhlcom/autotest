@@ -1,0 +1,27 @@
+[2016-07-27 17:02:07] 1°¢sshµ«¬ºIAM∑˛ŒÒ∆˜£ª
+[2016-07-27 17:02:07] 2°¢ªÒ»°µ«¬ºπ‹¿Ì‘±µƒid∫≈∫Õtoken÷µ£∫
+[2016-07-27 17:02:07] 3°¢–¬‘ˆ“ª∏ˆπ‹¿Ì‘±£¨nicknameŒ™ø’£ª
+13760281503 is not exists!
+ÃÌº”≥¨º∂π‹¿Ì‘±’ÀªßŒ™:13760281503
+Í«≥∆Œ™',Í«≥∆Œ™≥§∂»Œ™ø’
+{"err_code"=>"5004", "err_msg"=>"\u6635\u79F0\u683C\u5F0F\u9519\u8BEF", "err_desc"=>"E_NICKNAME_FORMAT_ERROR"}
+RESULT err_msg:Í«≥∆∏Ò Ω¥ÌŒÛ
+RESULT err_code:5004
+RESULT err_desc:E_NICKNAME_FORMAT_ERROR
+[2016-07-27 17:02:07] 1.ª÷∏¥ƒ¨»œ…Ë÷√
+13760281503 is not exists!
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.01 s
+Slowest tests:
+0.25 s	IAM::IamManager#test_’À∫≈Í«≥∆Œ™ø’ IAM_F_SysManager_028
+Slowest suites:
+0.25 s	IAM::IamManager
+
+
+[32mFinished tests in 0.268503s, 3.7244 tests/s, 11.1731 assertions/s.[0m
+
+
+[32m1 tests, 3 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160727
+Writing XML reports to E:/autotest/iam_testcases/reports/20160727

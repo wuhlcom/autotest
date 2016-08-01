@@ -1,0 +1,118 @@
+[2016-07-27 18:54:53] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-07-27 18:54:53] 2¡¢»ñÈ¡µÇÂ¼¹ÜÀíÔ±µÄidºÅºÍtokenÖµ£º
+[2016-07-27 18:54:53] 3¡¢Ê¹ÓÃ²»Í¬ÊÖ»ú¶ÎºÅÂëĞÂÔöÒ»¸ö¹ÜÀíÔ±£º
+13066668888 is not exists!
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:'13066668888'
+RESULT MSG:Ìí¼Ó³É¹¦
+13166668888 is not exists!
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:'13166668888'
+RESULT MSG:Ìí¼Ó³É¹¦
+13266668888 is not exists!
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:'13266668888'
+RESULT MSG:Ìí¼Ó³É¹¦
+13366668888 is not exists!
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:'13366668888'
+RESULT MSG:Ìí¼Ó³É¹¦
+13466668888 is not exists!
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:'13466668888'
+RESULT MSG:Ìí¼Ó³É¹¦
+13566668888 is not exists!
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:'13566668888'
+RESULT MSG:Ìí¼Ó³É¹¦
+13666668888 is not exists!
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:'13666668888'
+RESULT MSG:Ìí¼Ó³É¹¦
+13766668888 is not exists!
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:'13766668888'
+RESULT MSG:Ìí¼Ó³É¹¦
+13866668888 is not exists!
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:'13866668888'
+RESULT MSG:Ìí¼Ó³É¹¦
+13966668888 is not exists!
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:'13966668888'
+RESULT MSG:Ìí¼Ó³É¹¦
+145 is not exists!
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:'145'
+RESULT MSG:
+[2016-07-27 18:54:56] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+delete manager '13066668888'
+delete manager '13166668888'
+delete manager '13266668888'
+delete manager '13366668888'
+delete manager '13466668888'
+delete manager '13566668888'
+delete manager '13666668888'
+delete manager '13766668888'
+delete manager '13866668888'
+delete manager '13966668888'
+delete manager '145'
+145 is not exists!
+delete manager '147'
+147 is not exists!
+delete manager '15066668888'
+15066668888 is not exists!
+delete manager '15166668888'
+15166668888 is not exists!
+delete manager '15266668888'
+15266668888 is not exists!
+delete manager '15366668888'
+15366668888 is not exists!
+delete manager '15466668888'
+15466668888 is not exists!
+delete manager '15566668888'
+15566668888 is not exists!
+delete manager '15666668888'
+15666668888 is not exists!
+delete manager '15766668888'
+15766668888 is not exists!
+delete manager '15866668888'
+15866668888 is not exists!
+delete manager '15966668888'
+15966668888 is not exists!
+delete manager '176'
+176 is not exists!
+delete manager '177'
+177 is not exists!
+delete manager '178'
+178 is not exists!
+delete manager '18066668888'
+18066668888 is not exists!
+delete manager '18166668888'
+18166668888 is not exists!
+delete manager '18266668888'
+18266668888 is not exists!
+delete manager '18366668888'
+18366668888 is not exists!
+delete manager '18466668888'
+18466668888 is not exists!
+delete manager '18566668888'
+18566668888 is not exists!
+delete manager '18666668888'
+18666668888 is not exists!
+delete manager '18766668888'
+18766668888 is not exists!
+delete manager '18866668888'
+18866668888 is not exists!
+delete manager '18966668888'
+18966668888 is not exists!
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.00 s
+Slowest tests:
+6.50 s	IAM::IamManager#test_ÊÖ»úÕËºÅºÅÂëÊäÈëÕı³£²âÊÔ IAM_F_SysManager_020
+Slowest suites:
+6.50 s	IAM::IamManager
+
+
+[31mFinished tests in 6.529319s, 0.1532 tests/s, 3.2163 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_ÊÖ»úÕËºÅºÅÂëÊäÈëÕı³£²âÊÔ IAM_F_SysManager_020 [(eval):44]
+Minitest::Assertion: Ìí¼Ó³¬¼¶¹ÜÀíÔ±'145'Ê§°Ü!.
+Expected: 1
+  Actual: nil[0m
+
+[31m1 tests, 21 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160727
+Writing XML reports to E:/autotest/iam_testcases/reports/20160727

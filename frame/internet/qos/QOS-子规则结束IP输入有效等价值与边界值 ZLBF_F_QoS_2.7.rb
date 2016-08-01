@@ -24,7 +24,11 @@ testcase {
 						@options_page.add_item
 				}
 
-				operate("2、带宽控制的对规则1的起始结束地址边界进行测试") {
+				operate("2、起始IP地址输入x.x.x.1") {
+
+				}
+
+				operate("3、带宽控制的对规则1的起始结束地址边界进行测试") {
 						#边界值测试
 						#起始IP地址下边界
 						tc_qos_ip  = "1"
@@ -32,7 +36,7 @@ testcase {
 						tc_qos_ip3 = "100"
 						puts "输入起始IP地址为#{tc_qos_ip}".encode("GBK")
 						puts "结束地址为#{tc_qos_ip}".encode("GBK")
-						@options_page.set_client_bw(1, tc_qos_ip, tc_qos_ip2, @ts_tag_bandlimit, @tc_bandwidth_limit)
+						@options_page.set_client_bw(1, tc_qos_ip, tc_qos_ip, @ts_tag_bandlimit, @tc_bandwidth_limit)
 						@options_page.save_traffic #保存
 						error_tip = @options_page.error_msg
 						assert_empty(error_tip, "提示信息内容错误!")
@@ -40,7 +44,7 @@ testcase {
 						#起始IP地址上边界
 						puts "输入起始IP地址为#{tc_qos_ip}".encode("GBK")
 						puts "结束地址为#{tc_qos_ip2}".encode("GBK")
-						@options_page.set_client_bw(1, tc_qos_ip2, tc_qos_ip2, @ts_tag_bandlimit, @tc_bandwidth_limit)
+						@options_page.set_client_bw(1, tc_qos_ip, tc_qos_ip2, @ts_tag_bandlimit, @tc_bandwidth_limit)
 						@options_page.save_traffic #保存
 						error_tip = @options_page.error_msg
 						assert_empty(error_tip, "提示信息内容错误!")
@@ -48,7 +52,7 @@ testcase {
 						# 结束IP地址下边界
 						puts "输入起始IP地址为#{tc_qos_ip}".encode("GBK")
 						puts "结束地址为#{tc_qos_ip3}".encode("GBK")
-						@options_page.set_client_bw(1, tc_qos_ip, tc_qos_ip, @ts_tag_bandlimit, @tc_bandwidth_limit)
+						@options_page.set_client_bw(1, tc_qos_ip, tc_qos_ip3, @ts_tag_bandlimit, @tc_bandwidth_limit)
 						@options_page.save_traffic #保存
 						error_tip = @options_page.error_msg
 						assert_empty(error_tip, "提示信息内容错误!")

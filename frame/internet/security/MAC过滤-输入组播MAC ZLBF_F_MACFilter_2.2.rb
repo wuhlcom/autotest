@@ -55,7 +55,7 @@ testcase {
             puts "ERROR TIP:#{error_tip.text}".encode("GBK")
             assert_equal(@tc_mac_error, error_tip.text, "提示内容错误")
 
-            tc_mac1 = "0a:00:5e:00:00:01"
+            tc_mac1 = "0b:00:5e:00:00:01"
             puts "添加MAC #{tc_mac1}为过滤条件".encode("GBK")
             @options_page.mac_filter_input(tc_mac1, @tc_mac_desc) #输入，状态默认为生效
             @options_page.mac_save #保存mac过滤条件

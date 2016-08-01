@@ -30,6 +30,7 @@ module RouterPageObject
 						button(:save_item, id: @@ts_tag_sbm, frame: frame)
 						button(:delete_item_all, id: @@ts_tag_delvir, frame: frame)
 						span(:error_msg, id: @@ts_tag_wan_err, frame: frame)
+						div(:error_aui, class_name: @@ts_tag_aui_content, frame: frame)
 				end
 		end
 

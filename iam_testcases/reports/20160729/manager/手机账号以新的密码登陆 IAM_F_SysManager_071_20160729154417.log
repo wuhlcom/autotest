@@ -1,0 +1,23 @@
+[2016-07-29 15:44:17] 1¡¢SSHµÇÂ¼IAMÏµÍ³£»
+mode phone manager 18900000000 pw
+{"result"=>1}
+[2016-07-29 15:44:18] 2¡¢Ê¹ÓÃĞÂÃÜÂëµÇÂ¼£»
+{"result"=>1, "name"=>"18900000000", "nickname"=>"phone_manager", "uid"=>"208", "role_code"=>"2", "token"=>"9646de392505e4c56f427c828caeb186"}
+[2016-07-29 15:44:18] 3¡¢Ê¹ÓÃ¾ÉÃÜÂëµÇÂ¼£»
+{"err_code"=>"10001", "err_msg"=>"\u5E10\u53F7\u6216\u5BC6\u7801\u9519\u8BEF", "err_desc"=>"E_USER_PWD_ERROR"}
+[2016-07-29 15:44:18] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.00 s
+Slowest tests:
+0.94 s	IAM::IamManager#test_ÊÖ»úÕËºÅÒÔĞÂµÄÃÜÂëµÇÂ½ IAM_F_SysManager_071
+Slowest suites:
+0.94 s	IAM::IamManager
+
+
+[32mFinished tests in 0.950554s, 1.0520 tests/s, 1.0520 assertions/s.[0m
+
+
+[32m1 tests, 1 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160729
+Writing XML reports to E:/autotest/iam_testcases/reports/20160729

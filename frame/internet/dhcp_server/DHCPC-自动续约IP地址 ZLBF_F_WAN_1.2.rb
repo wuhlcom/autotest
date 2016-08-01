@@ -75,8 +75,8 @@ testcase {
 						puts "两次request报文时间点分别是：#{request_time1}s,和 #{request_time2}s".to_gbk
 						flag  = false
 						value =request_time2-request_time1
-						puts "DHCP服务器租期为60s时，路由器WAN发送request的间隔为#{value}"
-						if (value>= 30 && value <= 31)
+						puts "DHCP服务器租期为60s时，路由器WAN发送request的间隔为#{value}".to_gbk
+						if (value>= 30 && value <= 33) #因为路由器续约前发送ARP报文,dhcp续约报文会延迟2-3s发送，
 								flag = true
 						end
 						assert(flag, "dut在租约时间的一半时间内未发request报文！")

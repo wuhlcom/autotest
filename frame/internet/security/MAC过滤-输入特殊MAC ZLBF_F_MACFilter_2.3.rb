@@ -16,13 +16,13 @@ testcase {
     def process
 
         operate("1、AP工作在路由方式下，输入MAC地址包含~!@#$%^&*()_+{}|:\"<>?等键盘上33个特殊字符,查看是否允许输入保存；") {
-            @status_page = RouterPageObject::SystatusPage.new(@browser)
-            @status_page.open_systatus_page(@browser.url)
-            @tc_lanmac = @status_page.get_lan_mac
-            puts "LAN MAC #{@tc_lanmac}"
-            if @browser.div(class_name: @ts_aui_state_focus).exists? || @browser.div(class_name: @ts_aui_state).exists?
-                @browser.execute_script(@ts_close_div)
-            end
+            # @status_page = RouterPageObject::SystatusPage.new(@browser)
+            # @status_page.open_systatus_page(@browser.url)
+            # @tc_lanmac = @status_page.get_lan_mac
+            # puts "LAN MAC #{@tc_lanmac}"
+            # if @browser.div(class_name: @ts_aui_state_focus).exists? || @browser.div(class_name: @ts_aui_state).exists?
+            #     @browser.execute_script(@ts_close_div)
+            # end
 
             @options_page = RouterPageObject::OptionsPage.new(@browser)
             @options_page.open_security_setting(@browser.url) #打开安全界面
@@ -53,15 +53,15 @@ testcase {
             puts "ERROR TIP:#{error_tip.text}".encode("GBK")
             assert_equal(@tc_mac_error, error_tip.text, "提示内容错误")
 
-            tc_mac1 = @tc_lanmac
-            puts "添加MAC #{tc_mac1}为过滤条件".encode("GBK")
-            @options_page.mac_filter_input(tc_mac1, @tc_mac_desc) #输入，状态默认为生效
-            @options_page.mac_save #保存mac过滤条件
-            sleep 1
-            error_tip =@options_page.mac_filter_err_msg_element
-            assert(error_tip.exists?, "未提示MAC地址格式错误")
-            puts "ERROR TIP:#{error_tip.text}".encode("GBK")
-            assert_equal(@tc_mac_error, error_tip.text, "提示内容错误")
+            # tc_mac1 = @tc_lanmac
+            # puts "添加MAC #{tc_mac1}为过滤条件".encode("GBK")
+            # @options_page.mac_filter_input(tc_mac1, @tc_mac_desc) #输入，状态默认为生效
+            # @options_page.mac_save #保存mac过滤条件
+            # sleep 1
+            # error_tip =@options_page.mac_filter_err_msg_element
+            # assert(error_tip.exists?, "未提示MAC地址格式错误")
+            # puts "ERROR TIP:#{error_tip.text}".encode("GBK")
+            # assert_equal(@tc_mac_error, error_tip.text, "提示内容错误")
         }
 
     end

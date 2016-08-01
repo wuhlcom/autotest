@@ -1,0 +1,40 @@
+[2016-07-28 14:32:23] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-07-28 14:32:23] 2¡¢»ñÈ¡µÇÂ¼¹ÜÀíÔ±µÄidºÅºÍtokenÖµ£º
+[2016-07-28 14:32:23] 3¡¢ĞÂÔöÒ»¸ö¹ÜÀíÔ±£¬ÃÜÂëÒì³£¸ñÊ½£»
+SysManager_038@zhilutec.com is not exists!
+ĞÂÔö¹ÜÀíÔ±:¡®SysManager_038@zhilutec.com¡¯£¬ÃÜÂë³¤¶ÈÖĞ¼ä1234
+RESULT err_msg:ÃÜÂë¸ñÊ½´íÎó
+RESULT err_code:5005
+RESULT err_desc:E_PASSWD_FORMAT_ERROR
+SysManager_0351@zhilutec.com is not exists!
+ĞÂÔö¹ÜÀíÔ±:¡®SysManager_0351@zhilutec.com¡¯£¬ÃÜÂë³¤¶ÈWe$%*^&2
+RESULT err_msg:ÃÜÂë¸ñÊ½´íÎó
+RESULT err_code:5005
+RESULT err_desc:E_PASSWD_FORMAT_ERROR
+SysManager_0352@zhilutec.com is not exists!
+ĞÂÔö¹ÜÀíÔ±:¡®SysManager_0352@zhilutec.com¡¯£¬ÃÜÂë³¤¶È£±£²£³£´£µ£¶£·
+RESULT err_msg:ÃÜÂë¸ñÊ½´íÎó
+RESULT err_code:5005
+RESULT err_desc:E_PASSWD_FORMAT_ERROR
+[2016-07-28 14:32:24] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+delete manager:SysManager_038@zhilutec.com
+SysManager_038@zhilutec.com is not exists!
+delete manager:SysManager_0351@zhilutec.com
+SysManager_0351@zhilutec.com is not exists!
+delete manager:SysManager_0352@zhilutec.com
+SysManager_0352@zhilutec.com is not exists!
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.02 s
+Slowest tests:
+0.76 s	IAM::IamManager#test_ÃÜÂëÒì³£ÊäÈë²âÊÔ IAM_F_SysManager_038
+Slowest suites:
+0.76 s	IAM::IamManager
+
+
+[32mFinished tests in 0.778951s, 1.2838 tests/s, 11.5540 assertions/s.[0m
+
+
+[32m1 tests, 9 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160728
+Writing XML reports to E:/autotest/iam_testcases/reports/20160728

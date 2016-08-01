@@ -1,0 +1,22 @@
+[2016-07-28 15:21:13] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-07-28 15:21:13] 2¡¢»ñÈ¡µÇÂ¼¹ÜÀíÔ±µÄidºÅºÍtokenÖµ£º
+[2016-07-28 15:21:13] 3¡¢ĞÂÔöÒ»¸ö¹ÜÀíÔ±£¬commentsÎª255¸ö×Ö·û£»
+IAM_F_SysManager@126.com is not exists!
+ĞÂÔö¹ÜÀíÔ±:¡®IAM_F_SysManager@126.com¡¯£¬±¸×¢³¤Îª'255'
+RESULT MSG:Ìí¼Ó³É¹¦
+[2016-07-28 15:21:13] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.00 s
+Slowest tests:
+0.49 s	IAM::IamManager#test_·¶Î§ÄÚÕı³£ÊäÈë²âÊÔ_×î´óÖµ²âÊÔ IAM_F_SysManager_042
+Slowest suites:
+0.49 s	IAM::IamManager
+
+
+[32mFinished tests in 0.506392s, 1.9748 tests/s, 3.9495 assertions/s.[0m
+
+
+[32m1 tests, 2 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160728
+Writing XML reports to E:/autotest/iam_testcases/reports/20160728

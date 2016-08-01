@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="IAM::IamManager" skipped="0" failures="1" errors="0" tests="1" assertions="1" time="0.08441238000523299">
+  <testcase name="test_手机账号以新的密码登陆 IAM_F_SysManager_071" classname="IAM::IamManager" assertions="1" time="0.08441238000523299">
+    <failure type="test_手机账号以新的密码登陆 IAM_F_SysManager_071" message="undefined local variable or method `rs' for #&lt;IAMAPI::IAM:0x00000004739e08&gt;">
+Failure:
+test_手机账号以新的密码登陆 IAM_F_SysManager_071(IAM::IamManager) [iam_manager_single.rb:72]:
+undefined local variable or method `rs' for #&lt;IAMAPI::IAM:0x00000004739e08&gt;
+    </failure>
+  </testcase>
+</testsuite>

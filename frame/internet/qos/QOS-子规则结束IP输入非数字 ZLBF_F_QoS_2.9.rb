@@ -11,7 +11,7 @@ testcase {
 				@tc_wait_time       = 2
 				#kbps
 				@tc_bandwidth_total = "100000"
-        @tc_ip_error2       = "只允许输入数字"
+        @tc_ip_error2       = "只允许输入正数"
 		end
 
 		def process
@@ -71,17 +71,20 @@ testcase {
             assert_equal(@tc_ip_error2, error_tip, "提示信息内容错误!")
 				}
 
-
 		end
 
 		def clearup
 
 				operate("1 删除流量控制配置") {
-						@options_page = RouterPageObject::OptionsPage.new(@browser)
-						@options_page.select_traffic_ctl(@browser.url)
-						@options_page.delete_item_all
-						@options_page.unselect_traffic_sw
-						@options_page.save_traffic #保存
+						if @options_page.total_bw?
+								@options_page.unselect_traffic_sw
+								@options_page.save_traffic(10)
+						else
+								@options_page = RouterPageObject::OptionsPage.new(@browser)
+								@options_page.select_traffic_ctl(@browser.url)
+								@options_page.unselect_traffic_sw
+								@options_page.save_traffic(10)
+						end
 				}
 		end
 

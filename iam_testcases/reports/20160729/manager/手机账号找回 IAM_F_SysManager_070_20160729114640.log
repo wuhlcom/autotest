@@ -1,0 +1,22 @@
+[2016-07-29 11:46:40] 1¡¢SSHµÇÂ¼IAMÏµÍ³£»
+[2016-07-29 11:46:40] 2¡¢»ñÈ¡ÊÖ»úÑéÖ¤Âë£»
+[2016-07-29 11:46:40] 3¡¢ÊäÈëĞÂÃÜÂë£»
+add phone manager 18900001111
+mode phone manager 18900001111 pw
+RESULT:{"result"=>1}
+[2016-07-29 11:46:40] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.00 s
+Slowest tests:
+0.72 s	IAM::IamManager#test_ÊÖ»úÕËºÅÕÒ»Ø IAM_F_SysManager_070
+Slowest suites:
+0.72 s	IAM::IamManager
+
+
+[32mFinished tests in 0.730300s, 1.3693 tests/s, 1.3693 assertions/s.[0m
+
+
+[32m1 tests, 1 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160729
+Writing XML reports to E:/autotest/iam_testcases/reports/20160729

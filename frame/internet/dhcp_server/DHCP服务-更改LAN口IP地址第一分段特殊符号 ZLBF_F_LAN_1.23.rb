@@ -1,0 +1,116 @@
+#
+#description:
+#author:wuhongliang
+#date:2015-06-30 14:12:41
+#modify:
+#
+testcase {
+		attr = {"id" => "ZLBF_6.1.4", "level" => "P1", "auto" => "n"}
+
+		def prepare
+				@tc_ipaddr_error  = "IP地址格式错误"
+				@tc_ipaddr_error2 = "请输入 IP 地址"
+				@tc_lan_ip1       = ""
+				@tc_lan_ip2       = "192 .168.100.1"
+				@tc_lan_ip3       = "@.168.100.1"
+				@tc_lan_ip4       = "c.168.100.1"
+				@tc_lan_ip5       = "19 2.168.100.1"
+				@tc_lan_ip6       = "19-2.168.100.1"
+				@tc_lan_ip7       = " 192.168.100.1"
+				@tc_flag          = false
+		end
+
+		def process
+
+				operate("1、登陆路由器进入内网设置") {
+						@lan_page = RouterPageObject::LanPage.new(@browser)
+						@lan_page.open_lan_page(@browser.url)
+				}
+
+				operate("2、分别更改DHCP服务地址为，如@.100.100.1，x.100.100.1,空格.168.100.1,192空格.168.100.1,19空格2.168.100.1，9_2.168.100.1等特殊符号") {
+						puts "修改LAN DHCP服务IP为空".to_gbk
+						@lan_page.lan_ip_set(@tc_lan_ip1)
+						@lan_page.save_lanset
+						error_msg = @lan_page.lan_error
+						puts "ERROR TIP:#{error_msg}".to_gbk
+						unless @tc_ipaddr_error2==error_msg
+								@tc_flag=true
+						end
+						assert_equal(@tc_ipaddr_error2, error_msg, "未提示IP地址格式错误")
+
+						puts "修改LAN DHCP服务IP为#{@tc_lan_ip2}".to_gbk
+						@lan_page.lan_ip_set(@tc_lan_ip2)
+						@lan_page.save_lanset
+						error_msg = @lan_page.lan_error
+						puts "ERROR TIP:#{error_msg}".to_gbk
+						unless @tc_ipaddr_error==error_msg
+								@tc_flag=true
+						end
+						assert_equal(@tc_ipaddr_error, error_msg, "未提示IP地址格式错误")
+
+						puts "修改LAN DHCP服务IP为#{@tc_lan_ip3}".to_gbk
+						@lan_page.lan_ip_set(@tc_lan_ip3)
+						@lan_page.save_lanset
+						error_msg = @lan_page.lan_error
+						puts "ERROR TIP:#{error_msg}".to_gbk
+						unless @tc_ipaddr_error==error_msg
+								@tc_flag=true
+						end
+						assert_equal(@tc_ipaddr_error, error_msg, "未提示IP地址格式错误")
+
+						puts "修改LAN DHCP服务IP为#{@tc_lan_ip4}".to_gbk
+						@lan_page.lan_ip_set(@tc_lan_ip4)
+						@lan_page.save_lanset
+						error_msg = @lan_page.lan_error
+						puts "ERROR TIP:#{error_msg}".to_gbk
+						unless @tc_ipaddr_error==error_msg
+								@tc_flag=true
+						end
+						assert_equal(@tc_ipaddr_error, error_msg, "未提示IP地址格式错误")
+
+						puts "修改LAN DHCP服务IP为#{@tc_lan_ip5}".to_gbk
+						@lan_page.lan_ip_set(@tc_lan_ip5)
+						@lan_page.save_lanset
+						error_msg = @lan_page.lan_error
+						puts "ERROR TIP:#{error_msg}".to_gbk
+						unless @tc_ipaddr_error==error_msg
+								@tc_flag=true
+						end
+						assert_equal(@tc_ipaddr_error, error_msg, "未提示IP地址格式错误")
+
+						puts "修改LAN DHCP服务IP为#{@tc_lan_ip6}".to_gbk
+						@lan_page.lan_ip_set(@tc_lan_ip6)
+						@lan_page.save_lanset
+						error_msg = @lan_page.lan_error
+						puts "ERROR TIP:#{error_msg}".to_gbk
+						unless @tc_ipaddr_error==error_msg
+								@tc_flag=true
+						end
+						assert_equal(@tc_ipaddr_error, error_msg, "未提示IP地址格式错误")
+
+						puts "修改LAN DHCP服务IP为#{@tc_lan_ip7}".to_gbk
+						@lan_page.lan_ip_set(@tc_lan_ip7)
+						@lan_page.save_lanset
+						error_msg = @lan_page.lan_error
+						puts "ERROR TIP:#{error_msg}".to_gbk
+						unless @tc_ipaddr_error==error_msg
+								@tc_flag=true
+						end
+						assert_equal(@tc_ipaddr_error, error_msg, "未提示IP地址格式错误")
+				}
+
+				operate("3、分别保存，客户端是否自动获取IP地址为更改网段的IP地址、子网掩码、网关、DNS服务器信息") {
+				}
+
+		end
+
+		def clearup
+				operate("1 恢复默认DHCP服务IP") {
+						if @tc_flag
+								sleep 80
+						end
+				}
+
+		end
+
+}

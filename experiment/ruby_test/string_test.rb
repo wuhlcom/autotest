@@ -268,57 +268,58 @@ arr = rs.split(/显示网络模式\sMODE=BSSID/)[1].split(/SSID\s\d+\s:/)
 # 频道               : 153
 # 基本速率(Mbps)     : 6 12 24
 # 其他速率(Mbps)     : 9 18 36 48 54
-arr.each_with_index do |bss, index|
-		next if index == 0
-		arr_two   = bss.split("BSSID")
-		bssids_arr= []
-		arr_head  = arr_two[0].split("\n")
-		arr_two.each_with_index do |item, index|
-				next if index ==0
-				item_arr = item.split("\n")
-				/\s*(?<bssid>\d+)\s+:/ =~ item_arr[0]
-				/\d+\s+:\s+(?<mac>[0-9a-f]{2}:[0-9a-f]{2}:[0-9a-f]{2}:[0-9a-f]{2}:[0-9a-f]{2}:[0-9a-f]{2})/i =~ item_arr[0]
-				/\s+\u4FE1\u53F7\s+:\s+(?<signal>.+)/i =~ item_arr[1]
-				/\s+\u65E0\u7EBF\u7535\u7C7B\u578B\s+:\s+(?<wiless_type>.+)/i =~ item_arr[2]
-				/\s+\u9891\u9053\s+:\s+(?<channel>.+)/i =~ item_arr[3]
-				/\s+\u57FA\u672C\u901F\u7387\(Mbps\)\s+:\s+(?<basic_speed>.+)/i =~ item_arr[4]
-				/\s+\u5176\u4ED6\u901F\u7387\(Mbps\)\s+:\s+(?<other_speed>.+)/i =~ item_arr[5]
-				bssid_hash = {
-						bssid:        bssid.strip,
-						mac:          mac.strip,
-						signal:       signal.strip,
-						wirelss_type: wiless_type.strip,
-						channel:      channel.strip,
-						basic_speed:  basic_speed.strip,
-						other_speed:  other_speed.strip
-				}
-				bssids_arr << bssid_hash
-		end
-
-		ssid = arr_head[0].strip unless arr_head[0].nil?
-		if /Network\s+type\s+:\s+(?<struct>.+)/u=~arr_head[1]
-				if struct=~/\u7ED3\u6784/ #结构
-						network_type = "struct"
-				else
-						network_type=struct
-				end
-		end
-		# "    \u8EAB\u4EFD\u9A8C\u8BC1                : WPA2 - \u4E2A\u4EBA"
-		if /身份验证\s+:\s+(?<identify>.+)/=~arr_head[2]
-				if identify=="WPA2 - \u4E2A\u4EBA" #结构
-						identify = "WPA2PSK"
-				elsif identify=="WPA2 - \u4E2A\u4EBA" #结构
-						identify = "WPAPSK"
-				else
-						identify=identify
-				end
-		end
-		# "    \u52A0\u5BC6                    : CCMP "
-		/\u52A0\u5BC6\s+:\s+(?<aumode>.+)/=~arr_head[3]
-		p ssid_hash = {ssid: ssid.strip, network_type: network_type.strip, identify: identify.strip, au_mode: aumode.strip, bssids: bssids_arr}
-end
+# arr.each_with_index do |bss, index|
+# 		next if index == 0
+# 		arr_two   = bss.split("BSSID")
+# 		bssids_arr= []
+# 		arr_head  = arr_two[0].split("\n")
+# 		arr_two.each_with_index do |item, index|
+# 				next if index ==0
+# 				item_arr = item.split("\n")
+# 				/\s*(?<bssid>\d+)\s+:/ =~ item_arr[0]
+# 				/\d+\s+:\s+(?<mac>[0-9a-f]{2}:[0-9a-f]{2}:[0-9a-f]{2}:[0-9a-f]{2}:[0-9a-f]{2}:[0-9a-f]{2})/i =~ item_arr[0]
+# 				/\s+\u4FE1\u53F7\s+:\s+(?<signal>.+)/i =~ item_arr[1]
+# 				/\s+\u65E0\u7EBF\u7535\u7C7B\u578B\s+:\s+(?<wiless_type>.+)/i =~ item_arr[2]
+# 				/\s+\u9891\u9053\s+:\s+(?<channel>.+)/i =~ item_arr[3]
+# 				/\s+\u57FA\u672C\u901F\u7387\(Mbps\)\s+:\s+(?<basic_speed>.+)/i =~ item_arr[4]
+# 				/\s+\u5176\u4ED6\u901F\u7387\(Mbps\)\s+:\s+(?<other_speed>.+)/i =~ item_arr[5]
+# 				bssid_hash = {
+# 						bssid:        bssid.strip,
+# 						mac:          mac.strip,
+# 						signal:       signal.strip,
+# 						wirelss_type: wiless_type.strip,
+# 						channel:      channel.strip,
+# 						basic_speed:  basic_speed.strip,
+# 						other_speed:  other_speed.strip
+# 				}
+# 				bssids_arr << bssid_hash
+# 		end
+#
+# 		ssid = arr_head[0].strip unless arr_head[0].nil?
+# 		if /Network\s+type\s+:\s+(?<struct>.+)/u=~arr_head[1]
+# 				if struct=~/\u7ED3\u6784/ #结构
+# 						network_type = "struct"
+# 				else
+# 						network_type=struct
+# 				end
+# 		end
+# 		# "    \u8EAB\u4EFD\u9A8C\u8BC1                : WPA2 - \u4E2A\u4EBA"
+# 		if /身份验证\s+:\s+(?<identify>.+)/=~arr_head[2]
+# 				if identify=="WPA2 - \u4E2A\u4EBA" #结构
+# 						identify = "WPA2PSK"
+# 				elsif identify=="WPA2 - \u4E2A\u4EBA" #结构
+# 						identify = "WPAPSK"
+# 				else
+# 						identify=identify
+# 				end
+# 		end
+# 		# "    \u52A0\u5BC6                    : CCMP "
+# 		/\u52A0\u5BC6\s+:\s+(?<aumode>.+)/=~arr_head[3]
+# 		p ssid_hash = {ssid: ssid.strip, network_type: network_type.strip, identify: identify.strip, au_mode: aumode.strip, bssids: bssids_arr}
+# end
 #
 # p "\u5BC6\u7801\u53EA\u80FD\u662F\u6570\u5B57,\u5B57\u6BCD\u548C\u62EC\u53F7\u5185\u7E14\u957F\u5EA6\u662F8-63\u4E2A\u5B57\u7B26\u4E4B\u95F4".encode("GBK")
 # p "\u5BC6\u7801\u53EA\u80FD\u662F\u6570\u5B57\u548C\u5B57\u6BCD\u4E0B\u5212\u7EBF".encode("GBK")
- p "\u4E24\u6B21\u5BC6\u7801\u4E0D\u4E00\u81F4".encode("GBK")
- p "\u7528\u6237\u540D\u548C\u5BC6\u7801\u4E0D\u80FD\u4E3A\u7A7A".encode("GBK")
+#  p "\u4E24\u6B21\u5BC6\u7801\u4E0D\u4E00\u81F4".encode("GBK")
+#  p "\u7528\u6237\u540D\u548C\u5BC6\u7801\u4E0D\u80FD\u4E3A\u7A7A".encode("GBK")
+p ["a","b"].include?("a")

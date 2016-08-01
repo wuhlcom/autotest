@@ -44,7 +44,7 @@ testcase {
 						assert_equal(@ts_wan_mode_static, tc_net_type, "上网连接类型错误")
 						tc_net_status = @diagnose_page.net_status_element.element.span.text
 						puts "WAN口连接状态：#{tc_net_status}".to_gbk
-						assert_equal(@ts_net_link, tc_net_status, "WAN连接状态显示错误")
+						assert_equal(@ts_tag_diag_fail, tc_net_status, "WAN连接状态显示错误")
 						tc_net_domain_ip = @diagnose_page.domain_ip_element.element.span.text
 						puts "域名：#{@ts_diag_web}，解析结果：#{tc_net_domain_ip}".to_gbk
 						assert_match(@ts_domina_ip_fail, tc_net_domain_ip, "域名解析成功")

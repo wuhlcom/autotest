@@ -47,8 +47,10 @@ module TestTool
 
         #回填结果到excel
         def write_excel(line, key, tc_msg)
+            result = "failed"
+            result = "pass" if key.to_s == "success"
             @excel_obj.range_select("M#{line}:O#{line}")
-            @excel_obj.set_range(["autotest", key.to_s, tc_msg])
+            @excel_obj.set_range(["autotest", result, tc_msg])
         end
 
         #获取自动化测试结果
@@ -152,6 +154,7 @@ end
 
 if __FILE__ ==$0
     report_dir     = "20160628"
+    
     excel_name     = "baseline_tcs.xls"
     excel_baseline = File.expand_path("./reports")
     excel_log_dir  = File.expand_path("./reports/#{report_dir}")
