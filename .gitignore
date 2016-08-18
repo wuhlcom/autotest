@@ -6,6 +6,5 @@
 .git/*
 *.xlsx
 *.xls
-*reports/*
-html_reports/*
-reports/*
+*/html_reports/*
+*/reports/*
