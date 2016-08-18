@@ -1,0 +1,70 @@
+[2016-08-04 12:15:46] 1¡¢SSHµÇÂ¼IAMÏµÍ³£»
+[2016-08-04 12:15:46] 2¡¢»ñÈ¡ÕÒ»ØÕËºÅtokenÖµ£»
+[2016-08-04 12:15:46] 3¡¢ĞŞ¸ÄĞÂÃÜÂë£»
+=======================================================
+[ERROR INFO]:============PROCESS ERROR!===============
+=======================================================
+======================PROCESS ERROR MSG===============================
+======================PROCESS ERROR MSG================================
+C:/Ruby23-x64/lib/ruby/2.3.0/net/protocol.rb:158:in `rbuf_fill'
+C:/Ruby23-x64/lib/ruby/2.3.0/net/protocol.rb:136:in `readuntil'
+C:/Ruby23-x64/lib/ruby/2.3.0/net/protocol.rb:146:in `readline'
+C:/Ruby23-x64/lib/ruby/2.3.0/net/http/response.rb:40:in `read_status_line'
+C:/Ruby23-x64/lib/ruby/2.3.0/net/http/response.rb:29:in `read_new'
+C:/Ruby23-x64/lib/ruby/2.3.0/net/http.rb:1437:in `block in transport_request'
+C:/Ruby23-x64/lib/ruby/2.3.0/net/http.rb:1434:in `catch'
+C:/Ruby23-x64/lib/ruby/2.3.0/net/http.rb:1434:in `transport_request'
+C:/Ruby23-x64/lib/ruby/2.3.0/net/http.rb:1407:in `request'
+C:/Ruby23-x64/lib/ruby/2.3.0/net/http.rb:1352:in `request_post'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/iam-1.0.0/lib/iam/pubsocket.rb:57:in `block in post_data'
+C:/Ruby23-x64/lib/ruby/2.3.0/net/http.rb:853:in `start'
+C:/Ruby23-x64/lib/ruby/2.3.0/net/http.rb:584:in `start'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/iam-1.0.0/lib/iam/pubsocket.rb:56:in `post_data'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/iam-1.0.0/lib/iam/manager.rb:298:in `get_em_token'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/iam-1.0.0/lib/iam/manager.rb:319:in `modify_emailmana_pw'
+(eval):31:in `block in process56'
+E:/autotest/iam_testcases/public_instance_variable.rb:109:in `operate'
+(eval):25:in `process56'
+iam_manager.rb:52:in `block (3 levels) in <class:IamManager>'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest/test.rb:108:in `block (3 levels) in run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest/test.rb:205:in `capture_exceptions'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest/test.rb:105:in `block (2 levels) in run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest/test.rb:256:in `time_it'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest/test.rb:104:in `block in run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest.rb:334:in `on_signal'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest/test.rb:276:in `with_info_handler'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest/test.rb:103:in `run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-reporters-1.1.9/lib/minitest/reporters.rb:48:in `run_with_hooks'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest.rb:781:in `run_one_method'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest.rb:308:in `run_one_method'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest.rb:296:in `block (2 levels) in run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest.rb:295:in `each'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest.rb:295:in `block in run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest.rb:334:in `on_signal'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest.rb:321:in `with_info_handler'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest.rb:294:in `run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/iam-1.0.0/lib/iam/testsuit_order.rb:27:in `block in __run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/iam-1.0.0/lib/iam/testsuit_order.rb:27:in `map'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/iam-1.0.0/lib/iam/testsuit_order.rb:27:in `__run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest.rb:129:in `run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest.rb:56:in `block in autorun'
+[2016-08-04 12:16:46] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.00 s
+Slowest tests:
+60.30 s	IAM::IamManager#test_ÓÊÏäÕËºÅÃÜÂëÕÒ»Ø IAM_F_SysManager_085
+Slowest suites:
+60.30 s	IAM::IamManager
+
+
+[31mFinished tests in 60.312890s, 0.0166 tests/s, 0.0332 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_ÓÊÏäÕËºÅÃÜÂëÕÒ»Ø IAM_F_SysManager_085 [iam_manager.rb:62]
+Minitest::Assertion: Net::ReadTimeout[0m
+
+[31m1 tests, 2 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160804
+Writing XML reports to E:/autotest/iam_testcases/reports/20160804

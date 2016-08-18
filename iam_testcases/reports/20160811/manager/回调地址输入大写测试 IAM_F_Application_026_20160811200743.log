@@ -1,0 +1,19 @@
+[2016-08-11 20:07:43] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-11 20:07:43] 2¡¢»ñÈ¡ÖªÂ·¹ÜÀíÔ±tokenÖµ£»
+[2016-08-11 20:07:43] 3¡¢´´½¨Ó¦ÓÃ£¬redirect_uriÊäÈë´óĞ´£»
+[2016-08-11 20:07:43] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.01 s
+Slowest tests:
+0.37 s	IAM::IamManager#test_»Øµ÷µØÖ·ÊäÈë´óĞ´²âÊÔ IAM_F_Application_026
+Slowest suites:
+0.37 s	IAM::IamManager
+
+
+[32mFinished tests in 0.392590s, 2.5472 tests/s, 5.0944 assertions/s.[0m
+
+
+[32m1 tests, 2 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160811
+Writing XML reports to E:/autotest/iam_testcases/reports/20160811

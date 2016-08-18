@@ -1,0 +1,33 @@
+[2016-08-15 14:56:11] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-15 14:56:11] 2¡¢»ñÈ¡ÖªÂ·¹ÜÀíÔ±tokenÖµ£»
+[2016-08-15 14:56:11] 3¡¢»ñÈ¡ĞŞ¸ÄÓ¦ÓÃµÄÓ¦ÓÃIDºÅ;
+´´½¨Ó¦ÓÃÃûÎª'É½¶«Æ»¹û'
+[2016-08-15 14:56:11] 4¡¢ĞŞ¸ÄÓ¦ÓÃÃû³ÆÎªÒÑ´æÔÚµÄÃû³Æ£»
+Ó¦ÓÃÃûÓÉ'É½¶«Æ»¹û'======>ĞŞ¸ÄÎª'É½¶«Æ»¹û'
+{"result"=>1, "msg"=>"OK"}
+RESULT err_msg:''
+RESULT err_code:''
+RESULT err_desc:''
+[2016-08-15 14:56:11] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.00 s
+Slowest tests:
+0.57 s	IAM::IamManager#test_ĞŞ¸ÄÓ¦ÓÃÃû³ÆÖØ¸´²âÊÔ IAM_F_Application_037
+Slowest suites:
+0.57 s	IAM::IamManager
+
+
+[31mFinished tests in 0.597280s, 1.6743 tests/s, 5.0228 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_ĞŞ¸ÄÓ¦ÓÃÃû³ÆÖØ¸´²âÊÔ IAM_F_Application_037 [(eval):44]
+Minitest::Assertion: Ó¦ÓÃÃûÓÉ'É½¶«Æ»¹û'======>ĞŞ¸ÄÎª'É½¶«Æ»¹û'·µ»Ø´íÎóÏûÏ¢²»ÕıÈ·!.
+Expected: # encoding: UTF-8
+"\u5E94\u7528\u540D\u79F0\u683C\u5F0F\u9519\u8BEF"
+  Actual: nil[0m
+
+[31m1 tests, 3 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160815
+Writing XML reports to E:/autotest/iam_testcases/reports/20160815

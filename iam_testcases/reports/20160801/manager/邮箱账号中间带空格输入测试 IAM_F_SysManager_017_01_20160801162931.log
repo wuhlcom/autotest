@@ -1,0 +1,31 @@
+[2016-08-01 16:29:31] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-01 16:29:31] 2¡¢»ñÈ¡µÇÂ¼¹ÜÀíÔ±µÄidºÅºÍtokenÖµ£º
+[2016-08-01 16:29:31] 3¡¢ÕËºÅÖĞ¼ä´ø¿Õ¸ñ£¬ĞÂÔö¹ÜÀíÔ±£º
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:'Sys Manager_017@zhilutec.com'
+RESULT err_msg:ÕÊºÅ¸ñÊ½´íÎó
+RESULT err_code:5003
+RESULT err_desc:E_ACCOUNT_FORMAT_ERROR
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:'SysManager_017@zhilu tec.com'
+RESULT err_msg:ÕÊºÅ¸ñÊ½´íÎó
+RESULT err_code:5003
+RESULT err_desc:E_ACCOUNT_FORMAT_ERROR
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:'SysManager_017@zhilutec.c om '
+RESULT err_msg:ÕÊºÅ¸ñÊ½´íÎó
+RESULT err_code:5003
+RESULT err_desc:E_ACCOUNT_FORMAT_ERROR
+[2016-08-01 16:29:31] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[32m.[0m[32m.[0m
+                | 0.29 s
+Slowest tests:
+0.85 s	IAM::IamManager#test_ÓÊÏäÕËºÅÇ°ºó´ø¿Õ¸ñÊäÈë²âÊÔ IAM_F_SysManager_017
+0.28 s	IAM::IamManager#test_ÓÊÏäÕËºÅÖĞ¼ä´ø¿Õ¸ñÊäÈë²âÊÔ IAM_F_SysManager_017_01
+Slowest suites:
+1.13 s	IAM::IamManager
+
+
+[32mFinished tests in 1.154177s, 1.7328 tests/s, 11.2634 assertions/s.[0m
+
+
+[32m2 tests, 13 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160801
+Writing XML reports to E:/autotest/iam_testcases/reports/20160801

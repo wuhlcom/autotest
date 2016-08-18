@@ -1,0 +1,33 @@
+[2016-08-03 14:23:17] 1¡¢SSHµÇÂ¼IAMÏµÍ³£»
+[2016-08-03 14:23:17] 2¡¢»ñÈ¡ÊÖ»úÑéÖ¤Âë£»
+[2016-08-03 14:23:17] 3¡¢ÊäÈëĞÂÃÜÂë£¨ÃÜÂëÕı³£·¶Î§¸ñÊ½ÕıÈ·£©£»
+Ô­ÃÜÂëÎª123456,ĞŞ¸ÄÃÜÂëÎª456789,ÃÜÂë³¤¶È6
+mode phone manager 13444444445 pw
+RESULT:{"result"=>1}
+RESULT name:13444444445
+ĞŞ¸ÄÃÜÂëÎª456789,ÃÜÂë³¤¶È6
+RESULT nickname:autotest
+[2016-08-03 14:23:19] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.00 s
+Slowest tests:
+2.20 s	IAM::IamManager#test_ÃÜÂëÕı³£ÊäÈë²âÊÔ IAM_F_SysManager_079
+Slowest suites:
+2.20 s	IAM::IamManager
+
+
+[31mFinished tests in 2.211555s, 0.4522 tests/s, 1.8087 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_ÃÜÂëÕı³£ÊäÈë²âÊÔ IAM_F_SysManager_079 [(eval):39]
+Minitest::Assertion: ĞŞ¸Ä¹ÜÀíÔ±ÃÜÂëÎª456789ºóµÇÂ¼·µ»ØnicknameĞÅÏ¢´íÎó!.
+Expected: # encoding: UTF-8
+"phone_manager"
+  Actual: # encoding: UTF-8
+"autotest"[0m
+
+[31m1 tests, 4 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160803
+Writing XML reports to E:/autotest/iam_testcases/reports/20160803

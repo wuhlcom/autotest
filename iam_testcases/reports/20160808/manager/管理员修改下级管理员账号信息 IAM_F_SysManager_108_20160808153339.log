@@ -1,0 +1,29 @@
+[2016-08-08 15:33:39] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-08 15:33:39] 2¡¢ÖªÂ·¹ÜÀíÔ±ÏÂĞÂÔö³¬¼¶¹ÜÀíÔ±£»
+IAM Socket bugs!Return value format error!
+submanagertest@zhilutec.com is not exists!
+{}
+ĞÂÔö¹ÜÀíÔ±:¡®managertest@zhilutec.com¡¯
+RESULT MSG:
+[2016-08-08 15:33:40] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.00 s
+Slowest tests:
+0.23 s	IAM::IamManager#test_¹ÜÀíÔ±ĞŞ¸ÄÏÂ¼¶¹ÜÀíÔ±ÕËºÅĞÅÏ¢ IAM_F_SysManager_108
+Slowest suites:
+0.23 s	IAM::IamManager
+
+
+[31mFinished tests in 0.244066s, 4.0972 tests/s, 4.0972 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_¹ÜÀíÔ±ĞŞ¸ÄÏÂ¼¶¹ÜÀíÔ±ÕËºÅĞÅÏ¢ IAM_F_SysManager_108 [(eval):34]
+Minitest::Assertion: Ìí¼ÓÏµÍ³¹ÜÀíÔ±Ê§°Ü!.
+Expected: 1
+  Actual: nil[0m
+
+[31m1 tests, 1 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160808
+Writing XML reports to E:/autotest/iam_testcases/reports/20160808

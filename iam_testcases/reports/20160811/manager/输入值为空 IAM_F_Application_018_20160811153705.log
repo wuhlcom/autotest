@@ -1,0 +1,21 @@
+[2016-08-11 15:37:05] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-11 15:37:05] 2¡¢»ñÈ¡ÖªÂ·¹ÜÀíÔ±tokenÖµ£»
+[2016-08-11 15:37:05] 3¡¢´´½¨Ó¦ÓÃ£¬commentsÊäÈëÎª¿Õ£»
+´´½¨µÄÓ¦ÓÃÃû'ÎïÁªÍø'£¬Ó¦ÓÃ¼ò½éÄÚÈİÎª¿Õ
+[2016-08-11 15:37:05] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+É¾³ıÓ¦ÓÃ'ÎïÁªÍø'
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.01 s
+Slowest tests:
+0.37 s	IAM::IamManager#test_ÊäÈëÖµÎª¿Õ IAM_F_Application_018
+Slowest suites:
+0.37 s	IAM::IamManager
+
+
+[32mFinished tests in 0.389944s, 2.5645 tests/s, 5.1289 assertions/s.[0m
+
+
+[32m1 tests, 2 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160811
+Writing XML reports to E:/autotest/iam_testcases/reports/20160811

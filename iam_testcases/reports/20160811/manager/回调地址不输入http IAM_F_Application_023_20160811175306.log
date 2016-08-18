@@ -1,0 +1,22 @@
+[2016-08-11 17:53:06] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-11 17:53:06] 2¡¢»ñÈ¡ÖªÂ·¹ÜÀíÔ±tokenÖµ£»
+[2016-08-11 17:53:06] 3¡¢´´½¨Ó¦ÓÃ£¬redirect_uriÊäÈë²»´øhttp://£»
+RESULT err_msg:'Ó¦ÓÃ»Øµ÷µØÖ·¸ñÊ½´íÎó'
+RESULT err_code:'22011'
+RESULT err_desc:'E_REDIRECT_URI_FORMAT_ERROR'
+[2016-08-11 17:53:06] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.00 s
+Slowest tests:
+0.12 s	IAM::IamManager#test_»Øµ÷µØÖ·²»ÊäÈëhttp IAM_F_Application_023
+Slowest suites:
+0.12 s	IAM::IamManager
+
+
+[32mFinished tests in 0.132823s, 7.5288 tests/s, 22.5864 assertions/s.[0m
+
+
+[32m1 tests, 3 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160811
+Writing XML reports to E:/autotest/iam_testcases/reports/20160811

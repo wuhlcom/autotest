@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Frame::WebTestSystem" skipped="0" failures="1" errors="0" tests="3" assertions="4" time="0.04715809199990417">
+  <testcase name="test_默认密码测试 ZLBF_21.1.49" classname="Frame::WebTestSystem" assertions="1" time="0.01411541999993915">
+  </testcase>
+  <testcase name="test_登录功能测试 ZLBF_21.1.36" classname="Frame::WebTestSystem" assertions="1" time="0.024667490999945585">
+  </testcase>
+  <testcase name="test_注销功能测试 ZLBF_21.1.74" classname="Frame::WebTestSystem" assertions="2" time="0.008375181000019438">
+    <failure type="test_注销功能测试 ZLBF_21.1.74" message="测试失败了">
+Failure:
+test_注销功能测试 ZLBF_21.1.74(Frame::WebTestSystem) [(eval):27]:
+测试失败了
+    </failure>
+  </testcase>
+</testsuite>

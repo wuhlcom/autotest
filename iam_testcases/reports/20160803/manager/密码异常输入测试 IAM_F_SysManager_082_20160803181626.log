@@ -1,0 +1,22 @@
+[2016-08-03 18:16:26] 1¡¢SSHµÇÂ¼IAMÏµÍ³£»
+[2016-08-03 18:16:26] 2¡¢»ñÈ¡ÊÖ»úÑéÖ¤Âë£»
+[2016-08-03 18:16:26] 3¡¢ÐÂÃÜÂëÃÜÂëÒì³£ÊäÈë£»
+13444444245 is not exists!
+Ô­ÃÜÂëÎª123456,ÐÞ¸ÄÃÜÂëÎªÄãºÃÄãºÃÄãºÃ
+add phone manager 13444444245
+mode phone manager 13444444245 pw
+RESULT err_msg:'ÃÜÂë¸ñÊ½´íÎó'
+RESULT err_code:'5005'
+RESULT err_desc:'E_PASSWD_FORMAT_ERROR'
+ÐÞ¸ÄÃÜÂëÎª1^#!@*()@45
+»ñÈ¡µÃÑéÖ¤ÂëÎª2260
+RESULT err_msg:'ÃÜÂë¸ñÊ½´íÎó'
+RESULT err_code:'5005'
+RESULT err_desc:'E_PASSWD_FORMAT_ERROR'
+ÐÞ¸ÄÃÜÂëÎª£±£´£µ£¶£·£¸£¹£°
+»ñÈ¡µÃÑéÖ¤ÂëÎª8081
+RESULT err_msg:'ÃÜÂë¸ñÊ½´íÎó'
+RESULT err_code:'5005'
+RESULT err_desc:'E_PASSWD_FORMAT_ERROR'
+[2016-08-03 18:16:37] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[32m.[0m[32m.[0m

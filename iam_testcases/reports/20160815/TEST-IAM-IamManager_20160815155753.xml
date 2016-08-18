@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="IAM::IamManager" skipped="0" failures="1" errors="0" tests="1" assertions="3" time="0.3527599580011156">
+  <testcase name="test_修改提供方异常输入测试 IAM_F_Application_041" classname="IAM::IamManager" assertions="3" time="0.3527599580011156">
+    <failure type="test_修改提供方异常输入测试 IAM_F_Application_041" message="no implicit conversion of Symbol into Integer">
+Failure:
+test_修改提供方异常输入测试 IAM_F_Application_041(IAM::IamManager) [iam_manager.rb:62]:
+no implicit conversion of Symbol into Integer
+    </failure>
+  </testcase>
+</testsuite>

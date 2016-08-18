@@ -1,0 +1,27 @@
+[2016-08-04 17:35:42] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-04 17:35:42] 2¡¢»ñÈ¡ÖªÂ·¹ÜÀítokenÖµ£»
+[2016-08-04 17:35:42] 3¡¢ÖªÂ·¹ÜÀíÔ±ÏÂĞÂÔö³¬¼¶¹ÜÀíÔ±£»
+ÖªÂ·¹ÜÀíÔ±´´½¨³¬¼¶¹ÜÀíÔ±klwn20@163.com
+[2016-08-04 17:35:42] 4¡¢³¬¼¶¹ÜÀíÔ±ÏÂĞÂÔöÏµÍ³¹ÜÀíÔ±£»
+³¬¼¶¹ÜÀíÔ±klwn20@163.com´´½¨ÏµÍ³¹ÜÀíÔ±klwn202@163.com
+{"result"=>1, "name"=>"admin@zhilutec.com", "nickname"=>"\u77E5\u8DEF\u7BA1\u7406\u5458", "uid"=>"1", "role_code"=>"1", "token"=>"151db2a196627c8131ff2148af295b2f"}
+{"result"=>1, "name"=>"klwn20@163.com", "nickname"=>"pilipala", "uid"=>"353", "role_code"=>"2", "token"=>"7939ca343aec3dee72f20b4293d9e496"}
+{"result"=>1, "msg"=>"\u6DFB\u52A0\u6210\u529F"}
+[2016-08-04 17:35:42] 5¡¢ÖªÂ·¹ÜÀíÔ±ÏÂ»ñÈ¡¹ÜÀíÔ±ÁĞ±íºÍ¹ÜÀíÔ±ueridºÅ£º
+[2016-08-04 17:35:42] 6¡¢É¾³ıÖ¸¶¨µÄ¹ÜÀíÔ±£»
+[2016-08-04 17:35:42] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.01 s
+Slowest tests:
+0.53 s	IAM::IamManager#test_É¾³ıÓĞÏÂ¼¶¹ÜÀíÔ±µÄ¹ÜÀíÔ± IAM_F_SysManager_106
+Slowest suites:
+0.53 s	IAM::IamManager
+
+
+[32mFinished tests in 0.550675s, 1.8160 tests/s, 1.8160 assertions/s.[0m
+
+
+[32m1 tests, 1 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160804
+Writing XML reports to E:/autotest/iam_testcases/reports/20160804

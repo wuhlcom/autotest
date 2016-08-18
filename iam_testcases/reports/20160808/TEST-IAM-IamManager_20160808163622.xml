@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="IAM::IamManager" skipped="0" failures="1" errors="0" tests="1" assertions="3" time="0.5985150650012656">
+  <testcase name="test_管理员修改自身账号信息 IAM_F_SysManager_109" classname="IAM::IamManager" assertions="3" time="0.5985150650012656">
+    <failure type="test_管理员修改自身账号信息 IAM_F_SysManager_109" message="undefined method `merge!' for nil:NilClass">
+Failure:
+test_管理员修改自身账号信息 IAM_F_SysManager_109(IAM::IamManager) [iam_manager.rb:62]:
+undefined method `merge!' for nil:NilClass
+    </failure>
+  </testcase>
+</testsuite>

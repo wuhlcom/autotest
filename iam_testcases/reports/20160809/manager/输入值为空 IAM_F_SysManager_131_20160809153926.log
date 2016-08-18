@@ -1,0 +1,23 @@
+[2016-08-09 15:39:26] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-09 15:39:26] 2¡¢»ñÈ¡ÏµÍ³¹ÜÀíÔ±uidºÍtokenÖµ£»
+pigu@zhilutec.com is not exists!
+ĞÂÔö¹ÜÀíÔ±:¡®pigu@zhilutec.com¡¯
+RESULT MSG:Ìí¼Ó³É¹¦
+[2016-08-09 15:39:26] 3¡¢ĞŞ¸ÄcommentsĞÅÏ¢Îª¿Õ£»
+ĞŞ¸ÄcommentsÎª¿Õ
+[2016-08-09 15:39:26] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.00 s
+Slowest tests:
+0.50 s	IAM::IamManager#test_ÊäÈëÖµÎª¿Õ IAM_F_SysManager_131
+Slowest suites:
+0.50 s	IAM::IamManager
+
+
+[32mFinished tests in 0.514174s, 1.9449 tests/s, 5.8346 assertions/s.[0m
+
+
+[32m1 tests, 3 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160809
+Writing XML reports to E:/autotest/iam_testcases/reports/20160809

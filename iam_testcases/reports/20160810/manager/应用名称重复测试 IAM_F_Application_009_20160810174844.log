@@ -1,0 +1,34 @@
+[2016-08-10 17:48:44] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-10 17:48:44] 2¡¢»ñÈ¡ÖªÂ·¹ÜÀíÔ±tokenÖµ£»
+[2016-08-10 17:48:45] 3¡¢´´½¨Ó¦ÓÃ£¬ÆäÖĞÃû³Æ123£»
+´´½¨µÄÓ¦ÓÃÃûSameAPP
+[2016-08-10 17:48:45] 4¡¢ÔÙ´Î´´½¨Ó¦ÓÃ£¬Ãû³Æ123£»
+ÖØ¸´´´½¨µÄÓ¦ÓÃSameAPP
+{"err_code"=>"1002", "err_msg"=>"JSON\u6D88\u606F\u683C\u5F0F\u4E0D\u5408\u6CD5", "err_desc"=>"E_JSON_FORMAT_ERROR"}
+RESULT err_msg:'JSONÏûÏ¢¸ñÊ½²»ºÏ·¨'
+RESULT err_code:'1002'
+RESULT err_desc:'E_JSON_FORMAT_ERROR'
+[2016-08-10 17:48:45] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.00 s
+Slowest tests:
+0.30 s	IAM::IamManager#test_Ó¦ÓÃÃû³ÆÖØ¸´²âÊÔ IAM_F_Application_009
+Slowest suites:
+0.30 s	IAM::IamManager
+
+
+[31mFinished tests in 0.315588s, 3.1687 tests/s, 9.5061 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_Ó¦ÓÃÃû³ÆÖØ¸´²âÊÔ IAM_F_Application_009 [(eval):48]
+Minitest::Assertion: ÖØ¸´´´½¨µÄÓ¦ÓÃSameAPP·µ»Ø´íÎóÏûÏ¢²»ÕıÈ·!.
+Expected: # encoding: UTF-8
+"\u5E94\u7528\u540D\u79F0\u683C\u5F0F\u9519\u8BEF"
+  Actual: # encoding: UTF-8
+"JSON\u6D88\u606F\u683C\u5F0F\u4E0D\u5408\u6CD5"[0m
+
+[31m1 tests, 3 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160810
+Writing XML reports to E:/autotest/iam_testcases/reports/20160810

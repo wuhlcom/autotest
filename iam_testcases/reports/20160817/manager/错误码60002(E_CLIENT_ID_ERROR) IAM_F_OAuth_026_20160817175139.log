@@ -1,0 +1,42 @@
+[2016-08-17 17:51:39] 1¡¢sshµÇÂ¼µ½IAM·şÎñÆ÷£»
+[2016-08-17 17:51:39] 2¡¢¹ÜÀíÔ±´´½¨Ó¦ÓÃ
+¹ÜÀíÔ±µÇÂ¼
+¹ÜÀíÔ±´´½¨²¢¼¤»îÓ¦ÓÃ
+create app...
+create and active the new app...
+¹ÜÀíÔ±²éÑ¯Ó¦ÓÃ'GoToTheShop'ĞÅÏ¢
+[2016-08-17 17:51:40] 3¡¢ÓÃ»§×¢²á
+[2016-08-17 17:51:42] 4¡¢ÓÃ»§µÇÂ¼²¢°ó¶¨Ó¦ÓÃ
+ÓÃ»§'13103188889'µÇÂ¼
+ÓÃ»§'13103188889'µÇÂ¼ºó²éÑ¯Ó¦ÓÃ
+ÓÃ»§'13103188889'µÇÂ¼ºó°ó¶¨Ó¦ÓÃ
+[2016-08-17 17:51:42] 5¡¢ÓÃ»§oauthµÇÂ¼,»ñÈ¡ÓÃ»§userid£»
+[2016-08-17 17:51:43] 6¡¢client_idÊäÈë´íÎó£»
+RESULT err_msg:''
+RESULT err_code:''
+RESULT err_desc:''
+[2016-08-17 17:51:44] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[2016-08-17 17:51:44] 1.ÓÃ»§½â³ı°ó¶¨
+[2016-08-17 17:51:44] 2.É¾³ıÓ¦ÓÃ
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.01 s
+Slowest tests:
+4.51 s	IAM::IamManager#test_´íÎóÂë60002(E_CLIENT_ID_ERROR) IAM_F_OAuth_026
+Slowest suites:
+4.51 s	IAM::IamManager
+
+
+[31mFinished tests in 4.525616s, 0.2210 tests/s, 2.4306 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_´íÎóÂë60002(E_CLIENT_ID_ERROR) IAM_F_OAuth_026 [(eval):93]
+Minitest::Assertion: client_idÊäÈë´íÎó·µ»Ø´íÎóÏûÏ¢²»ÕıÈ·!.
+Expected: # encoding: UTF-8
+"AccessToken\u9519\u8BEF"
+  Actual: nil[0m
+
+[31m1 tests, 11 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160817
+Writing XML reports to E:/autotest/iam_testcases/reports/20160817

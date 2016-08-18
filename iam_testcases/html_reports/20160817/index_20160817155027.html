@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>测试结果</title>
+  <link href="../../style/bootstrap334.css" rel="stylesheet">
+  <script src="../../style/jquery334.js"></script>
+  <script src="../../style/jquery214.js"></script>
+  <script src="../../style/jqueryUI1103.js"></script>
+</head>
+
+<body>
+<div class="container">
+  <div class="jumbotron">
+    <h3>测试结果：</h3>
+
+    <p>
+      执行总时长 0h00m04s, 平均执行速率 4.31 per/s
+      <!--平均断言速率 2.55 assertions/s-->
+    </p>
+
+    <p>
+      <strong>
+        <span class="">执行脚本总数:1</span>,
+        <span class=""> 通过脚本数:0</span>,
+        <span class="text-danger">失败脚本数:1</span>,
+        <span class=""> 出错脚本数:0 </span>,
+        <span class=""> 忽略脚本数:0</span>
+        <!--<span class="">断言数:11</span>-->
+      </strong>
+    </p>
+
+    <div class="progress">
+      <div class="progress-bar progress-bar-info" style="width: 0.0%">
+        0% passed
+      </div>
+      <div class="progress-bar progress-bar-danger" style="width: 100.0%">
+        100% failed
+      </div>
+      <div class="progress-bar progress-bar-warning" style="width: 0.0%">
+        0% skipped
+      </div>
+    </div>
+
+
+  </div>
+
+  
+      <div class="panel panel-default">
+        <div class="panel-heading"><strong>IAM::IamManager</strong>
+                <span class="pull-right">
+                    <span class="">执行脚本数：1
+                      </span>,
+                   <span class="text-info">通过脚本数：0
+                      </span>,
+                    <span class="text-danger"> 失败脚本数：1
+                      </span>,
+                    <span class="">出错误脚本数：0
+                      </span>,
+                    <span class=""> 忽略脚本数0
+                      </span>,
+                  <!--  <span class="">断言数：11
+                      </span>,-->
+                  <span> 测试集执行时长： 4.2928s</span>
+                </span>
+        </div>
+        <div class="panel-body">
+          <div class="list-group">
+            
+                <div class="list-group-item">
+                  <h5 class="list-group-item-heading">
+                    
+                        <span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"></span>
+                    
+                    test_获取code接口认证 IAM_F_OAuth_020
+                    <span class="pull-right">
+                                    assertions： 11, time： 4.292800s
+                                </span>
+                  </h5>
+                  
+                      <pre class="list-group-item-text">(eval):92
+
+用户'13103158888'oauth登录获取接口认证code失败!.
+Expected: # encoding: UTF-8
+"71e1c69ead707c0c0c4ac92e99461232"
+  Actual: # encoding: UTF-8
+"<script>window.opener.location.href=\"http://192.168.10.9:8083/index.php/Login/index?code=71e1c69ead707c0c0c4ac92e99461232&ssid=MmVnYzgzcW84NzVmN3RiZnJkaWp1c2pvZzFpdDFqNzE=\";window.close();</script>"</pre>
+                  
+                </div>
+            
+          </div>
+        </div>
+      </div>
+  
+</div>
+</body>
+</html>

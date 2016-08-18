@@ -1,0 +1,33 @@
+[2016-08-17 17:45:30] 1¡¢sshµÇÂ¼µ½IAM·şÎñÆ÷£»
+[2016-08-17 17:45:30] 2¡¢¹ÜÀíÔ±´´½¨Ó¦ÓÃ
+¹ÜÀíÔ±µÇÂ¼
+¹ÜÀíÔ±´´½¨²¢¼¤»îÓ¦ÓÃ
+create app...
+create and active the new app...
+¹ÜÀíÔ±²éÑ¯Ó¦ÓÃ'GoToTheShop'ĞÅÏ¢
+[2016-08-17 17:45:30] 3¡¢ÓÃ»§×¢²á
+[2016-08-17 17:45:33] 4¡¢ÓÃ»§µÇÂ¼²¢°ó¶¨Ó¦ÓÃ
+ÓÃ»§'13103188889'µÇÂ¼
+ÓÃ»§'13103188889'µÇÂ¼ºó²éÑ¯Ó¦ÓÃ
+ÓÃ»§'13103188889'µÇÂ¼ºó°ó¶¨Ó¦ÓÃ
+[2016-08-17 17:45:33] 5¡¢ÓÃ»§oauthµÇÂ¼,»ñÈ¡ÓÃ»§userid£»
+[2016-08-17 17:45:34] 6¡¢client_idÊäÈë´íÎó£»
+nil
+[2016-08-17 17:45:34] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[2016-08-17 17:45:34] 1.ÓÃ»§½â³ı°ó¶¨
+[2016-08-17 17:45:34] 2.É¾³ıÓ¦ÓÃ
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.01 s
+Slowest tests:
+4.51 s	IAM::IamManager#test_´íÎóÂë60002(E_CLIENT_ID_ERROR) IAM_F_OAuth_026
+Slowest suites:
+4.51 s	IAM::IamManager
+
+
+[32mFinished tests in 4.532093s, 0.2206 tests/s, 2.2065 assertions/s.[0m
+
+
+[32m1 tests, 10 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160817
+Writing XML reports to E:/autotest/iam_testcases/reports/20160817

@@ -36,7 +36,7 @@ testcase {
 
     def clearup
         operate("1.»Ö¸´Ä¬ÈÏÉèÖÃ") {
-            @iam_obj.del_manager(@tc_man_name)
+             @iam_obj.del_manager(@tc_man_name)
         }
     end
 

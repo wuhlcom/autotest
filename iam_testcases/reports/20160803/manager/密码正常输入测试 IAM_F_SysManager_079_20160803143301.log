@@ -1,0 +1,35 @@
+[2016-08-03 14:33:01] 1¡¢SSHµÇÂ¼IAMÏµÍ³£»
+[2016-08-03 14:33:01] 2¡¢»ñÈ¡ÊÖ»úÑéÖ¤Âë£»
+[2016-08-03 14:33:01] 3¡¢ÊäÈëĞÂÃÜÂë£¨ÃÜÂëÕı³£·¶Î§¸ñÊ½ÕıÈ·£©£»
+13444444445 is not exists!
+Ô­ÃÜÂëÎª123456,ĞŞ¸ÄÃÜÂëÎª456789,ÃÜÂë³¤¶È6
+add phone manager 13444444445
+mode phone manager 13444444445 pw
+RESULT:{"result"=>1}
+RESULT name:13444444445
+ĞŞ¸ÄÃÜÂëÎª456789,ÃÜÂë³¤¶È6
+RESULT nickname:phone_manager
+ĞŞ¸ÄÃÜÂëÎª01234567890123456789012345678922,ÃÜÂë³¤¶È32
+RESULT:{"result"=>1}
+RESULT name:13444444445
+RESULT nickname:phone_manager
+ĞŞ¸ÄÃÜÂëÎª1234_abcd,ÃÜÂë³¤¶È9
+RESULT:{"result"=>1}
+RESULT name:13444444445
+RESULT nickname:phone_manager
+[2016-08-03 14:33:02] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.00 s
+Slowest tests:
+1.64 s	IAM::IamManager#test_ÃÜÂëÕı³£ÊäÈë²âÊÔ IAM_F_SysManager_079
+Slowest suites:
+1.64 s	IAM::IamManager
+
+
+[32mFinished tests in 1.657057s, 0.6035 tests/s, 7.2418 assertions/s.[0m
+
+
+[32m1 tests, 12 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160803
+Writing XML reports to E:/autotest/iam_testcases/reports/20160803

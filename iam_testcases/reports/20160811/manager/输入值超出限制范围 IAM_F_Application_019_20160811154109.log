@@ -1,0 +1,123 @@
+[2016-08-11 15:41:09] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-11 15:41:09] 2¡¢»ñÈ¡ÖªÂ·¹ÜÀíÔ±tokenÖµ£»
+[2016-08-11 15:41:09] 3¡¢´´½¨Ó¦ÓÃ£¬commentsÊäÈëÎª¿Õ£»
+´´½¨µÄÓ¦ÓÃÃû'º£ÏÊÒ»ºÅ'£¬Ó¦ÓÃ¼ò½éÄÚÈİ´óĞ¡Îª256
+=======================================================
+[ERROR INFO]:============PROCESS ERROR!===============
+=======================================================
+======================PROCESS ERROR MSG===============================
+======================PROCESS ERROR MSG================================
+C:/Ruby23-x64/lib/ruby/2.3.0/json/common.rb:156:in `parse'
+C:/Ruby23-x64/lib/ruby/2.3.0/json/common.rb:156:in `parse'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/iam-1.0.0/lib/iam/manager.rb:343:in `create_apply'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/iam-1.0.0/lib/iam/manager.rb:352:in `mana_create_app'
+(eval):31:in `block in process114'
+E:/autotest/iam_testcases/public_instance_variable.rb:154:in `operate'
+(eval):28:in `process114'
+iam_manager.rb:52:in `block (3 levels) in <class:IamManager>'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest/test.rb:107:in `block (3 levels) in run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest/test.rb:204:in `capture_exceptions'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest/test.rb:104:in `block (2 levels) in run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest/test.rb:255:in `time_it'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest/test.rb:103:in `block in run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:348:in `on_signal'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest/test.rb:275:in `with_info_handler'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest/test.rb:102:in `run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-reporters-1.1.9/lib/minitest/reporters.rb:48:in `run_with_hooks'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:799:in `run_one_method'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:322:in `run_one_method'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:310:in `block (2 levels) in run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:309:in `each'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:309:in `block in run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:348:in `on_signal'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:335:in `with_info_handler'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:308:in `run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/iam-1.0.0/lib/iam/testsuit_order.rb:27:in `block in __run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/iam-1.0.0/lib/iam/testsuit_order.rb:27:in `map'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/iam-1.0.0/lib/iam/testsuit_order.rb:27:in `__run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:135:in `run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:62:in `block in autorun'
+[2016-08-11 15:41:10] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.00 s
+Slowest tests:
+0.11 s	IAM::IamManager#test_ÊäÈëÖµ³¬³öÏŞÖÆ·¶Î§ IAM_F_Application_019
+Slowest suites:
+0.11 s	IAM::IamManager
+
+
+[31mFinished tests in 0.126724s, 7.8912 tests/s, 7.8912 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_ÊäÈëÖµ³¬³öÏŞÖÆ·¶Î§ IAM_F_Application_019 [iam_manager.rb:62]
+Minitest::Assertion: 784: unexpected token at '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>ÏµÍ³·¢Éú´íÎó</title>
+<style type="text/css">
+*{ padding: 0; margin: 0; }
+html{ overflow-y: scroll; }
+body{ background: #fff; font-family: 'Î¢ÈíÑÅºÚ'; color: #333; font-size: 16px; }
+img{ border: 0; }
+.error{ padding: 24px 48px; }
+.face{ font-size: 100px; font-weight: normal; line-height: 120px; margin-bottom: 12px; }
+h1{ font-size: 32px; line-height: 48px; }
+.error .content{ padding-top: 10px}
+.error .info{ margin-bottom: 12px; }
+.error .info .title{ margin-bottom: 3px; }
+.error .info .title h3{ color: #000; font-weight: 700; font-size: 16px; }
+.error .info .text{ line-height: 24px; }
+.copyright{ padding: 12px 48px; color: #999; }
+.copyright a{ color: #000; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="error">
+<p class="face">:(</p>
+<h1>1105:Data too long for column 'comments' at row 1
+ [ SQLÓï¾ä ] : INSERT INTO `zl_app` (`name`,`provider`,`redirect_uri`,`comments`,`admin_id`,`client_id`,`client_secret`,`expires_in`,`create_time`,`update_time`) VALUES ('º£ÏÊÒ»ºÅ','ÉúÏÊ¹İ','http://192.168.10.9','°ü×ÓÂøÍ·Äê¸âµ°ABC°ü×ÓÂøÍ·Äê¸âµ°ABC°ü×ÓÂøÍ·Äê¸âµ°ABC°ü×ÓÂøÍ·Äê¸âµ°ABC°ü×ÓÂøÍ·Äê¸âµ°ABC°ü×ÓÂøÍ·Äê¸âµ°ABC°ü×ÓÂøÍ·Äê¸âµ°ABC°ü×ÓÂøÍ·Äê¸âµ°ABC°ü×ÓÂøÍ·Äê¸âµ°ABC°ü×ÓÂøÍ·Äê¸âµ°ABC°ü×ÓÂøÍ·Äê¸âµ°ABC°ü×ÓÂøÍ·Äê¸âµ°ABC°ü×ÓÂøÍ·Äê¸âµ°ABC°ü×ÓÂøÍ·Äê¸âµ°ABC°ü×ÓÂøÍ·Äê¸âµ°ABC°ü×ÓÂøÍ·Äê¸âµ°ABC°ü×ÓÂøÍ·Äê¸âµ°ABC°ü×ÓÂøÍ·Äê¸âµ°ABC°ü×ÓÂøÍ·Äê¸âµ°ABC°ü×ÓÂøÍ·Äê¸âµ°ABC°ü×ÓÂøÍ·Äê¸âµ°ABC°ü×ÓÂøÍ·Äê¸âµ°ABC°ü×ÓÂøÍ·Äê¸âµ°ABC°ü×ÓÂøÍ·Äê¸âµ°ABC°ü×ÓÂøÍ·Äê¸âµ°ABCó¦Ğ·ÁúÏºöÏÓã','1','160811686569','dPuz9NRK0ruzAC5ZDWtFZ1Z3tZu6mDL0','1502437297','1470901297','1470901297')</h1>
+<div class="content">
+	<div class="info">
+		<div class="title">
+			<h3>´íÎóÎ»ÖÃ</h3>
+		</div>
+		<div class="text">
+			<p>FILE: /var/www/html/zlapi/ThinkPHP/Library/Think/Db/Driver.class.php &#12288;LINE: 350</p>
+		</div>
+	</div>
+	<div class="info">
+		<div class="title">
+			<h3>TRACE</h3>
+		</div>
+		<div class="text">
+			<p>#0 /var/www/html/zlapi/ThinkPHP/Library/Think/Db/Driver.class.php(350): E('1105:Data too l...')<br />
+#1 /var/www/html/zlapi/ThinkPHP/Library/Think/Db/Driver.class.php(237): Think\Db\Driver->error()<br />
+#2 /var/www/html/zlapi/ThinkPHP/Library/Think/Db/Driver.class.php(824): Think\Db\Driver->execute('INSERT INTO `zl...', false)<br />
+#3 /var/www/html/zlapi/ThinkPHP/Library/Think/Model.class.php(320): Think\Db\Driver->insert(Array, Array, false)<br />
+#4 /var/www/html/zlapi/API/iam/Controller/AppsController.class.php(235): Think\Model->add()<br />
+#5 [internal function]: iam\Controller\AppsController->index_post()<br />
+#6 /var/www/html/zlapi/ThinkPHP/Library/Think/App.class.php(173): ReflectionMethod->invoke(Object(iam\Controller\AppsController))<br />
+#7 /var/www/html/zlapi/ThinkPHP/Library/Think/Controller/RestController.class.php(80): Think\App::invokeAction(Object(iam\Controller\AppsController), 'index_post')<br />
+#8 [internal function]: Think\Controller\RestController->__call('index', '')<br />
+#9 /var/www/html/zlapi/ThinkPHP/Library/Think/App.class.php(114): ReflectionMethod->invokeArgs(Object(iam\Controller\AppsController), Array)<br />
+#10 /var/www/html/zlapi/ThinkPHP/Library/Think/App.class.php(204): Think\App::exec()<br />
+#11 /var/www/html/zlapi/ThinkPHP/Library/Think/Think.class.php(120): Think\App::run()<br />
+#12 /var/www/html/zlapi/ThinkPHP/ThinkPHP.php(97): Think\Think::start()<br />
+#13 /var/www/html/zlapi/index.php(25): require('/var/www/html/z...')<br />
+#14 {main}</p>
+		</div>
+	</div>
+</div>
+</div>
+<div class="copyright">
+<p><a title="¹Ù·½ÍøÕ¾" href="http://www.thinkphp.cn">ThinkPHP</a><sup>3.2.3</sup> { Fast & Simple OOP PHP Framework } -- [ WE CAN DO IT JUST THINK ]</p>
+</div>
+</body>
+</html>
+'[0m
+
+[31m1 tests, 1 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160811
+Writing XML reports to E:/autotest/iam_testcases/reports/20160811

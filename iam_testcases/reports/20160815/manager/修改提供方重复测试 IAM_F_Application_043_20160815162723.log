@@ -1,0 +1,29 @@
+[2016-08-15 16:27:23] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-15 16:27:23] 2¡¢»ñÈ¡ÖªÂ·¹ÜÀíÔ±tokenÖµ£»
+[2016-08-15 16:27:23] 3¡¢»ñÈ¡ĞŞ¸ÄÓ¦ÓÃµÄÓ¦ÓÃIDºÅ;
+´´½¨µÄÓ¦ÓÃÃû'»î·ğ¼Ã¹«',Ó¦ÓÃÌá¹©·½'zhilutec'
+´´½¨µÄÓ¦ÓÃÃû'Ç¢Ç¢¹Ï×Ó',Ó¦ÓÃÌá¹©·½'jidujiao'
+[2016-08-15 16:27:23] 4¡¢ĞŞ¸ÄproviderÖµÎªÒÑ´æÔÚÃû³Æ£»
+Ó¦ÓÃ'Ç¢Ç¢¹Ï×Ó'Ìá¹©·½ÓÉ'jidujiao'¸ÄÎªzhilutec
+[2016-08-15 16:27:24] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.01 s
+Slowest tests:
+0.68 s	IAM::IamManager#test_ĞŞ¸ÄÌá¹©·½ÖØ¸´²âÊÔ IAM_F_Application_043
+Slowest suites:
+0.68 s	IAM::IamManager
+
+
+[31mFinished tests in 0.710447s, 1.4076 tests/s, 7.0378 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_ĞŞ¸ÄÌá¹©·½ÖØ¸´²âÊÔ IAM_F_Application_043 [(eval):50]
+Minitest::Assertion: ĞÂÔöÒ»¸öÓ¦ÓÃÊ§°Ü!.
+Expected: 1
+  Actual: nil[0m
+
+[31m1 tests, 5 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160815
+Writing XML reports to E:/autotest/iam_testcases/reports/20160815

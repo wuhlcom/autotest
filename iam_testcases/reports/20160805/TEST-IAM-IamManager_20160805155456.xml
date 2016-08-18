@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="IAM::IamManager" skipped="0" failures="1" errors="0" tests="1" assertions="1" time="0.14117985000484623">
+  <testcase name="test_删除有下级管理员的管理员 IAM_F_SysManager_106" classname="IAM::IamManager" assertions="1" time="0.14117985000484623">
+    <failure type="test_删除有下级管理员的管理员 IAM_F_SysManager_106" message="wrong number of arguments (given 1, expected 0)">
+Failure:
+test_删除有下级管理员的管理员 IAM_F_SysManager_106(IAM::IamManager) [iam_manager.rb:62]:
+wrong number of arguments (given 1, expected 0)
+    </failure>
+  </testcase>
+</testsuite>

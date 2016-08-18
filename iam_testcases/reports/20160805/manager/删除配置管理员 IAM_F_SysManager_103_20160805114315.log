@@ -1,0 +1,26 @@
+[2016-08-05 11:43:15] 1°¢sshµ«¬ºIAM∑˛ŒÒ∆˜£ª
+"{\"totalRows\":\"1\",\"listRows\":10,\"nowPage\":1,\"res\":[{\"id\":\"367\",\"name\":\"klwn20@163.com\",\"nickname\":\"pilipala\",\"comments\":\"autotest\",\"title\":\"\\u8d85\\u7ea7\\u7ba1\\u7406\\u5458\"}]}"
+{"totalRows"=>"1", "listRows"=>10, "nowPage"=>1, "res"=>[{"id"=>"367", "name"=>"klwn20@163.com", "nickname"=>"pilipala", "comments"=>"autotest", "title"=>"\u8D85\u7EA7\u7BA1\u7406\u5458"}]}
+[2016-08-05 11:43:15] 2°¢ªÒ»°÷™¬∑π‹¿Ìtoken÷µ£ª
+[2016-08-05 11:43:15] 3°¢ªÒ»°π‹¿Ì‘±¡–±Ì∫Õπ‹¿Ì‘±uerid∫≈£∫
+[2016-08-05 11:43:15] 4°¢…æ≥˝÷∏∂®µƒπ‹¿Ì‘±£ª
+"{\"totalRows\":\"1\",\"listRows\":10,\"nowPage\":1,\"res\":[{\"id\":\"368\",\"name\":\"klwn20@163.com\",\"nickname\":\"pilipili\",\"comments\":\"autotest\",\"title\":\"\\u914d\\u7f6e\\u7ba1\\u7406\\u5458\"}]}"
+{"result"=>1}
+[2016-08-05 11:43:15] 1.ª÷∏¥ƒ¨»œ…Ë÷√
+"{\"totalRows\":\"0\",\"listRows\":10,\"nowPage\":1,\"res\":[]}"
+klwn20@163.com is not exists!
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.00 s
+Slowest tests:
+0.54 s	IAM::IamManager#test_…æ≥˝≈‰÷√π‹¿Ì‘± IAM_F_SysManager_103
+Slowest suites:
+0.54 s	IAM::IamManager
+
+
+[32mFinished tests in 0.551179s, 1.8143 tests/s, 3.6286 assertions/s.[0m
+
+
+[32m1 tests, 2 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160805
+Writing XML reports to E:/autotest/iam_testcases/reports/20160805

@@ -1,0 +1,20 @@
+[2016-08-10 16:09:06] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-10 16:09:06] 2¡¢»ñÈ¡ÖªÂ·¹ÜÀíÔ±tokenÖµ£»
+[2016-08-10 16:09:06] 3¡¢´´½¨Ó¦ÓÃ£¬ÆäÖĞÃû³ÆÊäÈë33¸ö×Ö·û£»
+{"err_code"=>"22006", "err_msg"=>"\u5E94\u7528\u540D\u79F0\u683C\u5F0F\u9519\u8BEF", "err_desc"=>"E_APP_NAME_FORMAT_ERROR"}
+[2016-08-10 16:09:06] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.00 s
+Slowest tests:
+0.19 s	IAM::IamManager#test_Ó¦ÓÃÃû³Æ³¤¶ÈÔÚ·¶Î§Íâ²âÊÔ IAM_F_Application_005
+Slowest suites:
+0.19 s	IAM::IamManager
+
+
+[32mFinished tests in 0.201831s, 4.9546 tests/s, 0.0000 assertions/s.[0m
+
+
+[32m1 tests, 0 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160810
+Writing XML reports to E:/autotest/iam_testcases/reports/20160810

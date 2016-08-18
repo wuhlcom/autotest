@@ -38,7 +38,7 @@ module IAM
         tcs_el = @ts_el.elements["TestCases"]
         tc_el  = tcs_el.elements.each("TestCase") { |tc|
             tc_name = tc.elements["name"].text
-            next if tc_name !~ /IAM_F_SysManager_061/
+            next if tc_name !~ /IAM_F_SysManager_057/
             tc_path     = tc.elements["path"].text
             tc_abs_path = File.absolute_path(tc_path, __FILE__)
             tc_file     = tc_abs_path+"/"+tc_name+".rb"
@@ -52,7 +52,7 @@ module IAM
                     tc_content.gsub!("process", new_process)
                     tc_content.gsub!("clearup", new_clearup)
                     eval(tc_content)
-                    tc_name=tc_name.to_gbk
+                    # tc_name=tc_name.to_gbk
                     define_method "test_#{tc_name}" do
                         report_fpath = @@report_path_manager+"/#{tc_name}.log"
                         time         = Time.new.strftime("%Y%m%d%H%M%S")

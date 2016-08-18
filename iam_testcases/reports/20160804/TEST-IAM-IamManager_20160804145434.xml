@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="IAM::IamManager" skipped="0" failures="1" errors="0" tests="1" assertions="3" time="1.6151141019945499">
+  <testcase name="test_使用旧密码登陆 IAM_F_SysManager_087" classname="IAM::IamManager" assertions="3" time="1.6151141019945499">
+    <failure type="test_使用旧密码登陆 IAM_F_SysManager_087" message="使用修改密码后的账户登录失败!....">
+Failure:
+test_使用旧密码登陆 IAM_F_SysManager_087(IAM::IamManager) [(eval):31]:
+使用修改密码后的账户登录失败!.
+Expected: 1
+  Actual: nil
+    </failure>
+  </testcase>
+</testsuite>

@@ -10,7 +10,8 @@ testcase {
     def prepare
         @tc_man_name = "18900001111"
         @tc_nickname = "phone_manager"
-        @tc_passwd   = "123456_dddd"
+        @tc_add_pw   = "123456"
+        @tc_mod_pw   = "12345678"
     end
 
     def process
@@ -22,9 +23,9 @@ testcase {
         }
 
         operate("3、输入新密码；") {
-            rs = @iam_obj.mobile_manager_modpw(@tc_man_name, @tc_passwd, @tc_nickname)
+            rs = @iam_obj.mobile_manager_modpw(@tc_man_name, @tc_mod_pw, @tc_add_pw,@tc_nickname)
             puts "RESULT:#{rs}".encode("GBK")
-            assert_equal(@ts_add_rs, rs["result"], "添加修改手机账户超级管理员密码失败!")
+            assert_equal(@ts_add_rs, rs["result"], "修改手机账户超级管理员密码失败!")
         }
 
 

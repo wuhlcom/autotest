@@ -4,31 +4,41 @@
 # date:2016-07-25 10:00:17
 # modify:
 #
-    testcase{
-      attr = {"id"=>"IAM_F_SysManager_085", "level"=>"P1", "auto"=>"n"}
-    def prepare
+testcase {
+  attr = {"id" => "IAM_F_SysManager_085", "level" => "P1", "auto" => "n"}
 
-    end
+  def prepare
+    @tc_account = "378433825322@qq.com"
+    @tc_passwd  = "1234567"
+    @tc_modpw   = "45678944"
+    @tc_nickname= "hahaha"
+  end
 
-    def process
+  def process
 
-      operate("1ã€SSHç™»å½•IAMç³»ç»Ÿï¼›") {
-}
+    operate("1¡¢SSHµÇÂ¼IAMÏµÍ³£»") {
+    }
 
-operate("2ã€è·å–æ‰¾å›è´¦å·tokenå€¼ï¼›") {
-}
+    operate("2¡¢»ñÈ¡ÕÒ»ØÕËºÅtokenÖµ£»") {
+    }
 
-operate("3ã€ä¿®æ”¹æ–°å¯†ç ï¼›") {
-}
+    operate("3¡¢ĞŞ¸ÄĞÂÃÜÂë£»") {
+      #´´½¨ÕË»§
+      rs_login = @iam_obj.manager_add_login(@tc_account, @tc_passwd, @tc_nickname)
+      assert_equal(@ts_admin_log_rs, rs_login["result"], "´´½¨ÕË»§#{@tc_account}Ê§°Ü!")
+
+      #ĞŞ¸ÄÃÜÂë
+      rs = @iam_obj.modify_emailmana_pw(@tc_account, @tc_modpw)
+      assert_equal(@ts_admin_log_rs, rs["result"], "ĞŞ¸ÄÃÜÂëÎª#{@tc_mod_pw1}·µ»Ø´íÎóÏûÏ¢²»ÕıÈ·!")
+    }
 
 
+  end
 
-    end
-
-    def clearup
-    operate("1.æ¢å¤é»˜è®¤è®¾ç½®"){
+  def clearup
+    operate("1.»Ö¸´Ä¬ÈÏÉèÖÃ") {
 
     }
-    end
+  end
 
-    }
+}

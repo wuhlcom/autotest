@@ -1,0 +1,22 @@
+[2016-08-09 17:56:51] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-09 17:56:51] 2¡¢»ñÈ¡ÖªÂ·¹ÜÀíÔ±tokenÖµ£»
+ÖªÂ·¹ÜÀíÔ±´´½¨³¬¼¶¹ÜÀíÔ±wuhuarou@zhilutec.com
+³¬¼¶¹ÜÀíÔ±wuhuarou@zhilutec.com´´½¨ÏµÍ³¹ÜÀíÔ±xianyu@zhilutec.com
+IAM Socket bugs!Return value format error!
+[2016-08-09 17:56:51] 3¡¢²éÑ¯ÖªÂ·¹ÜÀíÔ±ÏÂµÄ¹ÜÀíÔ±ĞÅÏ¢£»£¨³¬¼¶¹ÜÀíÔ±¡¢ÏµÍ³¹ÜÀíÔ±²éÑ¯Í¬ÉÏ£©
+[2016-08-09 17:56:51] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.00 s
+Slowest tests:
+0.86 s	IAM::IamManager#test_¹ÜÀíÔ±²é¿´ËùÓĞÏÂ¼¶¹ÜÀíÔ±¼°Æä´´½¨µÄÏÂ¼¶¹ÜÀíÔ± IAM_F_SysManager_134
+Slowest suites:
+0.86 s	IAM::IamManager
+
+
+[32mFinished tests in 0.874889s, 1.1430 tests/s, 6.8580 assertions/s.[0m
+
+
+[32m1 tests, 6 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160809
+Writing XML reports to E:/autotest/iam_testcases/reports/20160809

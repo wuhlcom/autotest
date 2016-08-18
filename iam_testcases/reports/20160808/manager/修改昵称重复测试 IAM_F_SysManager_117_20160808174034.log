@@ -1,0 +1,26 @@
+[2016-08-08 17:40:34] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-08 17:40:34] 2¡¢»ñÈ¡ÏµÍ³¹ÜÀíÔ±idºÅºÍtokenÖµ£»
+jiandan@zhilutec.com is not exists!
+ĞÂÔö¹ÜÀíÔ±:¡®jiandan@zhilutec.com¡¯
+RESULT MSG:Ìí¼Ó³É¹¦
+hongshao@zhilutec.com is not exists!
+ĞÂÔö¹ÜÀíÔ±:¡®hongshao@zhilutec.com¡¯
+RESULT MSG:Ìí¼Ó³É¹¦
+[2016-08-08 17:40:34] 3¡¢ĞŞ¸ÄnicknameĞÅÏ¢ÎªÒÑ´æÔÚµÄêÇ³Æ£»
+ĞŞ¸Ä¹ÜÀíÔ±hongshao@zhilutec.comêÇ³ÆÎª'¼åµ°ÃÃ'Óë¹ÜÀíÔ±jiandan@zhilutec.comµÄêÇ³ÆÒ»ÖÂ
+[2016-08-08 17:40:34] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.00 s
+Slowest tests:
+0.92 s	IAM::IamManager#test_ĞŞ¸ÄêÇ³ÆÖØ¸´²âÊÔ IAM_F_SysManager_117
+Slowest suites:
+0.92 s	IAM::IamManager
+
+
+[32mFinished tests in 0.942340s, 1.0612 tests/s, 5.3059 assertions/s.[0m
+
+
+[32m1 tests, 5 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160808
+Writing XML reports to E:/autotest/iam_testcases/reports/20160808

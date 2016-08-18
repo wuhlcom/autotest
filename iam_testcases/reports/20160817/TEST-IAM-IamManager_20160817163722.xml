@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="IAM::IamManager" skipped="0" failures="1" errors="0" tests="1" assertions="5" time="0.2528990159917157">
+  <testcase name="test_code有效期测试 IAM_F_OAuth_021" classname="IAM::IamManager" assertions="5" time="0.2528990159917157">
+    <failure type="test_code有效期测试 IAM_F_OAuth_021" message="undefined method `[]' for nil:NilClass">
+Failure:
+test_code有效期测试 IAM_F_OAuth_021(IAM::IamManager) [iam_manager.rb:62]:
+undefined method `[]' for nil:NilClass
+    </failure>
+  </testcase>
+</testsuite>

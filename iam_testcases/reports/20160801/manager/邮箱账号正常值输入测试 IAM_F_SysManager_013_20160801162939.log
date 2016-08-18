@@ -1,0 +1,58 @@
+[2016-08-01 16:29:39] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-01 16:29:39] 2¡¢»ñÈ¡µÇÂ¼¹ÜÀíÔ±µÄidºÅºÍtokenÖµ£º
+[2016-08-01 16:29:39] 3¡¢Ö´ĞĞĞÂÔöÒ»¸ö¹ÜÀíÔ±£¬
+[2016-08-01 16:29:39] ÓÃÀıÖĞÁĞ³öÓÊÏä¶¼Òª²âÊÔÒ»±é£»
+klwn20@163.com is not exists!
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:'klwn20@163.com'
+RESULT MSG:Ìí¼Ó³É¹¦
+1420557566@qq.com is not exists!
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:'1420557566@qq.com'
+RESULT MSG:Ìí¼Ó³É¹¦
+NEWMAN@sina.com.cn is not exists!
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:'NEWMAN@sina.com.cn'
+RESULT MSG:Ìí¼Ó³É¹¦
+ADDx_550@sohu.com is not exists!
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:'ADDx_550@sohu.com'
+RESULT MSG:Ìí¼Ó³É¹¦
+zhihudasheng@yahoo.com.cn is not exists!
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:'zhihudasheng@yahoo.com.cn'
+RESULT MSG:Ìí¼Ó³É¹¦
+ggmmlll@gmail.com is not exists!
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:'ggmmlll@gmail.com'
+RESULT MSG:Ìí¼Ó³É¹¦
+hhhotmm_222@hotmail.com is not exists!
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:'hhhotmm_222@hotmail.com'
+RESULT MSG:Ìí¼Ó³É¹¦
+[2016-08-01 16:29:41] 4¡¢ÓÊÏä³¤¶È32×Ö·û£º
+zhilu_123456789012345678@126.com is not exists!
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:zhilu_123456789012345678@126.com,³¤¶ÈÎª32
+RESULT MSG:Ìí¼Ó³É¹¦
+[2016-08-01 16:29:41] 5¡¢ÓÊÏäÊäÈëº¬ÓĞ×ÖÄ¸¡¢Êı×Ö¡¢ÏÂ»®Ïß×Ö·û£º
+zhilu_ttec_5522@zhilutec.com is not exists!
+Ìí¼Ó³¬¼¶¹ÜÀíÔ±ÕË»§Îª:zhilu_ttec_5522@zhilutec.com
+RESULT MSG:Ìí¼Ó³É¹¦
+[2016-08-01 16:29:41] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+delete manager:klwn20@163.com
+delete manager:1420557566@qq.com
+delete manager:NEWMAN@sina.com.cn
+delete manager:ADDx_550@sohu.com
+delete manager:zhihudasheng@yahoo.com.cn
+delete manager:ggmmlll@gmail.com
+delete manager:hhhotmm_222@hotmail.com
+delete manager:zhilu_123456789012345678@126.com
+delete manager:zhilu_ttec_5522@zhilutec.com
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.00 s
+Slowest tests:
+3.33 s	IAM::IamManager#test_ÓÊÏäÕËºÅÕı³£ÖµÊäÈë²âÊÔ IAM_F_SysManager_013
+Slowest suites:
+3.33 s	IAM::IamManager
+
+
+[32mFinished tests in 3.354965s, 0.2981 tests/s, 5.3652 assertions/s.[0m
+
+
+[32m1 tests, 18 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160801
+Writing XML reports to E:/autotest/iam_testcases/reports/20160801

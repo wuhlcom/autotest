@@ -1,0 +1,36 @@
+[2016-08-17 16:39:47] 1°¢sshµ«¬ºµΩIAM∑˛ŒÒ∆˜£ª
+[2016-08-17 16:39:47] 2°¢π‹¿Ì‘±¥¥Ω®”¶”√
+π‹¿Ì‘±µ«¬º
+π‹¿Ì‘±¥¥Ω®≤¢º§ªÓ”¶”√
+app exists...
+active exidsted app...
+π‹¿Ì‘±≤È—Ø”¶”√'∂¨πœ∑¢µÁ'–≈œ¢
+[2016-08-17 16:39:47] 3°¢”√ªß◊¢≤·
+[2016-08-17 16:39:49] 4°¢”√ªßµ«¬º≤¢∞Û∂®”¶”√
+”√ªß'13100001111'µ«¬º
+”√ªß'13100001111'µ«¬º∫Û≤È—Ø”¶”√
+”√ªß'13100001111'µ«¬º∫Û∞Û∂®”¶”√
+[2016-08-17 16:39:49] 5°¢”√ªßoauthµ«¬º,ªÒ»°”√ªßuserid£ª
+[2016-08-17 16:39:51] 6°¢ªÒ»°Ω”ø⁄»œ÷§code÷µ£ª
+[2016-08-17 16:39:51] 7°¢code”––ß∆⁄ƒ⁄ªÒ»°»œ÷§access_token÷µ£ª
+[2016-08-17 16:39:51] 8°¢code≥¨ ±∫ÛªÒ»°»œ÷§access_token÷µ£ª
+Á≠âÂæÖ30sencods codeË∂ÖÊó∂
+{"access_token"=>"57be3209ea2e04ef0c1648c91261a2c6", "expires_in"=>3600, "user_id"=>"195f49fe-6eec-499e-a89a-405909380831", "scope"=>nil}
+RESULT err_msg:''
+RESULT err_code:''
+RESULT err_desc:''
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.00 s
+Slowest tests:
+34.70 s	IAM::IamManager#test_code”––ß∆⁄≤‚ ‘ IAM_F_OAuth_021
+Slowest suites:
+34.70 s	IAM::IamManager
+
+
+[32mFinished tests in 34.711860s, 0.0288 tests/s, 0.4033 assertions/s.[0m
+
+
+[32m1 tests, 14 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160817
+Writing XML reports to E:/autotest/iam_testcases/reports/20160817

@@ -1,0 +1,30 @@
+[2016-08-03 17:43:19] 1¡¢SSHµÇÂ¼IAMÏµÍ³£»
+[2016-08-03 17:43:19] 2¡¢»ñÈ¡ÊÖ»úÑéÖ¤Âë£»
+[2016-08-03 17:43:19] 3¡¢ÊäÈëĞÂÃÜÂë³¤¶ÈÔÚ·¶Î§Íâ£»
+Ô­ÃÜÂëÎª123456,ĞŞ¸ÄÃÜÂëÎª45678,ÃÜÂë³¤¶È5
+add phone manager 13444444345
+mode phone manager 13444444345 pw
+RESULT err_msg:'ÃÜÂë¸ñÊ½´íÎó'
+RESULT err_code:'5005'
+RESULT err_desc:'E_PASSWD_FORMAT_ERROR'
+ĞŞ¸ÄÃÜÂëÎª012345678901234567890123456789222,ÃÜÂë³¤¶È33
+»ñÈ¡µÃÑéÖ¤ÂëÎª1941
+RESULT err_msg:'ÃÜÂë¸ñÊ½´íÎó'
+RESULT err_code:'5005'
+RESULT err_desc:'E_PASSWD_FORMAT_ERROR'
+[2016-08-03 17:43:20] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.01 s
+Slowest tests:
+0.94 s	IAM::IamManager#test_ÃÜÂë³¤¶ÈÔÚÏŞÖÆ·¶Î§Íâ IAM_F_SysManager_080
+Slowest suites:
+0.94 s	IAM::IamManager
+
+
+[32mFinished tests in 0.963320s, 1.0381 tests/s, 6.2285 assertions/s.[0m
+
+
+[32m1 tests, 6 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160803
+Writing XML reports to E:/autotest/iam_testcases/reports/20160803

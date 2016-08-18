@@ -1,0 +1,22 @@
+[2016-08-12 11:11:33] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-12 11:11:33] 2¡¢»ñÈ¡ÖªÂ·¹ÜÀíÔ±tokenÖµ£»
+[2016-08-12 11:11:33] 3¡¢´´½¨Ó¦ÓÃ£¬redirect_uriÊäÈëÎª¿Õ£»
+RESULT err_msg:'Ó¦ÓÃÌá¹©·½Îª¿Õ'
+RESULT err_code:'22010'
+RESULT err_desc:'E_APP_REDIRECT_URI_NULL'
+[2016-08-12 11:11:33] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.01 s
+Slowest tests:
+0.11 s	IAM::IamManager#test_»Øµ÷µØÖ·ÊäÈëÎª¿Õ IAM_F_Application_027
+Slowest suites:
+0.11 s	IAM::IamManager
+
+
+[32mFinished tests in 0.135278s, 7.3922 tests/s, 22.1766 assertions/s.[0m
+
+
+[32m1 tests, 3 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160812
+Writing XML reports to E:/autotest/iam_testcases/reports/20160812

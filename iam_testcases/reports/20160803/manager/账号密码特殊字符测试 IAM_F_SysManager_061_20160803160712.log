@@ -1,0 +1,97 @@
+[2016-08-03 16:07:12] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-03 16:07:12] 2¡¢¹ÜÀíÔ±µÇÂ¼£¬ÕËºÅÃÜÂëÌØÊâ×Ö·û£»
+=======================================================
+[ERROR INFO]:============PROCESS ERROR!===============
+=======================================================
+======================PROCESS ERROR MSG===============================
+======================PROCESS ERROR MSG================================
+C:/Ruby23-x64/lib/ruby/2.3.0/uri/rfc3986_parser.rb:67:in `split'
+C:/Ruby23-x64/lib/ruby/2.3.0/uri/rfc3986_parser.rb:73:in `parse'
+C:/Ruby23-x64/lib/ruby/2.3.0/uri/common.rb:227:in `parse'
+C:/Ruby23-x64/lib/ruby/2.3.0/uri/common.rb:714:in `URI'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/iam-1.0.0/lib/iam/pubsocket.rb:10:in `uri'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/iam-1.0.0/lib/iam/pubsocket.rb:55:in `post_data'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/iam-1.0.0/lib/iam/manager.rb:40:in `manager_login'
+(eval):21:in `block in process0'
+E:/autotest/iam_testcases/public_instance_variable.rb:105:in `operate'
+(eval):20:in `process0'
+iam_manager_single.rb:62:in `block (3 levels) in <class:IamManager>'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest/test.rb:108:in `block (3 levels) in run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest/test.rb:205:in `capture_exceptions'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest/test.rb:105:in `block (2 levels) in run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest/test.rb:256:in `time_it'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest/test.rb:104:in `block in run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest.rb:334:in `on_signal'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest/test.rb:276:in `with_info_handler'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest/test.rb:103:in `run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-reporters-1.1.9/lib/minitest/reporters.rb:48:in `run_with_hooks'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest.rb:781:in `run_one_method'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest.rb:308:in `run_one_method'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest.rb:296:in `block (2 levels) in run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest.rb:295:in `each'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest.rb:295:in `block in run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest.rb:334:in `on_signal'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest.rb:321:in `with_info_handler'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest.rb:294:in `run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/iam-1.0.0/lib/iam/testsuit_order.rb:27:in `block in __run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/iam-1.0.0/lib/iam/testsuit_order.rb:27:in `map'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/iam-1.0.0/lib/iam/testsuit_order.rb:27:in `__run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest.rb:129:in `run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest.rb:56:in `block in autorun'
+[2016-08-03 16:07:12] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.00 s
+Slowest tests:
+0.01 s	IAM::IamManager#test_è´¦å·å¯†ç ç‰¹æ®Šå­—ç¬¦æµ‹è¯• IAM_F_SysManager_061
+Slowest suites:
+0.01 s	IAM::IamManager
+
+
+[31mFinished tests in 0.023848s, 41.9325 tests/s, 41.9325 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_è´¦å·å¯†ç ç‰¹æ®Šå­—ç¬¦æµ‹è¯• IAM_F_SysManager_061 [iam_manager_single.rb:72]
+Minitest::Assertion: bad URI(is not URI?): p_%^:?>23[0m
+
+[31m1 tests, 1 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160803
+There was an error writing the HTML report
+This may have been caused by cancelling the test run
+Use mode => :terse in the HTML reporters constructor to see less detail
+(erb):78:in `concat'(erb):78:in `concat'
+: : 
+incompatible character encodings: GBK and UTF-8incompatible character encodings: GBK and UTF-8
+ ( (
+Encoding::CompatibilityErrorEncoding::CompatibilityError
+)
+)
+	from (erb):78:in `block (2 levels) in report'
+	from (erb):78:in `block (2 levels) in report'
+	from (erb):68:in `each'
+	from (erb):68:in `each'
+	from (erb):68:in `block in report'
+	from (erb):68:in `block in report'
+	from (erb):47:in `each'
+	from (erb):47:in `each'
+	from (erb):47:in `report'
+	from (erb):47:in `report'
+	from C:/Ruby23-x64/lib/ruby/2.3.0/erb.rb:864:in `eval'
+	from C:/Ruby23-x64/lib/ruby/2.3.0/erb.rb:864:in `eval'
+	from C:/Ruby23-x64/lib/ruby/2.3.0/erb.rb:864:in `result'
+	from C:/Ruby23-x64/lib/ruby/2.3.0/erb.rb:864:in `result'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-reporters-1.1.9/lib/minitest/reporters/html_reporter.rb:100:in `report'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-reporters-1.1.9/lib/minitest/reporters/html_reporter.rb:100:in `report'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-reporters-1.1.9/lib/minitest/minitest_reporter_plugin.rb:26:in `each'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-reporters-1.1.9/lib/minitest/minitest_reporter_plugin.rb:26:in `each'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-reporters-1.1.9/lib/minitest/minitest_reporter_plugin.rb:26:in `report'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-reporters-1.1.9/lib/minitest/minitest_reporter_plugin.rb:26:in `report'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest.rb:640:in `each'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest.rb:640:in `each'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest.rb:640:in `report'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest.rb:640:in `report'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest.rb:134:in `run'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest.rb:134:in `run'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest.rb:56:in `block in autorun'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.8.3/lib/minitest.rb:56:in `block in autorun'

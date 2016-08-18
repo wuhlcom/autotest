@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="IAM::IamManager" skipped="0" failures="1" errors="0" tests="1" assertions="5" time="0.9085294140095357">
+  <testcase name="test_修改应用名称输入正常测试 IAM_F_Application_032" classname="IAM::IamManager" assertions="5" time="0.9085294140095357">
+    <failure type="test_修改应用名称输入正常测试 IAM_F_Application_032" message="应用名由'z'======&gt;修改为'你我他niwotah你我他niwotah你我他niwotahai'失败!....">
+Failure:
+test_修改应用名称输入正常测试 IAM_F_Application_032(IAM::IamManager) [(eval):57]:
+应用名由'z'======&gt;修改为'你我他niwotah你我他niwotah你我他niwotahai'失败!.
+Expected: 1
+  Actual: nil
+    </failure>
+  </testcase>
+</testsuite>

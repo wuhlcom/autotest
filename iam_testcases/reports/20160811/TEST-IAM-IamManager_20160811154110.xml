@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="IAM::IamManager" skipped="0" failures="1" errors="0" tests="1" assertions="1" time="0.10696326999823214">
+  <testcase name="test_输入值超出限制范围 IAM_F_Application_019" classname="IAM::IamManager" assertions="1" time="0.10696326999823214">
+    <failure type="test_输入值超出限制范围 IAM_F_Application_019" message="784: unexpected token at '&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;...">
+Failure:
+test_输入值超出限制范围 IAM_F_Application_019(IAM::IamManager) [iam_manager.rb:62]:
+784: unexpected token at '&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;&lt;head&gt;
+&lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type"&gt;
+&lt;title&gt;系统发生错误&lt;/title&gt;
+&lt;style type="text/css"&gt;
+*{ padding: 0; margin: 0; }
+html{ overflow-y: scroll; }
+body{ background: #fff; font-family: '微软雅黑'; color: #333; font-size: 16px; }
+img{ border: 0; }
+.error{ padding: 24px 48px; }
+.face{ font-size: 100px; font-weight: normal; line-height: 120px; margin-bottom: 12px; }
+h1{ font-size: 32px; line-height: 48px; }
+.error .content{ padding-top: 10px}
+.error .info{ margin-bottom: 12px; }
+.error .info .title{ margin-bottom: 3px; }
+.error .info .title h3{ color: #000; font-weight: 700; font-size: 16px; }
+.error .info .text{ line-height: 24px; }
+.copyright{ padding: 12px 48px; color: #999; }
+.copyright a{ color: #000; text-decoration: none; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class="error"&gt;
+&lt;p class="face"&gt;:(&lt;/p&gt;
+&lt;h1&gt;1105:Data too long for column 'comments' at row 1
+ [ SQL语句 ] : INSERT INTO `zl_app` (`name`,`provider`,`redirect_uri`,`comments`,`admin_id`,`client_id`,`client_secret`,`expires_in`,`create_time`,`update_time`) VALUES ('海鲜一号','生鲜馆','http://192.168.10.9','包子馒头年糕蛋ABC包子馒头年糕蛋ABC包子馒头年糕蛋ABC包子馒头年糕蛋ABC包子馒头年糕蛋ABC包子馒头年糕蛋ABC包子馒头年糕蛋ABC包子馒头年糕蛋ABC包子馒头年糕蛋ABC包子馒头年糕蛋ABC包子馒头年糕蛋ABC包子馒头年糕蛋ABC包子馒头年糕蛋ABC包子馒头年糕蛋ABC包子馒头年糕蛋ABC包子馒头年糕蛋ABC包子馒头年糕蛋ABC包子馒头年糕蛋ABC包子馒头年糕蛋ABC包子馒头年糕蛋ABC包子馒头年糕蛋ABC包子馒头年糕蛋ABC包子馒头年糕蛋ABC包子馒头年糕蛋ABC包子馒头年糕蛋ABC螃蟹龙虾鱿鱼','1','160811686569','dPuz9NRK0ruzAC5ZDWtFZ1Z3tZu6mDL0','1502437297','1470901297','1470901297')&lt;/h1&gt;
+&lt;div class="content"&gt;
+	&lt;div class="info"&gt;
+		&lt;div class="title"&gt;
+			&lt;h3&gt;错误位置&lt;/h3&gt;
+		&lt;/div&gt;
+		&lt;div class="text"&gt;
+			&lt;p&gt;FILE: /var/www/html/zlapi/ThinkPHP/Library/Think/Db/Driver.class.php &amp;#12288;LINE: 350&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="info"&gt;
+		&lt;div class="title"&gt;
+			&lt;h3&gt;TRACE&lt;/h3&gt;
+		&lt;/div&gt;
+		&lt;div class="text"&gt;
+			&lt;p&gt;#0 /var/www/html/zlapi/ThinkPHP/Library/Think/Db/Driver.class.php(350): E('1105:Data too l...')&lt;br /&gt;
+#1 /var/www/html/zlapi/ThinkPHP/Library/Think/Db/Driver.class.php(237): Think\Db\Driver-&gt;error()&lt;br /&gt;
+#2 /var/www/html/zlapi/ThinkPHP/Library/Think/Db/Driver.class.php(824): Think\Db\Driver-&gt;execute('INSERT INTO `zl...', false)&lt;br /&gt;
+#3 /var/www/html/zlapi/ThinkPHP/Library/Think/Model.class.php(320): Think\Db\Driver-&gt;insert(Array, Array, false)&lt;br /&gt;
+#4 /var/www/html/zlapi/API/iam/Controller/AppsController.class.php(235): Think\Model-&gt;add()&lt;br /&gt;
+#5 [internal function]: iam\Controller\AppsController-&gt;index_post()&lt;br /&gt;
+#6 /var/www/html/zlapi/ThinkPHP/Library/Think/App.class.php(173): ReflectionMethod-&gt;invoke(Object(iam\Controller\AppsController))&lt;br /&gt;
+#7 /var/www/html/zlapi/ThinkPHP/Library/Think/Controller/RestController.class.php(80): Think\App::invokeAction(Object(iam\Controller\AppsController), 'index_post')&lt;br /&gt;
+#8 [internal function]: Think\Controller\RestController-&gt;__call('index', '')&lt;br /&gt;
+#9 /var/www/html/zlapi/ThinkPHP/Library/Think/App.class.php(114): ReflectionMethod-&gt;invokeArgs(Object(iam\Controller\AppsController), Array)&lt;br /&gt;
+#10 /var/www/html/zlapi/ThinkPHP/Library/Think/App.class.php(204): Think\App::exec()&lt;br /&gt;
+#11 /var/www/html/zlapi/ThinkPHP/Library/Think/Think.class.php(120): Think\App::run()&lt;br /&gt;
+#12 /var/www/html/zlapi/ThinkPHP/ThinkPHP.php(97): Think\Think::start()&lt;br /&gt;
+#13 /var/www/html/zlapi/index.php(25): require('/var/www/html/z...')&lt;br /&gt;
+#14 {main}&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="copyright"&gt;
+&lt;p&gt;&lt;a title="官方网站" href="http://www.thinkphp.cn"&gt;ThinkPHP&lt;/a&gt;&lt;sup&gt;3.2.3&lt;/sup&gt; { Fast &amp; Simple OOP PHP Framework } -- [ WE CAN DO IT JUST THINK ]&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+'
+    </failure>
+  </testcase>
+</testsuite>

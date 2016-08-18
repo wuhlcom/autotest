@@ -1,0 +1,35 @@
+[2016-08-08 17:31:15] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+hongshao@zhilutec.com is not exists!
+[2016-08-08 17:31:15] 2¡¢»ñÈ¡ÏµÍ³¹ÜÀíÔ±idºÅºÍtokenÖµ£»
+hongshao@zhilutec.com is not exists!
+ĞÂÔö¹ÜÀíÔ±:¡®hongshao@zhilutec.com¡¯
+RESULT MSG:Ìí¼Ó³É¹¦
+[2016-08-08 17:31:15] 3¡¢ĞŞ¸ÄnicknameĞÅÏ¢´øÓĞ¿Õ¸ñ£»
+êÇ³ÆÎª' ºìÉÕÈâ'
+RESULT err_msg:
+RESULT err_code:
+RESULT err_desc:
+êÇ³ÆÎª'ºìÉÕÈâ '
+RESULT err_msg:
+RESULT err_code:
+RESULT err_desc:
+êÇ³ÆÎª'ºìÉÕ Èâ'
+RESULT err_msg:êÇ³Æ¸ñÊ½´íÎó
+RESULT err_code:5004
+RESULT err_desc:E_NICKNAME_FORMAT_ERROR
+[2016-08-08 17:31:16] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.00 s
+Slowest tests:
+0.82 s	IAM::IamManager#test_ĞŞ¸ÄêÇ³Æ´ø¿Õ¸ñÊäÈë²âÊÔ IAM_F_SysManager_116
+Slowest suites:
+0.82 s	IAM::IamManager
+
+
+[32mFinished tests in 0.834557s, 1.1982 tests/s, 8.3877 assertions/s.[0m
+
+
+[32m1 tests, 7 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160808
+Writing XML reports to E:/autotest/iam_testcases/reports/20160808

@@ -1,0 +1,58 @@
+[2016-08-09 17:40:53] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-09 17:40:53] 2¡¢»ñÈ¡ÖªÂ·¹ÜÀíÔ±tokenÖµ£»
+ÖªÂ·¹ÜÀíÔ±´´½¨³¬¼¶¹ÜÀíÔ±miantiao@zhilutec.com
+³¬¼¶¹ÜÀíÔ±miantiao@zhilutec.com´´½¨ÏµÍ³¹ÜÀíÔ±wuhuarou@zhilutec.com
+IAM Socket bugs!Return value format error!
+[2016-08-09 17:40:53] 3¡¢²éÑ¯ÖªÂ·¹ÜÀíÔ±ÏÂµÄ¹ÜÀíÔ±ĞÅÏ¢£»£¨³¬¼¶¹ÜÀíÔ±¡¢ÏµÍ³¹ÜÀíÔ±²éÑ¯Í¬ÉÏ£©
+=======================================================
+[ERROR INFO]:============PROCESS ERROR!===============
+=======================================================
+======================PROCESS ERROR MSG===============================
+======================PROCESS ERROR MSG================================
+(eval):40:in `[]'
+(eval):40:in `block in process93'
+E:/autotest/iam_testcases/public_instance_variable.rb:130:in `operate'
+(eval):38:in `process93'
+iam_manager.rb:52:in `block (3 levels) in <class:IamManager>'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest/test.rb:107:in `block (3 levels) in run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest/test.rb:204:in `capture_exceptions'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest/test.rb:104:in `block (2 levels) in run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest/test.rb:255:in `time_it'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest/test.rb:103:in `block in run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:348:in `on_signal'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest/test.rb:275:in `with_info_handler'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest/test.rb:102:in `run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-reporters-1.1.9/lib/minitest/reporters.rb:48:in `run_with_hooks'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:799:in `run_one_method'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:322:in `run_one_method'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:310:in `block (2 levels) in run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:309:in `each'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:309:in `block in run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:348:in `on_signal'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:335:in `with_info_handler'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:308:in `run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/iam-1.0.0/lib/iam/testsuit_order.rb:27:in `block in __run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/iam-1.0.0/lib/iam/testsuit_order.rb:27:in `map'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/iam-1.0.0/lib/iam/testsuit_order.rb:27:in `__run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:135:in `run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:62:in `block in autorun'
+[2016-08-09 17:40:54] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.00 s
+Slowest tests:
+0.85 s	IAM::IamManager#test_¹ÜÀíÔ±²é¿´ËùÓĞÏÂ¼¶¹ÜÀíÔ±¼°Æä´´½¨µÄÏÂ¼¶¹ÜÀíÔ± IAM_F_SysManager_134
+Slowest suites:
+0.85 s	IAM::IamManager
+
+
+[31mFinished tests in 0.862923s, 1.1589 tests/s, 4.6354 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_¹ÜÀíÔ±²é¿´ËùÓĞÏÂ¼¶¹ÜÀíÔ±¼°Æä´´½¨µÄÏÂ¼¶¹ÜÀíÔ± IAM_F_SysManager_134 [iam_manager.rb:62]
+Minitest::Assertion: no implicit conversion of String into Integer[0m
+
+[31m1 tests, 4 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160809
+Writing XML reports to E:/autotest/iam_testcases/reports/20160809

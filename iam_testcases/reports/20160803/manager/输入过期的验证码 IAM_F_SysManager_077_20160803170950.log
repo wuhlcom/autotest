@@ -1,0 +1,29 @@
+[2016-08-03 17:09:50] 1¡¢SSHµÇÂ¼IAMÏµÍ³£»
+[2016-08-03 17:09:50] 2¡¢»ñÈ¡ÊÖ»úÑéÖ¤Âë£»
+[2016-08-03 17:09:50] 3¡¢ÊäÈëĞÂÃÜÂë¡¢ÑéÖ¤Âë¹ıÆÚ£»
+»ñÈ¡µÃÑéÖ¤ÂëÎª8398,µÈ´ı150Ãë£¬ÑéÖ¤Âë³¬Ê±
+RESULT err_msg:ÃÜÂë¸ñÊ½´íÎó
+RESULT err_code:5005
+RESULT err_desc:E_PASSWD_FORMAT_ERROR
+[2016-08-03 17:12:21] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.00 s
+Slowest tests:
+150.65 s	IAM::IamManager#test_ÊäÈë¹ıÆÚµÄÑéÖ¤Âë IAM_F_SysManager_077
+Slowest suites:
+150.65 s	IAM::IamManager
+
+
+[31mFinished tests in 150.659596s, 0.0066 tests/s, 0.0133 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_ÊäÈë¹ıÆÚµÄÑéÖ¤Âë IAM_F_SysManager_077 [(eval):38]
+Minitest::Assertion: ÊäÈë´íÎóµÄÑéÖ¤Âë·µ»Ø´íÎóÏûÏ¢²»ÕıÈ·!.
+Expected: "\u9A8C\u8BC1\u7801\u5931\u6548"
+  Actual: "\u5BC6\u7801\u683C\u5F0F\u9519\u8BEF"[0m
+
+[31m1 tests, 2 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160803
+Writing XML reports to E:/autotest/iam_testcases/reports/20160803

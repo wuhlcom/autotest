@@ -1,0 +1,30 @@
+[2016-08-05 15:55:40] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-05 15:55:40] 2¡¢»ñÈ¡ÖªÂ·¹ÜÀítokenÖµ£»
+[2016-08-05 15:55:40] 3¡¢ÖªÂ·¹ÜÀíÔ±ÏÂĞÂÔö³¬¼¶¹ÜÀíÔ±£»
+ÖªÂ·¹ÜÀíÔ±´´½¨³¬¼¶¹ÜÀíÔ±klwn20@163.com
+{"totalRows"=>"1", "listRows"=>10, "nowPage"=>1, "res"=>[{"id"=>"375", "name"=>"klwn20@163.com", "nickname"=>"pilipala", "comments"=>"autotest", "title"=>"\u8D85\u7EA7\u7BA1\u7406\u5458"}]}
+"375"
+{"err_code"=>"21003", "err_msg"=>"\u5B58\u5728\u4E0B\u7EA7\u5E10\u53F7\u4E0D\u80FD\u5220\u9664", "err_desc"=>"E_DEL_USER_ERROR"}
+{"err_code"=>"5006", "err_msg"=>"\u5E10\u53F7\u5DF2\u5B58\u5728", "err_desc"=>"E_ACCOUNT_EXISTS_ERROR"}
+[2016-08-05 15:55:40] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.00 s
+Slowest tests:
+0.15 s	IAM::IamManager#test_É¾³ıÓĞÏÂ¼¶¹ÜÀíÔ±µÄ¹ÜÀíÔ± IAM_F_SysManager_106
+Slowest suites:
+0.15 s	IAM::IamManager
+
+
+[31mFinished tests in 0.158735s, 6.2998 tests/s, 6.2998 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_É¾³ıÓĞÏÂ¼¶¹ÜÀíÔ±µÄ¹ÜÀíÔ± IAM_F_SysManager_106 [(eval):32]
+Minitest::Assertion: ´´½¨ÕË»§klwn20@163.comÊ§°Ü!.
+Expected: 1
+  Actual: nil[0m
+
+[31m1 tests, 1 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160805
+Writing XML reports to E:/autotest/iam_testcases/reports/20160805

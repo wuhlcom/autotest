@@ -1,0 +1,26 @@
+[2016-08-05 17:47:12] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-05 17:47:12] 2¡¢»ñÈ¡ÖªÂ·¹ÜÀíÔ±tokenÖµ£»
+[2016-08-05 17:47:12] 3¡¢ÖªÂ·¹ÜÀíÔ±ÏÂĞÂÔö³¬¼¶¹ÜÀíÔ±£»
+ÖªÂ·¹ÜÀíÔ±´´½¨³¬¼¶¹ÜÀíÔ±klwn101@163.com
+[2016-08-05 17:47:12] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.00 s
+Slowest tests:
+0.44 s	IAM::IamManager#test_É¾³ı´´½¨ÁËÓ¦ÓÃµÄ³¬¼¶¹ÜÀíÔ± IAM_F_SysManager_107
+Slowest suites:
+0.44 s	IAM::IamManager
+
+
+[31mFinished tests in 0.460930s, 2.1695 tests/s, 2.1695 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_É¾³ı´´½¨ÁËÓ¦ÓÃµÄ³¬¼¶¹ÜÀíÔ± IAM_F_SysManager_107 [(eval):39]
+Minitest::Assertion: ´´½¨ÕË»§klwn101@163.comÊ§°Ü!.
+Expected: 1
+  Actual: nil[0m
+
+[31m1 tests, 1 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160805
+Writing XML reports to E:/autotest/iam_testcases/reports/20160805

@@ -1,0 +1,27 @@
+[2016-08-05 17:50:23] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-05 17:50:23] 2¡¢»ñÈ¡ÖªÂ·¹ÜÀíÔ±tokenÖµ£»
+[2016-08-05 17:50:23] 3¡¢ÖªÂ·¹ÜÀíÔ±ÏÂĞÂÔö³¬¼¶¹ÜÀíÔ±£»
+{"totalRows"=>"1", "listRows"=>10, "nowPage"=>1, "res"=>[{"id"=>"381", "name"=>"klwn101@163.com", "nickname"=>"hualaxiang", "comments"=>"autotest", "title"=>"\u8D85\u7EA7\u7BA1\u7406\u5458"}]}
+å¦‚æœè¶…çº§ç®¡ç†å‘˜klwn101@163.comå·²ç»å­˜åœ¨ï¼Œåˆ é™¤å…¶åº”ç”¨
+[2016-08-05 17:50:23] 4¡¢µÇÂ¼³¬¼¶¹ÜÀíÔ±»ñÈ¡idºÍtokenÖµ
+[2016-08-05 17:50:23] 5¡¢³¬¼¶¹ÜÀíÔ±ÏÂĞÂÔöÒ»¸öÓ¦ÓÃ£º
+[2016-08-05 17:50:24] 6¡¢ÖªÂ·¹ÜÀíÔ±ÏÂÉ¾³ıÒÑ´´½¨µÄ³¬¼¶¹ÜÀíÔ±£ºÆäÖĞuidÎªµÇÂ¼¹ÜÀíÔ±ID£¬useridÎª´ıÉ¾³ı¹ÜÀíÔ±ID£¬tokenÖµÎªµÇÂ¼¹ÜÀíÔ±tokenÖµ£»
+RESULT err_msg:ÕÊºÅÏÂ´æÔÚÓ¦ÓÃ²»ÄÜÉ¾³ı
+RESULT err_code:21005
+RESULT err_desc:E_USER_APP_ERROR
+[2016-08-05 17:50:24] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.00 s
+Slowest tests:
+0.78 s	IAM::IamManager#test_É¾³ı´´½¨ÁËÓ¦ÓÃµÄ³¬¼¶¹ÜÀíÔ± IAM_F_SysManager_107
+Slowest suites:
+0.78 s	IAM::IamManager
+
+
+[32mFinished tests in 0.794276s, 1.2590 tests/s, 6.2950 assertions/s.[0m
+
+
+[32m1 tests, 5 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160805
+Writing XML reports to E:/autotest/iam_testcases/reports/20160805

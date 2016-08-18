@@ -1,0 +1,21 @@
+[2016-08-04 15:08:19] 1¡¢SSHµÇÂ¼IAMÏµÍ³£»
+[2016-08-04 15:08:19] 2¡¢»ñÈ¡ÕÒ»ØÕËºÅtokenÖµ£¬ÓÊÏäÎª¿Õ£»
+RESULT err_msg:ÓÊÏä¸ñÊ½´íÎó
+RESULT err_code:5001
+RESULT err_desc:E_EMAIL_FORMAT_ERROR
+[2016-08-04 15:08:19] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.01 s
+Slowest tests:
+0.32 s	IAM::IamManager#test_ÓÊÏäÊäÈëÎª¿Õ IAM_F_SysManager_088
+Slowest suites:
+0.32 s	IAM::IamManager
+
+
+[32mFinished tests in 0.337587s, 2.9622 tests/s, 11.8488 assertions/s.[0m
+
+
+[32m1 tests, 4 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160804
+Writing XML reports to E:/autotest/iam_testcases/reports/20160804

@@ -1,0 +1,25 @@
+[2016-08-10 16:49:25] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-10 16:49:25] 2¡¢»ñÈ¡ÖªÂ·¹ÜÀíÔ±tokenÖµ£»
+[2016-08-10 16:49:25] 3¡¢´´½¨Ó¦ÓÃ£¬ÆäÖĞÃû³ÆÕı³£ÊäÈë£»
+´´½¨Ó¦ÓÃÃûÎª'9',³¤¶È'1'
+´´½¨Ó¦ÓÃÃûÎª'zhiluiamapzhiluiamapzhiluiamappp',³¤¶È'32'
+´´½¨Ó¦ÓÃÃûÎª'ÖªÂ·TEST_Ó¦ÓÃ',³¤¶È'9'
+[2016-08-10 16:49:26] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+É¾³ıÓ¦ÓÃ'9'
+É¾³ıÓ¦ÓÃ'zhiluiamapzhiluiamapzhiluiamappp'
+É¾³ıÓ¦ÓÃ'ÖªÂ·TEST_Ó¦ÓÃ'
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.00 s
+Slowest tests:
+0.67 s	IAM::IamManager#test_Ó¦ÓÃÃû³ÆÊäÈëÕı³£²âÊÔ IAM_F_Application_004
+Slowest suites:
+0.67 s	IAM::IamManager
+
+
+[32mFinished tests in 0.688516s, 1.4524 tests/s, 8.7144 assertions/s.[0m
+
+
+[32m1 tests, 6 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160810
+Writing XML reports to E:/autotest/iam_testcases/reports/20160810

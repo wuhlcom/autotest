@@ -1,0 +1,30 @@
+[2016-08-17 17:33:56] 1¡¢sshµÇÂ¼µ½IAM·şÎñÆ÷£»
+[2016-08-17 17:33:56] 2¡¢access_tokenÊäÈëÎª¿Õ
+{"err_code"=>"60003", "err_msg"=>"AccessToken\u4E3A\u7A7A", "err_desc"=>"E_ACCESS_TOKEN_NULL"}
+RESULT err_msg:'AccessTokenÎª¿Õ'
+RESULT err_code:'60003'
+RESULT err_desc:'E_ACCESS_TOKEN_NULL'
+[2016-08-17 17:33:56] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.00 s
+Slowest tests:
+0.08 s	IAM::IamManager#test_´íÎóÂë60003(E_ACCESS_TOKEN_NULL) IAM_F_OAuth_027
+Slowest suites:
+0.08 s	IAM::IamManager
+
+
+[31mFinished tests in 0.090057s, 11.1041 tests/s, 11.1041 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_´íÎóÂë60003(E_ACCESS_TOKEN_NULL) IAM_F_OAuth_027 [(eval):25]
+Minitest::Assertion: access_tokenÊäÈëÎª¿Õ·µ»Ø´íÎóÏûÏ¢²»ÕıÈ·!.
+Expected: # encoding: UTF-8
+"AccessToken\u9519\u8BEF"
+  Actual: # encoding: UTF-8
+"AccessToken\u4E3A\u7A7A"[0m
+
+[31m1 tests, 1 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160817
+Writing XML reports to E:/autotest/iam_testcases/reports/20160817

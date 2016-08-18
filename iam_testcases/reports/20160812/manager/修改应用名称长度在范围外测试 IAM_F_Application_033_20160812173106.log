@@ -1,0 +1,27 @@
+[2016-08-12 17:31:06] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-12 17:31:06] 2¡¢»ñÈ¡ÖªÂ·¹ÜÀíÔ±tokenÖµ£»
+[2016-08-12 17:31:06] 3¡¢»ñÈ¡ĞŞ¸ÄÓ¦ÓÃµÄÓ¦ÓÃIDºÅ;
+´´½¨Ó¦ÓÃÃûÎª'Ìì¿ÕÖ®³Ç'
+{"err_code"=>"22007", "err_msg"=>"\u5E94\u7528\u540D\u79F0\u5DF2\u5B58\u5728", "err_desc"=>"E_APP_NAME_EXIST"}
+[2016-08-12 17:31:06] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.00 s
+Slowest tests:
+0.18 s	IAM::IamManager#test_ĞŞ¸ÄÓ¦ÓÃÃû³Æ³¤¶ÈÔÚ·¶Î§Íâ²âÊÔ IAM_F_Application_033
+Slowest suites:
+0.18 s	IAM::IamManager
+
+
+[31mFinished tests in 0.190822s, 5.2405 tests/s, 5.2405 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_ĞŞ¸ÄÓ¦ÓÃÃû³Æ³¤¶ÈÔÚ·¶Î§Íâ²âÊÔ IAM_F_Application_033 [(eval):36]
+Minitest::Assertion: ĞÂÔöÒ»¸öÓ¦ÓÃÊ§°Ü!.
+Expected: 1
+  Actual: nil[0m
+
+[31m1 tests, 1 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160812
+Writing XML reports to E:/autotest/iam_testcases/reports/20160812

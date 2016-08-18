@@ -1,0 +1,28 @@
+[2016-08-08 15:48:52] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-08 15:48:52] 2¡¢»ñÈ¡ÖªÂ·¹ÜÀítokenÖµ£»
+[2016-08-08 15:48:52] 3¡¢ÖªÂ·¹ÜÀíÔ±ÏÂĞÂÔö³¬¼¶¹ÜÀíÔ±£»
+ÖªÂ·¹ÜÀíÔ±´´½¨³¬¼¶¹ÜÀíÔ±klwn201@163.com
+[2016-08-08 15:48:52] 4¡¢³¬¼¶¹ÜÀíÔ±ÏÂĞÂÔöÏµÍ³¹ÜÀíÔ±£»
+³¬¼¶¹ÜÀíÔ±klwn201@163.com´´½¨ÏµÍ³¹ÜÀíÔ±klwn202@163.com
+IAM Socket bugs!Return value format error!
+[2016-08-08 15:48:53] 5¡¢ÖªÂ·¹ÜÀíÔ±ÏÂ»ñÈ¡¹ÜÀíÔ±ÁĞ±íºÍ¹ÜÀíÔ±ueridºÅ£º
+[2016-08-08 15:48:53] 6¡¢É¾³ıÖ¸¶¨µÄ¹ÜÀíÔ±£»
+RESULT err_msg:´æÔÚÏÂ¼¶ÕÊºÅ²»ÄÜÉ¾³ı
+RESULT err_code:21003
+RESULT err_desc:E_DEL_USER_ERROR
+[2016-08-08 15:48:53] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.01 s
+Slowest tests:
+0.89 s	IAM::IamManager#test_É¾³ıÓĞÏÂ¼¶¹ÜÀíÔ±µÄ¹ÜÀíÔ± IAM_F_SysManager_106
+Slowest suites:
+0.89 s	IAM::IamManager
+
+
+[32mFinished tests in 0.909934s, 1.0990 tests/s, 6.5939 assertions/s.[0m
+
+
+[32m1 tests, 6 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160808
+Writing XML reports to E:/autotest/iam_testcases/reports/20160808

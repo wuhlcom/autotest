@@ -1,0 +1,41 @@
+[2016-08-17 15:54:38] 1¡¢sshµÇÂ¼µ½IAM·şÎñÆ÷£»
+[2016-08-17 15:54:38] 2¡¢¹ÜÀíÔ±´´½¨Ó¦ÓÃ
+¹ÜÀíÔ±µÇÂ¼
+¹ÜÀíÔ±´´½¨²¢¼¤»îÓ¦ÓÃ
+app exists...
+active exidsted app...
+¹ÜÀíÔ±²éÑ¯Ó¦ÓÃ'ºìÆ¤»¨Éú'ĞÅÏ¢
+"160817779875"
+"OronBLr2ng3noWe8xHVL3b7YSJ0NcOyq"
+[2016-08-17 15:54:39] 3¡¢ÓÃ»§×¢²á
+[2016-08-17 15:54:41] 4¡¢ÓÃ»§µÇÂ¼²¢°ó¶¨Ó¦ÓÃ
+ÓÃ»§'13103158888'µÇÂ¼
+ÓÃ»§'13103158888'µÇÂ¼ºó²éÑ¯Ó¦ÓÃ
+ÓÃ»§'13103158888'µÇÂ¼ºó°ó¶¨Ó¦ÓÃ
+[2016-08-17 15:54:41] 5¡¢ÓÃ»§oauthµÇÂ¼,»ñÈ¡ÓÃ»§userid£»
+[2016-08-17 15:54:42] 6¡¢»ñÈ¡½Ó¿ÚÈÏÖ¤codeÖµ£»
+<script>window.opener.location.href="http://192.168.10.9:8083/index.php/Login/index?code=ec9f3bf513475d89d72bd06c0a4ea53a&ssid=MmVnYzgza2Jrajk5ZGMxZjcydnVmOHJhZnE5ZHR1YjY=";window.close();</script>"ec9f3bf513475d89d72bd06c0a4ea53a"
+[2016-08-17 15:54:43] 1.ÓÃ»§½â³ı°ó¶¨
+[2016-08-17 15:54:43] 2.É¾³ıÓ¦ÓÃ
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.00 s
+Slowest tests:
+4.24 s	IAM::IamManager#test_»ñÈ¡code½Ó¿ÚÈÏÖ¤ IAM_F_OAuth_020
+Slowest suites:
+4.24 s	IAM::IamManager
+
+
+[31mFinished tests in 4.254928s, 0.2350 tests/s, 2.5852 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_»ñÈ¡code½Ó¿ÚÈÏÖ¤ IAM_F_OAuth_020 [(eval):92]
+Minitest::Assertion: ÓÃ»§'13103158888'oauthµÇÂ¼»ñÈ¡½Ó¿ÚÈÏÖ¤codeÊ§°Ü!.
+Expected: # encoding: UTF-8
+"ec9f3bf513475d89d72bd06c0a4ea53a"
+  Actual: nil[0m
+
+[31m1 tests, 11 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160817
+Writing XML reports to E:/autotest/iam_testcases/reports/20160817

@@ -5,50 +5,60 @@
 # modify:
 #
 testcase {
-    attr = {"id" => "IAM_F_SysManager_078", "level" => "P3", "auto" => "n"}
+  attr = {"id" => "IAM_F_SysManager_078", "level" => "P3", "auto" => "n"}
 
-    def prepare
-        @tc_man_name    = "13566600000"
-        @tc_add_passwd  = "123456"
-        @tc_mod_passwd1 = "12345678"
-        @tc_mod_passwd2 = "12345678"
-        @tc_nickname    = "hahawangle"
+  def prepare
+    @tc_man_name    = "13566600000"
+    @tc_add_passwd  = "123456"
+    @tc_mod_passwd1 = "12345678"
+    @tc_mod_passwd2 = "123456789"
+    @tc_nickname    = "hahawangle"
 
-    end
+  end
 
-    def process
+  def process
 
-        operate("1ã€SSHç™»å½•IAMç³»ç»Ÿï¼›") {
-        }
+    operate("1¡¢SSHµÇÂ¼IAMÏµÍ³£»") {
+    }
 
-        operate("2ã€è·å–æ‰‹æœºéªŒè¯ç ï¼›") {
-            #å…ˆæ·»åŠ ç®¡ç†å‘˜
-            rs = @iam_obj.manager_del_add(@tc_man_name, @tc_add_passwd, @tc_nickname)
-            assert_equal(@ts_add_rs, rs["result"], "æ·»åŠ ç®¡ç†å‘˜#{@tc_man_name}å¤±è´¥!")
-        }
+    operate("2¡¢»ñÈ¡ÊÖ»úÑéÖ¤Âë£»") {
+      #ÏÈÌí¼ÓÊÖ»ú¹ÜÀíÔ±
+      rs = @iam_obj.manager_del_add(@tc_man_name, @tc_add_passwd, @tc_nickname)
+      assert_equal(@ts_add_rs, rs["result"], "Ìí¼Ó¹ÜÀíÔ±#{@tc_man_name}Ê§°Ü!")
+    }
 
-        operate("3ã€è¾“å…¥æ–°å¯†ç ã€éªŒè¯ç å·²ä½¿ç”¨ï¼›") {
-            rs_recode = @iam_obj.request_mobile_code(@tc_man_name)
-            puts "ç­‰å¾…éªŒè¯ç #{rs_recode["code"]}è¶…æ—¶,sleep #{@tc_timeout_time} seconds...".to_gbk
-            sleep @tc_timeout_time
-            rs_getcode= @iam_obj.get_mobile_code(@tc_man_name)
-            puts "ç­‰å¾…éªŒè¯ç #{@tc_timeout_time} secondsè¶…æ—¶åï¼Œè·å–å¾—éªŒè¯ç ä¸º#{rs_getcode["code"]}".to_gbk
-            p rs = @iam_obj.phone_manager_modpw(@tc_man_name, @tc_mod_passwd, rs_getcode["code"])
-            puts "RESULT err_msg:#{rs['err_msg']}".encode("GBK")
-            puts "RESULT err_code:#{rs['err_code']}".encode("GBK")
-            puts "RESULT err_desc:#{rs['err_desc']}".encode("GBK")
-            assert_equal(@ts_err_pcoderr_msg, rs["err_msg"], "è¾“å…¥é”™è¯¯çš„éªŒè¯ç è¿”å›é”™è¯¯æ¶ˆæ¯ä¸æ­£ç¡®!")
-            assert_equal(@ts_err_pcoderr_code, rs["err_code"], "è¾“å…¥é”™è¯¯çš„éªŒè¯ç è¿”å›é”™è¯¯codeä¸æ­£ç¡®!")
-            assert_equal(@ts_err_pcoderr_desc, rs["err_desc"], "è¾“å…¥é”™è¯¯çš„éªŒè¯ç è¿”å›é”™è¯¯descä¸æ­£ç¡®!")
-        }
+    operate("3¡¢ÊäÈëĞÂÃÜÂë¡¢ÑéÖ¤ÂëÒÑÊ¹ÓÃ£»") {
+      #ÇëÇóÑéÖ¤Âë
+      rs_recode = @iam_obj.request_mobile_code(@tc_man_name)
+      puts "ÇëÇóµÄÑéÖ¤ÂëÎª#{rs_recode["code"]}".to_gbk
+      #»ñÈ¡ÑéÖ¤Âë
+      rs_getcode= @iam_obj.get_mobile_code(@tc_man_name)
+      puts "»ñÈ¡µÄÑéÖ¤Âë#{rs_getcode["code"]}".to_gbk
+      rs_rlogin1 = @iam_obj.manager_login(@tc_man_name, @tc_mod_pw1)
+      #ÕÒ»ØÊÖ»úÃÜÂë
+      puts "ÑéÖ¤Âë#{rs_getcode["code"]}ÕÒ»ØÃÜÂë".to_gbk
+      rs         = @iam_obj.phone_manager_modpw(@tc_man_name, @tc_mod_passwd1, rs_getcode["code"])
+      assert_equal(@ts_admin_log_rs, rs["result"], "ĞŞ¸Ä¹ÜÀíÔ±ÃÜÂëÎª#{@tc_mod_pw1}Ê§°Ü!")
 
 
-    end
+      #Ê¹ÓÃÏàÍ¬µÄÑéÖ¤ÂëÔÙÕÒ»ØÒ»´ÎÊÖ»úÃÜÂë
+      puts "ÔÙÒ»´ÎÊ¹ÓÃÑéÖ¤Âë#{rs_getcode["code"]}ÕÒ»ØÃÜÂë".to_gbk
+      rs = @iam_obj.phone_manager_modpw(@tc_man_name, @tc_mod_passwd2, rs_getcode["code"])
+      puts "RESULT err_msg:#{rs['err_msg']}".encode("GBK")
+      puts "RESULT err_code:#{rs['err_code']}".encode("GBK")
+      puts "RESULT err_desc:#{rs['err_desc']}".encode("GBK")
+      assert_equal(@ts_err_pcodnul_msg, rs["err_msg"], "ÊäÈë±»Ê¹ÓÃ¹ıµÄÑéÖ¤Âë·µ»Ø´íÎóÏûÏ¢²»ÕıÈ·!")
+      assert_equal(@ts_err_pcodnul_code, rs["err_code"], "ÊäÈë±»Ê¹ÓÃ¹ıµÄÑéÖ¤Âë·µ»Ø´íÎócode²»ÕıÈ·!")
+      assert_equal(@ts_err_pcodnul_desc, rs["err_desc"], "ÊäÈë±»Ê¹ÓÃ¹ıµÄÑéÖ¤Âë·µ»Ø´íÎódesc²»ÕıÈ·!")
+    }
 
-    def clearup
-        operate("1.æ¢å¤é»˜è®¤è®¾ç½®") {
 
-        }
-    end
+  end
+
+  def clearup
+    operate("1.»Ö¸´Ä¬ÈÏÉèÖÃ") {
+
+    }
+  end
 
 }

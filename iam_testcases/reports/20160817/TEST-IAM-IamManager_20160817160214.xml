@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="IAM::IamManager" skipped="0" failures="1" errors="0" tests="1" assertions="11" time="4.321241768979235">
+  <testcase name="test_获取code接口认证 IAM_F_OAuth_020" classname="IAM::IamManager" assertions="11" time="4.321241768979235">
+    <failure type="test_获取code接口认证 IAM_F_OAuth_020" message="用户'13103158888'oauth登录获取接口认证code失败!....">
+Failure:
+test_获取code接口认证 IAM_F_OAuth_020(IAM::IamManager) [(eval):92]:
+用户'13103158888'oauth登录获取接口认证code失败!.
+Expected: # encoding: UTF-8
+"e85fdeaea09a11c44e3c1861d059fab7"
+  Actual: nil
+    </failure>
+  </testcase>
+</testsuite>

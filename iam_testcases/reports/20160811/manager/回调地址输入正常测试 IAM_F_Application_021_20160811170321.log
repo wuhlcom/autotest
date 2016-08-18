@@ -1,0 +1,26 @@
+[2016-08-11 17:03:21] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-11 17:03:21] 2¡¢»ñÈ¡ÖªÂ·¹ÜÀíÔ±tokenÖµ£»
+[2016-08-11 17:03:21] 3¡¢´´½¨Ó¦ÓÃ£¬redirect_uriÊäÈëÕı³£Öµ£»
+{"err_code"=>"22011", "err_msg"=>"\u5E94\u7528\u56DE\u8C03\u5730\u5740\u683C\u5F0F\u9519\u8BEF", "err_desc"=>"E_REDIRECT_URI_FORMAT_ERROR"}
+[2016-08-11 17:03:21] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.01 s
+Slowest tests:
+0.16 s	IAM::IamManager#test_»Øµ÷µØÖ·ÊäÈëÕı³£²âÊÔ IAM_F_Application_021
+Slowest suites:
+0.16 s	IAM::IamManager
+
+
+[31mFinished tests in 0.184634s, 5.4161 tests/s, 5.4161 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_»Øµ÷µØÖ·ÊäÈëÕı³£²âÊÔ IAM_F_Application_021 [(eval):29]
+Minitest::Assertion: ĞÂÔöÒ»¸öÓ¦ÓÃÊ§°Ü!.
+Expected: 1
+  Actual: nil[0m
+
+[31m1 tests, 1 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160811
+Writing XML reports to E:/autotest/iam_testcases/reports/20160811

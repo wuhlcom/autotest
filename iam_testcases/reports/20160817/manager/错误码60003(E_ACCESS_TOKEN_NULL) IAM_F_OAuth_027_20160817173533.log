@@ -1,0 +1,21 @@
+[2016-08-17 17:35:33] 1¡¢sshµÇÂ¼µ½IAM·şÎñÆ÷£»
+[2016-08-17 17:35:33] 2¡¢access_tokenÊäÈëÎª¿Õ
+RESULT err_msg:'AccessTokenÎª¿Õ'
+RESULT err_code:'60003'
+RESULT err_desc:'E_ACCESS_TOKEN_NULL'
+[2016-08-17 17:35:33] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.00 s
+Slowest tests:
+0.03 s	IAM::IamManager#test_´íÎóÂë60003(E_ACCESS_TOKEN_NULL) IAM_F_OAuth_027
+Slowest suites:
+0.03 s	IAM::IamManager
+
+
+[32mFinished tests in 0.043889s, 22.7846 tests/s, 68.3538 assertions/s.[0m
+
+
+[32m1 tests, 3 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160817
+Writing XML reports to E:/autotest/iam_testcases/reports/20160817

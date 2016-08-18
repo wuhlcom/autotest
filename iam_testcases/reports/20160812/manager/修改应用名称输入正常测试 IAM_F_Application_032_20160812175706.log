@@ -1,0 +1,37 @@
+[2016-08-12 17:57:06] 1¡¢sshµÇÂ¼IAM·þÎñÆ÷£»
+[2016-08-12 17:57:06] 2¡¢»ñÈ¡ÖªÂ·¹ÜÀíÔ±tokenÖµ£»
+[2016-08-12 17:57:06] 3¡¢»ñÈ¡ÐÞ¸ÄÓ¦ÓÃµÄÓ¦ÓÃIDºÅ;
+[2016-08-12 17:57:06] 4¡¢ÐÞ¸ÄÓ¦ÓÃÃû³Æ£»
+´´½¨Ó¦ÓÃÃûÎª'ÎÒÒª±»ÐÞ¸ÄÁË'
+Ó¦ÓÃÃûÓÉ'ÎÒÒª±»ÐÞ¸ÄÁË'======>ÐÞ¸ÄÎª'z'
+ÐÂÓ¦ÓÃÃû³¤¶ÈÎª1
+Ó¦ÓÃÃûÓÉ'z'======>ÐÞ¸ÄÎª'ÄãÎÒËûniwotahÄãÎÒËûniwotahÄãÎÒËûniwotahai'
+ÐÂÓ¦ÓÃÃû³¤¶ÈÎª32
+Ó¦ÓÃÃûÓÉ'ÄãÎÒËûniwotahÄãÎÒËûniwotahÄãÎÒËûniwotahai'======>ÐÞ¸ÄÎª'Ä§¹í¾­¼ÃÑ§_01ABc'
+ÐÂÓ¦ÓÃÃû³¤¶ÈÎª11
+[2016-08-12 17:57:07] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+É¾³ýÓ¦ÓÃ'ÎÒÒª±»ÐÞ¸ÄÁË'
+É¾³ýÓ¦ÓÃ'z'
+É¾³ýÓ¦ÓÃ'ÄãÎÒËûniwotahÄãÎÒËûniwotahÄãÎÒËûniwotahai'
+É¾³ýÓ¦ÓÃ'Ä§¹í¾­¼ÃÑ§_01ABc'
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.00 s
+Slowest tests:
+0.89 s	IAM::IamManager#test_ÐÞ¸ÄÓ¦ÓÃÃû³ÆÊäÈëÕý³£²âÊÔ IAM_F_Application_032
+Slowest suites:
+0.89 s	IAM::IamManager
+
+
+[31mFinished tests in 0.900687s, 1.1103 tests/s, 7.7718 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_ÐÞ¸ÄÓ¦ÓÃÃû³ÆÊäÈëÕý³£²âÊÔ IAM_F_Application_032 [(eval):57]
+Minitest::Assertion: Ó¦ÓÃÃûÓÉ'ÄãÎÒËûniwotahÄãÎÒËûniwotahÄãÎÒËûniwotahai'======>ÐÞ¸ÄÎª'Ä§¹í¾­¼ÃÑ§_01ABc'Ê§°Ü!.
+Expected: 1
+  Actual: nil[0m
+
+[31m1 tests, 7 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160812
+Writing XML reports to E:/autotest/iam_testcases/reports/20160812

@@ -1,0 +1,16 @@
+[2016-08-03 16:10:57] 1 µÇÂ¼Éè±¸
+ZLBF_21.1.40
+
+[2016-08-03 16:10:57] 2 ×¢ÏúµÇÂ¼
+[31mF[0m
+
+[31mFinished tests in 0.056271s, 53.3131 tests/s, 71.0841 assertions/s.[0m
+
+
+[31mFailure:
+Frame::WebTestSystem#test_×¢Ïú¹¦ÄÜ²âÊÔ ZLBF_21.1.74 [(eval):27]
+Minitest::Assertion: ²âÊÔÊ§°ÜÁË[0m
+
+[31m3 tests, 4 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/frame_test/html_reports/20160803
+Writing XML reports to E:/autotest/frame_test/reports/20160803

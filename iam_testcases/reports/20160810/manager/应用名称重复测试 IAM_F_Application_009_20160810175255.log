@@ -1,0 +1,25 @@
+[2016-08-10 17:52:55] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-10 17:52:55] 2¡¢»ñÈ¡ÖªÂ·¹ÜÀíÔ±tokenÖµ£»
+[2016-08-10 17:52:55] 3¡¢´´½¨Ó¦ÓÃ£¬ÆäÖĞÃû³ÆSameAPP£»
+´´½¨µÄÓ¦ÓÃÃûSameAPP
+[2016-08-10 17:52:55] 4¡¢ÔÙ´Î´´½¨Ó¦ÓÃ£¬Ãû³Æ{@tc_app_name1}£»
+ÖØ¸´´´½¨µÄÓ¦ÓÃSameAPP
+RESULT err_msg:'Ó¦ÓÃÃû³ÆÒÑ´æÔÚ'
+RESULT err_code:'22007'
+RESULT err_desc:'E_APP_NAME_EXIST'
+[2016-08-10 17:52:56] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.01 s
+Slowest tests:
+0.45 s	IAM::IamManager#test_Ó¦ÓÃÃû³ÆÖØ¸´²âÊÔ IAM_F_Application_009
+Slowest suites:
+0.45 s	IAM::IamManager
+
+
+[32mFinished tests in 0.478980s, 2.0878 tests/s, 10.4389 assertions/s.[0m
+
+
+[32m1 tests, 5 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160810
+Writing XML reports to E:/autotest/iam_testcases/reports/20160810

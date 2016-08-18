@@ -1,0 +1,33 @@
+[2016-08-15 15:58:31] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-15 15:58:31] 2¡¢»ñÈ¡ÖªÂ·¹ÜÀíÔ±tokenÖµ£»
+[2016-08-15 15:58:31] 3¡¢»ñÈ¡ĞŞ¸ÄÓ¦ÓÃµÄIDºÅ;
+´´½¨Ó¦ÓÃÃûÎª'»¨ÉúÈÊ'
+[2016-08-15 15:58:31] 4¡¢ĞŞ¸ÄproviderÊäÈëÒì³£Öµ£»
+Ó¦ÓÃÌá¹©·½ÓÉ'zhilutec'======>ĞŞ¸ÄÎª'~#%^*()_+{}:"|<>?-=[];'\,./'
+RESULT err_msg:'Ó¦ÓÃÃû³ÆÎª¿Õ'
+RESULT err_code:'22005'
+RESULT err_desc:'E_APP_NAME_NULL'
+[2016-08-15 15:58:31] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.01 s
+Slowest tests:
+0.45 s	IAM::IamManager#test_ĞŞ¸ÄÌá¹©·½Òì³£ÊäÈë²âÊÔ IAM_F_Application_041
+Slowest suites:
+0.45 s	IAM::IamManager
+
+
+[31mFinished tests in 0.478135s, 2.0915 tests/s, 6.2744 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_ĞŞ¸ÄÌá¹©·½Òì³£ÊäÈë²âÊÔ IAM_F_Application_041 [(eval):52]
+Minitest::Assertion: Ó¦ÓÃÌá¹©·½ÓÉ'zhilutec'======>ĞŞ¸ÄÎª'~#%^*()_+{}:"|<>?-=[];'\,./'·µ»Ø´íÎóÏûÏ¢²»ÕıÈ·!.
+Expected: # encoding: UTF-8
+"\u5E94\u7528\u63D0\u4F9B\u65B9\u4E3A\u7A7A"
+  Actual: # encoding: UTF-8
+"\u5E94\u7528\u540D\u79F0\u4E3A\u7A7A"[0m
+
+[31m1 tests, 3 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160815
+Writing XML reports to E:/autotest/iam_testcases/reports/20160815

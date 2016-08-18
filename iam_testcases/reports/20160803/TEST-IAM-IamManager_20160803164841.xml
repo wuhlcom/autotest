@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="IAM::IamManager" skipped="0" failures="0" errors="0" tests="4" assertions="8" time="1.8455115740007386">
+  <testcase name="test_新增超级管理员 IAM_F_SysManager_008" classname="IAM::IamManager" assertions="2" time="0.5071836360002635">
+  </testcase>
+  <testcase name="test_新增系统管理员 IAM_F_SysManager_009" classname="IAM::IamManager" assertions="2" time="0.48858261000032144">
+  </testcase>
+  <testcase name="test_新增配置管理员 IAM_F_SysManager_010" classname="IAM::IamManager" assertions="2" time="0.4641977460000817">
+  </testcase>
+  <testcase name="test_新增监视管理员 IAM_F_SysManager_011" classname="IAM::IamManager" assertions="2" time="0.385547582000072">
+  </testcase>
+</testsuite>

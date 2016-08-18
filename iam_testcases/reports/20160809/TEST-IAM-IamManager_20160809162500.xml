@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="IAM::IamManager" skipped="0" failures="0" errors="0" tests="1" assertions="4" time="0.6493752499955008">
+  <testcase name="test_输入值带空格 IAM_F_SysManager_133" classname="IAM::IamManager" assertions="4" time="0.6493752499955008">
+  </testcase>
+</testsuite>

@@ -1,0 +1,26 @@
+[2016-08-05 17:54:16] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-05 17:54:16] 2¡¢»ñÈ¡ÖªÂ·¹ÜÀíÔ±tokenÖµ£»
+[2016-08-05 17:54:16] 3¡¢ÖªÂ·¹ÜÀíÔ±ÏÂĞÂÔö³¬¼¶¹ÜÀíÔ±£»
+Èç¹û³¬¼¶¹ÜÀíÔ±klwn101@163.comÒÑ¾­´æÔÚ£¬É¾³ıÆäÓ¦ÓÃ
+[2016-08-05 17:54:17] 4¡¢µÇÂ¼³¬¼¶¹ÜÀíÔ±»ñÈ¡idºÍtokenÖµ
+[2016-08-05 17:54:17] 5¡¢³¬¼¶¹ÜÀíÔ±ÏÂĞÂÔöÒ»¸öÓ¦ÓÃ£º
+[2016-08-05 17:54:17] 6¡¢ÖªÂ·¹ÜÀíÔ±ÏÂÉ¾³ıÒÑ´´½¨µÄ³¬¼¶¹ÜÀíÔ±£ºÆäÖĞuidÎªµÇÂ¼¹ÜÀíÔ±ID£¬useridÎª´ıÉ¾³ı¹ÜÀíÔ±ID£¬tokenÖµÎªµÇÂ¼¹ÜÀíÔ±tokenÖµ£»
+RESULT err_msg:ÕÊºÅÏÂ´æÔÚÓ¦ÓÃ²»ÄÜÉ¾³ı
+RESULT err_code:21005
+RESULT err_desc:E_USER_APP_ERROR
+[2016-08-05 17:54:17] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.00 s
+Slowest tests:
+1.10 s	IAM::IamManager#test_É¾³ı´´½¨ÁËÓ¦ÓÃµÄ³¬¼¶¹ÜÀíÔ± IAM_F_SysManager_107
+Slowest suites:
+1.10 s	IAM::IamManager
+
+
+[32mFinished tests in 1.113055s, 0.8984 tests/s, 4.4921 assertions/s.[0m
+
+
+[32m1 tests, 5 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160805
+Writing XML reports to E:/autotest/iam_testcases/reports/20160805

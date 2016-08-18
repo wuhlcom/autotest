@@ -1,0 +1,33 @@
+[2016-08-17 17:17:52] 1¡¢sshµÇÂ¼µ½IAM·şÎñÆ÷£»
+[2016-08-17 17:17:52] 2¡¢¹ÜÀíÔ±´´½¨Ó¦ÓÃ
+¹ÜÀíÔ±µÇÂ¼
+¹ÜÀíÔ±´´½¨²¢¼¤»îÓ¦ÓÃ
+create app...
+create and active the new app...
+¹ÜÀíÔ±²éÑ¯Ó¦ÓÃ'JumpToHigh'ĞÅÏ¢
+[2016-08-17 17:17:52] 3¡¢ÓÃ»§×¢²á
+[2016-08-17 17:17:55] 4¡¢ÓÃ»§µÇÂ¼²¢°ó¶¨Ó¦ÓÃ
+ÓÃ»§'13100001112'µÇÂ¼
+ÓÃ»§'13100001112'µÇÂ¼ºó²éÑ¯Ó¦ÓÃ
+ÓÃ»§'13100001112'µÇÂ¼ºó°ó¶¨Ó¦ÓÃ
+[2016-08-17 17:17:55] 5¡¢ÓÃ»§oauthµÇÂ¼,»ñÈ¡ÓÃ»§userid£»
+[2016-08-17 17:17:56] 6¡¢»ñÈ¡½Ó¿ÚÈÏÖ¤codeÖµ£»
+[2016-08-17 17:17:56] 7¡¢codeÓĞĞ§ÆÚÄÚ»ñÈ¡ÈÏÖ¤access_tokenÖµ£»
+[2016-08-17 17:17:56] 8¡¢»ñÈ¡ÓÃ»§ĞÅÏ¢
+[2016-08-17 17:17:56] 1.ÓÃ»§½â³ı°ó¶¨
+[2016-08-17 17:17:57] 2.É¾³ıÓ¦ÓÃ
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.01 s
+Slowest tests:
+4.81 s	IAM::IamManager#test_»ñÈ¡ÓÃ»§×ÊÁÏ½Ó¿Ú²âÊÔ IAM_F_OAuth_024
+Slowest suites:
+4.81 s	IAM::IamManager
+
+
+[32mFinished tests in 4.830465s, 0.2070 tests/s, 3.3123 assertions/s.[0m
+
+
+[32m1 tests, 16 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160817
+Writing XML reports to E:/autotest/iam_testcases/reports/20160817

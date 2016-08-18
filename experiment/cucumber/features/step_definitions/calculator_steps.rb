@@ -32,7 +32,7 @@ When /^我点击累加$/ do
 end
 
 Then /^我应该看到结果(\d+)$/ do |result|
-  expect(@c.result).to eq(result.to_i)
+  # expect(@c.result).to eq(result.to_i)
   # specify {expect @c.result.to eq(result.to_i)}
-  # @c.result.should==(result.to_i)
+  @c.result==(result.to_i)
 end

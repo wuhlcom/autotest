@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="IAM::IamManager" skipped="0" failures="1" errors="0" tests="1" assertions="3" time="0.40648139599943534">
+  <testcase name="test_修改昵称长度在范围外测试 IAM_F_SysManager_113" classname="IAM::IamManager" assertions="3" time="0.40648139599943534">
+    <failure type="test_修改昵称长度在范围外测试 IAM_F_SysManager_113" message="undefined local variable or method `args' for #&lt;IAM::IamManager:0x00000003f12e78&gt;">
+Failure:
+test_修改昵称长度在范围外测试 IAM_F_SysManager_113(IAM::IamManager) [iam_manager.rb:62]:
+undefined local variable or method `args' for #&lt;IAM::IamManager:0x00000003f12e78&gt;
+    </failure>
+  </testcase>
+</testsuite>

@@ -1,0 +1,31 @@
+[2016-08-11 16:16:41] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-11 16:16:41] 2¡¢»ñÈ¡ÖªÂ·¹ÜÀíÔ±tokenÖµ£»
+[2016-08-11 16:16:41] 3¡¢´´½¨Ó¦ÓÃ£¬commentsÊäÈë´ø¿Õ¸ñ£»
+´´½¨Ó¦ÓÃÃûÎª'µçÔ´¹ÜÀí',¼ò½éÎª' PowerManager'
+´´½¨Ó¦ÓÃÃûÎª'ÎÂ¶È¿ØÖÆ',¼ò½éÎª'TemperatureControl '
+´´½¨Ó¦ÓÃÃûÎª'ÎÂ¶È¿ØÖÆ',¼ò½éÎª'Humidity Control'
+[2016-08-11 16:16:42] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+É¾³ıÓ¦ÓÃ'µçÔ´¹ÜÀí'
+É¾³ıÓ¦ÓÃ'ÎÂ¶È¿ØÖÆ'
+É¾³ıÓ¦ÓÃ'ÎÂ¶È¿ØÖÆ'
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.00 s
+Slowest tests:
+0.76 s	IAM::IamManager#test_ÊäÈëÖµ´ø¿Õ¸ñ IAM_F_Application_020
+Slowest suites:
+0.76 s	IAM::IamManager
+
+
+[31mFinished tests in 0.769948s, 1.2988 tests/s, 6.4939 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_ÊäÈëÖµ´ø¿Õ¸ñ IAM_F_Application_020 [(eval):49]
+Minitest::Assertion: ´´½¨Ó¦ÓÃÃûÎª'ÎÂ¶È¿ØÖÆ',¼ò½éÎª'Humidity Control'Ê§°Ü!.
+Expected: 1
+  Actual: nil[0m
+
+[31m1 tests, 5 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160811
+Writing XML reports to E:/autotest/iam_testcases/reports/20160811

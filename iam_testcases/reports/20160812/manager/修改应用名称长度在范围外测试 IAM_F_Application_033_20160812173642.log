@@ -1,0 +1,25 @@
+[2016-08-12 17:36:42] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-12 17:36:42] 2¡¢»ñÈ¡ÖªÂ·¹ÜÀíÔ±tokenÖµ£»
+[2016-08-12 17:36:42] 3¡¢»ñÈ¡ĞŞ¸ÄÓ¦ÓÃµÄÓ¦ÓÃIDºÅ;
+´´½¨Ó¦ÓÃÃûÎª'Ìì¿ÕÖ®³Ç'
+[2016-08-12 17:36:42] 4¡¢ĞŞ¸ÄÓ¦ÓÃÃû³Æ³¤¶È·¶Î§Íâ£»
+Ó¦ÓÃÃûÓÉ'Ìì¿ÕÖ®³Ç'======>ĞŞ¸ÄÎª'WWW12345WWWWW12345WWWWW12345WW888'
+RESULT err_msg:'Ó¦ÓÃÃû³Æ¸ñÊ½´íÎó'
+RESULT err_code:'22006'
+RESULT err_desc:'E_APP_NAME_FORMAT_ERROR'
+[2016-08-12 17:36:42] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.00 s
+Slowest tests:
+0.42 s	IAM::IamManager#test_ĞŞ¸ÄÓ¦ÓÃÃû³Æ³¤¶ÈÔÚ·¶Î§Íâ²âÊÔ IAM_F_Application_033
+Slowest suites:
+0.42 s	IAM::IamManager
+
+
+[32mFinished tests in 0.432941s, 2.3098 tests/s, 11.5489 assertions/s.[0m
+
+
+[32m1 tests, 5 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160812
+Writing XML reports to E:/autotest/iam_testcases/reports/20160812

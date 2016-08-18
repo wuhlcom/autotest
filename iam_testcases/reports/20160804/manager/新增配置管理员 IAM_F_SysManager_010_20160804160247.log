@@ -1,0 +1,21 @@
+[2016-08-04 16:02:47] 1¡¢sshµÇÂ¼µ½IAM·şÎñÆ÷£»
+[2016-08-04 16:02:47] 2¡¢»ñÈ¡ÖªÂ·¹ÜÀíÔ±tokenÖµ£»
+autotest_whl3@zhilutec.com is not exists!
+[2016-08-04 16:02:47] 3¡¢ĞÂÔöÅäÖÃ¹ÜÀíÔ±£»
+RESULT MSG:Ìí¼Ó³É¹¦
+[2016-08-04 16:02:47] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.00 s
+Slowest tests:
+0.32 s	IAM::IamManager#test_ĞÂÔöÅäÖÃ¹ÜÀíÔ± IAM_F_SysManager_010
+Slowest suites:
+0.32 s	IAM::IamManager
+
+
+[32mFinished tests in 0.328945s, 3.0400 tests/s, 6.0800 assertions/s.[0m
+
+
+[32m1 tests, 2 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160804
+Writing XML reports to E:/autotest/iam_testcases/reports/20160804
