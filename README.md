@@ -1,15 +1,15 @@
 ---
 ##目录说明:
-1. **autotest_sdk**  SDK自动化测试的全套脚本
-2. **frame_test** 测试和调试自动化框架
-3. **htmltags**   自动化基础支撑:windows系统接口，有线无线网卡操作，路由器登录，Minitest,Reporter,RouterOS操作,抓包操作,FTP操作等
-4. **router_page_obect** 		自动化WEB PageObject封装：统一平台WEB TAG及操作步骤封装
-5. **services**     			提供Druby分布式服务，HTTP，TCP,UDP,FTP等服务
-6. **iam**						IAM API接口封装，oauth js加密封装
-7. **iam_testcases**			IAM API接口测试脚本
-8. **tools** 					自动化一些工具，脚本模板生成，excel生成与解析，xml生成与解析等
-9. **experiment**				一些ruby库，ruby gem的实验与使用
-10. **js加密**					oauth js加密WEB版本
+1. **autotest_sdk**     SDK自动化测试的全套脚本
+2. **frame_test**       测试和调试自动化框架
+3. **htmltags**     自动化基础支撑:windows系统接口，有线无线网卡操作，路由器登录，Minitest,Reporter,RouterOS操作,抓包操作,FTP操作等
+4. **router_page_obect**        自动化WEB PageObject封装：统一平台WEB TAG及操作步骤封装
+5. **services**     提供Druby分布式服务，HTTP，TCP,UDP,FTP等服务
+6. **iam**      IAM API接口封装，oauth js加密封装
+7. **iam_testcases**        IAM API接口测试脚本
+8. **tools**        自动化一些工具，脚本模板生成，excel生成与解析，xml生成与解析等
+9. **experiment**	        一些ruby库，ruby gem的实验与使用
+10. **js加密**        oauth js加密WEB版本
 ---  
 ##Window平台自动化执行环境基本配置(2016/06/08)
 1. **ruby 193以上的版本及配套DevKit，当前使用ruby 2.3.0及配套DevKit**
@@ -50,16 +50,16 @@
 **环境1**                
 执行机:control 50.50.50.55, dut->dhcp,ap->192.168.50.x       
 业务PC:control 50.50.50.56,wireless			
-继电器:50.50.50.101		
-	
-**环境2**  
+继电器:50.50.50.101
+
+   **环境2**  
 执行机:control 50.50.50.50, dut->dhcp,ap->192.168.50.x    
 业务PC:control 50.50.50.51	
 继电器:50.50.50.110
 
-**公共环境**
+   **公共环境**
 	
-**服务器：**
+   **服务器：**
 	
 lan配置静态IP但不配置网关50.50.50.57,10.10.10.57，	
 配置静态路由20.20.20.x和30.30.30.x,网关为10.10.10.1 	
