@@ -7,3 +7,8 @@
 *.xlsx
 *.xls
 *reports/
+/iam_testcases/html_reports/
+/iam_testcases/reports/
+/autotest_sdk/frame/reports/
+/frame/html_reports/
+/frame/reports/
