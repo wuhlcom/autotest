@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="IAM::IamManager" skipped="0" failures="0" errors="0" tests="1" assertions="3" time="0.08002714499980357">
-  <testcase name="test_提供方为空 IAM_F_Application_012" classname="IAM::IamManager" assertions="3" time="0.08002714499980357">
-  </testcase>
-</testsuite>

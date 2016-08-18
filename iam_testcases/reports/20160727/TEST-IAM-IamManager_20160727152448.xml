@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="IAM::IamManager" skipped="0" failures="0" errors="0" tests="1" assertions="5" time="0.5248722789983731">
-  <testcase name="test_邮箱账号重复值输入测试 IAM_F_SysManager_019" classname="IAM::IamManager" assertions="5" time="0.5248722789983731">
-  </testcase>
-</testsuite>

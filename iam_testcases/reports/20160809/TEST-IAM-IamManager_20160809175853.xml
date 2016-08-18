@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="IAM::IamManager" skipped="0" failures="0" errors="0" tests="1" assertions="8" time="1.2847926219983492">
-  <testcase name="test_管理员账号支持模糊查询 IAM_F_SysManager_137" classname="IAM::IamManager" assertions="8" time="1.2847926219983492">
-  </testcase>
-</testsuite>
