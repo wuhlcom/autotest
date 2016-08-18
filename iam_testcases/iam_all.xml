@@ -1667,7 +1667,7 @@
         <path>../../iam_testcases/oauth</path>
         <module>oauth</module>
       </TestCase>
-      <TestCase auto="y" beginTime="" endTime="" executed="n" id="IAM_F_OAuth_029" level="P3" result="f" tested="n">
+      <TestCase auto="n" beginTime="" endTime="" executed="n" id="IAM_F_OAuth_029" level="P3" result="f" tested="n">
         <name>错误码60005(E_ACCESS_TOKEN_EXPIRE) IAM_F_OAuth_029</name>
         <path>../../iam_testcases/oauth</path>
         <module>oauth</module>
