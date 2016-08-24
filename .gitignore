@@ -1,14 +1,8 @@
-#gitignore svn config
 .svn/* 
-#gitignore rubymine idea config
 .idea/* 
-#gitignore rubymine idea config
 */.idea/* 
-#gitignore rubymine git config
 .git/* 
 *.xlsx
 *.xls
-#gitignore html_reports
 */html_reports/* 
-#gitignore reports
 */reports/*
