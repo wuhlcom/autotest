@@ -1,0 +1,32 @@
+[2016-08-22 17:38:08] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+User existed!
+[2016-08-22 17:38:09] 2¡¢ÓÃ»§µÇÂ¼»ñÈ¡ÓÃ»§uidºÅ£»
+[2016-08-22 17:38:09] 3¡¢ÓÃ»§Ìí¼ÓÉè±¸mac£¬Éè±¸Ãû³ÆÓĞÌØÊâ×Ö·û£»
+è®¾å¤‡åç§°ä¸º'çŸ¥è·¯TEC_&*(_+~!#$%^\]'
+Éè±¸Ãû³ÆÎª'ÖªÂ·TEC_&*(_+~!#$%^\]'
+RESULT err_msg:''
+RESULT err_code:''
+RESULT err_desc:''
+[2016-08-22 17:38:09] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.01 s
+Slowest tests:
+0.67 s	IAM::IamManager#test_Éè±¸Ãû³ÆÊäÈëÌØÊâ×Ö·û²âÊÔ IAM_F_DeviceOperation_033.1
+Slowest suites:
+0.67 s	IAM::IamManager
+
+
+[31mFinished tests in 0.691797s, 1.4455 tests/s, 1.4455 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_Éè±¸Ãû³ÆÊäÈëÌØÊâ×Ö·û²âÊÔ IAM_F_DeviceOperation_033.1 [(eval):34]
+Minitest::Assertion: Éè±¸Ãû³ÆÎª'ÖªÂ·TEC_&*(_+~!#$%^\]'·µ»Ø´íÎóÏûÏ¢²»ÕıÈ·!.
+Expected: # encoding: UTF-8
+"\u8BE5\u8BBE\u5907\u4E3A\u65E0\u6548\u8BBE\u5907"
+  Actual: nil[0m
+
+[31m1 tests, 1 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160822
+Writing XML reports to E:/autotest/iam_testcases/reports/20160822

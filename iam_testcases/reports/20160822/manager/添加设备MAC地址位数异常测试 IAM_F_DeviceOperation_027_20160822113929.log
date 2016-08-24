@@ -1,0 +1,40 @@
+[2016-08-22 11:39:29] 1°¢sshµ«¬ºIAM∑˛ŒÒ∆˜£ª
+[2016-08-22 11:39:29] 2°¢”√ªßµ«¬ºªÒ»°”√ªßuid∫≈£ª
+User existed!
+[2016-08-22 11:39:29] 3°¢”√ªßÃÌº”µƒ≥§∂»“Ï≥£…Ë±∏MACµÿ÷∑£ª
+{"err_code"=>"40007", "err_msg"=>"\u8BE5\u8BBE\u5907\u4E3A\u65E0\u6548\u8BBE\u5907", "err_desc"=>"E_QUERY_DEVICE_ID_FAIL"}
+”√ªßÃÌº”∂‡≤•…Ë±∏mac'02:10:18:01:01'
+RESULT err_msg:'∏√…Ë±∏Œ™Œﬁ–ß…Ë±∏'
+RESULT err_code:'40007'
+RESULT err_desc:'E_QUERY_DEVICE_ID_FAIL'
+{"err_code"=>"40007", "err_msg"=>"\u8BE5\u8BBE\u5907\u4E3A\u65E0\u6548\u8BBE\u5907", "err_desc"=>"E_QUERY_DEVICE_ID_FAIL"}
+”√ªßÃÌº”∂‡≤•…Ë±∏mac'02:10:18:01:01:1'
+RESULT err_msg:'∏√…Ë±∏Œ™Œﬁ–ß…Ë±∏'
+RESULT err_code:'40007'
+RESULT err_desc:'E_QUERY_DEVICE_ID_FAIL'
+{"err_code"=>"40007", "err_msg"=>"\u8BE5\u8BBE\u5907\u4E3A\u65E0\u6548\u8BBE\u5907", "err_desc"=>"E_QUERY_DEVICE_ID_FAIL"}
+”√ªßÃÌº”∂‡≤•…Ë±∏mac'02:10:18:01:01:011'
+RESULT err_msg:'∏√…Ë±∏Œ™Œﬁ–ß…Ë±∏'
+RESULT err_code:'40007'
+RESULT err_desc:'E_QUERY_DEVICE_ID_FAIL'
+{"err_code"=>"40007", "err_msg"=>"\u8BE5\u8BBE\u5907\u4E3A\u65E0\u6548\u8BBE\u5907", "err_desc"=>"E_QUERY_DEVICE_ID_FAIL"}
+”√ªßÃÌº”∂‡≤•…Ë±∏mac'02:10:18:01:01:01:02'
+RESULT err_msg:'∏√…Ë±∏Œ™Œﬁ–ß…Ë±∏'
+RESULT err_code:'40007'
+RESULT err_desc:'E_QUERY_DEVICE_ID_FAIL'
+[2016-08-22 11:39:29] 1.ª÷∏¥ƒ¨»œ…Ë÷√
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.00 s
+Slowest tests:
+0.60 s	IAM::IamManager#test_ÃÌº”…Ë±∏MACµÿ÷∑Œª ˝“Ï≥£≤‚ ‘ IAM_F_DeviceOperation_027
+Slowest suites:
+0.60 s	IAM::IamManager
+
+
+[32mFinished tests in 0.615467s, 1.6248 tests/s, 21.1222 assertions/s.[0m
+
+
+[32m1 tests, 13 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160822
+Writing XML reports to E:/autotest/iam_testcases/reports/20160822

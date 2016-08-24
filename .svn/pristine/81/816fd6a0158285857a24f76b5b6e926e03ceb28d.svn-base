@@ -1,0 +1,19 @@
+1¡¢½øÈëDUT ´ø¿í¿ØÖÆÒ³Ãæ£¬¹´Ñ¡¡°¿ªÆôIP´ø¿í¿ØÖÆ¡±Ñ¡Ïî¿ò£¬ÉèÖÃÉêÇë´ø¿íÎª1000kbps
+2¡¢¼ÙÉèµ±Ç°LAN¿ÚµØÖ·Îª192.168.100.1£¬ÉèÖÃ¹æÔò1µØÖ·¶ÎÎª192.168,100.2µ½192.168,100.2
+rule 1 ip start ip 100,end ip 110
+rule 2 ip start ip 50,end ip 100
+ERROR TIP :
+É¾³ı´ø¿í¿ØÖÆÅäÖÃ
+[31mF[0m
+
+[31mFinished tests in 83.463774s, 0.0120 tests/s, 0.0599 assertions/s.[0m
+
+
+[31mFailure:
+Frame::WebTestInternet#test_IPµØÖ·¶Î³åÍ»²âÊÔ ZLBF_27.1.14 [(eval):95]
+Minitest::Assertion: ÌáÊ¾ĞÅÏ¢ÄÚÈİ´íÎó!.
+Expected: "IP\u5730\u5740\u6BB5\u6709\u4EA4\u96C6"
+  Actual: ""[0m
+
+[31m1 tests, 5 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing XML reports to E:/auto_sdk/frame/reports/20160227

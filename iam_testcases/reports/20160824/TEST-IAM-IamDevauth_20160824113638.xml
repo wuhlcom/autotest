@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="IAM::IamDevauth" skipped="0" failures="1" errors="0" tests="1" assertions="1" time="0.08493908797390759">
+  <testcase name="test_查询业务进程文件 IAM_F_DeviceOperation_013" classname="IAM::IamDevauth" assertions="1" time="0.08493908797390759">
+    <failure type="test_查询业务进程文件 IAM_F_DeviceOperation_013" message="undefined method `each' for nil:NilClass">
+Failure:
+test_查询业务进程文件 IAM_F_DeviceOperation_013(IAM::IamDevauth) [iam_devauth.rb:61]:
+undefined method `each' for nil:NilClass
+    </failure>
+  </testcase>
+</testsuite>

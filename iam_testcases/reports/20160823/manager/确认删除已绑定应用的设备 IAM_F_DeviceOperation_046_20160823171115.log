@@ -1,0 +1,30 @@
+[2016-08-23 17:11:15] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+User existed!
+[2016-08-23 17:11:15] 2¡¢»ñÈ¡µÇÂ¼ÓÃ»§uidºÅ£»
+´´½¨Ó¦ÓÃÃûÎª'zhilutecApp'
+create app...
+create and active the new app...
+[2016-08-23 17:11:16] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.00 s
+Slowest tests:
+0.59 s	IAM::IamManager#test_È·ÈÏÉ¾³ıÒÑ°ó¶¨Ó¦ÓÃµÄÉè±¸ IAM_F_DeviceOperation_046
+Slowest suites:
+0.59 s	IAM::IamManager
+
+
+[31mFinished tests in 0.604049s, 1.6555 tests/s, 3.3110 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_È·ÈÏÉ¾³ıÒÑ°ó¶¨Ó¦ÓÃµÄÉè±¸ IAM_F_DeviceOperation_046 [(eval):33]
+Minitest::Assertion: ĞÂÔöÒ»¸öÓ¦ÓÃÊ§°Ü!.
+Expected: # encoding: UTF-8
+"OK"
+  Actual: # encoding: UTF-8
+"\u4FEE\u6539\u6210\u529F"[0m
+
+[31m1 tests, 2 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160823
+Writing XML reports to E:/autotest/iam_testcases/reports/20160823

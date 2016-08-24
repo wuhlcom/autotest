@@ -1,0 +1,29 @@
+[2016-08-24 18:25:17] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-24 18:25:17] 2¡¢»ñÈ¡ÖªÂ·¹ÜÀíÔ±idºÍtokenÖµ£»
+[2016-08-24 18:25:17] 3¡¢¾ÉÃÜÂëÊäÈëÎª¿Õ£»
+RESULT err_msg:
+RESULT err_code:
+RESULT err_desc:
+[2016-08-24 18:25:17] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.01 s
+Slowest tests:
+0.43 s	IAM::IamManager#test_¾ÉÃÜÂëÊäÈëÎª¿Õ IAM_F_SysManager_118
+Slowest suites:
+0.43 s	IAM::IamManager
+
+
+[31mFinished tests in 0.468964s, 2.1324 tests/s, 4.2647 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_¾ÉÃÜÂëÊäÈëÎª¿Õ IAM_F_SysManager_118 [(eval):38]
+Minitest::Assertion: Ìí¼ÓÊÖ»úÕË»§³¬¼¶¹ÜÀíÔ±Ó¦ÌáÊ¾Ê§°Ü!.
+Expected: # encoding: UTF-8
+"11005"
+  Actual: nil[0m
+
+[31m1 tests, 2 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160824
+Writing XML reports to E:/autotest/iam_testcases/reports/20160824

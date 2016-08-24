@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Frame::WebTestInternet" skipped="0" failures="1" errors="0" tests="1" assertions="4" time="30.311411">
+  <testcase name="test_DHCP服务器-租约时长输入特殊字符测试 ZLBF_8.1.27" classname="Frame::WebTestInternet" assertions="4" time="30.311411">
+    <failure type="test_DHCP服务器-租约时长输入特殊字符测试 ZLBF_8.1.27" message="未提示租约时间范围错误....">
+Failure:
+test_DHCP服务器-租约时长输入特殊字符测试 ZLBF_8.1.27(Frame::WebTestInternet) [(eval):35]:
+未提示租约时间范围错误.
+Expected: "\u79DF\u7EA6\u65F6\u95F4\u8303\u56F4\u4E3A60-43200"
+  Actual: "\u79DF\u7528\u65F6\u95F4\u53EA\u80FD\u662F\u6B63\u6574\u6570"
+    </failure>
+  </testcase>
+</testsuite>

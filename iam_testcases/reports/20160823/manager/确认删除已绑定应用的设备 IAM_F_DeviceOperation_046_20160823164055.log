@@ -1,0 +1,30 @@
+[2016-08-23 16:40:55] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+User existed!
+[2016-08-23 16:40:55] 2¡¢»ñÈ¡µÇÂ¼ÓÃ»§uidºÅ£»
+´´½¨Ó¦ÓÃÃûÎª'zhilutecApp'
+{"result"=>1, "msg"=>"OK"}
+"»ñÈ¡Ó¦ÓÃID"
+"160823147949"
+{"err_code"=>"40004", "err_msg"=>"\u8BBE\u5907MAC\u5DF2\u5B58\u5728", "err_desc"=>"E_DEV_MAC_EXISTS"}
+[2016-08-23 16:40:55] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.01 s
+Slowest tests:
+0.82 s	IAM::IamManager#test_È·ÈÏÉ¾³ıÒÑ°ó¶¨Ó¦ÓÃµÄÉè±¸ IAM_F_DeviceOperation_046
+Slowest suites:
+0.82 s	IAM::IamManager
+
+
+[31mFinished tests in 0.848868s, 1.1780 tests/s, 4.7122 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_È·ÈÏÉ¾³ıÒÑ°ó¶¨Ó¦ÓÃµÄÉè±¸ IAM_F_DeviceOperation_046 [(eval):44]
+Minitest::Assertion: Ìí¼ÓÉè±¸Ê§°Ü!.
+Expected: 1
+  Actual: nil[0m
+
+[31m1 tests, 4 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160823
+Writing XML reports to E:/autotest/iam_testcases/reports/20160823

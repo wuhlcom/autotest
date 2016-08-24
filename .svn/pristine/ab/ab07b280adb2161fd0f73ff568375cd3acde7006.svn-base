@@ -1,0 +1,73 @@
+1¡¢µ±Ç°APÍ¨¹ıDHCP½ÓÈëµ½²âÊÔÍø
+Frame::WebTestInternet#test_ÄÚ´æĞÅÏ¢ ZLBF_4.1.10->method_name:ping
+Frame::WebTestInternet#test_ÄÚ´æĞÅÏ¢ ZLBF_4.1.10->method_name:arp_clear
+
+ÕıÔÚ Ping www.a.shifen.com [14.215.177.37] ¾ßÓĞ 32 ×Ö½ÚµÄÊı¾İ:
+À´×Ô 14.215.177.37 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä=13ms TTL=53
+À´×Ô 14.215.177.37 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä=13ms TTL=53
+À´×Ô 14.215.177.37 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä=16ms TTL=53
+À´×Ô 14.215.177.37 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä=21ms TTL=53
+À´×Ô 14.215.177.37 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä=13ms TTL=53
+
+14.215.177.37 µÄ Ping Í³¼ÆĞÅÏ¢:
+    Êı¾İ°ü: ÒÑ·¢ËÍ = 5£¬ÒÑ½ÓÊÕ = 5£¬¶ªÊ§ = 0 (0% ¶ªÊ§)£¬
+Íù·µĞĞ³ÌµÄ¹À¼ÆÊ±¼ä(ÒÔºÁÃëÎªµ¥Î»):
+    ×î¶Ì = 13ms£¬×î³¤ = 21ms£¬Æ½¾ù = 15ms
+"»ñÈ¡DUTµÄssid"
+"DUTssid --> WIFI_762009"
+"DUTssid_pwd --> 12345678"
+"PC2Á¬½Ówifi"
+[ERROR INFO]:excute error
+(druby://50.50.50.56:8787) C:/Ruby21-x64/lib/ruby/2.1.0/fileutils.rb:1460:in `unlink'
+(druby://50.50.50.56:8787) C:/Ruby21-x64/lib/ruby/2.1.0/fileutils.rb:1460:in `block in remove_file'
+(druby://50.50.50.56:8787) C:/Ruby21-x64/lib/ruby/2.1.0/fileutils.rb:1468:in `platform_support'
+(druby://50.50.50.56:8787) C:/Ruby21-x64/lib/ruby/2.1.0/fileutils.rb:1459:in `remove_file'
+(druby://50.50.50.56:8787) C:/Ruby21-x64/lib/ruby/2.1.0/fileutils.rb:791:in `remove_file'
+(druby://50.50.50.56:8787) C:/Ruby21-x64/lib/ruby/2.1.0/fileutils.rb:569:in `block in rm'
+(druby://50.50.50.56:8787) C:/Ruby21-x64/lib/ruby/2.1.0/fileutils.rb:568:in `each'
+(druby://50.50.50.56:8787) C:/Ruby21-x64/lib/ruby/2.1.0/fileutils.rb:568:in `rm'
+(druby://50.50.50.56:8787) E:/services/druby_server.rb:168:in `connect'
+(druby://50.50.50.56:8787) C:/Ruby21-x64/lib/ruby/2.1.0/drb/drb.rb:1588:in `perform_without_block'
+(druby://50.50.50.56:8787) C:/Ruby21-x64/lib/ruby/2.1.0/drb/drb.rb:1548:in `perform'
+(druby://50.50.50.56:8787) C:/Ruby21-x64/lib/ruby/2.1.0/drb/drb.rb:1626:in `block (2 levels) in main_loop'
+(druby://50.50.50.56:8787) C:/Ruby21-x64/lib/ruby/2.1.0/drb/drb.rb:1622:in `loop'
+(druby://50.50.50.56:8787) C:/Ruby21-x64/lib/ruby/2.1.0/drb/drb.rb:1622:in `block in main_loop'
+(eval):83:in `block in process0'
+frame_internet_single.rb:21:in `operate'
+(eval):32:in `process0'
+frame_internet_single.rb:71:in `block (3 levels) in <class:WebTestInternet>'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/minitest-5.8.0/lib/minitest/test.rb:107:in `block (3 levels) in run'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/minitest-5.8.0/lib/minitest/test.rb:204:in `capture_exceptions'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/minitest-5.8.0/lib/minitest/test.rb:104:in `block (2 levels) in run'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/minitest-5.8.0/lib/minitest/test.rb:255:in `time_it'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/minitest-5.8.0/lib/minitest/test.rb:103:in `block in run'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/minitest-5.8.0/lib/minitest.rb:334:in `on_signal'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/minitest-5.8.0/lib/minitest/test.rb:275:in `with_info_handler'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/minitest-5.8.0/lib/minitest/test.rb:102:in `run'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/minitest-reporters-1.1.0/lib/minitest/reporters.rb:47:in `run_with_hooks'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/minitest-5.8.0/lib/minitest.rb:781:in `run_one_method'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/minitest-5.8.0/lib/minitest.rb:308:in `run_one_method'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/minitest-5.8.0/lib/minitest.rb:296:in `block (2 levels) in run'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/minitest-5.8.0/lib/minitest.rb:295:in `each'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/minitest-5.8.0/lib/minitest.rb:295:in `block in run'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/minitest-5.8.0/lib/minitest.rb:334:in `on_signal'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/minitest-5.8.0/lib/minitest.rb:321:in `with_info_handler'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/minitest-5.8.0/lib/minitest.rb:294:in `run'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/minitest-5.8.0/lib/minitest.rb:155:in `block in __run'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/minitest-5.8.0/lib/minitest.rb:155:in `map'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/minitest-5.8.0/lib/minitest.rb:155:in `__run'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/minitest-5.8.0/lib/minitest.rb:129:in `run'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/minitest-5.8.0/lib/minitest.rb:56:in `block in autorun'
+1 »Ö¸´ÎªÄ¬ÈÏµÄ½ÓÈë·½Ê½£¬DHCP½ÓÈë
+"¶Ï¿ªwifiÁ¬½Ó"
+[31mF[0m
+
+[31mFinished tests in 61.536763s, 0.0163 tests/s, 0.0813 assertions/s.[0m
+
+
+[31mFailure:
+Frame::WebTestInternet#test_ÄÚ´æĞÅÏ¢ ZLBF_4.1.10 [frame_internet_single.rb:77]
+Minitest::Assertion: Permission denied @ unlink_internal - locationnotificationsview.xml[0m
+
+[31m1 tests, 5 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing XML reports to E:/auto_sdk/frame/reports/20160226

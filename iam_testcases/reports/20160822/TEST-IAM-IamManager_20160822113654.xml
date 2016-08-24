@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="IAM::IamManager" skipped="0" failures="1" errors="0" tests="1" assertions="3" time="0.7372450059992843">
+  <testcase name="test_添加设备MAC地址间隔符测试 IAM_F_DeviceOperation_026" classname="IAM::IamManager" assertions="3" time="0.7372450059992843">
+    <failure type="test_添加设备MAC地址间隔符测试 IAM_F_DeviceOperation_026" message="用户添加设备mac为‘00-88-00-00-00-01’失败!!....">
+Failure:
+test_添加设备MAC地址间隔符测试 IAM_F_DeviceOperation_026(IAM::IamManager) [(eval):43]:
+用户添加设备mac为‘00-88-00-00-00-01’失败!!.
+Expected: 1
+  Actual: nil
+    </failure>
+  </testcase>
+</testsuite>

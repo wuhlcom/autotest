@@ -1,0 +1,34 @@
+[2016-08-22 17:15:03] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+User existed!
+[2016-08-22 17:15:03] 2¡¢ÓÃ»§µÇÂ¼»ñÈ¡ÓÃ»§uidºÅ£»
+[2016-08-22 17:15:03] 3¡¢ÓÃ»§Ìí¼ÓÉè±¸AµÄmac£»
+ÓÃ»§Ìí¼ÓÉè±¸mac:'00:88:A1:BB:CC:DD'
+[2016-08-22 17:15:03] 4¡¢ÔÙ´ÎÌí¼ÓÉè±¸AµÄmac£»
+ÓÃ»§ÔÙÒ»´ÎÌí¼ÓÉè±¸mac:'00:88:A1:BB:CC:DD'
+RESULT err_msg:'Éè±¸MACÒÑ´æÔÚ'
+RESULT err_code:'40004'
+RESULT err_desc:'E_DEV_MAC_EXISTS'
+[2016-08-22 17:15:03] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.01 s
+Slowest tests:
+0.83 s	IAM::IamManager#test_Ìí¼ÓÉè±¸MACµØÖ·ÖØ¸´ĞÔ²âÊÔ IAM_F_DeviceOperation_031
+Slowest suites:
+0.83 s	IAM::IamManager
+
+
+[31mFinished tests in 0.860124s, 1.1626 tests/s, 3.4879 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_Ìí¼ÓÉè±¸MACµØÖ·ÖØ¸´ĞÔ²âÊÔ IAM_F_DeviceOperation_031 [(eval):45]
+Minitest::Assertion: ÓÃ»§ÔÙÒ»´ÎÌí¼ÓÉè±¸mac:'00:88:A1:BB:CC:DD'·µ»Ø´íÎóÏûÏ¢²»ÕıÈ·!.
+Expected: # encoding: UTF-8
+"\u8BE5\u8BBE\u5907\u4E3A\u65E0\u6548\u8BBE\u5907"
+  Actual: # encoding: UTF-8
+"\u8BBE\u5907MAC\u5DF2\u5B58\u5728"[0m
+
+[31m1 tests, 3 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160822
+Writing XML reports to E:/autotest/iam_testcases/reports/20160822

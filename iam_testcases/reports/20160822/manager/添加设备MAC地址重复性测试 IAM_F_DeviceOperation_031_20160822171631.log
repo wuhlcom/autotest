@@ -1,0 +1,26 @@
+[2016-08-22 17:16:31] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+User existed!
+[2016-08-22 17:16:31] 2¡¢ÓÃ»§µÇÂ¼»ñÈ¡ÓÃ»§uidºÅ£»
+[2016-08-22 17:16:31] 3¡¢ÓÃ»§Ìí¼ÓÉè±¸AµÄmac£»
+ÓÃ»§Ìí¼ÓÉè±¸mac:'00:88:A1:BB:CC:DD'
+[2016-08-22 17:16:31] 4¡¢ÔÙ´ÎÌí¼ÓÉè±¸AµÄmac£»
+ÓÃ»§ÔÙÒ»´ÎÌí¼ÓÉè±¸mac:'00:88:A1:BB:CC:DD'
+RESULT err_msg:'Éè±¸MACÒÑ´æÔÚ'
+RESULT err_code:'40004'
+RESULT err_desc:'E_DEV_MAC_EXISTS'
+[2016-08-22 17:16:31] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.01 s
+Slowest tests:
+0.87 s	IAM::IamManager#test_Ìí¼ÓÉè±¸MACµØÖ·ÖØ¸´ĞÔ²âÊÔ IAM_F_DeviceOperation_031
+Slowest suites:
+0.87 s	IAM::IamManager
+
+
+[32mFinished tests in 0.902598s, 1.1079 tests/s, 5.5396 assertions/s.[0m
+
+
+[32m1 tests, 5 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160822
+Writing XML reports to E:/autotest/iam_testcases/reports/20160822

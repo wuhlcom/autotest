@@ -1,0 +1,23 @@
+[2016-08-23 16:07:55] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+User existed!
+[2016-08-23 16:07:55] 2¡¢»ñÈ¡µÇÂ¼ÓÃ»§µÄuidºÅ£»
+{"result"=>1, "uid"=>"87d9cf1c-eeb8-447e-9fc7-1485841e201e", "account"=>"13700001111", "access_token"=>"f81f7590989c95f3251cc39b24a32530"}
+[2016-08-23 16:07:56] 3¡¢»ñÈ¡Â¼ÈëÉè±¸device_idºÅ£»
+[2016-08-23 16:07:56] 4¡¢É¾³ıÉè±¸£»
+{"err_code"=>"40002", "err_msg"=>"\u8BBE\u5907ID\u4E3A\u7A7A", "err_desc"=>"E_DEV_ID_NULL"}
+[2016-08-23 16:07:56] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.01 s
+Slowest tests:
+0.20 s	IAM::IamManager#test_È·¶¨É¾³ıÎ´°ó¶¨Ó¦ÓÃµÄÉè±¸ IAM_F_DeviceOperation_043
+Slowest suites:
+0.20 s	IAM::IamManager
+
+
+[32mFinished tests in 0.228271s, 4.3808 tests/s, 4.3808 assertions/s.[0m
+
+
+[32m1 tests, 1 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160823
+Writing XML reports to E:/autotest/iam_testcases/reports/20160823

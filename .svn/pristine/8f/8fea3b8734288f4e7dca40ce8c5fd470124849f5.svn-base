@@ -1,0 +1,368 @@
+1¡¢½øÈëDUT ´ø¿í¿ØÖÆÒ³Ãæ£¬¹´Ñ¡¡°¿ªÆôIP´ø¿í¿ØÖÆ¡±Ñ¡Ïî¿ò£¬ÉèÖÃÉêÇë´ø¿íÎª100000kbps
+2¡¢¼ÙÉèµ±Ç°LAN¿ÚIPµØÖ·Îª192.168.1.1£¬ÉèÖÃ¹æÔò1µÄµØÖ·¶ÎÎª192.168.1.2µ½192.168.1.10£¬ÉèÖÃ×î´óÊÜÏŞ´ø¿íÎª100kbps£¬²¢±£´æ±¾Ìõ¹æÔò
+3¡¢ÏÂ½ÓµçÄÔµÄIPµØÖ·Îª192.168.1.2£¬½øĞĞFTPÏÂÔØ£¬ÑéÖ¤Á÷Á¿ÊÇ·ñÊÜÏŞÎª100kbps
+=============capture first time=================
+Frame::WebTestInternet#test_ĞŞ¸ÄLAN¿ÚIPºó¹æÔò×Ô¶¯¸ü¸Ä ZLBF_27.1.8->method_name:tshark_duration
+=============capture second time=================
+Frame::WebTestInternet#test_ĞŞ¸ÄLAN¿ÚIPºó¹æÔò×Ô¶¯¸ü¸Ä ZLBF_27.1.8->method_name:tshark_duration
+=============capture three time=================
+Frame::WebTestInternet#test_ĞŞ¸ÄLAN¿ÚIPºó¹æÔò×Ô¶¯¸ü¸Ä ZLBF_27.1.8->method_name:tshark_duration
+=============Statistics first time=================
+Frame::WebTestInternet#test_ĞŞ¸ÄLAN¿ÚIPºó¹æÔò×Ô¶¯¸ü¸Ä ZLBF_27.1.8->method_name:capinfos_all
+File name:           D:/ftpcaps/lanip_change_before1_00001_20160225204649.pcap
+File type:           Wireshark/... - pcapng
+File encapsulation:  Ethernet
+Packet size limit:   file hdr: (not set)
+Number of packets:   372 
+File size:           555 kB
+Data size:           542 kB
+Capture duration:    4 seconds
+Start time:          Thu Feb 25 20:46:49 2016
+End time:            Thu Feb 25 20:46:54 2016
+Data byte rate:      128 kBps
+Data bit rate:       1027 kbps
+Average packet size: 1459.07 bytes
+Average packet rate: 88 packets/sec
+SHA1:                7397e12ab0ad500e9d5e62dbbfe50ddb7bb5e9ad
+RIPEMD160:           dc77e249140d6ef982e5ed0e7cdd3eaca744c937
+MD5:                 b3d02d4bbc57cc44bc6192f134670c34
+Strict time order:   True
+Êµ¼ÊÏÂÔØËÙÂÊÎª1027000bps
+0.02057647705078125
+=============Statistics second time=================
+Frame::WebTestInternet#test_ĞŞ¸ÄLAN¿ÚIPºó¹æÔò×Ô¶¯¸ü¸Ä ZLBF_27.1.8->method_name:capinfos_all
+File name:           D:/ftpcaps/lanip_change_before2_00001_20160225204700.pcap
+File type:           Wireshark/... - pcapng
+File encapsulation:  Ethernet
+Packet size limit:   file hdr: (not set)
+Number of packets:   410 
+File size:           626 kB
+Data size:           612 kB
+Capture duration:    5 seconds
+Start time:          Thu Feb 25 20:47:00 2016
+End time:            Thu Feb 25 20:47:05 2016
+Data byte rate:      128 kBps
+Data bit rate:       1026 kbps
+Average packet size: 1494.52 bytes
+Average packet rate: 85 packets/sec
+SHA1:                78d943eba882cc74184258fa7f8c245ff296715f
+RIPEMD160:           f3d60ca49ce4e1d8809be7d984336d62b0f814dc
+MD5:                 369d8433e01d8920b6b8af3894e6097a
+Strict time order:   True
+Êµ¼ÊÏÂÔØËÙÂÊÎª1026000bps
+0.0215301513671875
+=============Statistics three time=================
+Frame::WebTestInternet#test_ĞŞ¸ÄLAN¿ÚIPºó¹æÔò×Ô¶¯¸ü¸Ä ZLBF_27.1.8->method_name:capinfos_all
+File name:           D:/ftpcaps/lanip_change_before3_00001_20160225204711.pcap
+File type:           Wireshark/... - pcapng
+File encapsulation:  Ethernet
+Packet size limit:   file hdr: (not set)
+Number of packets:   408 
+File size:           622 kB
+Data size:           608 kB
+Capture duration:    5 seconds
+Start time:          Thu Feb 25 20:47:11 2016
+End time:            Thu Feb 25 20:47:16 2016
+Data byte rate:      128 kBps
+Data bit rate:       1026 kbps
+Average packet size: 1490.80 bytes
+Average packet rate: 86 packets/sec
+SHA1:                ec5a977867c0e10997c78f2f7b84d96b8be37fa0
+RIPEMD160:           f4f0c4277269baed8a05c7a9e261acb321a99bc4
+MD5:                 717654a0c3045c2d4b86fb39b56a0ef1
+Strict time order:   True
+Êµ¼ÊÏÂÔØËÙÂÊÎª1026000bps
+0.0215301513671875
+4¡¢ĞŞ¸ÄLAN¿ÚIPµØÖ·Îª192.168.2.1£¬ĞŞ¸ÄÍê³Éºó£¬²é¿´¹æÔò1µÄµØÖ·¶ÎÊÇ·ñ×Ô¶¯±ä¸üÎª192.168.2.2µ½192.168.2.10£¬ÆäËûÊı¾İ²»±ä
+µÈ´ıÂ·ÓÉÆ÷ÖØÆğ...
+Frame::WebTestInternet#test_ĞŞ¸ÄLAN¿ÚIPºó¹æÔò×Ô¶¯¸ü¸Ä ZLBF_27.1.8->method_name:login_no_default_ip
+5¡¢ÏÂ½ÓµçÄÔµÄIPµØÖ·Îª192.168.2.2£¬½øĞĞFTPÏÂÔØ£¬ÑéÖ¤Á÷Á¿ÊÇ·ñÊÜÏŞÎª100kbps
+=============capture first time=================
+Frame::WebTestInternet#test_ĞŞ¸ÄLAN¿ÚIPºó¹æÔò×Ô¶¯¸ü¸Ä ZLBF_27.1.8->method_name:tshark_duration
+=============capture second time=================
+Frame::WebTestInternet#test_ĞŞ¸ÄLAN¿ÚIPºó¹æÔò×Ô¶¯¸ü¸Ä ZLBF_27.1.8->method_name:tshark_duration
+=============capture three time=================
+Frame::WebTestInternet#test_ĞŞ¸ÄLAN¿ÚIPºó¹æÔò×Ô¶¯¸ü¸Ä ZLBF_27.1.8->method_name:tshark_duration
+=============Statistics first time=================
+Frame::WebTestInternet#test_ĞŞ¸ÄLAN¿ÚIPºó¹æÔò×Ô¶¯¸ü¸Ä ZLBF_27.1.8->method_name:capinfos_all
+File name:           D:/ftpcaps/lanip_change_after1_00001_20160225204946.pcap
+File type:           Wireshark/... - pcapng
+File encapsulation:  Ethernet
+Packet size limit:   file hdr: (not set)
+Number of packets:   406 
+File size:           625 kB
+Data size:           611 kB
+Capture duration:    5 seconds
+Start time:          Thu Feb 25 20:49:46 2016
+End time:            Thu Feb 25 20:49:51 2016
+Data byte rate:      128 kBps
+Data bit rate:       1026 kbps
+Average packet size: 1505.01 bytes
+Average packet rate: 85 packets/sec
+SHA1:                dac377e373470bf1da2c46f918c31e04de710417
+RIPEMD160:           95bf2cf64ed5bdfc3897dc9c26f3c09c37d3e3c8
+MD5:                 db3fd77a36faea7964910f6f5a808f9c
+Strict time order:   True
+Êµ¼ÊÏÂÔØËÙÂÊÎª1026000bps
+0.0215301513671875
+=============Statistics second time=================
+Frame::WebTestInternet#test_ĞŞ¸ÄLAN¿ÚIPºó¹æÔò×Ô¶¯¸ü¸Ä ZLBF_27.1.8->method_name:capinfos_all
+File name:           D:/ftpcaps/lanip_change_after2_00001_20160225204957.pcap
+File type:           Wireshark/... - pcapng
+File encapsulation:  Ethernet
+Packet size limit:   file hdr: (not set)
+Number of packets:   405 
+File size:           625 kB
+Data size:           611 kB
+Capture duration:    5 seconds
+Start time:          Thu Feb 25 20:49:57 2016
+End time:            Thu Feb 25 20:50:01 2016
+Data byte rate:      128 kBps
+Data bit rate:       1026 kbps
+Average packet size: 1510.40 bytes
+Average packet rate: 84 packets/sec
+SHA1:                7923bcd3662585e2a3c797a80009394276795c96
+RIPEMD160:           f81ec6d84c476cf345a3ad528d276c3306fe925a
+MD5:                 25c93da7c74c41490a6fc9c4545d4ea8
+Strict time order:   True
+Êµ¼ÊÏÂÔØËÙÂÊÎª1026000bps
+0.0215301513671875
+=============Statistics three time=================
+Frame::WebTestInternet#test_ĞŞ¸ÄLAN¿ÚIPºó¹æÔò×Ô¶¯¸ü¸Ä ZLBF_27.1.8->method_name:capinfos_all
+File name:           D:/ftpcaps/lanip_change_after3_00001_20160225205007.pcap
+File type:           Wireshark/... - pcapng
+File encapsulation:  Ethernet
+Packet size limit:   file hdr: (not set)
+Number of packets:   355 
+File size:           549 kB
+Data size:           537 kB
+Capture duration:    4 seconds
+Start time:          Thu Feb 25 20:50:07 2016
+End time:            Thu Feb 25 20:50:12 2016
+Data byte rate:      128 kBps
+Data bit rate:       1026 kbps
+Average packet size: 1514.00 bytes
+Average packet rate: 84 packets/sec
+SHA1:                4c5b3da3c466e9e213d1d8ca2dcebd9d7e0cef5a
+RIPEMD160:           c4fc0f17ad54e592f207ae3d176c08b8156c8dd6
+MD5:                 5327c8ec4d25a77f3e76e087f7ebf693
+Strict time order:   True
+Êµ¼ÊÏÂÔØËÙÂÊÎª1026000bps
+0.0215301513671875
+1 Í£Ö¹ËùÓĞÏÂÔØ½ø³Ì
+kill 345292 error:No such process
+kill 351904 error:No such process
+»Ö¸´Ä¬ÈÏÅäÖÃ
+Frame::WebTestInternet#test_ĞŞ¸ÄLAN¿ÚIPºó¹æÔò×Ô¶¯¸ü¸Ä ZLBF_27.1.8->method_name:login_recover
+Frame::WebTestInternet#test_ĞŞ¸ÄLAN¿ÚIPºó¹æÔò×Ô¶¯¸ü¸Ä ZLBF_27.1.8->method_name:netsh_if_ip_show
+
+½Ó¿Ú "dut" µÄÅäÖÃ
+    DHCP ÒÑÆôÓÃ:                          ÊÇ
+    IP µØÖ·:                           192.168.123.100
+    ×ÓÍøÇ°×º:                        192.168.123.0/24 (ÑÚÂë 255.255.255.0)
+    Ä¬ÈÏÍø¹Ø:                         192.168.123.1
+    Íø¹ØÔ¾µãÊı:                       0
+    InterfaceMetric:                      20
+
+Frame::WebTestInternet#test_ĞŞ¸ÄLAN¿ÚIPºó¹æÔò×Ô¶¯¸ü¸Ä ZLBF_27.1.8->method_name:ping_recover
+Frame::WebTestInternet#test_ĞŞ¸ÄLAN¿ÚIPºó¹æÔò×Ô¶¯¸ü¸Ä ZLBF_27.1.8->method_name:netsh_if_shif
+
+dut                                      
+   ÖÖÀà:     ×¨ÓÃ             
+   ¹ÜÀí×´Ì¬: ÒÑÆôÓÃ             
+   Á¬½Ó×´Ì¬: ÒÑÁ¬½Ó             
+
+NIC state is enabled
+Frame::WebTestInternet#test_ĞŞ¸ÄLAN¿ÚIPºó¹æÔò×Ô¶¯¸ü¸Ä ZLBF_27.1.8->method_name:netsh_if_ip_show
+
+½Ó¿Ú "dut" µÄÅäÖÃ
+    DHCP ÒÑÆôÓÃ:                          ÊÇ
+    IP µØÖ·:                           192.168.123.100
+    ×ÓÍøÇ°×º:                        192.168.123.0/24 (ÑÚÂë 255.255.255.0)
+    Ä¬ÈÏÍø¹Ø:                         192.168.123.1
+    Íø¹ØÔ¾µãÊı:                       0
+    InterfaceMetric:                      20
+
+Frame::WebTestInternet#test_ĞŞ¸ÄLAN¿ÚIPºó¹æÔò×Ô¶¯¸ü¸Ä ZLBF_27.1.8->method_name:ping_default
+Frame::WebTestInternet#test_ĞŞ¸ÄLAN¿ÚIPºó¹æÔò×Ô¶¯¸ü¸Ä ZLBF_27.1.8->method_name:arp_clear
+
+ÕıÔÚ Ping 192.168.100.1 ¾ßÓĞ 32 ×Ö½ÚµÄÊı¾İ:
+ÇëÇó³¬Ê±¡£
+ÇëÇó³¬Ê±¡£
+ÇëÇó³¬Ê±¡£
+ÇëÇó³¬Ê±¡£
+ÇëÇó³¬Ê±¡£
+
+192.168.100.1 µÄ Ping Í³¼ÆĞÅÏ¢:
+    Êı¾İ°ü: ÒÑ·¢ËÍ = 5£¬ÒÑ½ÓÊÕ = 0£¬¶ªÊ§ = 5 (100% ¶ªÊ§)£¬
+Recover router default lan ip
+Frame::WebTestInternet#test_ĞŞ¸ÄLAN¿ÚIPºó¹æÔò×Ô¶¯¸ü¸Ä ZLBF_27.1.8->method_name:login_default
+Enter url address!
+Enter usrname and passwd!
+Frame::WebTestInternet#test_ĞŞ¸ÄLAN¿ÚIPºó¹æÔò×Ô¶¯¸ü¸Ä ZLBF_27.1.8->method_name:router_recover
+sleep 120 seconds for router recovering seconds.....
+Frame::WebTestInternet#test_ĞŞ¸ÄLAN¿ÚIPºó¹æÔò×Ô¶¯¸ü¸Ä ZLBF_27.1.8->method_name:login_default
+Enter usrname and passwd!
+[32m.[0mFrame::WebTestInternet#test_±£ÕÏ×îĞ¡´ø¿íÖ®ºÍ´óÓÚ×Ü´ø¿í ZLBF_27.1.10->method_name:ipconfig
+
+Windows IP ÅäÖÃ
+
+   Ö÷»úÃû  . . . . . . . . . . . . . : ÖªÂ·²âÊÔsdgsdgkdsejkfjgkklj-wjekljsdskljf3sdg3
+   Ö÷ DNS ºó×º . . . . . . . . . . . : 
+   ½ÚµãÀàĞÍ  . . . . . . . . . . . . : »ìºÏ
+   IP Â·ÓÉÒÑÆôÓÃ . . . . . . . . . . : ·ñ
+   WINS ´úÀíÒÑÆôÓÃ . . . . . . . . . : ·ñ
+
+ÒÔÌ«ÍøÊÊÅäÆ÷ AP:
+
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Realtek USB FE Family Controller
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 00-E0-4C-36-14-02
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+   ±¾µØÁ´½Ó IPv6 µØÖ·. . . . . . . . : fe80::ec6d:f574:7481:635b%21(Ê×Ñ¡) 
+   IPv4 µØÖ· . . . . . . . . . . . . : 192.168.50.100(Ê×Ñ¡) 
+   ×ÓÍøÑÚÂë  . . . . . . . . . . . . : 255.255.255.0
+   Ä¬ÈÏÍø¹Ø. . . . . . . . . . . . . : 
+   DHCPv6 IAID . . . . . . . . . . . : 503373900
+   DHCPv6 ¿Í»§¶Ë DUID  . . . . . . . : 00-01-00-01-1C-21-93-0A-BC-EE-7B-75-EB-4F
+   DNS ·şÎñÆ÷  . . . . . . . . . . . : fec0:0:0:ffff::1%1
+                                       fec0:0:0:ffff::2%1
+                                       fec0:0:0:ffff::3%1
+   TCPIP ÉÏµÄ NetBIOS  . . . . . . . : ÒÑÆôÓÃ
+
+ÒÔÌ«ÍøÊÊÅäÆ÷ control:
+
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Realtek PCIe GBE Family Controller #2
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 20-F4-1B-60-51-F5
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+   ±¾µØÁ´½Ó IPv6 µØÖ·. . . . . . . . : fe80::dd6:5d32:f850:8252%19(Ê×Ñ¡) 
+   IPv4 µØÖ· . . . . . . . . . . . . : 50.50.50.50(Ê×Ñ¡) 
+   ×ÓÍøÑÚÂë  . . . . . . . . . . . . : 255.255.255.0
+   Ä¬ÈÏÍø¹Ø. . . . . . . . . . . . . : 
+   DHCPv6 IAID . . . . . . . . . . . : 455144475
+   DHCPv6 ¿Í»§¶Ë DUID  . . . . . . . : 00-01-00-01-1C-21-93-0A-BC-EE-7B-75-EB-4F
+   DNS ·şÎñÆ÷  . . . . . . . . . . . : fec0:0:0:ffff::1%1
+                                       fec0:0:0:ffff::2%1
+                                       fec0:0:0:ffff::3%1
+   TCPIP ÉÏµÄ NetBIOS  . . . . . . . : ÒÑÆôÓÃ
+
+ÒÔÌ«ÍøÊÊÅäÆ÷ dut:
+
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Realtek PCIe GBE Family Controller
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : BC-EE-7B-75-EB-4F
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ÊÇ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+   ±¾µØÁ´½Ó IPv6 µØÖ·. . . . . . . . : fe80::c819:87cf:3504:296e%18(Ê×Ñ¡) 
+   IPv4 µØÖ· . . . . . . . . . . . . : 192.168.100.100(Ê×Ñ¡) 
+   ×ÓÍøÑÚÂë  . . . . . . . . . . . . : 255.255.255.0
+   »ñµÃ×âÔ¼µÄÊ±¼ä  . . . . . . . . . : 2016Äê2ÔÂ25ÈÕ 20:52:19
+   ×âÔ¼¹ıÆÚµÄÊ±¼ä  . . . . . . . . . : 2016Äê2ÔÂ26ÈÕ 8:52:19
+   Ä¬ÈÏÍø¹Ø. . . . . . . . . . . . . : 192.168.100.1
+   DHCP ·şÎñÆ÷ . . . . . . . . . . . : 192.168.100.1
+   DHCPv6 IAID . . . . . . . . . . . : 633138811
+   DHCPv6 ¿Í»§¶Ë DUID  . . . . . . . : 00-01-00-01-1C-21-93-0A-BC-EE-7B-75-EB-4F
+   DNS ·şÎñÆ÷  . . . . . . . . . . . : 192.168.100.1
+   TCPIP ÉÏµÄ NetBIOS  . . . . . . . : ÒÑÆôÓÃ
+
+ËíµÀÊÊÅäÆ÷ Teredo Tunneling Pseudo-Interface:
+
+   Ã½Ìå×´Ì¬  . . . . . . . . . . . . : Ã½ÌåÒÑ¶Ï¿ª
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Teredo Tunneling Pseudo-Interface
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+
+ËíµÀÊÊÅäÆ÷ isatap.{248CF58B-BF93-45FC-9050-F7163BF8C880}:
+
+   Ã½Ìå×´Ì¬  . . . . . . . . . . . . : Ã½ÌåÒÑ¶Ï¿ª
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Microsoft ISATAP Adapter #2
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+
+ËíµÀÊÊÅäÆ÷ isatap.{8BAC9A05-919D-4C1B-ADC5-0DAC27A19740}:
+
+   Ã½Ìå×´Ì¬  . . . . . . . . . . . . : Ã½ÌåÒÑ¶Ï¿ª
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Microsoft ISATAP Adapter #3
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+
+ËíµÀÊÊÅäÆ÷ 6TO4 Adapter:
+
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Microsoft 6to4 Adapter
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+   IPv6 µØÖ· . . . . . . . . . . . . : 2002:3232:3232::3232:3232(Ê×Ñ¡) 
+   Ä¬ÈÏÍø¹Ø. . . . . . . . . . . . . : 
+   DNS ·şÎñÆ÷  . . . . . . . . . . . : fec0:0:0:ffff::1%1
+                                       fec0:0:0:ffff::2%1
+                                       fec0:0:0:ffff::3%1
+   TCPIP ÉÏµÄ NetBIOS  . . . . . . . : ÒÑ½ûÓÃ
+
+ËíµÀÊÊÅäÆ÷ isatap.{41FBDD5C-1EE7-4C75-ADEB-174E80C7EBC5}:
+
+   Ã½Ìå×´Ì¬  . . . . . . . . . . . . : Ã½ÌåÒÑ¶Ï¿ª
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Microsoft ISATAP Adapter #7
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+Frame::WebTestInternet#test_±£ÕÏ×îĞ¡´ø¿íÖ®ºÍ´óÓÚ×Ü´ø¿í ZLBF_27.1.10->method_name:parse_ipconfig
+PC2 DRB parameter:druby://50.50.50.51:8787
+Frame::WebTestInternet#test_±£ÕÏ×îĞ¡´ø¿íÖ®ºÍ´óÓÚ×Ü´ø¿í ZLBF_27.1.10->method_name:login_recover
+Frame::WebTestInternet#test_±£ÕÏ×îĞ¡´ø¿íÖ®ºÍ´óÓÚ×Ü´ø¿í ZLBF_27.1.10->method_name:netsh_if_ip_show
+
+½Ó¿Ú "dut" µÄÅäÖÃ
+    DHCP ÒÑÆôÓÃ:                          ÊÇ
+    IP µØÖ·:                           192.168.100.100
+    ×ÓÍøÇ°×º:                        192.168.100.0/24 (ÑÚÂë 255.255.255.0)
+    Ä¬ÈÏÍø¹Ø:                         192.168.100.1
+    Íø¹ØÔ¾µãÊı:                       0
+    InterfaceMetric:                      20
+
+Frame::WebTestInternet#test_±£ÕÏ×îĞ¡´ø¿íÖ®ºÍ´óÓÚ×Ü´ø¿í ZLBF_27.1.10->method_name:ping_recover
+Frame::WebTestInternet#test_±£ÕÏ×îĞ¡´ø¿íÖ®ºÍ´óÓÚ×Ü´ø¿í ZLBF_27.1.10->method_name:netsh_if_shif
+
+dut                                      
+   ÖÖÀà:     ×¨ÓÃ             
+   ¹ÜÀí×´Ì¬: ÒÑÆôÓÃ             
+   Á¬½Ó×´Ì¬: ÒÑÁ¬½Ó             
+
+NIC state is enabled
+Frame::WebTestInternet#test_±£ÕÏ×îĞ¡´ø¿íÖ®ºÍ´óÓÚ×Ü´ø¿í ZLBF_27.1.10->method_name:netsh_if_ip_show
+
+½Ó¿Ú "dut" µÄÅäÖÃ
+    DHCP ÒÑÆôÓÃ:                          ÊÇ
+    IP µØÖ·:                           192.168.100.100
+    ×ÓÍøÇ°×º:                        192.168.100.0/24 (ÑÚÂë 255.255.255.0)
+    Ä¬ÈÏÍø¹Ø:                         192.168.100.1
+    Íø¹ØÔ¾µãÊı:                       0
+    InterfaceMetric:                      20
+
+Frame::WebTestInternet#test_±£ÕÏ×îĞ¡´ø¿íÖ®ºÍ´óÓÚ×Ü´ø¿í ZLBF_27.1.10->method_name:ping_default
+Frame::WebTestInternet#test_±£ÕÏ×îĞ¡´ø¿íÖ®ºÍ´óÓÚ×Ü´ø¿í ZLBF_27.1.10->method_name:arp_clear
+
+ÕıÔÚ Ping 192.168.100.1 ¾ßÓĞ 32 ×Ö½ÚµÄÊı¾İ:
+À´×Ô 192.168.100.1 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä<1ms TTL=64
+À´×Ô 192.168.100.1 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä<1ms TTL=64
+À´×Ô 192.168.100.1 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä<1ms TTL=64
+À´×Ô 192.168.100.1 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä<1ms TTL=64
+À´×Ô 192.168.100.1 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä<1ms TTL=64
+
+192.168.100.1 µÄ Ping Í³¼ÆĞÅÏ¢:
+    Êı¾İ°ü: ÒÑ·¢ËÍ = 5£¬ÒÑ½ÓÊÕ = 5£¬¶ªÊ§ = 0 (0% ¶ªÊ§)£¬
+Íù·µĞĞ³ÌµÄ¹À¼ÆÊ±¼ä(ÒÔºÁÃëÎªµ¥Î»):
+    ×î¶Ì = 0ms£¬×î³¤ = 0ms£¬Æ½¾ù = 0ms
+Frame::WebTestInternet#test_±£ÕÏ×îĞ¡´ø¿íÖ®ºÍ´óÓÚ×Ü´ø¿í ZLBF_27.1.10->method_name:login_default
+Enter url address!
+Enter usrname and passwd!

@@ -1,0 +1,17 @@
+[2016-08-24 18:57:12] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-24 18:57:12] 2¡¢»ñÈ¡µÇÂ¼¹ÜÀíÔ±µÄidºÅºÍtokenÖµ£º
+[2016-08-24 18:57:12] 3¡¢ĞÂÔöÒ»¸ö¹ÜÀíÔ±£¬ÃÜÂë¸ñÊ½ÕıÈ·£»
+SysManager_035@zhilutec.com is not exists!
+ĞÂÔö¹ÜÀíÔ±:¡®SysManager_035@zhilutec.com¡¯£¬ÃÜÂë³¤¶ÈÎª6
+RESULT MSG:Ìí¼Ó³É¹¦
+SysManager_0351@zhilutec.com is not exists!
+ĞÂÔö¹ÜÀíÔ±:¡®SysManager_0351@zhilutec.com¡¯£¬ÃÜÂë³¤¶ÈÎª32
+RESULT MSG:Ìí¼Ó³É¹¦
+SysManager_0352@zhilutec.com is not exists!
+ĞÂÔö¹ÜÀíÔ±:¡®SysManager_0352@zhilutec.com¡¯£¬ÃÜÂë³¤¶ÈÎª11
+RESULT MSG:Ìí¼Ó³É¹¦
+[2016-08-24 18:57:12] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+delete manager:SysManager_035@zhilutec.com
+delete manager:SysManager_0351@zhilutec.com
+delete manager:SysManager_0352@zhilutec.com
+[32m.[0m[32m.[0m

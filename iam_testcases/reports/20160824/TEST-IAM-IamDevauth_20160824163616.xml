@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="IAM::IamDevauth" skipped="0" failures="0" errors="0" tests="1" assertions="13" time="144.87521479302086">
+  <testcase name="test_确认删除已被设备关联的应用 IAM_F_DeviceOperation_018" classname="IAM::IamDevauth" assertions="13" time="144.87521479302086">
+  </testcase>
+</testsuite>

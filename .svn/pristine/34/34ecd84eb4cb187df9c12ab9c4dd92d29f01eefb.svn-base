@@ -1,0 +1,56 @@
+#encoding:utf-8
+#iam api,pub http socket
+#author:wuhongliang
+#date:2016-07-21
+module IAMAPI
+    module PubSocket
+        # url      = "http://192.168.10.9:8082/userid.txt"
+        def uri(url)
+            uri = URI(url)
+        end
+
+        #http get
+        #get userid
+        # url="http://192.168.10.9:8082/userid.txt
+        #get code
+        # url="http://192.168.10.9:8082/code.txt
+        def get(url)
+            uri =uri(url)
+            Net::HTTP.get(uri) # => String
+        end
+
+        def http_del(path, initheader = {'Depth' => 'Infinity'})
+            uri =uri(path)
+            res = Net::HTTP.start(uri.hostname, uri.port) do |http|
+                http.delete(path, initheader) # => String
+            end
+            res.body
+        end
+
+        #=================================
+        # http.request_post(uri, data)
+        #=============================
+        # http.request_post(uri, str) { |response|
+        #     response['content-type']
+        #     p response.code_type
+        #     response.read_body do |str| # read body now
+        #         str
+        #     end
+        # }
+        #=================================
+        #
+        #http post
+        def post_data(url, data)
+            uri =uri(url)
+            res = Net::HTTP.start(uri.hostname, uri.port) do |http|
+                http.request_post(uri, data)
+            end
+            res.body
+        end
+
+        def doc(html)
+            doc = Nokogiri::HTML(html)
+        end
+
+    end
+end

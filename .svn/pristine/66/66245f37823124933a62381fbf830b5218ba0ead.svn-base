@@ -1,0 +1,101 @@
+#iam api maneger api
+#管理员接口
+#author:wuhongliang
+#date:2016-07-21
+file_path =File.expand_path('../pubsocket', __FILE__)
+require file_path
+module IAMAPI
+    module Manager
+        include IAMAPI::PubSocket
+        # {
+        #     "result":1,
+        #     "name":"admin@zhilutec.com",
+        #     "nickname":"\u552f\u4e00\u77e5\u8def\u8d85\u7ea7\u7ba1\u7406\u5458",
+        #     "uid":"1",
+        #     "role_code":"1",
+        #     "token":"34d5aeb4b075ef65f6aa156f202127e4"
+        # }
+        # {
+        #     "err_code": 10006,
+        #     "err_msg": "帐号或密码错误"
+        # }
+        # curl -X POST http://192.168.10.9:8092/admins/dologin -d 'name=admin@zhilutec.com&password=123123'
+        def data_admin_login(usr, pw)
+            data = "name=#{usr}&password=#{pw}"
+        end
+
+        # result:
+        #   {
+        #   "result"=>1,
+        #   "name"=>"admin@zhilutec.com",
+        #   "nickname"=>"\u77E5\u8DEF\u7BA1\u7406\u5458",
+        #   "uid"=>"1",
+        #   "role_code"=>"1", "
+        #   token"=>"ef75b14c2fe47c09b2f3def7e53d1f32"
+        #   }
+        #返回管理员uid和token
+        def admin_login(url=ADMIN_URL, usr="admin@zhilutec.com", pw="123123")
+            uri        = uri(url)
+            data       = data_admin_login(usr, pw)
+            rs         = post_data(uri, data)
+            admin_hash = JSON.parse(rs)
+        end
+
+        # curl -X GET "http://192.168.10.9:8082/apps?admin_id=1&token=f816eabf9964b995313948a0d6c4c085" // 查询全部
+        # curl -X GET "http://192.168.10.9:8082/apps?admin_id=1&token=XXXX&listRows=2&p=2" // 分页查询
+        # curl -X GET "http://192.168.10.9:8082/apps?admin_id=1&token=XXXX&type=name&cond=123" // 模糊查询
+        #args
+        # 1: {"listRows"=>"2","p"=>"2"}
+        # 2: {"type"=>"name","cond"=>"IAM"}
+        #    type。模糊查询类型，name:应用名称 id:应用编号 provider:应用提供方
+        #    cond, 模糊查询条件。为空则不进行模糊查询，type,cond条件无效则查询全部
+        #return,String
+        #  "http://192.168.10.9:8082/apps?admin_id=1&token=f816eabf9964b995313948a0d6c4c085" // 查询全部
+        #  "http://192.168.10.9:8082/apps?admin_id=1&token=XXXX&listRows=2&p=2" // 分页查询
+        #  "http://192.168.10.9:8082/apps?admin_id=1&token=XXXX&type=name&cond=123" // 模糊查询
+        def data_app_list(token, uid="1", args =nil)
+            data    =""
+            args_arr=[]
+            if args.nil?
+                data = "admin_id=#{uid}&token=#{token}"
+            elsif args.kind_of?(Hash)
+                data = "admin_id=#{uid}&token=#{token}&"
+                args.each do |key, value|
+                    args_arr<<"#{key}=#{value}"
+                end
+                data=data+args_arr.join("&")
+            else
+                "params error!"
+            end
+            return data
+        end
+
+        #return,Hash，返回应用列表信息
+        # curl -X GET "http://192.168.10.9:8082/apps?admin_id=1&token=f816eabf9964b995313948a0d6c4c085" // 查询全部
+        # curl -X GET "http://192.168.10.9:8082/apps?admin_id=1&token=XXXX&listRows=2&p=2" // 分页查询
+        # curl -X GET "http://192.168.10.9:8082/apps?admin_id=1&token=XXXX&type=name&cond=123" // 模糊查询
+        def get_app_list(token, url=APP_URL, uid="1", args =nil)
+            uri = uri(url+data_app_list(token, uid, args))
+            rs  = get(uri)
+            JSON.parse(rs)
+        end
+
+        #return,Array，获取应用列表中应用信息
+        def get_app_info(token, url=APP_URL, uid="1", args =nil)
+            rs = get_app_list(token, url, uid, args)
+            rs["apps"]
+        end
+
+        #return,Hash，获取应用列表中指定应用信息
+        def get_spec_app_info(token, appname, url=APP_URL, uid="1", args =nil)
+            app_info={}
+            rs      = get_app_info(token, url, uid, args)
+            rs.each do |app|
+                if app.has_value?(appname)
+                    app_info=app
+                end
+            end
+            return app_info
+        end
+    end
+end

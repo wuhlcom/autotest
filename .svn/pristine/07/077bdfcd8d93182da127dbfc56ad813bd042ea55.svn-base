@@ -1,0 +1,18 @@
+1¡¢µÇÂ½Â·ÓÉÆ÷½øÈëÄÚÍøÉèÖÃ
+2¡¢¸ü¸Ä×âÔ¼Ê±³¤ÊäÈëÌØÊâ×Ö·û£»
+ĞŞ¸Ä×âÆÚÎª60@
+ERROR TIP:×âÓÃÊ±¼äÖ»ÄÜÊÇÕıÕûÊı
+1 Ôö¼Ó·Ç·¨ÊäÈëÒ²ÄÜ±£´æµÄÒì³£´¦Àí
+[31mF[0m
+
+[31mFinished tests in 30.465817s, 0.0328 tests/s, 0.1313 assertions/s.[0m
+
+
+[31mFailure:
+Frame::WebTestInternet#test_DHCP·şÎñÆ÷-×âÔ¼Ê±³¤ÊäÈëÌØÊâ×Ö·û²âÊÔ ZLBF_8.1.27 [(eval):35]
+Minitest::Assertion: Î´ÌáÊ¾×âÔ¼Ê±¼ä·¶Î§´íÎó.
+Expected: "\u79DF\u7EA6\u65F6\u95F4\u8303\u56F4\u4E3A60-43200"
+  Actual: "\u79DF\u7528\u65F6\u95F4\u53EA\u80FD\u662F\u6B63\u6574\u6570"[0m
+
+[31m1 tests, 4 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing XML reports to E:/auto_sdk/frame/reports/20160227

@@ -1,0 +1,29 @@
+[2016-08-22 11:30:21] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-22 11:30:21] 2¡¢ÓÃ»§µÇÂ¼»ñÈ¡ÓÃ»§uidºÅ£»
+User existed!
+[2016-08-22 11:30:21] 3¡¢ÓÃ»§Ìí¼ÓÉè±¸mac£»£¨ºÍÔÆ¶ËÒ»ÖÂ£¬Ö»²âÊÔÃ°ºÅ¼ä¸ô·û£©
+ÓÃ»§Ìí¼ÓÉè±¸macÎª¡®00:88:00:00:00:01¡¯
+ÓÃ»§Ìí¼ÓÉè±¸macÎª¡®00-88-00-00-00-01¡¯
+ÓÃ»§Ìí¼ÓÉè±¸macÎª¡®00-88:00:00:00:01¡¯
+[2016-08-22 11:30:21] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.00 s
+Slowest tests:
+0.62 s	IAM::IamManager#test_Ìí¼ÓÉè±¸MACµØÖ·¼ä¸ô·û²âÊÔ IAM_F_DeviceOperation_026
+Slowest suites:
+0.62 s	IAM::IamManager
+
+
+[31mFinished tests in 0.633468s, 1.5786 tests/s, 3.1572 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_Ìí¼ÓÉè±¸MACµØÖ·¼ä¸ô·û²âÊÔ IAM_F_DeviceOperation_026 [(eval):48]
+Minitest::Assertion: ÓÃ»§Ìí¼ÓÉè±¸macÎª¡®00-88:00:00:00:01¡¯Ê§°Ü!.
+Expected: 1
+  Actual: nil[0m
+
+[31m1 tests, 2 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160822
+Writing XML reports to E:/autotest/iam_testcases/reports/20160822

@@ -1,0 +1,385 @@
+1¡¢½øÈëDUT ´ø¿í¿ØÖÆÒ³Ãæ£¬¹´Ñ¡¡°¿ªÆôIP´ø¿í¿ØÖÆ¡±Ñ¡Ïî¿ò£¬ÉèÖÃÉêÇë´ø¿íÎª1000kbps
+Frame::WebTestInternet#test_ÊÜÏŞ×î´ó´ø¿íÖ®ºÍ´óÓÚ×Ü´ø¿í ZLBF_27.1.12->method_name:ping
+Frame::WebTestInternet#test_ÊÜÏŞ×î´ó´ø¿íÖ®ºÍ´óÓÚ×Ü´ø¿í ZLBF_27.1.12->method_name:arp_clear
+
+ÕıÔÚ Ping 10.10.10.57 ¾ßÓĞ 32 ×Ö½ÚµÄÊı¾İ:
+À´×Ô 10.10.10.57 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä<1ms TTL=63
+À´×Ô 10.10.10.57 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä<1ms TTL=63
+À´×Ô 10.10.10.57 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä=1ms TTL=63
+À´×Ô 10.10.10.57 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä<1ms TTL=63
+À´×Ô 10.10.10.57 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä<1ms TTL=63
+
+10.10.10.57 µÄ Ping Í³¼ÆĞÅÏ¢:
+    Êı¾İ°ü: ÒÑ·¢ËÍ = 5£¬ÒÑ½ÓÊÕ = 5£¬¶ªÊ§ = 0 (0% ¶ªÊ§)£¬
+Íù·µĞĞ³ÌµÄ¹À¼ÆÊ±¼ä(ÒÔºÁÃëÎªµ¥Î»):
+    ×î¶Ì = 0ms£¬×î³¤ = 1ms£¬Æ½¾ù = 0ms
+wifi passwd:12345678
+wlan pc mac:14:75:90:F8:A2:2C
+wlan pc ip:192.168.100.101
+Frame::WebTestInternet#test_ÊÜÏŞ×î´ó´ø¿íÖ®ºÍ´óÓÚ×Ü´ø¿í ZLBF_27.1.12->method_name:ipconfig
+
+Windows IP ÅäÖÃ
+
+   Ö÷»úÃû  . . . . . . . . . . . . . : ÖªÂ·²âÊÔsdgsdgkdsejkfjgkklj-wjekljsdskljf3sdg3
+   Ö÷ DNS ºó×º . . . . . . . . . . . : 
+   ½ÚµãÀàĞÍ  . . . . . . . . . . . . : »ìºÏ
+   IP Â·ÓÉÒÑÆôÓÃ . . . . . . . . . . : ·ñ
+   WINS ´úÀíÒÑÆôÓÃ . . . . . . . . . : ·ñ
+
+ÒÔÌ«ÍøÊÊÅäÆ÷ AP:
+
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Realtek USB FE Family Controller
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 00-E0-4C-36-14-02
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+   ±¾µØÁ´½Ó IPv6 µØÖ·. . . . . . . . : fe80::ec6d:f574:7481:635b%21(Ê×Ñ¡) 
+   IPv4 µØÖ· . . . . . . . . . . . . : 192.168.50.100(Ê×Ñ¡) 
+   ×ÓÍøÑÚÂë  . . . . . . . . . . . . : 255.255.255.0
+   Ä¬ÈÏÍø¹Ø. . . . . . . . . . . . . : 
+   DHCPv6 IAID . . . . . . . . . . . : 503373900
+   DHCPv6 ¿Í»§¶Ë DUID  . . . . . . . : 00-01-00-01-1C-21-93-0A-BC-EE-7B-75-EB-4F
+   DNS ·şÎñÆ÷  . . . . . . . . . . . : fec0:0:0:ffff::1%1
+                                       fec0:0:0:ffff::2%1
+                                       fec0:0:0:ffff::3%1
+   TCPIP ÉÏµÄ NetBIOS  . . . . . . . : ÒÑÆôÓÃ
+
+ÒÔÌ«ÍøÊÊÅäÆ÷ control:
+
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Realtek PCIe GBE Family Controller #2
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 20-F4-1B-60-51-F5
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+   ±¾µØÁ´½Ó IPv6 µØÖ·. . . . . . . . : fe80::dd6:5d32:f850:8252%19(Ê×Ñ¡) 
+   IPv4 µØÖ· . . . . . . . . . . . . : 50.50.50.50(Ê×Ñ¡) 
+   ×ÓÍøÑÚÂë  . . . . . . . . . . . . : 255.255.255.0
+   Ä¬ÈÏÍø¹Ø. . . . . . . . . . . . . : 
+   DHCPv6 IAID . . . . . . . . . . . : 455144475
+   DHCPv6 ¿Í»§¶Ë DUID  . . . . . . . : 00-01-00-01-1C-21-93-0A-BC-EE-7B-75-EB-4F
+   DNS ·şÎñÆ÷  . . . . . . . . . . . : fec0:0:0:ffff::1%1
+                                       fec0:0:0:ffff::2%1
+                                       fec0:0:0:ffff::3%1
+   TCPIP ÉÏµÄ NetBIOS  . . . . . . . : ÒÑÆôÓÃ
+
+ÒÔÌ«ÍøÊÊÅäÆ÷ dut:
+
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Realtek PCIe GBE Family Controller
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : BC-EE-7B-75-EB-4F
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ÊÇ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+   ±¾µØÁ´½Ó IPv6 µØÖ·. . . . . . . . : fe80::c819:87cf:3504:296e%18(Ê×Ñ¡) 
+   IPv4 µØÖ· . . . . . . . . . . . . : 192.168.100.100(Ê×Ñ¡) 
+   ×ÓÍøÑÚÂë  . . . . . . . . . . . . : 255.255.255.0
+   »ñµÃ×âÔ¼µÄÊ±¼ä  . . . . . . . . . : 2016Äê2ÔÂ26ÈÕ 18:08:25
+   ×âÔ¼¹ıÆÚµÄÊ±¼ä  . . . . . . . . . : 2016Äê2ÔÂ27ÈÕ 6:08:25
+   Ä¬ÈÏÍø¹Ø. . . . . . . . . . . . . : 192.168.100.1
+   DHCP ·şÎñÆ÷ . . . . . . . . . . . : 192.168.100.1
+   DHCPv6 IAID . . . . . . . . . . . : 633138811
+   DHCPv6 ¿Í»§¶Ë DUID  . . . . . . . : 00-01-00-01-1C-21-93-0A-BC-EE-7B-75-EB-4F
+   DNS ·şÎñÆ÷  . . . . . . . . . . . : 192.168.100.1
+   TCPIP ÉÏµÄ NetBIOS  . . . . . . . : ÒÑÆôÓÃ
+
+ËíµÀÊÊÅäÆ÷ Teredo Tunneling Pseudo-Interface:
+
+   Ã½Ìå×´Ì¬  . . . . . . . . . . . . : Ã½ÌåÒÑ¶Ï¿ª
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Teredo Tunneling Pseudo-Interface
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+
+ËíµÀÊÊÅäÆ÷ isatap.{248CF58B-BF93-45FC-9050-F7163BF8C880}:
+
+   Ã½Ìå×´Ì¬  . . . . . . . . . . . . : Ã½ÌåÒÑ¶Ï¿ª
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Microsoft ISATAP Adapter #2
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+
+ËíµÀÊÊÅäÆ÷ isatap.{8BAC9A05-919D-4C1B-ADC5-0DAC27A19740}:
+
+   Ã½Ìå×´Ì¬  . . . . . . . . . . . . : Ã½ÌåÒÑ¶Ï¿ª
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Microsoft ISATAP Adapter #3
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+
+ËíµÀÊÊÅäÆ÷ 6TO4 Adapter:
+
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Microsoft 6to4 Adapter
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+   IPv6 µØÖ· . . . . . . . . . . . . : 2002:3232:3232::3232:3232(Ê×Ñ¡) 
+   Ä¬ÈÏÍø¹Ø. . . . . . . . . . . . . : 
+   DNS ·şÎñÆ÷  . . . . . . . . . . . : fec0:0:0:ffff::1%1
+                                       fec0:0:0:ffff::2%1
+                                       fec0:0:0:ffff::3%1
+   TCPIP ÉÏµÄ NetBIOS  . . . . . . . : ÒÑ½ûÓÃ
+
+ËíµÀÊÊÅäÆ÷ isatap.{41FBDD5C-1EE7-4C75-ADEB-174E80C7EBC5}:
+
+   Ã½Ìå×´Ì¬  . . . . . . . . . . . . : Ã½ÌåÒÑ¶Ï¿ª
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Microsoft ISATAP Adapter #7
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+Frame::WebTestInternet#test_ÊÜÏŞ×î´ó´ø¿íÖ®ºÍ´óÓÚ×Ü´ø¿í ZLBF_27.1.12->method_name:parse_ipconfig
+pc mac:BC:EE:7B:75:EB:4F
+pc ip:192.168.100.100
+2¡¢¼ÙÉèµ±Ç°LAN¿ÚµØÖ·Îª192.168.100.1£¬ÉèÖÃ¹æÔò1µØÖ·¶ÎÎª192.168,100.2µ½192.168,100.2£¬¹æÔòÎªÊÜÏŞ×î´ó´ø¿í£¬´ø¿íÎª800kbps£»ÉèÖÃ¹æÔò2µØÖ·¶ÎÎª192.168,100.3µ½192.168,100.3£¬¹æÔòÎªÊÜÏŞ×î´ó´ø¿í£¬´ø¿íÎª400kbps£¬µã»÷±£´æ
+3¡¢APÏÂ½Ó2Ì¨µçÄÔ£¬PC1-PC2µØÖ··Ö±ğÎª192.168.100.2-3£¬PC1ºÍPC2½øĞĞÏÂÔØ£¬Í³¼Æµ±Ç°µÄPC1£¬PC2ºÍPC3µÄÁ÷Á¿Çé¿ö
+4 Í³¼ÆÏÂÔØ´ø¿íÊÇ·ñ·ûºÏ×Ü´ø¿íÏŞ¶¨
+=============wireless client capture first time=================
+=============wireless client capture second time=================
+=============wireless client capture third time=================
+=============Statistics wireless bandwith first time=================
+ÎŞÏß¿Í»§¶ËÊµ¼ÊÏÂÔØËÙÂÊÎª159000bps
+=============Statistics wireless bandwith second time=================
+ÎŞÏß¿Í»§¶ËÊµ¼ÊÏÂÔØËÙÂÊÎª320000bps
+=============Statistics wireless bandwith third time=================
+ÎŞÏß¿Í»§¶ËÊµ¼ÊÏÂÔØËÙÂÊÎª334000bps
+=============wired client capture first time=================
+Frame::WebTestInternet#test_ÊÜÏŞ×î´ó´ø¿íÖ®ºÍ´óÓÚ×Ü´ø¿í ZLBF_27.1.12->method_name:tshark_duration
+=============wired client capture second time=================
+Frame::WebTestInternet#test_ÊÜÏŞ×î´ó´ø¿íÖ®ºÍ´óÓÚ×Ü´ø¿í ZLBF_27.1.12->method_name:tshark_duration
+=============wired client capture third time=================
+Frame::WebTestInternet#test_ÊÜÏŞ×î´ó´ø¿íÖ®ºÍ´óÓÚ×Ü´ø¿í ZLBF_27.1.12->method_name:tshark_duration
+=============Statistics wired bandwith first time=================
+Frame::WebTestInternet#test_ÊÜÏŞ×î´ó´ø¿íÖ®ºÍ´óÓÚ×Ü´ø¿í ZLBF_27.1.12->method_name:capinfos_all
+File name:           D:/ftpcaps/ftp_wired_download1_00001_20160226181912.pcapng
+File type:           Wireshark/... - pcapng
+File encapsulation:  Ethernet
+Packet size limit:   file hdr: (not set)
+Number of packets:   384 
+File size:           582 kB
+Data size:           569 kB
+Capture duration:    5 seconds
+Start time:          Fri Feb 26 18:19:12 2016
+End time:            Fri Feb 26 18:19:17 2016
+Data byte rate:      121 kBps
+Data bit rate:       969 kbps
+Average packet size: 1483.02 bytes
+Average packet rate: 81 packets/sec
+SHA1:                ced598e0dcdded77b8b714cb3a5c9e2fe15e8157
+RIPEMD160:           746ca230f3b40fd8bbbe57cc71b5c8a5aaa8c8c0
+MD5:                 f805d9d3301ac59aa056af0009b25e86
+Strict time order:   True
+ÓĞÏß¿Í»§¶ËÊµ¼ÊÏÂÔØËÙÂÊÎª969000bps
+=============Statistics wired bandwith second time=================
+Frame::WebTestInternet#test_ÊÜÏŞ×î´ó´ø¿íÖ®ºÍ´óÓÚ×Ü´ø¿í ZLBF_27.1.12->method_name:capinfos_all
+File name:           D:/ftpcaps/ftp_wired_download2_00001_20160226181923.pcapng
+File type:           Wireshark/... - pcapng
+File encapsulation:  Ethernet
+Packet size limit:   file hdr: (not set)
+Number of packets:   322 
+File size:           498 kB
+Data size:           487 kB
+Capture duration:    5 seconds
+Start time:          Fri Feb 26 18:19:23 2016
+End time:            Fri Feb 26 18:19:28 2016
+Data byte rate:      100 kBps
+Data bit rate:       802 kbps
+Average packet size: 1514.00 bytes
+Average packet rate: 66 packets/sec
+SHA1:                b6ccdab0f0068c7a08b31f76fb51260e9fb3d628
+RIPEMD160:           77e341af1c712c6a8c0292235d069a0a165c0dcc
+MD5:                 1481120d19ae75cde3de59226dfd6335
+Strict time order:   True
+ÓĞÏß¿Í»§¶ËÊµ¼ÊÏÂÔØËÙÂÊÎª802000bps
+=============Statistics wired bandwith third time=================
+Frame::WebTestInternet#test_ÊÜÏŞ×î´ó´ø¿íÖ®ºÍ´óÓÚ×Ü´ø¿í ZLBF_27.1.12->method_name:capinfos_all
+File name:           D:/ftpcaps/ftp_wired_download3_00001_20160226181934.pcapng
+File type:           Wireshark/... - pcapng
+File encapsulation:  Ethernet
+Packet size limit:   file hdr: (not set)
+Number of packets:   316 
+File size:           489 kB
+Data size:           478 kB
+Capture duration:    5 seconds
+Start time:          Fri Feb 26 18:19:34 2016
+End time:            Fri Feb 26 18:19:39 2016
+Data byte rate:      100 kBps
+Data bit rate:       802 kbps
+Average packet size: 1514.00 bytes
+Average packet rate: 66 packets/sec
+SHA1:                45f86fe5fcedd6e0ce4ba5c9c9d14f5939a753b4
+RIPEMD160:           5cc83590e25175c4fd2c9b37412f9aa59269c6ca
+MD5:                 864ea2f0c2f2c616dc39958c070428d1
+Strict time order:   True
+ÓĞÏß¿Í»§¶ËÊµ¼ÊÏÂÔØËÙÂÊÎª802000bps
+total download bandwidth  1128666bps
+total download bandwidth limited 1024000bps
+0.102212890625
+¹Ø±ÕÏÂÔØºÍ¶Ï¿ªÎŞÏßÁ¬½Ó
+kill 421396 error:No such process
+É¾³ıÁ÷Á¿¿ØÖÆÅäÖÃ
+[32m.[0mFrame::WebTestInternet#test_ÎŞÏßSSID³¤¶È·¶Î§²âÊÔ ZLBF_11.1.8->method_name:ipconfig
+
+Windows IP ÅäÖÃ
+
+   Ö÷»úÃû  . . . . . . . . . . . . . : ÖªÂ·²âÊÔsdgsdgkdsejkfjgkklj-wjekljsdskljf3sdg3
+   Ö÷ DNS ºó×º . . . . . . . . . . . : 
+   ½ÚµãÀàĞÍ  . . . . . . . . . . . . : »ìºÏ
+   IP Â·ÓÉÒÑÆôÓÃ . . . . . . . . . . : ·ñ
+   WINS ´úÀíÒÑÆôÓÃ . . . . . . . . . : ·ñ
+
+ÒÔÌ«ÍøÊÊÅäÆ÷ AP:
+
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Realtek USB FE Family Controller
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 00-E0-4C-36-14-02
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+   ±¾µØÁ´½Ó IPv6 µØÖ·. . . . . . . . : fe80::ec6d:f574:7481:635b%21(Ê×Ñ¡) 
+   IPv4 µØÖ· . . . . . . . . . . . . : 192.168.50.100(Ê×Ñ¡) 
+   ×ÓÍøÑÚÂë  . . . . . . . . . . . . : 255.255.255.0
+   Ä¬ÈÏÍø¹Ø. . . . . . . . . . . . . : 
+   DHCPv6 IAID . . . . . . . . . . . : 503373900
+   DHCPv6 ¿Í»§¶Ë DUID  . . . . . . . : 00-01-00-01-1C-21-93-0A-BC-EE-7B-75-EB-4F
+   DNS ·şÎñÆ÷  . . . . . . . . . . . : fec0:0:0:ffff::1%1
+                                       fec0:0:0:ffff::2%1
+                                       fec0:0:0:ffff::3%1
+   TCPIP ÉÏµÄ NetBIOS  . . . . . . . : ÒÑÆôÓÃ
+
+ÒÔÌ«ÍøÊÊÅäÆ÷ control:
+
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Realtek PCIe GBE Family Controller #2
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 20-F4-1B-60-51-F5
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+   ±¾µØÁ´½Ó IPv6 µØÖ·. . . . . . . . : fe80::dd6:5d32:f850:8252%19(Ê×Ñ¡) 
+   IPv4 µØÖ· . . . . . . . . . . . . : 50.50.50.50(Ê×Ñ¡) 
+   ×ÓÍøÑÚÂë  . . . . . . . . . . . . : 255.255.255.0
+   Ä¬ÈÏÍø¹Ø. . . . . . . . . . . . . : 
+   DHCPv6 IAID . . . . . . . . . . . : 455144475
+   DHCPv6 ¿Í»§¶Ë DUID  . . . . . . . : 00-01-00-01-1C-21-93-0A-BC-EE-7B-75-EB-4F
+   DNS ·şÎñÆ÷  . . . . . . . . . . . : fec0:0:0:ffff::1%1
+                                       fec0:0:0:ffff::2%1
+                                       fec0:0:0:ffff::3%1
+   TCPIP ÉÏµÄ NetBIOS  . . . . . . . : ÒÑÆôÓÃ
+
+ÒÔÌ«ÍøÊÊÅäÆ÷ dut:
+
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Realtek PCIe GBE Family Controller
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : BC-EE-7B-75-EB-4F
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ÊÇ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+   ±¾µØÁ´½Ó IPv6 µØÖ·. . . . . . . . : fe80::c819:87cf:3504:296e%18(Ê×Ñ¡) 
+   IPv4 µØÖ· . . . . . . . . . . . . : 192.168.100.100(Ê×Ñ¡) 
+   ×ÓÍøÑÚÂë  . . . . . . . . . . . . : 255.255.255.0
+   »ñµÃ×âÔ¼µÄÊ±¼ä  . . . . . . . . . : 2016Äê2ÔÂ26ÈÕ 18:08:25
+   ×âÔ¼¹ıÆÚµÄÊ±¼ä  . . . . . . . . . : 2016Äê2ÔÂ27ÈÕ 6:08:25
+   Ä¬ÈÏÍø¹Ø. . . . . . . . . . . . . : 192.168.100.1
+   DHCP ·şÎñÆ÷ . . . . . . . . . . . : 192.168.100.1
+   DHCPv6 IAID . . . . . . . . . . . : 633138811
+   DHCPv6 ¿Í»§¶Ë DUID  . . . . . . . : 00-01-00-01-1C-21-93-0A-BC-EE-7B-75-EB-4F
+   DNS ·şÎñÆ÷  . . . . . . . . . . . : 192.168.100.1
+   TCPIP ÉÏµÄ NetBIOS  . . . . . . . : ÒÑÆôÓÃ
+
+ËíµÀÊÊÅäÆ÷ Teredo Tunneling Pseudo-Interface:
+
+   Ã½Ìå×´Ì¬  . . . . . . . . . . . . : Ã½ÌåÒÑ¶Ï¿ª
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Teredo Tunneling Pseudo-Interface
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+
+ËíµÀÊÊÅäÆ÷ isatap.{248CF58B-BF93-45FC-9050-F7163BF8C880}:
+
+   Ã½Ìå×´Ì¬  . . . . . . . . . . . . : Ã½ÌåÒÑ¶Ï¿ª
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Microsoft ISATAP Adapter #2
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+
+ËíµÀÊÊÅäÆ÷ isatap.{8BAC9A05-919D-4C1B-ADC5-0DAC27A19740}:
+
+   Ã½Ìå×´Ì¬  . . . . . . . . . . . . : Ã½ÌåÒÑ¶Ï¿ª
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Microsoft ISATAP Adapter #3
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+
+ËíµÀÊÊÅäÆ÷ 6TO4 Adapter:
+
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Microsoft 6to4 Adapter
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+   IPv6 µØÖ· . . . . . . . . . . . . : 2002:3232:3232::3232:3232(Ê×Ñ¡) 
+   Ä¬ÈÏÍø¹Ø. . . . . . . . . . . . . : 
+   DNS ·şÎñÆ÷  . . . . . . . . . . . : fec0:0:0:ffff::1%1
+                                       fec0:0:0:ffff::2%1
+                                       fec0:0:0:ffff::3%1
+   TCPIP ÉÏµÄ NetBIOS  . . . . . . . : ÒÑ½ûÓÃ
+
+ËíµÀÊÊÅäÆ÷ isatap.{41FBDD5C-1EE7-4C75-ADEB-174E80C7EBC5}:
+
+   Ã½Ìå×´Ì¬  . . . . . . . . . . . . : Ã½ÌåÒÑ¶Ï¿ª
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Microsoft ISATAP Adapter #7
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+Frame::WebTestInternet#test_ÎŞÏßSSID³¤¶È·¶Î§²âÊÔ ZLBF_11.1.8->method_name:parse_ipconfig
+PC2 DRB parameter:druby://50.50.50.51:8787
+Frame::WebTestInternet#test_ÎŞÏßSSID³¤¶È·¶Î§²âÊÔ ZLBF_11.1.8->method_name:login_recover
+Frame::WebTestInternet#test_ÎŞÏßSSID³¤¶È·¶Î§²âÊÔ ZLBF_11.1.8->method_name:netsh_if_ip_show
+
+½Ó¿Ú "dut" µÄÅäÖÃ
+    DHCP ÒÑÆôÓÃ:                          ÊÇ
+    IP µØÖ·:                           192.168.100.100
+    ×ÓÍøÇ°×º:                        192.168.100.0/24 (ÑÚÂë 255.255.255.0)
+    Ä¬ÈÏÍø¹Ø:                         192.168.100.1
+    Íø¹ØÔ¾µãÊı:                       0
+    InterfaceMetric:                      20
+
+Frame::WebTestInternet#test_ÎŞÏßSSID³¤¶È·¶Î§²âÊÔ ZLBF_11.1.8->method_name:ping_recover
+Frame::WebTestInternet#test_ÎŞÏßSSID³¤¶È·¶Î§²âÊÔ ZLBF_11.1.8->method_name:netsh_if_shif
+
+dut                                      
+   ÖÖÀà:     ×¨ÓÃ             
+   ¹ÜÀí×´Ì¬: ÒÑÆôÓÃ             
+   Á¬½Ó×´Ì¬: ÒÑÁ¬½Ó             
+
+NIC state is enabled
+Frame::WebTestInternet#test_ÎŞÏßSSID³¤¶È·¶Î§²âÊÔ ZLBF_11.1.8->method_name:netsh_if_ip_show
+
+½Ó¿Ú "dut" µÄÅäÖÃ
+    DHCP ÒÑÆôÓÃ:                          ÊÇ
+    IP µØÖ·:                           192.168.100.100
+    ×ÓÍøÇ°×º:                        192.168.100.0/24 (ÑÚÂë 255.255.255.0)
+    Ä¬ÈÏÍø¹Ø:                         192.168.100.1
+    Íø¹ØÔ¾µãÊı:                       0
+    InterfaceMetric:                      20
+
+Frame::WebTestInternet#test_ÎŞÏßSSID³¤¶È·¶Î§²âÊÔ ZLBF_11.1.8->method_name:ping_default
+Frame::WebTestInternet#test_ÎŞÏßSSID³¤¶È·¶Î§²âÊÔ ZLBF_11.1.8->method_name:arp_clear
+
+ÕıÔÚ Ping 192.168.100.1 ¾ßÓĞ 32 ×Ö½ÚµÄÊı¾İ:
+À´×Ô 192.168.100.1 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä<1ms TTL=64
+À´×Ô 192.168.100.1 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä<1ms TTL=64
+À´×Ô 192.168.100.1 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä<1ms TTL=64
+À´×Ô 192.168.100.1 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä<1ms TTL=64
+À´×Ô 192.168.100.1 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä<1ms TTL=64
+
+192.168.100.1 µÄ Ping Í³¼ÆĞÅÏ¢:
+    Êı¾İ°ü: ÒÑ·¢ËÍ = 5£¬ÒÑ½ÓÊÕ = 5£¬¶ªÊ§ = 0 (0% ¶ªÊ§)£¬
+Íù·µĞĞ³ÌµÄ¹À¼ÆÊ±¼ä(ÒÔºÁÃëÎªµ¥Î»):
+    ×î¶Ì = 0ms£¬×î³¤ = 0ms£¬Æ½¾ù = 0ms
+Frame::WebTestInternet#test_ÎŞÏßSSID³¤¶È·¶Î§²âÊÔ ZLBF_11.1.8->method_name:login_default
+Enter url address!
+Enter usrname and passwd!

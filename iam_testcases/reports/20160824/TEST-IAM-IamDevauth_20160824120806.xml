@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="IAM::IamDevauth" skipped="0" failures="1" errors="0" tests="1" assertions="3" time="102.71541586497915">
+  <testcase name="test_查询业务进程文件 IAM_F_DeviceOperation_013" classname="IAM::IamDevauth" assertions="3" time="102.71541586497915">
+    <failure type="test_查询业务进程文件 IAM_F_DeviceOperation_013" message="查询应用业务进程文件为空!....">
+Failure:
+test_查询业务进程文件 IAM_F_DeviceOperation_013(IAM::IamDevauth) [(eval):42]:
+查询应用业务进程文件为空!.
+Expected [{"file_name"=&gt;"autotest_01.ko", "file_module"=&gt;"2"}] to be empty.
+    </failure>
+  </testcase>
+</testsuite>

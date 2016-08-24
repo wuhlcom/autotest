@@ -1,0 +1,32 @@
+[2016-08-22 17:08:05] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+User existed!
+[2016-08-22 17:08:05] 2¡¢ÓÃ»§µÇÂ¼»ñÈ¡ÓÃ»§uidºÅ£»
+[2016-08-22 17:08:05] 3¡¢ÓÃ»§Ìí¼ÓÉè±¸mac£¨macµØÖ·´øÓĞ¿Õ¸ñ£©£»
+{"result"=>1, "msg"=>"OK"}
+ÓÃ»§Ìí¼ÓÉè±¸mac' 00:88:A1:BB:CC:DD'
+{"result"=>1, "msg"=>"OK"}
+ÓÃ»§Ìí¼ÓÉè±¸mac'00:88:A1:BB:CC:DD '
+{"err_code"=>"40007", "err_msg"=>"\u8BE5\u8BBE\u5907\u4E3A\u65E0\u6548\u8BBE\u5907", "err_desc"=>"E_QUERY_DEVICE_ID_FAIL"}
+ÓÃ»§Ìí¼ÓÉè±¸mac'00:88:A 1:BB: CC:DD'
+[2016-08-22 17:08:06] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.01 s
+Slowest tests:
+1.47 s	IAM::IamManager#test_Ìí¼ÓÉè±¸MACµØÖ·´ø¿Õ¸ñ²âÊÔ IAM_F_DeviceOperation_030
+Slowest suites:
+1.47 s	IAM::IamManager
+
+
+[31mFinished tests in 1.488672s, 0.6717 tests/s, 4.0304 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_Ìí¼ÓÉè±¸MACµØÖ·´ø¿Õ¸ñ²âÊÔ IAM_F_DeviceOperation_030 [(eval):35]
+Minitest::Assertion: ÓÃ»§Ìí¼ÓÉè±¸mac'00:88:A 1:BB: CC:DD'Ê§°Ü!.
+Expected: 1
+  Actual: nil[0m
+
+[31m1 tests, 6 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160822
+Writing XML reports to E:/autotest/iam_testcases/reports/20160822

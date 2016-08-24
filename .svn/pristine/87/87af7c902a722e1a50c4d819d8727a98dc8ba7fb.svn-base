@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Frame::WebTestInternet" skipped="0" failures="1" errors="0" tests="1" assertions="11" time="206.301811">
+  <testcase name="test_APN拨号号码 ZLBF_7.1.21" classname="Frame::WebTestInternet" assertions="11" time="206.301811">
+    <failure type="test_APN拨号号码 ZLBF_7.1.21" message="接入类型错误！....">
+Failure:
+test_APN拨号号码 ZLBF_7.1.21(Frame::WebTestInternet) [(eval):94]:
+接入类型错误！.
+Expected /3G\/4G/ to match "\u8FDE\u63A5\u7C7B\u578B\nDHCP".
+    </failure>
+  </testcase>
+</testsuite>

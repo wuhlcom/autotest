@@ -1,0 +1,315 @@
+1¡¢¿ªÆôIP´ø¿í¿ØÖÆ£¬ÉèÖÃ×Ü´ø¿íÎª1000kbps
+Frame::WebTestInternet#test_ÖØÆôºóQOSÑéÖ¤ ZLBF_27.1.25->method_name:ping
+Frame::WebTestInternet#test_ÖØÆôºóQOSÑéÖ¤ ZLBF_27.1.25->method_name:arp_clear
+
+ÕıÔÚ Ping 10.10.10.57 ¾ßÓĞ 32 ×Ö½ÚµÄÊı¾İ:
+À´×Ô 10.10.10.57 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä<1ms TTL=63
+À´×Ô 10.10.10.57 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä=1ms TTL=63
+À´×Ô 10.10.10.57 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä<1ms TTL=63
+À´×Ô 10.10.10.57 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä=1ms TTL=63
+À´×Ô 10.10.10.57 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä=1ms TTL=63
+
+10.10.10.57 µÄ Ping Í³¼ÆĞÅÏ¢:
+    Êı¾İ°ü: ÒÑ·¢ËÍ = 5£¬ÒÑ½ÓÊÕ = 5£¬¶ªÊ§ = 0 (0% ¶ªÊ§)£¬
+Íù·µĞĞ³ÌµÄ¹À¼ÆÊ±¼ä(ÒÔºÁÃëÎªµ¥Î»):
+    ×î¶Ì = 0ms£¬×î³¤ = 1ms£¬Æ½¾ù = 0ms
+wifi ssid: WIFI_762009,passwd:12345678
+wlan pc mac:14:75:90:F8:A2:2C
+wlan pc ip:192.168.100.101
+Frame::WebTestInternet#test_ÖØÆôºóQOSÑéÖ¤ ZLBF_27.1.25->method_name:ipconfig
+
+Windows IP ÅäÖÃ
+
+   Ö÷»úÃû  . . . . . . . . . . . . . : ÖªÂ·²âÊÔsdgsdgkdsejkfjgkklj-wjekljsdskljf3sdg3
+   Ö÷ DNS ºó×º . . . . . . . . . . . : 
+   ½ÚµãÀàĞÍ  . . . . . . . . . . . . : »ìºÏ
+   IP Â·ÓÉÒÑÆôÓÃ . . . . . . . . . . : ·ñ
+   WINS ´úÀíÒÑÆôÓÃ . . . . . . . . . : ·ñ
+
+ÒÔÌ«ÍøÊÊÅäÆ÷ AP:
+
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Realtek USB FE Family Controller
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 00-E0-4C-36-14-02
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+   ±¾µØÁ´½Ó IPv6 µØÖ·. . . . . . . . : fe80::ec6d:f574:7481:635b%21(Ê×Ñ¡) 
+   IPv4 µØÖ· . . . . . . . . . . . . : 192.168.50.100(Ê×Ñ¡) 
+   ×ÓÍøÑÚÂë  . . . . . . . . . . . . : 255.255.255.0
+   Ä¬ÈÏÍø¹Ø. . . . . . . . . . . . . : 
+   DHCPv6 IAID . . . . . . . . . . . : 503373900
+   DHCPv6 ¿Í»§¶Ë DUID  . . . . . . . : 00-01-00-01-1C-21-93-0A-BC-EE-7B-75-EB-4F
+   DNS ·şÎñÆ÷  . . . . . . . . . . . : fec0:0:0:ffff::1%1
+                                       fec0:0:0:ffff::2%1
+                                       fec0:0:0:ffff::3%1
+   TCPIP ÉÏµÄ NetBIOS  . . . . . . . : ÒÑÆôÓÃ
+
+ÒÔÌ«ÍøÊÊÅäÆ÷ control:
+
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Realtek PCIe GBE Family Controller #2
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 20-F4-1B-60-51-F5
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+   ±¾µØÁ´½Ó IPv6 µØÖ·. . . . . . . . : fe80::dd6:5d32:f850:8252%19(Ê×Ñ¡) 
+   IPv4 µØÖ· . . . . . . . . . . . . : 50.50.50.50(Ê×Ñ¡) 
+   ×ÓÍøÑÚÂë  . . . . . . . . . . . . : 255.255.255.0
+   Ä¬ÈÏÍø¹Ø. . . . . . . . . . . . . : 
+   DHCPv6 IAID . . . . . . . . . . . : 455144475
+   DHCPv6 ¿Í»§¶Ë DUID  . . . . . . . : 00-01-00-01-1C-21-93-0A-BC-EE-7B-75-EB-4F
+   DNS ·şÎñÆ÷  . . . . . . . . . . . : fec0:0:0:ffff::1%1
+                                       fec0:0:0:ffff::2%1
+                                       fec0:0:0:ffff::3%1
+   TCPIP ÉÏµÄ NetBIOS  . . . . . . . : ÒÑÆôÓÃ
+
+ÒÔÌ«ÍøÊÊÅäÆ÷ dut:
+
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Realtek PCIe GBE Family Controller
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : BC-EE-7B-75-EB-4F
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ÊÇ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+   ±¾µØÁ´½Ó IPv6 µØÖ·. . . . . . . . : fe80::c819:87cf:3504:296e%18(Ê×Ñ¡) 
+   IPv4 µØÖ· . . . . . . . . . . . . : 192.168.100.100(Ê×Ñ¡) 
+   ×ÓÍøÑÚÂë  . . . . . . . . . . . . : 255.255.255.0
+   »ñµÃ×âÔ¼µÄÊ±¼ä  . . . . . . . . . : 2016Äê2ÔÂ27ÈÕ 12:07:25
+   ×âÔ¼¹ıÆÚµÄÊ±¼ä  . . . . . . . . . : 2016Äê2ÔÂ28ÈÕ 0:07:25
+   Ä¬ÈÏÍø¹Ø. . . . . . . . . . . . . : 192.168.100.1
+   DHCP ·şÎñÆ÷ . . . . . . . . . . . : 192.168.100.1
+   DHCPv6 IAID . . . . . . . . . . . : 633138811
+   DHCPv6 ¿Í»§¶Ë DUID  . . . . . . . : 00-01-00-01-1C-21-93-0A-BC-EE-7B-75-EB-4F
+   DNS ·şÎñÆ÷  . . . . . . . . . . . : 192.168.100.1
+   TCPIP ÉÏµÄ NetBIOS  . . . . . . . : ÒÑÆôÓÃ
+
+ËíµÀÊÊÅäÆ÷ Teredo Tunneling Pseudo-Interface:
+
+   Ã½Ìå×´Ì¬  . . . . . . . . . . . . : Ã½ÌåÒÑ¶Ï¿ª
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Teredo Tunneling Pseudo-Interface
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+
+ËíµÀÊÊÅäÆ÷ isatap.{248CF58B-BF93-45FC-9050-F7163BF8C880}:
+
+   Ã½Ìå×´Ì¬  . . . . . . . . . . . . : Ã½ÌåÒÑ¶Ï¿ª
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Microsoft ISATAP Adapter #2
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+
+ËíµÀÊÊÅäÆ÷ isatap.{8BAC9A05-919D-4C1B-ADC5-0DAC27A19740}:
+
+   Ã½Ìå×´Ì¬  . . . . . . . . . . . . : Ã½ÌåÒÑ¶Ï¿ª
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Microsoft ISATAP Adapter #3
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+
+ËíµÀÊÊÅäÆ÷ 6TO4 Adapter:
+
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Microsoft 6to4 Adapter
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+   IPv6 µØÖ· . . . . . . . . . . . . : 2002:3232:3232::3232:3232(Ê×Ñ¡) 
+   Ä¬ÈÏÍø¹Ø. . . . . . . . . . . . . : 
+   DNS ·şÎñÆ÷  . . . . . . . . . . . : fec0:0:0:ffff::1%1
+                                       fec0:0:0:ffff::2%1
+                                       fec0:0:0:ffff::3%1
+   TCPIP ÉÏµÄ NetBIOS  . . . . . . . : ÒÑ½ûÓÃ
+
+ËíµÀÊÊÅäÆ÷ isatap.{41FBDD5C-1EE7-4C75-ADEB-174E80C7EBC5}:
+
+   Ã½Ìå×´Ì¬  . . . . . . . . . . . . : Ã½ÌåÒÑ¶Ï¿ª
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Microsoft ISATAP Adapter #7
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+Frame::WebTestInternet#test_ÖØÆôºóQOSÑéÖ¤ ZLBF_27.1.25->method_name:parse_ipconfig
+pc mac:BC:EE:7B:75:EB:4F
+pc ip:192.168.100.100
+2¡¢¼ÙÉèµ±Ç°APµÄµØÖ·Îª192.168.100.1¡£¿ªÆô¹æÔò1ºÍ¹æÔò2£¬¹æÔò1IPµØÖ·Îª192.168.100.100£¬ÀàĞÍÎª±£ÕÏ×îĞ¡´ø¿í£¬´ø¿íÎª800kbps£»¹æÔò2IPµØÖ·Îª192.168.100.101£¬ÀàĞÍÎªÊÜÏŞ×î´ó´ø¿í£¬´ø¿íÎª800kbps
+3¡¢PC1µÄµØÖ·Îª192.168.100.100£¬PC2µÄµØÖ·Îª192.168.100.101,ÅäÖÃQOS¹æÔò
+4¡¢ÖØÆôÂ·ÓÉÆ÷
+Waitfing for system reboot....
+Frame::WebTestInternet#test_ÖØÆôºóQOSÑéÖ¤ ZLBF_27.1.25->method_name:login_no_default_ip
+5¡¢PC1½øĞĞFTPÏÂÔØ£¬²é¿´ÏÂÔØËÙÂÊÎª¶àÉÙ
+sleep 90 second for ftp download...
+=============wired client capture first time=================
+Frame::WebTestInternet#test_ÖØÆôºóQOSÑéÖ¤ ZLBF_27.1.25->method_name:tshark_duration
+=============wired client capture second time=================
+Frame::WebTestInternet#test_ÖØÆôºóQOSÑéÖ¤ ZLBF_27.1.25->method_name:tshark_duration
+=============wired client capture three time=================
+Frame::WebTestInternet#test_ÖØÆôºóQOSÑéÖ¤ ZLBF_27.1.25->method_name:tshark_duration
+=============Statistics wired bandwith first time=================
+Frame::WebTestInternet#test_ÖØÆôºóQOSÑéÖ¤ ZLBF_27.1.25->method_name:capinfos_all
+File name:           D:/ftpcaps/ftp_wired_reboot1_00001_20160227135017.pcapng
+File type:           Wireshark/... - pcapng
+File encapsulation:  Ethernet
+Packet size limit:   file hdr: (not set)
+Number of packets:   830 
+File size:           1282 kB
+Data size:           1254 kB
+Capture duration:    10 seconds
+Start time:          Sat Feb 27 13:50:17 2016
+End time:            Sat Feb 27 13:50:27 2016
+Data byte rate:      125 kBps
+Data bit rate:       1001 kbps
+Average packet size: 1511.23 bytes
+Average packet rate: 82 packets/sec
+SHA1:                49019c2e13144a97b56b3fe808b38fd869d32b32
+RIPEMD160:           53b31e50663110e8a43eead3c82083b4e0d1865f
+MD5:                 00440f5d17b75c3b392236f925e04ce3
+Strict time order:   True
+ÓĞÏß¿Í»§¶ËÊµ¼ÊÏÂÔØËÙÂÊÎª1001000bps
+ÓĞÏß¿Í»§¶ËÊµ¼ÊÏÂÔØÓëÊÜÏŞ×î´ó´ø¿íµÄ²îÎª:181800bps
+=============Statistics wired bandwith second time=================
+Frame::WebTestInternet#test_ÖØÆôºóQOSÑéÖ¤ ZLBF_27.1.25->method_name:capinfos_all
+File name:           D:/ftpcaps/ftp_wired_reboot2_00001_20160227135038.pcapng
+File type:           Wireshark/... - pcapng
+File encapsulation:  Ethernet
+Packet size limit:   file hdr: (not set)
+Number of packets:   833 
+File size:           1287 kB
+Data size:           1258 kB
+Capture duration:    10 seconds
+Start time:          Sat Feb 27 13:50:38 2016
+End time:            Sat Feb 27 13:50:48 2016
+Data byte rate:      125 kBps
+Data bit rate:       1001 kbps
+Average packet size: 1511.29 bytes
+Average packet rate: 82 packets/sec
+SHA1:                43de186d5ea931f6ad8b8430502a34977b22e5c7
+RIPEMD160:           53a6b5cb5e9011968a2d8a984514f45d063313ba
+MD5:                 880b70927ad1c59d564393d412fcc4d3
+Strict time order:   True
+ÓĞÏß¿Í»§¶ËÊµ¼ÊÏÂÔØËÙÂÊÎª1001000bps
+ÓĞÏß¿Í»§¶ËÊµ¼ÊÏÂÔØÓëÊÜÏŞ×î´ó´ø¿íµÄ²îÎª:181800bps
+=============Statistics wired bandwith third time=================
+Frame::WebTestInternet#test_ÖØÆôºóQOSÑéÖ¤ ZLBF_27.1.25->method_name:capinfos_all
+File name:           D:/ftpcaps/ftp_wired_reboot3_00001_20160227135059.pcapng
+File type:           Wireshark/... - pcapng
+File encapsulation:  Ethernet
+Packet size limit:   file hdr: (not set)
+Number of packets:   827 
+File size:           1277 kB
+Data size:           1248 kB
+Capture duration:    10 seconds
+Start time:          Sat Feb 27 13:50:59 2016
+End time:            Sat Feb 27 13:51:09 2016
+Data byte rate:      125 kBps
+Data bit rate:       1000 kbps
+Average packet size: 1509.89 bytes
+Average packet rate: 82 packets/sec
+SHA1:                5737e0d3bf058b0f0fd48f201de22e81153db205
+RIPEMD160:           a782972f09e91a86046b50226bd3f2a2e245c56a
+MD5:                 6593d833de4987ce8f51b23cb2ec1c66
+Strict time order:   True
+ÓĞÏß¿Í»§¶ËÊµ¼ÊÏÂÔØËÙÂÊÎª1000000bps
+ÓĞÏß¿Í»§¶ËÊµ¼ÊÏÂÔØÓëÊÜÏŞ×î´ó´ø¿íµÄ²îÎª:180800bps
+6¡¢PC2½øĞĞFTPÏÂÔØ£¬ÔÙ²é¿´´ËÊ±PC1ºÍPC2µÄÏÂÔØËÙÂÊ¸÷ÊÇ¶àÉÙ
+wireless can use  204800bps
+sleep 120 seconds for download ...
+=============wireless client capture first time=================
+=============wireless client capture second time=================
+=============wireless client capture three time=================
+=============Statistics wireless bandwith first time=================
+ÓĞÏß¿Í»§¶ËµÄÍ¬Ê±£¬ÎŞÏß¿Í»§¶Ë½øĞĞÏÂÔØ£¬ÆäÊµ¼ÊÏÂÔØËÙÂÊÎª314000bps
+ÎŞÏß¿Í»§¶ËÊµ¼ÊÏÂÔØËÙÂÊÓëÊ£Óà´ø¿íµÄ²îÎª:0.533203125bps
+=============Statistics wireless bandwith second time=================
+ÓĞÏß¿Í»§¶ËµÄÍ¬Ê±£¬ÎŞÏß¿Í»§¶Ë½øĞĞÏÂÔØ£¬ÆäÊµ¼ÊÏÂÔØËÙÂÊÎª321000bps
+ÎŞÏß¿Í»§¶ËÊµ¼ÊÏÂÔØËÙÂÊÓëÊ£Óà´ø¿íµÄ²îÎª:0.5673828125bps
+=============Statistics wireless bandwith three time=================
+ÓĞÏß¿Í»§¶ËµÄÍ¬Ê±£¬ÎŞÏß¿Í»§¶Ë½øĞĞÏÂÔØ£¬ÆäÊµ¼ÊÏÂÔØËÙÂÊÎª322000bps
+ÎŞÏß¿Í»§¶ËÊµ¼ÊÏÂÔØËÙÂÊÓëÊ£Óà´ø¿íµÄ²îÎª:0.572265625bps
+=============wired client capture first time=================
+Frame::WebTestInternet#test_ÖØÆôºóQOSÑéÖ¤ ZLBF_27.1.25->method_name:tshark_duration
+=============wired client capture second time=================
+Frame::WebTestInternet#test_ÖØÆôºóQOSÑéÖ¤ ZLBF_27.1.25->method_name:tshark_duration
+=============wired client capture three time=================
+Frame::WebTestInternet#test_ÖØÆôºóQOSÑéÖ¤ ZLBF_27.1.25->method_name:tshark_duration
+=============Statistics wired bandwith fourth time=================
+Frame::WebTestInternet#test_ÖØÆôºóQOSÑéÖ¤ ZLBF_27.1.25->method_name:capinfos_all
+File name:           D:/ftpcaps/ftp_wired_reboot4_00001_20160227135436.pcapng
+File type:           Wireshark/... - pcapng
+File encapsulation:  Ethernet
+Packet size limit:   file hdr: (not set)
+Number of packets:   788 
+File size:           1211 kB
+Data size:           1184 kB
+Capture duration:    9 seconds
+Start time:          Sat Feb 27 13:54:36 2016
+End time:            Sat Feb 27 13:54:46 2016
+Data byte rate:      125 kBps
+Data bit rate:       1001 kbps
+Average packet size: 1503.41 bytes
+Average packet rate: 83 packets/sec
+SHA1:                c86ecff31377762d9c758da82f04fbbd46c2071d
+RIPEMD160:           7b72ac2589890b7a9d90a2067aad62ac7c4775d5
+MD5:                 0488d620ae35e04aecf88c608bf0cf8f
+Strict time order:   True
+Á½¿Í»§¶Ë¶¼ÔÚÏÂÔØÊ±£¬Í³¼Æµ½ÓĞÏß¿Í»§¶ËÊµ¼ÊÏÂÔØËÙÂÊ1001000bps
+Á½¿Í»§¶Ë¶¼ÔÚÏÂÔØÊ±£¬ÓĞÏß¿Í»§¶ËÊµ¼ÊÏÂÔØËÙÂÊÓëÏŞÖÆµÄËÙÂÊµÄ²îÎª181800bps
+=============Statistics wired bandwith fifth time=================
+Frame::WebTestInternet#test_ÖØÆôºóQOSÑéÖ¤ ZLBF_27.1.25->method_name:capinfos_all
+File name:           D:/ftpcaps/ftp_wired_reboot5_00001_20160227135457.pcapng
+File type:           Wireshark/... - pcapng
+File encapsulation:  Ethernet
+Packet size limit:   file hdr: (not set)
+Number of packets:   793 
+File size:           1225 kB
+Data size:           1198 kB
+Capture duration:    10 seconds
+Start time:          Sat Feb 27 13:54:57 2016
+End time:            Sat Feb 27 13:55:07 2016
+Data byte rate:      125 kBps
+Data bit rate:       1001 kbps
+Average packet size: 1511.24 bytes
+Average packet rate: 82 packets/sec
+SHA1:                08d1d8a8ec36b295bcac5aad5f52d366e62f1a90
+RIPEMD160:           a90aedc2513d2243c4c523ba284fb40bf8606b9e
+MD5:                 589a71659c3631b0b134aca2546a0c6f
+Strict time order:   True
+Á½¿Í»§¶Ë¶¼ÔÚÏÂÔØÊ±£¬Í³¼Æµ½ÓĞÏß¿Í»§¶ËÊµ¼ÊÏÂÔØËÙÂÊ1001000bps
+Á½¿Í»§¶Ë¶¼ÔÚÏÂÔØÊ±£¬ÓĞÏß¿Í»§¶ËÊµ¼ÊÏÂÔØËÙÂÊÓëÏŞÖÆµÄËÙÂÊµÄ²îÎª181800bps
+=============Statistics wired bandwith sixth time=================
+Frame::WebTestInternet#test_ÖØÆôºóQOSÑéÖ¤ ZLBF_27.1.25->method_name:capinfos_all
+File name:           D:/ftpcaps/ftp_wired_reboot6_00001_20160227135518.pcapng
+File type:           Wireshark/... - pcapng
+File encapsulation:  Ethernet
+Packet size limit:   file hdr: (not set)
+Number of packets:   834 
+File size:           1285 kB
+Data size:           1257 kB
+Capture duration:    10 seconds
+Start time:          Sat Feb 27 13:55:18 2016
+End time:            Sat Feb 27 13:55:28 2016
+Data byte rate:      125 kBps
+Data bit rate:       1001 kbps
+Average packet size: 1507.45 bytes
+Average packet rate: 83 packets/sec
+SHA1:                ac85573ae7e66768c78f2c21f1755e382dc2ad50
+RIPEMD160:           daab92fc6cdbf8095c221df5a0fc2072780d5868
+MD5:                 9dd50f2a74bc156685da77b42f7943b4
+Strict time order:   True
+Á½¿Í»§¶Ë¶¼ÔÚÏÂÔØÊ±£¬Í³¼Æµ½ÓĞÏß¿Í»§¶ËÊµ¼ÊÏÂÔØËÙÂÊ1001000bps
+Á½¿Í»§¶Ë¶¼ÔÚÏÂÔØÊ±£¬ÓĞÏß¿Í»§¶ËÊµ¼ÊÏÂÔØËÙÂÊÓëÏŞÖÆµÄËÙÂÊµÄ²îÎª181800bps
+Êµ¼ÊÏÂÔØ×ÜËÙÂÊÎª1320000
+1 ¹Ø±ÕÏÂÔØºÍ¶Ï¿ªÎŞÏßÁ¬½Ó
+2 É¾³ıQOSÅäÖÃ
+[31mF[0m
+
+[31mFinished tests in 692.641509s, 0.0014 tests/s, 0.0202 assertions/s.[0m
+
+
+[31mFailure:
+Frame::WebTestInternet#test_ÖØÆôºóQOSÑéÖ¤ ZLBF_27.1.25 [(eval):473]
+Minitest::Assertion: ÏÂÔØ×ÜÁ÷Á¿ÓëÉèÖÃ×Ü´ø¿í1024000²»·û[0m
+
+[31m1 tests, 14 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing XML reports to E:/auto_sdk/frame/reports/20160227

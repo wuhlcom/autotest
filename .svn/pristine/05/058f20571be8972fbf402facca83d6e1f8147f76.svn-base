@@ -1,0 +1,20 @@
+1¡¢½øÈëDUT ´ø¿í¿ØÖÆÒ³Ãæ£¬¹´Ñ¡¡°¿ªÆôIP´ø¿í¿ØÖÆ¡±Ñ¡Ïî¿ò£¬ÉèÖÃÉêÇë´ø¿íÎª10000kbps
+2¡¢ÆğÊ¼µØÖ·£¬½áÊøµØÖ·£¬´ø¿í´óĞ¡·Ö±ğÎª¿Õ£¬µã»÷±£´æ
+ÊäÈëÆğÊ¼IPµØÖ·Îª¿Õ
+½áÊøµØÖ·Îª100
+´ø¿íÎª1024
+ERROR TIP 
+1 É¾³ıÁ÷Á¿¿ØÖÆÅäÖÃ
+[31mF[0m
+
+[31mFinished tests in 70.729942s, 0.0141 tests/s, 0.0707 assertions/s.[0m
+
+
+[31mFailure:
+Frame::WebTestInternet#test_IPÆğÊ¼½áÊøµØÖ·ÑéÖ¤ ZLBF_27.1.6 [(eval):75]
+Minitest::Assertion: Î´ÊäÈëÆğÊ¼IPµØÖ·.
+Expected: "\u8BF7\u8F93\u5165\u8D77\u59CBIP\u5730\u5740"
+  Actual: ""[0m
+
+[31m1 tests, 5 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing XML reports to E:/auto_sdk/frame/reports/20160227

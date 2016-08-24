@@ -1,0 +1,31 @@
+[2016-08-18 12:35:33] 1¡¢sshµÇÂ¼µ½IAM·şÎñÆ÷£»
+[2016-08-18 12:35:33] 2¡¢¹ÜÀíÔ±´´½¨Ó¦ÓÃ
+¹ÜÀíÔ±µÇÂ¼
+¹ÜÀíÔ±´´½¨²¢¼¤»îÓ¦ÓÃ
+app exists...
+active exidsted app...
+¹ÜÀíÔ±²éÑ¯Ó¦ÓÃ'ºìÆ¤»¨Éú'ĞÅÏ¢
+[2016-08-18 12:35:33] 3¡¢ÓÃ»§×¢²á
+[2016-08-18 12:35:36] 4¡¢ÓÃ»§µÇÂ¼²¢°ó¶¨Ó¦ÓÃ
+ÓÃ»§'13103158888'µÇÂ¼
+ÓÃ»§'13103158888'µÇÂ¼ºó²éÑ¯Ó¦ÓÃ
+ÓÃ»§'13103158888'µÇÂ¼ºó°ó¶¨Ó¦ÓÃ
+[2016-08-18 12:35:36] 5¡¢ÓÃ»§oauthµÇÂ¼,»ñÈ¡ÓÃ»§userid£»
+[2016-08-18 12:35:37] 6¡¢»ñÈ¡½Ó¿ÚÈÏÖ¤codeÖµ£»
+[2016-08-18 12:35:38] 1.ÓÃ»§½â³ı°ó¶¨
+[2016-08-18 12:35:38] 2.É¾³ıÓ¦ÓÃ
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.00 s
+Slowest tests:
+4.55 s	IAM::IamManager#test_»ñÈ¡code½Ó¿ÚÈÏÖ¤ IAM_F_OAuth_020
+Slowest suites:
+4.55 s	IAM::IamManager
+
+
+[32mFinished tests in 4.567198s, 0.2190 tests/s, 2.4085 assertions/s.[0m
+
+
+[32m1 tests, 11 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160818
+Writing XML reports to E:/autotest/iam_testcases/reports/20160818

@@ -1,0 +1,27 @@
+[2016-08-22 16:36:54] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-22 16:36:54] 2¡¢ÓÃ»§µÇÂ¼»ñÈ¡ÓÃ»§uidºÅ£»
+User existed!
+[2016-08-22 16:36:54] 3¡¢ÓÃ»§Ìí¼ÓÉè±¸mac£»
+ÓÃ»§Ìí¼ÓÉè±¸mac'00:88:A1:BB:CC:DD'
+[2016-08-22 16:36:54] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.01 s
+Slowest tests:
+1.00 s	IAM::IamManager#test_Ìí¼ÓÉè±¸MACµØÖ·´óĞ¡Ğ´ÊÊÅä²âÊÔ IAM_F_DeviceOperation_029
+Slowest suites:
+1.00 s	IAM::IamManager
+
+
+[31mFinished tests in 1.028231s, 0.9725 tests/s, 1.9451 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_Ìí¼ÓÉè±¸MACµØÖ·´óĞ¡Ğ´ÊÊÅä²âÊÔ IAM_F_DeviceOperation_029 [(eval):37]
+Minitest::Assertion: ÓÃ»§Ìí¼ÓÉè±¸mac'00:88:A1:BB:CC:DD'Ê§°Ü!.
+Expected: 1
+  Actual: nil[0m
+
+[31m1 tests, 2 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160822
+Writing XML reports to E:/autotest/iam_testcases/reports/20160822

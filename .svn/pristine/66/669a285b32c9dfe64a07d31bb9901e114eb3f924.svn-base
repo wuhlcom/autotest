@@ -1,0 +1,100 @@
+<TestSuites>
+  <TestSuite>
+    <name>internet</name>
+    <path>../../frame</path>
+    <TestCases>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_4.1.29' level='P2' result='f' tested='n'>
+        <name>系统诊断测试-无线WAN ZLBF_4.1.29</name>
+        <path>../../frame/internet</path>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_4.1.30' level='P3' result='f' tested='n'>
+        <name>高级诊断-无线WDS模式测试 ZLBF_4.1.30</name>
+        <path>../../frame/internet</path>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_4.1.31' level='P2' result='f' tested='n'>
+        <name>高级诊断-无线WAN正常测试 ZLBF_4.1.31</name>
+        <path>../../frame/internet</path>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_4.1.32' level='P2' result='f' tested='n'>
+        <name>高级诊断-无线WAN失败测试 ZLBF_4.1.32</name>
+        <path>../../frame/internet</path>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_5.1.36' level='P1' result='f' tested='n'>
+        <name>无线5G状态 ZLBF_5.1.36</name>
+        <path>../../frame/internet</path>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_5.1.37' level='P1' result='f' tested='n'>
+        <name>无线2.4G状态更多 ZLBF_5.1.37</name>
+        <path>../../frame/internet</path>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_5.1.38' level='P1' result='f' tested='n'>
+        <name>无线5G状态更多 ZLBF_5.1.38</name>
+        <path>../../frame/internet</path>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_5.1.39' level='P1' result='f' tested='n'>
+        <name>无线终端数 ZLBF_5.1.39</name>
+        <path>../../frame/internet</path>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_11.1.22' level='P1' result='f' tested='n'>
+        <name>最大连接数输入值为正常值 ZLBF_11.1.22</name>
+        <path>../../frame/internet</path>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_11.1.23' level='P3' result='f' tested='n'>
+        <name>最大连接数输入值超出限制范围 ZLBF_11.1.23</name>
+        <path>../../frame/internet</path>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_11.1.24' level='P4' result='f' tested='n'>
+        <name>最大连接数输入值为空 ZLBF_11.1.24</name>
+        <path>../../frame/internet</path>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_11.1.25' level='P4' result='f' tested='n'>
+        <name>最大连接数输入值为为小数 ZLBF_11.1.25</name>
+        <path>../../frame/internet</path>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_11.1.26' level='P4' result='f' tested='n'>
+        <name>最大连接数输入值为负数 ZLBF_11.1.26</name>
+        <path>../../frame/internet</path>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_11.1.27' level='P4' result='f' tested='n'>
+        <name>最大连接数输入值为非数字的其他字符 ZLBF_11.1.27</name>
+        <path>../../frame/internet</path>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_11.1.28' level='P4' result='f' tested='n'>
+        <name>最大连接数输入值带空格 ZLBF_11.1.28</name>
+        <path>../../frame/internet</path>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_11.1.16' level='P2' result='f' tested='n'>
+        <name>信号强度测试 ZLBF_11.1.16</name>
+        <path>../../frame/internet</path>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_11.1.30' level='P1' result='f' tested='n'>
+        <name>最大连接数输入值为正常值 ZLBF_11.1.30</name>
+        <path>../../frame/internet</path>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_11.1.31' level='P3' result='f' tested='n'>
+        <name>最大连接数输入值超出限制范围 ZLBF_11.1.31</name>
+        <path>../../frame/internet</path>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_11.1.32' level='P4' result='f' tested='n'>
+        <name>最大连接数输入值为空 ZLBF_11.1.32</name>
+        <path>../../frame/internet</path>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_11.1.33' level='P4' result='f' tested='n'>
+        <name>最大连接数输入值为为小数 ZLBF_11.1.33</name>
+        <path>../../frame/internet</path>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_11.1.34' level='P4' result='f' tested='n'>
+        <name>最大连接数输入值为负数 ZLBF_11.1.34</name>
+        <path>../../frame/internet</path>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_11.1.35' level='P4' result='f' tested='n'>
+        <name>最大连接数输入值为非数字的其他字符 ZLBF_11.1.35</name>
+        <path>../../frame/internet</path>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='ZLBF_11.1.36' level='P4' result='f' tested='n'>
+        <name>最大连接数输入值带空格 ZLBF_11.1.36</name>
+        <path>../../frame/internet</path>
+      </TestCase>
+    </TestCases>
+  </TestSuite>
+</TestSuites>

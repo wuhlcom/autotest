@@ -1,0 +1,26 @@
+[2016-08-22 11:09:34] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-22 11:09:34] 2¡¢ÓÃ»§µÇÂ¼»ñÈ¡ÓÃ»§uidºÅ£»
+User existed!
+[2016-08-22 11:09:34] 3¡¢ÓÃ»§Ìí¼ÓÉè±¸mac£¨¶à²¥µØÖ·£©£»
+RESULT err_msg:'¸ÃÉè±¸ÎªÎŞĞ§Éè±¸'
+RESULT err_code:'40007'
+RESULT err_desc:'E_QUERY_DEVICE_ID_FAIL'
+RESULT err_msg:'¸ÃÉè±¸ÎªÎŞĞ§Éè±¸'
+RESULT err_code:'40007'
+RESULT err_desc:'E_QUERY_DEVICE_ID_FAIL'
+[2016-08-22 11:09:35] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.00 s
+Slowest tests:
+0.33 s	IAM::IamManager#test_Ìí¼ÓÉè±¸MACµØÖ·Îª¶à²¥µØÖ· IAM_F_DeviceOperation_024
+Slowest suites:
+0.33 s	IAM::IamManager
+
+
+[32mFinished tests in 0.356044s, 2.8086 tests/s, 16.8519 assertions/s.[0m
+
+
+[32m1 tests, 6 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160822
+Writing XML reports to E:/autotest/iam_testcases/reports/20160822

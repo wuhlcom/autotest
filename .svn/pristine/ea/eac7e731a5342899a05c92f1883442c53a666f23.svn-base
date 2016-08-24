@@ -1,0 +1,315 @@
+1¡¢½øÈëDUT ´ø¿í¿ØÖÆÒ³Ãæ£¬²é¿´´ø¿í´óĞ¡£¬Á÷Á¿¿ØÖÆ¹æÔòÒ³ÃæÊÇ·ñ³öÏÖ£¬ÊÇ·ñ¿ÉÒÔÉèÖÃ£»
+2¡¢¹´Ñ¡¡°¿ªÆôIP´ø¿í¿ØÖÆ¡±Ñ¡Ïî¿ò£¬ÉèÖÃÉêÇë´ø¿íÎª100000kbps£»Ìí¼ÓÒ»ÌõÁ÷Á¿¿ØÖÆ¹æÔò£¬ÈçIPµØÖ··¶Î§ÊäÈë192.168.100.100£¬ÔËĞĞÄ£Ê½ÉèÖÃÊÜÏŞ×î´ó´ø¿íÎª1000kbps
+=============capture first time=================
+Frame::WebTestInternet#test_QOS¿ªÆô-×Ó¹æÔò¹Ø±Õ ZLBF_27.1.4->method_name:tshark_duration
+=============capture second time=================
+Frame::WebTestInternet#test_QOS¿ªÆô-×Ó¹æÔò¹Ø±Õ ZLBF_27.1.4->method_name:tshark_duration
+=============capture three time=================
+Frame::WebTestInternet#test_QOS¿ªÆô-×Ó¹æÔò¹Ø±Õ ZLBF_27.1.4->method_name:tshark_duration
+=============Statistics first time=================
+Frame::WebTestInternet#test_QOS¿ªÆô-×Ó¹æÔò¹Ø±Õ ZLBF_27.1.4->method_name:capinfos_all
+File name:           D:/ftpcaps/ftp_limit_before1_00001_20160225202854.pcap
+File type:           Wireshark/... - pcapng
+File encapsulation:  Ethernet
+Packet size limit:   file hdr: (not set)
+Number of packets:   361 
+File size:           554 kB
+Data size:           541 kB
+Capture duration:    4 seconds
+Start time:          Thu Feb 25 20:28:54 2016
+End time:            Thu Feb 25 20:28:59 2016
+Data byte rate:      128 kBps
+Data bit rate:       1026 kbps
+Average packet size: 1499.86 bytes
+Average packet rate: 85 packets/sec
+SHA1:                5901f11d9be63abd7566a47b7f04d3aa15860378
+RIPEMD160:           3c5dac027ca4dd9e1d0f71fcf02e5514a1bb4c59
+MD5:                 1ec4cb21ad17f91ddbafb8b2b047ea66
+Strict time order:   True
+Êµ¼ÊÏÂÔØËÙÂÊÎª1026000bps
+0.0215301513671875
+=============Statistics second time=================
+Frame::WebTestInternet#test_QOS¿ªÆô-×Ó¹æÔò¹Ø±Õ ZLBF_27.1.4->method_name:capinfos_all
+File name:           D:/ftpcaps/ftp_limit_before2_00001_20160225202905.pcap
+File type:           Wireshark/... - pcapng
+File encapsulation:  Ethernet
+Packet size limit:   file hdr: (not set)
+Number of packets:   402 
+File size:           621 kB
+Data size:           607 kB
+Capture duration:    5 seconds
+Start time:          Thu Feb 25 20:29:05 2016
+End time:            Thu Feb 25 20:29:10 2016
+Data byte rate:      128 kBps
+Data bit rate:       1026 kbps
+Average packet size: 1510.37 bytes
+Average packet rate: 84 packets/sec
+SHA1:                2138fdb1b84a14fd3beb4fe8fa6ba4b2106f9868
+RIPEMD160:           fadd1683dd3cb9cd59eeca6ec19ab82ad79744bc
+MD5:                 604c07c62faec2055c3be38633127501
+Strict time order:   True
+Êµ¼ÊÏÂÔØËÙÂÊÎª1026000bps
+0.0215301513671875
+=============Statistics three time=================
+Frame::WebTestInternet#test_QOS¿ªÆô-×Ó¹æÔò¹Ø±Õ ZLBF_27.1.4->method_name:capinfos_all
+File name:           D:/ftpcaps/ftp_limit_before3_00001_20160225202916.pcap
+File type:           Wireshark/... - pcapng
+File encapsulation:  Ethernet
+Packet size limit:   file hdr: (not set)
+Number of packets:   403 
+File size:           624 kB
+Data size:           610 kB
+Capture duration:    5 seconds
+Start time:          Thu Feb 25 20:29:16 2016
+End time:            Thu Feb 25 20:29:21 2016
+Data byte rate:      128 kBps
+Data bit rate:       1026 kbps
+Average packet size: 1514.00 bytes
+Average packet rate: 84 packets/sec
+SHA1:                93d777162508bfddb4304c3f2afb3bb67946799f
+RIPEMD160:           d5326a3a0bc909af9eb9a54c921aa778226fd08f
+MD5:                 95e78f1216745a15e0d58793ce430fa8
+Strict time order:   True
+Êµ¼ÊÏÂÔØËÙÂÊÎª1026000bps
+0.0215301513671875
+3¡¢¹Ø±ÕÔÚIPµØÖ·Îª192.168.100.100µÄ´ø¿íÏŞÖÆ£¬Á÷Á¿Óë×Ü´ø¿í²î²»¶à
+=============close client band limit capture first time=================
+Frame::WebTestInternet#test_QOS¿ªÆô-×Ó¹æÔò¹Ø±Õ ZLBF_27.1.4->method_name:tshark_duration
+=============close client band limit capture second time=================
+Frame::WebTestInternet#test_QOS¿ªÆô-×Ó¹æÔò¹Ø±Õ ZLBF_27.1.4->method_name:tshark_duration
+=============close client band limit capture three time=================
+Frame::WebTestInternet#test_QOS¿ªÆô-×Ó¹æÔò¹Ø±Õ ZLBF_27.1.4->method_name:tshark_duration
+============= close client band limit Statistics first time=================
+Frame::WebTestInternet#test_QOS¿ªÆô-×Ó¹æÔò¹Ø±Õ ZLBF_27.1.4->method_name:capinfos_all
+File name:           D:/ftpcaps/ftp_total_before1_00001_20160225202950.pcap
+File type:           Wireshark/... - pcapng
+File encapsulation:  Ethernet
+Packet size limit:   file hdr: (not set)
+Number of packets:   38 k
+File size:           58 MB
+Data size:           56 MB
+Capture duration:    5 seconds
+Start time:          Thu Feb 25 20:29:50 2016
+End time:            Thu Feb 25 20:29:55 2016
+Data byte rate:      12 MBps
+Data bit rate:       98 Mbps
+Average packet size: 1486.23 bytes
+Average packet rate: 8256 packets/sec
+SHA1:                f862d091688a63d1ab6ce674b09fa456bdd2188e
+RIPEMD160:           a25014d5ddef1bdee2fd34d6400b1466cb91f476
+MD5:                 ba8e54dc4d9cc1bc3b84267052d8e58c
+Strict time order:   True
+Êµ¼ÊÏÂÔØËÙÂÊÎª98000000bps
+0.04296875
+=============close client band limit Statistics second time=================
+Frame::WebTestInternet#test_QOS¿ªÆô-×Ó¹æÔò¹Ø±Õ ZLBF_27.1.4->method_name:capinfos_all
+File name:           D:/ftpcaps/ftp_total_before2_00001_20160225203001.pcap
+File type:           Wireshark/... - pcapng
+File encapsulation:  Ethernet
+Packet size limit:   file hdr: (not set)
+Number of packets:   38 k
+File size:           58 MB
+Data size:           56 MB
+Capture duration:    5 seconds
+Start time:          Thu Feb 25 20:30:01 2016
+End time:            Thu Feb 25 20:30:06 2016
+Data byte rate:      12 MBps
+Data bit rate:       98 Mbps
+Average packet size: 1478.75 bytes
+Average packet rate: 8290 packets/sec
+SHA1:                d9d1235d49fe4ceaaced16ab8ff032a263882c1b
+RIPEMD160:           f9f900ce30845231af22017a2bfd6d1867d2f83f
+MD5:                 1475c2f05e8dcfdcc52125c38f99644c
+Strict time order:   True
+Êµ¼ÊÏÂÔØËÙÂÊÎª98000000bps
+0.04296875
+=============close client band limit Statistics three time=================
+Frame::WebTestInternet#test_QOS¿ªÆô-×Ó¹æÔò¹Ø±Õ ZLBF_27.1.4->method_name:capinfos_all
+File name:           D:/ftpcaps/ftp_total_before3_00001_20160225203012.pcap
+File type:           Wireshark/... - pcapng
+File encapsulation:  Ethernet
+Packet size limit:   file hdr: (not set)
+Number of packets:   38 k
+File size:           58 MB
+Data size:           56 MB
+Capture duration:    5 seconds
+Start time:          Thu Feb 25 20:30:12 2016
+End time:            Thu Feb 25 20:30:17 2016
+Data byte rate:      12 MBps
+Data bit rate:       98 Mbps
+Average packet size: 1478.80 bytes
+Average packet rate: 8300 packets/sec
+SHA1:                f6a2190ba4341c213b84a0e126944ade5f0a0043
+RIPEMD160:           bda49d2bd832f05b7b35d121dbe612ada6f9e168
+MD5:                 728fa3f92378b51718f31020cbd87729
+Strict time order:   True
+Êµ¼ÊÏÂÔØËÙÂÊÎª98000000bps
+0.04296875
+4¡¢ÖØÆôDUT£¬²é¿´²½Öè1¡¢2,3½á¹ûÊÇ·ñÈÔÈ»Í¬ÉÏ
+1 Í£Ö¹ÏÂÔØ
+kill 346632 error:No such process
+kill 342152 error:No such process
+2 »Ö¸´Ä¬ÈÏÅäÖÃ
+[32m.[0mFrame::WebTestInternet#test_QOS¿ªÆô-×Ó¹æÔò¿ªÆô ZLBF_27.1.5->method_name:ipconfig
+
+Windows IP ÅäÖÃ
+
+   Ö÷»úÃû  . . . . . . . . . . . . . : ÖªÂ·²âÊÔsdgsdgkdsejkfjgkklj-wjekljsdskljf3sdg3
+   Ö÷ DNS ºó×º . . . . . . . . . . . : 
+   ½ÚµãÀàĞÍ  . . . . . . . . . . . . : »ìºÏ
+   IP Â·ÓÉÒÑÆôÓÃ . . . . . . . . . . : ·ñ
+   WINS ´úÀíÒÑÆôÓÃ . . . . . . . . . : ·ñ
+
+ÒÔÌ«ÍøÊÊÅäÆ÷ AP:
+
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Realtek USB FE Family Controller
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 00-E0-4C-36-14-02
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+   ±¾µØÁ´½Ó IPv6 µØÖ·. . . . . . . . : fe80::ec6d:f574:7481:635b%21(Ê×Ñ¡) 
+   IPv4 µØÖ· . . . . . . . . . . . . : 192.168.50.100(Ê×Ñ¡) 
+   ×ÓÍøÑÚÂë  . . . . . . . . . . . . : 255.255.255.0
+   Ä¬ÈÏÍø¹Ø. . . . . . . . . . . . . : 
+   DHCPv6 IAID . . . . . . . . . . . : 503373900
+   DHCPv6 ¿Í»§¶Ë DUID  . . . . . . . : 00-01-00-01-1C-21-93-0A-BC-EE-7B-75-EB-4F
+   DNS ·şÎñÆ÷  . . . . . . . . . . . : fec0:0:0:ffff::1%1
+                                       fec0:0:0:ffff::2%1
+                                       fec0:0:0:ffff::3%1
+   TCPIP ÉÏµÄ NetBIOS  . . . . . . . : ÒÑÆôÓÃ
+
+ÒÔÌ«ÍøÊÊÅäÆ÷ control:
+
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Realtek PCIe GBE Family Controller #2
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 20-F4-1B-60-51-F5
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+   ±¾µØÁ´½Ó IPv6 µØÖ·. . . . . . . . : fe80::dd6:5d32:f850:8252%19(Ê×Ñ¡) 
+   IPv4 µØÖ· . . . . . . . . . . . . : 50.50.50.50(Ê×Ñ¡) 
+   ×ÓÍøÑÚÂë  . . . . . . . . . . . . : 255.255.255.0
+   Ä¬ÈÏÍø¹Ø. . . . . . . . . . . . . : 
+   DHCPv6 IAID . . . . . . . . . . . : 455144475
+   DHCPv6 ¿Í»§¶Ë DUID  . . . . . . . : 00-01-00-01-1C-21-93-0A-BC-EE-7B-75-EB-4F
+   DNS ·şÎñÆ÷  . . . . . . . . . . . : fec0:0:0:ffff::1%1
+                                       fec0:0:0:ffff::2%1
+                                       fec0:0:0:ffff::3%1
+   TCPIP ÉÏµÄ NetBIOS  . . . . . . . : ÒÑÆôÓÃ
+
+ÒÔÌ«ÍøÊÊÅäÆ÷ dut:
+
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Realtek PCIe GBE Family Controller
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : BC-EE-7B-75-EB-4F
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ÊÇ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+   ±¾µØÁ´½Ó IPv6 µØÖ·. . . . . . . . : fe80::c819:87cf:3504:296e%18(Ê×Ñ¡) 
+   IPv4 µØÖ· . . . . . . . . . . . . : 192.168.100.100(Ê×Ñ¡) 
+   ×ÓÍøÑÚÂë  . . . . . . . . . . . . : 255.255.255.0
+   »ñµÃ×âÔ¼µÄÊ±¼ä  . . . . . . . . . : 2016Äê2ÔÂ25ÈÕ 20:22:38
+   ×âÔ¼¹ıÆÚµÄÊ±¼ä  . . . . . . . . . : 2016Äê2ÔÂ26ÈÕ 8:22:38
+   Ä¬ÈÏÍø¹Ø. . . . . . . . . . . . . : 192.168.100.1
+   DHCP ·şÎñÆ÷ . . . . . . . . . . . : 192.168.100.1
+   DHCPv6 IAID . . . . . . . . . . . : 633138811
+   DHCPv6 ¿Í»§¶Ë DUID  . . . . . . . : 00-01-00-01-1C-21-93-0A-BC-EE-7B-75-EB-4F
+   DNS ·şÎñÆ÷  . . . . . . . . . . . : 192.168.100.1
+   TCPIP ÉÏµÄ NetBIOS  . . . . . . . : ÒÑÆôÓÃ
+
+ËíµÀÊÊÅäÆ÷ Teredo Tunneling Pseudo-Interface:
+
+   Ã½Ìå×´Ì¬  . . . . . . . . . . . . : Ã½ÌåÒÑ¶Ï¿ª
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Teredo Tunneling Pseudo-Interface
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+
+ËíµÀÊÊÅäÆ÷ isatap.{248CF58B-BF93-45FC-9050-F7163BF8C880}:
+
+   Ã½Ìå×´Ì¬  . . . . . . . . . . . . : Ã½ÌåÒÑ¶Ï¿ª
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Microsoft ISATAP Adapter #2
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+
+ËíµÀÊÊÅäÆ÷ isatap.{8BAC9A05-919D-4C1B-ADC5-0DAC27A19740}:
+
+   Ã½Ìå×´Ì¬  . . . . . . . . . . . . : Ã½ÌåÒÑ¶Ï¿ª
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Microsoft ISATAP Adapter #3
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+
+ËíµÀÊÊÅäÆ÷ 6TO4 Adapter:
+
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Microsoft 6to4 Adapter
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+   IPv6 µØÖ· . . . . . . . . . . . . : 2002:3232:3232::3232:3232(Ê×Ñ¡) 
+   Ä¬ÈÏÍø¹Ø. . . . . . . . . . . . . : 
+   DNS ·şÎñÆ÷  . . . . . . . . . . . : fec0:0:0:ffff::1%1
+                                       fec0:0:0:ffff::2%1
+                                       fec0:0:0:ffff::3%1
+   TCPIP ÉÏµÄ NetBIOS  . . . . . . . : ÒÑ½ûÓÃ
+
+ËíµÀÊÊÅäÆ÷ isatap.{41FBDD5C-1EE7-4C75-ADEB-174E80C7EBC5}:
+
+   Ã½Ìå×´Ì¬  . . . . . . . . . . . . : Ã½ÌåÒÑ¶Ï¿ª
+   Á¬½ÓÌØ¶¨µÄ DNS ºó×º . . . . . . . : 
+   ÃèÊö. . . . . . . . . . . . . . . : Microsoft ISATAP Adapter #7
+   ÎïÀíµØÖ·. . . . . . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP ÒÑÆôÓÃ . . . . . . . . . . . : ·ñ
+   ×Ô¶¯ÅäÖÃÒÑÆôÓÃ. . . . . . . . . . : ÊÇ
+Frame::WebTestInternet#test_QOS¿ªÆô-×Ó¹æÔò¿ªÆô ZLBF_27.1.5->method_name:parse_ipconfig
+PC2 DRB parameter:druby://50.50.50.51:8787
+Frame::WebTestInternet#test_QOS¿ªÆô-×Ó¹æÔò¿ªÆô ZLBF_27.1.5->method_name:login_recover
+Frame::WebTestInternet#test_QOS¿ªÆô-×Ó¹æÔò¿ªÆô ZLBF_27.1.5->method_name:netsh_if_ip_show
+
+½Ó¿Ú "dut" µÄÅäÖÃ
+    DHCP ÒÑÆôÓÃ:                          ÊÇ
+    IP µØÖ·:                           192.168.100.100
+    ×ÓÍøÇ°×º:                        192.168.100.0/24 (ÑÚÂë 255.255.255.0)
+    Ä¬ÈÏÍø¹Ø:                         192.168.100.1
+    Íø¹ØÔ¾µãÊı:                       0
+    InterfaceMetric:                      20
+
+Frame::WebTestInternet#test_QOS¿ªÆô-×Ó¹æÔò¿ªÆô ZLBF_27.1.5->method_name:ping_recover
+Frame::WebTestInternet#test_QOS¿ªÆô-×Ó¹æÔò¿ªÆô ZLBF_27.1.5->method_name:netsh_if_shif
+
+dut                                      
+   ÖÖÀà:     ×¨ÓÃ             
+   ¹ÜÀí×´Ì¬: ÒÑÆôÓÃ             
+   Á¬½Ó×´Ì¬: ÒÑÁ¬½Ó             
+
+NIC state is enabled
+Frame::WebTestInternet#test_QOS¿ªÆô-×Ó¹æÔò¿ªÆô ZLBF_27.1.5->method_name:netsh_if_ip_show
+
+½Ó¿Ú "dut" µÄÅäÖÃ
+    DHCP ÒÑÆôÓÃ:                          ÊÇ
+    IP µØÖ·:                           192.168.100.100
+    ×ÓÍøÇ°×º:                        192.168.100.0/24 (ÑÚÂë 255.255.255.0)
+    Ä¬ÈÏÍø¹Ø:                         192.168.100.1
+    Íø¹ØÔ¾µãÊı:                       0
+    InterfaceMetric:                      20
+
+Frame::WebTestInternet#test_QOS¿ªÆô-×Ó¹æÔò¿ªÆô ZLBF_27.1.5->method_name:ping_default
+Frame::WebTestInternet#test_QOS¿ªÆô-×Ó¹æÔò¿ªÆô ZLBF_27.1.5->method_name:arp_clear
+
+ÕıÔÚ Ping 192.168.100.1 ¾ßÓĞ 32 ×Ö½ÚµÄÊı¾İ:
+À´×Ô 192.168.100.1 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä<1ms TTL=64
+À´×Ô 192.168.100.1 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä<1ms TTL=64
+À´×Ô 192.168.100.1 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä<1ms TTL=64
+À´×Ô 192.168.100.1 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä<1ms TTL=64
+À´×Ô 192.168.100.1 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä<1ms TTL=64
+
+192.168.100.1 µÄ Ping Í³¼ÆĞÅÏ¢:
+    Êı¾İ°ü: ÒÑ·¢ËÍ = 5£¬ÒÑ½ÓÊÕ = 5£¬¶ªÊ§ = 0 (0% ¶ªÊ§)£¬
+Íù·µĞĞ³ÌµÄ¹À¼ÆÊ±¼ä(ÒÔºÁÃëÎªµ¥Î»):
+    ×î¶Ì = 0ms£¬×î³¤ = 0ms£¬Æ½¾ù = 0ms
+Frame::WebTestInternet#test_QOS¿ªÆô-×Ó¹æÔò¿ªÆô ZLBF_27.1.5->method_name:login_default
+Enter url address!
+Enter usrname and passwd!

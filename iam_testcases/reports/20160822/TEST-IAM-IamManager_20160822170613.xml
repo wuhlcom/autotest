@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="IAM::IamManager" skipped="0" failures="1" errors="0" tests="1" assertions="4" time="0.8394332019997819">
+  <testcase name="test_添加设备MAC地址带空格测试 IAM_F_DeviceOperation_030" classname="IAM::IamManager" assertions="4" time="0.8394332019997819">
+    <failure type="test_添加设备MAC地址带空格测试 IAM_F_DeviceOperation_030" message="用户添加设备mac'00:88:A1:BB:CC:DD '失败!....">
+Failure:
+test_添加设备MAC地址带空格测试 IAM_F_DeviceOperation_030(IAM::IamManager) [(eval):35]:
+用户添加设备mac'00:88:A1:BB:CC:DD '失败!.
+Expected: 1
+  Actual: nil
+    </failure>
+  </testcase>
+</testsuite>

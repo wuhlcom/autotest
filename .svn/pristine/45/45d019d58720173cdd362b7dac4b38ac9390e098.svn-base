@@ -1,0 +1,28 @@
+# p str = ("白日依山尽，黄河入海流，欲穷千里目，更上一层楼，行到水穷处，坐看云起时，数风流人物，"*6+"还看今朝").encode("GBK")
+#  p str.size
+# p str.chop!.encode("GBK").size
+# # p ("爱国路知青楼B栋3楼304~!@#$%^&*()_+{}:\"|<>?-=[];'\\,./YZipqf2"*5).size
+# @tc_app_comment = "包子馒头年糕蛋ABC"*25
+# p @tc_app_comment.size
+# p 'http://www.jd.com/?cu=true&utm_source=baidu-pinzhuan&utm_medium=cpc&utm_campaign=t_288551095_baidupinzhuan&utm_term=0f3d30c8dba7'.size
+
+str =  '{"name":"test_put","provider":"zhilu","redirect_uri":"http://www.zhilutec.com","comments":""}'
+require 'json'
+p str2 =JSON.parse(str)
+p str2.to_json
+@tc_provider    = "wo"
+@tc_comments    = "autotest"
+@tc_app_name1   = "我要被修改了"
+@tc_args1       ={"name"         => @tc_app_name1,
+                  "provider"     => @tc_provider,
+                  "redirect_uri" => @ts_app_redirect_uri,
+                  "comments"     => @tc_comments}
+param_part      = {"provider": @tc_provider, "redirect_uri": @ts_app_redirect_uri, "comments": @tc_comments}
+@tc_args        =[]
+@tc_new_appnames= %w(大主宰 玄界之门 魔鬼经济学)
+@tc_new_appnames.each do |appname|
+  param_name = {"name": appname}
+  param_part.merge!(param_name)
+  @tc_args<<param_part
+end
+p @tc_args

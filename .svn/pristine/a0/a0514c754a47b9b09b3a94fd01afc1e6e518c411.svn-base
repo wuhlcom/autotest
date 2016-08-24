@@ -1,0 +1,63 @@
+require 'net/telnet'
+module HtmlTag
+    module LswTelnet
+
+        def lsw_telnet_obj(url, admin="", password="")
+            puts "#{self.to_s}->method_name:#{__method__}"
+            @localhost = Net::Telnet::new("Host"     => url,
+                                          "Timeout"  => 10,
+                                          "Waittime" => 2,
+                                          "Prompt"   => /[$%#>:]\s*\z|(\[N\/y\])/n)
+            @localhost.login({"Name" => admin, "Password" => password, "LoginPrompt" =>/[$%#>:]\s*\z|(\[N\/y\])/n, "PasswordPrompt" => /[$%#>:]\s*\z|(\[N\/y\])/n}) { |c| print c }
+            return @localhost
+        end
+
+        def send_cmd(cmd, timeout=10)
+            puts "#{self.to_s}->method_name:#{__method__}"
+            fail "#{cmd} type is #{cmd.class},command must be string!" unless cmd.kind_of?(String)
+            fail "cmd is empty string,please check the params!" if cmd.empty?
+            cmd_return = @localhost.cmd("String" => cmd, "Timeout" => timeout) { |c| print c }
+            puts
+            # if cmd_return=~/not\s*found|syntax\s+error|bad\s+command/i
+            # 		fail "Command error!"
+            # end
+            cmd_return
+        end
+
+        def interface_eth(port, url="192.168.99.1")
+            puts "#{self.to_s}->method_name:#{__method__}"
+            lsw_telnet_obj(url)
+            send_cmd("en")
+            send_cmd("admin")
+            send_cmd("conf t")
+            send_cmd("interface fastEthernet 0/#{port}")
+        end
+
+        #关闭交换机端口
+        def shutdown_port(port, cmd="shutdown")
+            puts "#{self.to_s}->method_name:#{__method__}"
+            interface_eth(port)
+            send_cmd(cmd)
+            sleep 5
+        end
+
+        #打开交换机端口
+        def no_shutdown_port(port, cmd="no shutdown")
+            puts "#{self.to_s}->method_name:#{__method__}"
+            interface_eth(port)
+            send_cmd(cmd)
+            sleep 5
+        end
+
+    end
+end
+
+
+if __FILE__==$0
+    include HtmlTag::LswTelnet
+    require 'htmltags'
+    include HtmlTag::WinCmd
+    shutdown_port(23)
+    no_shutdown_port(23)
+    ping("www.cctv.com")
+end

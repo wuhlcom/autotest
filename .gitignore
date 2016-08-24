@@ -1,10 +1,10 @@
 #ºöÂÔsvn
 #ºöÂÔrubymine
-.svn/*
-.idea/*
-*/.idea/*
-.git/*
+.svn/* #gitignore svn config
+.idea/* #gitignore rubymine idea config
+*/.idea/* #gitignore rubymine idea config
+.git/* #gitignore rubymine git config
 *.xlsx
 *.xls
-*/html_reports/*
-*/reports/*
+*/html_reports/* #gitignore html_reports
+*/reports/* #gitignore reports

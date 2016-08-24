@@ -1,0 +1,25 @@
+[2016-08-24 16:38:32] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+´´½¨Ó¦ÓÃÃûÎª'IAM_F_DeviceOperation_015'
+create app...
+create and active the new app...
+ÉÏ´«Ó¦ÓÃ½ø³ÌÎÄ¼ş'E:/autotest/iam_testcases/process_files/autotest_01.so'
+[2016-08-24 16:40:13] 2¡¢»ñÈ¡Ó¦ÓÃAµÄidºÅ£»£»
+[2016-08-24 16:40:13] 3¡¢É¾³ıÓ¦ÓÃA½ø³ÌÎÄ¼şB£»
+[2016-08-24 16:40:14] 4¡¢¹ÜÀíÔ±ÔÙÖØĞÂ¸øÓ¦ÓÃAÉÏ´«½ø³ÌÎÄ¼şB£»
+[2016-08-24 16:41:53] 5¡¢²éÑ¯Ó¦ÓÃAÊÇ·ñ´æÔÚÒµÎñ½ø³ÌÎÄ¼şB£»
+[2016-08-24 16:41:53] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamDevauth | [0m[32m.[0m[32m.[0m
+                | 0.00 s
+Slowest tests:
+218.40 s	IAM::IamDevauth#test_É¾³ıÒµÎñ½ø³ÌºóÔÙ´´½¨Í¬ÑùµÄÒµÎñ½ø³Ì IAM_F_DeviceOperation_020
+Slowest suites:
+218.40 s	IAM::IamDevauth
+
+
+[32mFinished tests in 218.418087s, 0.0046 tests/s, 0.0641 assertions/s.[0m
+
+
+[32m1 tests, 14 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160824
+Writing XML reports to E:/autotest/iam_testcases/reports/20160824

@@ -1,0 +1,32 @@
+[2016-08-23 15:09:36] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+User existed!
+[2016-08-23 15:09:36] 2¡¢ÓÃ»§µÇÂ¼»ñÈ¡ÓÃ»§uidºÅ£»
+[2016-08-23 15:09:36] 3¡¢ÓÃ»§Ìí¼ÓÉè±¸mac£¬Éè±¸Ãû³Æ´øÓĞ¿Õ¸ñ£»
+Éè±¸Ãû³ÆÎª' Device1'×Ö·û
+{"result"=>1, "msg"=>"OK"}
+RESULT err_msg:''
+RESULT err_code:''
+RESULT err_desc:''
+[2016-08-23 15:09:36] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.00 s
+Slowest tests:
+0.40 s	IAM::IamManager#test_Éè±¸Ãû³ÆÊäÈëÖµ´ø¿Õ¸ñ IAM_F_DeviceOperation_036
+Slowest suites:
+0.40 s	IAM::IamManager
+
+
+[31mFinished tests in 0.410682s, 2.4350 tests/s, 2.4350 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_Éè±¸Ãû³ÆÊäÈëÖµ´ø¿Õ¸ñ IAM_F_DeviceOperation_036 [(eval):35]
+Minitest::Assertion: Éè±¸Ãû³ÆÎª' Device1'×Ö·û·µ»Ø´íÎóÏûÏ¢²»ÕıÈ·!.
+Expected: # encoding: UTF-8
+"\u8BBE\u5907\u540D\u79F0\u4E3A\u7A7A"
+  Actual: nil[0m
+
+[31m1 tests, 1 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160823
+Writing XML reports to E:/autotest/iam_testcases/reports/20160823

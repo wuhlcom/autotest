@@ -1,0 +1,1928 @@
+<TestSuites>
+  <TestSuite>
+    <name>manager</name>
+    <path>../../iam_testcases</path>
+    <TestCases>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_008' level='P2' result='f'
+                tested='n'>
+        <name>新增超级管理员 IAM_F_SysManager_008</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_009' level='P2' result='f'
+                tested='n'>
+        <name>新增系统管理员 IAM_F_SysManager_009</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_010' level='P2' result='f'
+                tested='n'>
+        <name>新增配置管理员 IAM_F_SysManager_010</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_011' level='P2' result='f'
+                tested='n'>
+        <name>新增监视管理员 IAM_F_SysManager_011</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_013' level='P1' result='f'
+                tested='n'>
+        <name>邮箱账号正常值输入测试 IAM_F_SysManager_013</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_014' level='P2' result='f'
+                tested='n'>
+        <name>邮箱账号长度范围外输入测试 IAM_F_SysManager_014</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_015' level='P4' result='f'
+                tested='n'>
+        <name>邮箱账号格式不规范输入测试 IAM_F_SysManager_015</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_016' level='P4' result='f'
+                tested='n'>
+        <name>邮箱账号异常输入测试 IAM_F_SysManager_016</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_017' level='P4' result='f'
+                tested='n'>
+        <name>邮箱账号前后带空格输入测试 IAM_F_SysManager_017</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_017' level='P4' result='f'
+                tested='n'>
+        <name>邮箱账号中间带空格输入测试 IAM_F_SysManager_017</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_018' level='P4' result='f'
+                tested='n'>
+        <name>邮箱账号大小写输入测试 IAM_F_SysManager_018</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_019' level='P3' result='f'
+                tested='n'>
+        <name>邮箱账号重复值输入测试 IAM_F_SysManager_019</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_020' level='P1' result='f'
+                tested='n'>
+        <name>手机账号号码输入正常测试 IAM_F_SysManager_020</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_021' level='P3' result='f'
+                tested='n'>
+        <name>手机账号号长度在范围外测试 IAM_F_SysManager_021</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_022' level='P4' result='f'
+                tested='n'>
+        <name>手机账号号不输入 IAM_F_SysManager_022</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_023' level='P4' result='f'
+                tested='n'>
+        <name>手机账号号异常测试 IAM_F_SysManager_023</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_024' level='P4' result='f'
+                tested='n'>
+        <name>手机账号带空格测试 IAM_F_SysManager_024</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_025' level='P2' result='f'
+                tested='n'>
+        <name>手机账号号重复测试 IAM_F_SysManager_025</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_026' level='P1' result='f'
+                tested='n'>
+        <name>账号昵称输入正常测试 IAM_F_SysManager_026</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_027' level='P2' result='f'
+                tested='n'>
+        <name>账号昵称长度在范围外测试 IAM_F_SysManager_027</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_028' level='P4' result='f'
+                tested='n'>
+        <name>账号昵称为空 IAM_F_SysManager_028</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_029' level='P4' result='f'
+                tested='n'>
+        <name>账号昵称异常输入测试 IAM_F_SysManager_029</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_030' level='P4' result='f'
+                tested='n'>
+        <name>账号昵称带空格输入测试 IAM_F_SysManager_030</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_031' level='P2' result='f'
+                tested='n'>
+        <name>账号昵称重复测试 IAM_F_SysManager_031</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_034' level='P3' result='f'
+                tested='n'>
+        <name>管理员角色类型不能为空 IAM_F_SysManager_034</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_035' level='P1' result='f'
+                tested='n'>
+        <name>密码正常输入测试 IAM_F_SysManager_035</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_036' level='P3' result='f'
+                tested='n'>
+        <name>密码长度在限制范围外 IAM_F_SysManager_036</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_037' level='P2' result='f'
+                tested='n'>
+        <name>密码为空 IAM_F_SysManager_037</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_038' level='P4' result='f'
+                tested='n'>
+        <name>密码异常输入测试 IAM_F_SysManager_038</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_040' level='P4' result='f'
+                tested='n'>
+        <name>密码输入框带空格 IAM_F_SysManager_040</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_041' level='P1' result='f'
+                tested='n'>
+        <name>范围内正常输入测试_最小值测试 IAM_F_SysManager_041</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_042' level='P1' result='f'
+                tested='n'>
+        <name>范围内正常输入测试_最大值测试 IAM_F_SysManager_042</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_043' level='P4' result='f'
+                tested='n'>
+        <name>输入值为空 IAM_F_SysManager_043</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_044' level='P3' result='f'
+                tested='n'>
+        <name>输入值超出限制范围 IAM_F_SysManager_044</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_045' level='P4' result='f'
+                tested='n'>
+        <name>输入值带空格 IAM_F_SysManager_045</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_050' level='P1' result='f'
+                tested='n'>
+        <name>登陆后默认进入到主页面 IAM_F_SysManager_050</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_056' level='P2' result='f'
+                tested='n'>
+        <name>账号为空登录测试 IAM_F_SysManager_056</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_057' level='P2' result='f'
+                tested='n'>
+        <name>密码为空登录测试 IAM_F_SysManager_057</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_058' level='P4' result='f'
+                tested='n'>
+        <name>错误账号登录测试 IAM_F_SysManager_058</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_059' level='P3' result='f'
+                tested='n'>
+        <name>错误密码登录测试 IAM_F_SysManager_059</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_060' level='P4' result='f'
+                tested='n'>
+        <name>不输入账号密码登录测试 IAM_F_SysManager_060</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_061' level='P4' result='f'
+                tested='n'>
+        <name>账号密码特殊字符测试 IAM_F_SysManager_061</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_070' level='P1' result='f'
+                tested='n'>
+        <name>手机账号找回 IAM_F_SysManager_070</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_071' level='P2' result='f'
+                tested='n'>
+        <name>手机账号以新的密码登陆 IAM_F_SysManager_071</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_072' level='P3' result='f'
+                tested='n'>
+        <name>输入错误的手机账号 IAM_F_SysManager_072</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_073' level='P1' result='f'
+                tested='n'>
+        <name>输入手机账号为空 IAM_F_SysManager_073</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_074' level='P3' result='f'
+                tested='n'>
+        <name>输入不存在的手机账号 IAM_F_SysManager_074</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_075' level='P3' result='f'
+                tested='n'>
+        <name>输入空的验证码 IAM_F_SysManager_075</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_076' level='P3' result='f'
+                tested='n'>
+        <name>输入错误的验证码 IAM_F_SysManager_076</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_077' level='P3' result='f'
+                tested='n'>
+        <name>输入过期的验证码 IAM_F_SysManager_077</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_078' level='P3' result='f'
+                tested='n'>
+        <name>输入已使用的验证码 IAM_F_SysManager_078</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_079' level='P3' result='f'
+                tested='n'>
+        <name>密码正常输入测试 IAM_F_SysManager_079</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_080' level='P3' result='f'
+                tested='n'>
+        <name>密码长度在限制范围外 IAM_F_SysManager_080</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_081' level='P3' result='f'
+                tested='n'>
+        <name>密码为空 IAM_F_SysManager_081</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_082' level='P3' result='f'
+                tested='n'>
+        <name>密码异常输入测试 IAM_F_SysManager_082</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_084' level='P3' result='f'
+                tested='n'>
+        <name>密码输入框带空格 IAM_F_SysManager_084</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_085' level='P1' result='f'
+                tested='n'>
+        <name>邮箱账号密码找回 IAM_F_SysManager_085</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_086' level='P1' result='f'
+                tested='n'>
+        <name>使用找回密码登陆 IAM_F_SysManager_086</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_087' level='P2' result='f'
+                tested='n'>
+        <name>使用旧密码登陆 IAM_F_SysManager_087</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_088' level='P3' result='f'
+                tested='n'>
+        <name>邮箱输入为空 IAM_F_SysManager_088</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_089' level='P3' result='f'
+                tested='n'>
+        <name>输入错误的邮箱账号 IAM_F_SysManager_089</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_090' level='P3' result='f'
+                tested='n'>
+        <name>输入不存在的邮箱账号 IAM_F_SysManager_090</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_101' level='P3' result='f'
+                tested='n'>
+        <name>删除超级管理员 IAM_F_SysManager_101</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_102' level='P2' result='f'
+                tested='n'>
+        <name>删除系统管理员 IAM_F_SysManager_102</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_103' level='P2' result='f'
+                tested='n'>
+        <name>删除配置管理员 IAM_F_SysManager_103</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_104' level='P2' result='f'
+                tested='n'>
+        <name>删除监视管理员 IAM_F_SysManager_104</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_105' level='P2' result='f'
+                tested='n'>
+        <name>删除已登录管理员 IAM_F_SysManager_105</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_105' level='P3' result='f'
+                tested='n'>
+        <name>删除有下级管理员的管理员 IAM_F_SysManager_105</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_105' level='P3' result='f'
+                tested='n'>
+        <name>删除创建了应用的超级管理员 IAM_F_SysManager_105</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_108' level='P3' result='f'
+                tested='n'>
+        <name>管理员修改下级管理员账号信息 IAM_F_SysManager_108</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_109' level='P3' result='f'
+                tested='n'>
+        <name>管理员修改自身账号信息 IAM_F_SysManager_109</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_110' level='P3' result='f'
+                tested='n'>
+        <name>管理员修改自身密码 IAM_F_SysManager_110</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_112' level='P3' result='f'
+                tested='n'>
+        <name>修改昵称输入正常测试 IAM_F_SysManager_112</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_113' level='P3' result='f'
+                tested='n'>
+        <name>修改昵称长度在范围外测试 IAM_F_SysManager_113</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_114' level='P3' result='f'
+                tested='n'>
+        <name>修改昵称为空 IAM_F_SysManager_114</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_115' level='P3' result='f'
+                tested='n'>
+        <name>修改昵称异常输入测试 IAM_F_SysManager_115</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_116' level='P3' result='f'
+                tested='n'>
+        <name>修改昵称带空格输入测试 IAM_F_SysManager_116</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_117' level='P3' result='f'
+                tested='n'>
+        <name>修改昵称重复测试 IAM_F_SysManager_117</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_118' level='P3' result='f'
+                tested='n'>
+        <name>旧密码输入为空 IAM_F_SysManager_118</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_119' level='P3' result='f'
+                tested='n'>
+        <name>旧密码输入错误 IAM_F_SysManager_119</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_120' level='P3' result='f'
+                tested='n'>
+        <name>新密码与旧密码一样 IAM_F_SysManager_120</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_121' level='P2' result='f'
+                tested='n'>
+        <name>密码修改后新密码登陆 IAM_F_SysManager_121</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_122' level='P2' result='f'
+                tested='n'>
+        <name>密码修改后旧密码登陆 IAM_F_SysManager_122</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_123' level='P1' result='f'
+                tested='n'>
+        <name>新密码正常输入测试 IAM_F_SysManager_123</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_124' level='P3' result='f'
+                tested='n'>
+        <name>新密码长度在限制范围外 IAM_F_SysManager_124</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_125' level='P2' result='f'
+                tested='n'>
+        <name>新密码为空 IAM_F_SysManager_125</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_126' level='P4' result='f'
+                tested='n'>
+        <name>新密码异常输入测试 IAM_F_SysManager_126</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_128' level='P4' result='f'
+                tested='n'>
+        <name>新密码输入框带空格 IAM_F_SysManager_128</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_129' level='P1' result='f'
+                tested='n'>
+        <name>范围内正常输入测试_最小值测试 IAM_F_SysManager_129</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_130' level='P1' result='f'
+                tested='n'>
+        <name>范围内正常输入测试_最大值测试 IAM_F_SysManager_130</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_131' level='P4' result='f'
+                tested='n'>
+        <name>输入值为空 IAM_F_SysManager_131</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_132' level='P3' result='f'
+                tested='n'>
+        <name>输入值超出限制范围 IAM_F_SysManager_132</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_133' level='P4' result='f'
+                tested='n'>
+        <name>输入值带空格 IAM_F_SysManager_133</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_134' level='P1' result='f'
+                tested='n'>
+        <name>管理员查看所有下级管理员及其创建的下级管理员 IAM_F_SysManager_134</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_137' level='P2' result='f'
+                tested='n'>
+        <name>管理员账号支持模糊查询 IAM_F_SysManager_137</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_138' level='P3' result='f'
+                tested='n'>
+        <name>输入不存在的管理员查询 IAM_F_SysManager_138</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_139' level='P3' result='f'
+                tested='n'>
+        <name>输入为空点击查询 IAM_F_SysManager_139</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_SysManager_140' level='P3' result='f'
+                tested='n'>
+        <name>输入异常查询 IAM_F_SysManager_140</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_001' level='P1' result='f'
+                tested='n'>
+        <name>管理员创建应用 IAM_F_Application_001</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_004' level='P1' result='f'
+                tested='n'>
+        <name>应用名称输入正常测试 IAM_F_Application_004</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_005' level='P2' result='f'
+                tested='n'>
+        <name>应用名称长度在范围外测试 IAM_F_Application_005</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_006' level='P4' result='f'
+                tested='n'>
+        <name>应用名称为空 IAM_F_Application_006</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_007' level='P4' result='f'
+                tested='n'>
+        <name>应用名称异常输入测试 IAM_F_Application_007</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_008' level='P4' result='f'
+                tested='n'>
+        <name>应用名称带空格输入测试 IAM_F_Application_008</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_009' level='P2' result='f'
+                tested='n'>
+        <name>应用名称重复测试 IAM_F_Application_009</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_010' level='P1' result='f'
+                tested='n'>
+        <name>提供方输入正常测试 IAM_F_Application_010</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_011' level='P2' result='f'
+                tested='n'>
+        <name>提供方长度在范围外测试 IAM_F_Application_011</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_012' level='P4' result='f'
+                tested='n'>
+        <name>提供方为空 IAM_F_Application_012</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_013' level='P4' result='f'
+                tested='n'>
+        <name>提供方异常输入测试 IAM_F_Application_013</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_014' level='P4' result='f'
+                tested='n'>
+        <name>提供方带空格输入测试 IAM_F_Application_014</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_015' level='P2' result='f'
+                tested='n'>
+        <name>提供方重复测试 IAM_F_Application_015</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_016' level='P1' result='f'
+                tested='n'>
+        <name>范围内正常输入测试_最小值测试 IAM_F_Application_016</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_017' level='P1' result='f'
+                tested='n'>
+        <name>范围内正常输入测试_最大值测试 IAM_F_Application_017</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_018' level='P4' result='f'
+                tested='n'>
+        <name>输入值为空 IAM_F_Application_018</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_019' level='P3' result='f'
+                tested='n'>
+        <name>输入值超出限制范围 IAM_F_Application_019</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_020' level='P4' result='f'
+                tested='n'>
+        <name>输入值带空格 IAM_F_Application_020</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_021' level='P1' result='f'
+                tested='n'>
+        <name>回调地址输入正常测试 IAM_F_Application_021</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_022' level='P1' result='f'
+                tested='n'>
+        <name>回调地址输入https地址 IAM_F_Application_022</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_023' level='P3' result='f'
+                tested='n'>
+        <name>回调地址不输入http IAM_F_Application_023</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_024' level='P3' result='f'
+                tested='n'>
+        <name>回调地址输入其他格式地址 IAM_F_Application_024</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_025' level='P3' result='f'
+                tested='n'>
+        <name>回调地址输入中文测试 IAM_F_Application_025</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_026' level='P3' result='f'
+                tested='n'>
+        <name>回调地址输入大写测试 IAM_F_Application_026</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_027' level='P3' result='f'
+                tested='n'>
+        <name>回调地址输入为空 IAM_F_Application_027</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_028' level='P2' result='f'
+                tested='n'>
+        <name>回调地址输入长度范围内测试 IAM_F_Application_028</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_029' level='P4' result='f'
+                tested='n'>
+        <name>回调地址输入长度范围外测试 IAM_F_Application_029</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_032' level='P1' result='f'
+                tested='n'>
+        <name>修改应用名称输入正常测试 IAM_F_Application_032</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_033' level='P2' result='f'
+                tested='n'>
+        <name>修改应用名称长度在范围外测试 IAM_F_Application_033</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_034' level='P4' result='f'
+                tested='n'>
+        <name>修改应用名称为空 IAM_F_Application_034</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_035' level='P4' result='f'
+                tested='n'>
+        <name>修改应用名称异常输入测试 IAM_F_Application_035</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_036' level='P4' result='f'
+                tested='n'>
+        <name>修改应用名称带空格输入测试 IAM_F_Application_036</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_037' level='P2' result='f'
+                tested='n'>
+        <name>修改应用名称重复测试 IAM_F_Application_037</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_038' level='P1' result='f'
+                tested='n'>
+        <name>修改提供方输入正常测试 IAM_F_Application_038</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_039' level='P2' result='f'
+                tested='n'>
+        <name>修改提供方长度在范围外测试 IAM_F_Application_039</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_040' level='P4' result='f'
+                tested='n'>
+        <name>修改提供方为空 IAM_F_Application_040</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_041' level='P4' result='f'
+                tested='n'>
+        <name>修改提供方异常输入测试 IAM_F_Application_041</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_042' level='P4' result='f'
+                tested='n'>
+        <name>修改提供方带空格输入测试 IAM_F_Application_042</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_043' level='P2' result='f'
+                tested='n'>
+        <name>修改提供方重复测试 IAM_F_Application_043</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_044' level='P1' result='f'
+                tested='n'>
+        <name>范围内正常输入测试_最小值测试 IAM_F_Application_044</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_045' level='P1' result='f'
+                tested='n'>
+        <name>范围内正常输入测试_最大值测试 IAM_F_Application_045</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_046' level='P4' result='f'
+                tested='n'>
+        <name>输入值为空 IAM_F_Application_046</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_047' level='P3' result='f'
+                tested='n'>
+        <name>输入值超出限制范围 IAM_F_Application_047</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_048' level='P4' result='f'
+                tested='n'>
+        <name>输入值带空格 IAM_F_Application_048</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_049' level='P1' result='f'
+                tested='n'>
+        <name>回调地址输入正常测试 IAM_F_Application_049</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_050' level='P1' result='f'
+                tested='n'>
+        <name>回调地址输入https地址 IAM_F_Application_050</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_051' level='P3' result='f'
+                tested='n'>
+        <name>回调地址不输入http IAM_F_Application_051</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_052' level='P3' result='f'
+                tested='n'>
+        <name>回调地址输入其他格式地址 IAM_F_Application_052</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_053' level='P3' result='f'
+                tested='n'>
+        <name>回调地址输入中文测试 IAM_F_Application_053</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_054' level='P3' result='f'
+                tested='n'>
+        <name>回调地址输入大写测试 IAM_F_Application_054</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_055' level='P3' result='f'
+                tested='n'>
+        <name>回调地址输入为空 IAM_F_Application_055</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_056' level='P2' result='f'
+                tested='n'>
+        <name>回调地址输入长度范围内测试 IAM_F_Application_056</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_057' level='P4' result='f'
+                tested='n'>
+        <name>回调地址输入长度范围外测试 IAM_F_Application_057</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_061' level='P2' result='f'
+                tested='n'>
+        <name>应用内容查看 IAM_F_Application_061</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_062' level='P2' result='f'
+                tested='n'>
+        <name>应用名称模糊查询 IAM_F_Application_062</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_063' level='P2' result='f'
+                tested='n'>
+        <name>应用ID模糊查询 IAM_F_Application_063</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_063' level='P2' result='f'
+                tested='n'>
+        <name>应用提供方模糊查询 IAM_F_Application_063</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_064' level='P3' result='f'
+                tested='n'>
+        <name>输入不存在的查询 IAM_F_Application_064</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_065' level='P3' result='f'
+                tested='n'>
+        <name>输入为空点击查询 IAM_F_Application_065</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_066' level='P3' result='f'
+                tested='n'>
+        <name>输入异常查询 IAM_F_Application_066</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_068' level='P1' result='f'
+                tested='n'>
+        <name>有权限的管理员可以删除应用 IAM_F_Application_068</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_069' level='P1' result='f'
+                tested='n'>
+        <name>应用绑定了用户不能删除 IAM_F_Application_069</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_070' level='P1' result='f'
+                tested='n'>
+        <name>应用绑定了设备不能删除 IAM_F_Application_070</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Application_071' level='P2' result='f'
+                tested='n'>
+        <name>支持批量删除 IAM_F_Application_071</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Register_001' result='f' tested='n'>
+        <name>用户以邮箱注册账号 IAM_F_Register_001</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Register_002' result='f' tested='n'>
+        <name>用户邮箱注册后登陆 IAM_F_Register_002</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Register_003' level='P1' result='f' tested='n'>
+        <name>邮箱账号正常值输入测试 IAM_F_Register_003</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Register_004' level='P2' result='f' tested='n'>
+        <name>邮箱账号长度范围外输入测试 IAM_F_Register_004</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Register_005' level='P4' result='f' tested='n'>
+        <name>邮箱账号格式不规范输入测试 IAM_F_Register_005</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Register_006' level='P4' result='f' tested='n'>
+        <name>邮箱账号异常输入测试 IAM_F_Register_006</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Register_007' level='P4' result='f' tested='n'>
+        <name>邮箱账号前后带空格输入测试 IAM_F_Register_007</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Register_008' level='P4' result='f' tested='n'>
+        <name>邮箱账号中间带空格输入测试 IAM_F_Register_008</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Register_009' level='P4' result='f' tested='n'>
+        <name>邮箱账号大小写输入测试 IAM_F_Register_009</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Register_010' level='P3' result='f' tested='n'>
+        <name>邮箱账号重复值输入测试 IAM_F_Register_010</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Register_016' result='f' tested='n'>
+        <name>用户以手机注册账号 IAM_F_Register_016</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Register_017' level='P1' result='f' tested='n'>
+        <name>手机账号号码输入正常测试 IAM_F_Register_017</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Register_018' level='P3' result='f' tested='n'>
+        <name>手机账号号长度在范围外测试 IAM_F_Register_018</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Register_019' level='P4' result='f' tested='n'>
+        <name>手机账号号不输入 IAM_F_Register_019</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Register_020' level='P4' result='f' tested='n'>
+        <name>手机账号号异常测试 IAM_F_Register_020</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Register_021' level='P4' result='f' tested='n'>
+        <name>手机账号带空格测试 IAM_F_Register_021</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Register_022' level='P2' result='f' tested='n'>
+        <name>手机账号号重复测试 IAM_F_Register_022</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Register_023' level='P1' result='f' tested='n'>
+        <name>密码正常输入测试 IAM_F_Register_023</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Register_024' level='P3' result='f' tested='n'>
+        <name>密码长度在限制范围外 IAM_F_Register_024</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Register_025' level='P2' result='f' tested='n'>
+        <name>密码为空 IAM_F_Register_025</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Register_026' level='P4' result='f' tested='n'>
+        <name>密码异常输入测试 IAM_F_Register_026</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Register_028' level='P4' result='f' tested='n'>
+        <name>密码输入框带空格 IAM_F_Register_028</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Register_029' level='P1' result='f' tested='n'>
+        <name>验证码接收时间测试 IAM_F_Register_029</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Register_030' level='P1' result='f' tested='n'>
+        <name>手机验证码兼容性测试 IAM_F_Register_030</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Register_031' level='P1' result='f' tested='n'>
+        <name>正确验证码输入测试 IAM_F_Register_031</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Register_032' level='P2' result='f' tested='n'>
+        <name>错误验证码输入测试 IAM_F_Register_032</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Register_033' level='P3' result='f' tested='n'>
+        <name>已使用验证码输入测试 IAM_F_Register_033</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Register_034' level='P4' result='f' tested='n'>
+        <name>验证码为空输入测试 IAM_F_Register_034</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Register_035' level='P3' result='f' tested='n'>
+        <name>验证码有效时间测试 IAM_F_Register_035</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_Register_038' level='P4' result='f' tested='n'>
+        <name>输入其他手机号获取的验证码 IAM_F_Register_038</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_UserView_001' level='P2' result='f' tested='n'>
+        <name>默认按时间顺序显示所有 IAM_F_UserView_001</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_UserView_002' level='P2' result='f' tested='n'>
+        <name>支持按手机号码模糊查询 IAM_F_UserView_002</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_UserView_003' level='P1' result='f' tested='n'>
+        <name>支持按手机号码精确查询 IAM_F_UserView_003</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_UserView_004' level='P1' result='f' tested='n'>
+        <name>支持按邮箱精确查询 IAM_F_UserView_004</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_UserView_005' level='P2' result='f' tested='n'>
+        <name>支持按邮箱模糊查询 IAM_F_UserView_005</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_UserView_006' level='P1' result='f' tested='n'>
+        <name>支持按应用精确查询 IAM_F_UserView_006</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_UserView_007' level='P2' result='f' tested='n'>
+        <name>支持按应用模糊查询 IAM_F_UserView_007</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_UserView_008' level='P1' result='f' tested='n'>
+        <name>管理员点击用户查看详情 IAM_F_UserView_008</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_UserView_010' level='P2' result='f' tested='n'>
+        <name>知路超级管理员能看到所有用户信息 IAM_F_UserView_010</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_UserView_011' level='P2' result='f' tested='n'>
+        <name>超级管理员能看到绑定了自己应用的注册用户 IAM_F_UserView_011</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_UserView_012' level='P3' result='f' tested='n'>
+        <name>其他管理员无法看到注册用户 IAM_F_UserView_012</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_UserLogin_001' level='P2' result='f' tested='n'>
+        <name>账号为空登录测试 IAM_F_UserLogin_001</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_UserLogin_001' level='P2' result='f' tested='n'>
+        <name>密码为空登录测试 IAM_F_UserLogin_001</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_UserLogin_001' level='P4' result='f' tested='n'>
+        <name>错误账号登录测试 IAM_F_UserLogin_001</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_UserLogin_001' level='P3' result='f' tested='n'>
+        <name>错误密码登录测试 IAM_F_UserLogin_001</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_UserLogin_001' level='P4' result='f' tested='n'>
+        <name>不输入账号密码登录测试 IAM_F_UserLogin_001</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_UserLogin_001' level='P4' result='f' tested='n'>
+        <name>账号密码特殊字符测试 IAM_F_UserLogin_001</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_UserLogin_001' level='P3' result='f' tested='n'>
+        <name>账号密码大小写测试 IAM_F_UserLogin_001</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_FindPassword_002' result='f' tested='n'>
+        <name>输入存在的邮箱账号 IAM_F_FindPassword_002</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_FindPassword_004' level='P1' result='f'
+                tested='n'>
+        <name>邮箱账号正常值输入测试 IAM_F_FindPassword_004</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_FindPassword_005' level='P2' result='f'
+                tested='n'>
+        <name>邮箱账号长度范围外输入测试 IAM_F_FindPassword_005</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_FindPassword_006' level='P4' result='f'
+                tested='n'>
+        <name>邮箱账号格式不规范输入测试 IAM_F_FindPassword_006</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_FindPassword_007' level='P4' result='f'
+                tested='n'>
+        <name>邮箱账号异常输入测试 IAM_F_FindPassword_007</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_FindPassword_008' level='P4' result='f'
+                tested='n'>
+        <name>邮箱账号前后带空格输入测试 IAM_F_FindPassword_008</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_FindPassword_009' level='P4' result='f'
+                tested='n'>
+        <name>邮箱账号中间带空格输入测试 IAM_F_FindPassword_009</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_FindPassword_010' level='P4' result='f'
+                tested='n'>
+        <name>邮箱账号大小写输入测试 IAM_F_FindPassword_010</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_FindPassword_011' level='P4' result='f'
+                tested='n'>
+        <name>输入邮箱不存在时不会发送激活邮件 IAM_F_FindPassword_011</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_FindPassword_017' level='P4' result='f'
+                tested='n'>
+        <name>不同邮箱密码找回测试 IAM_F_FindPassword_017</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_FindPassword_018' level='P2' result='f'
+                tested='n'>
+        <name>输入正确手机号码进行密码找回 IAM_F_FindPassword_018</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_FindPassword_019' level='P1' result='f'
+                tested='n'>
+        <name>手机账号号码输入正常测试 IAM_F_FindPassword_019</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_FindPassword_020' level='P3' result='f'
+                tested='n'>
+        <name>手机账号号长度在范围外测试 IAM_F_FindPassword_020</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_FindPassword_021' level='P4' result='f'
+                tested='n'>
+        <name>手机账号号不输入 IAM_F_FindPassword_021</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_FindPassword_022' level='P4' result='f'
+                tested='n'>
+        <name>手机账号号异常测试 IAM_F_FindPassword_022</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_FindPassword_023' level='P4' result='f'
+                tested='n'>
+        <name>手机账号带空格测试 IAM_F_FindPassword_023</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_FindPassword_024' level='P1' result='f'
+                tested='n'>
+        <name>密码正常输入测试 IAM_F_FindPassword_024</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_FindPassword_025' level='P3' result='f'
+                tested='n'>
+        <name>密码长度在限制范围外 IAM_F_FindPassword_025</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_FindPassword_026' level='P2' result='f'
+                tested='n'>
+        <name>密码为空 IAM_F_FindPassword_026</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_FindPassword_027' level='P4' result='f'
+                tested='n'>
+        <name>密码异常输入测试 IAM_F_FindPassword_027</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_FindPassword_029' level='P4' result='f'
+                tested='n'>
+        <name>密码输入框带空格 IAM_F_FindPassword_029</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_FindPassword_032' level='P1' result='f'
+                tested='n'>
+        <name>正确验证码输入测试 IAM_F_FindPassword_032</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_FindPassword_033' level='P2' result='f'
+                tested='n'>
+        <name>错误验证码输入测试 IAM_F_FindPassword_033</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_FindPassword_034' level='P3' result='f'
+                tested='n'>
+        <name>已使用验证码输入测试 IAM_F_FindPassword_034</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_FindPassword_035' level='P4' result='f'
+                tested='n'>
+        <name>验证码为空输入测试 IAM_F_FindPassword_035</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_FindPassword_036' level='P3' result='f'
+                tested='n'>
+        <name>验证码有效时间测试 IAM_F_FindPassword_036</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_FindPassword_037' level='P1' result='f'
+                tested='n'>
+        <name>重新获取验证码测试 IAM_F_FindPassword_037</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_FindPassword_039' level='P4' result='f'
+                tested='n'>
+        <name>输入其他手机号获取的验证码 IAM_F_FindPassword_039</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_FindPassword_040' level='P1' result='f'
+                tested='n'>
+        <name>修改密码后以旧密码登录系统 IAM_F_FindPassword_040</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_FindPassword_041' level='P1' result='f'
+                tested='n'>
+        <name>修改密码后以新密码登录系统 IAM_F_FindPassword_041</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_UserCenter_004' level='P2' result='f'
+                tested='n'>
+        <name>用户性别设置 IAM_F_UserCenter_004</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_UserCenter_005' level='P1' result='f'
+                tested='n'>
+        <name>用户姓名输入正常测试 IAM_F_UserCenter_005</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_UserCenter_006' level='P2' result='f'
+                tested='n'>
+        <name>用户姓名长度在范围外测试 IAM_F_UserCenter_006</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_UserCenter_007' level='P4' result='f'
+                tested='n'>
+        <name>用户姓名为空 IAM_F_UserCenter_007</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_UserCenter_008' level='P4' result='f'
+                tested='n'>
+        <name>用户姓名异常输入测试 IAM_F_UserCenter_008</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_UserCenter_009' level='P4' result='f'
+                tested='n'>
+        <name>用户姓名带空格输入测试 IAM_F_UserCenter_009</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_UserCenter_010' level='P2' result='f'
+                tested='n'>
+        <name>用户姓名重复测试 IAM_F_UserCenter_010</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_UserCenter_012' level='P3' result='f'
+                tested='n'>
+        <name>旧密码输入为空 IAM_F_UserCenter_012</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_UserCenter_013' level='P3' result='f'
+                tested='n'>
+        <name>旧密码输入错误 IAM_F_UserCenter_013</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_UserCenter_014' level='P3' result='f'
+                tested='n'>
+        <name>新密码与旧密码一样 IAM_F_UserCenter_014</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_UserCenter_015' level='P2' result='f'
+                tested='n'>
+        <name>密码修改后新密码登陆 IAM_F_UserCenter_015</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_UserCenter_016' level='P2' result='f'
+                tested='n'>
+        <name>密码修改后旧密码登陆 IAM_F_UserCenter_016</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_UserCenter_017' level='P1' result='f'
+                tested='n'>
+        <name>新密码正常输入测试 IAM_F_UserCenter_017</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_UserCenter_018' level='P3' result='f'
+                tested='n'>
+        <name>新密码长度在限制范围外 IAM_F_UserCenter_018</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_UserCenter_019' level='P2' result='f'
+                tested='n'>
+        <name>新密码为空 IAM_F_UserCenter_019</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_UserCenter_020' level='P4' result='f'
+                tested='n'>
+        <name>新密码异常输入测试 IAM_F_UserCenter_020</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_UserCenter_022' level='P4' result='f'
+                tested='n'>
+        <name>新密码输入框带空格 IAM_F_UserCenter_022</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_ApplicationCenter_001' level='P1' result='f'
+                tested='n'>
+        <name>知路超级管理员创建的应用查看 IAM_F_ApplicationCenter_001</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_ApplicationCenter_002' level='P1' result='f'
+                tested='n'>
+        <name>超级管理员创建的应用查看 IAM_F_ApplicationCenter_002</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_ApplicationCenter_003' level='P4' result='f'
+                tested='n'>
+        <name>应用更新后信息查看 IAM_F_ApplicationCenter_003</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_ApplicationCenter_004' level='P2' result='f'
+                tested='n'>
+        <name>应用未激活不能查看到 IAM_F_ApplicationCenter_004</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_ApplicationCenter_005' level='P3' result='f'
+                tested='n'>
+        <name>应用激活状态改变 IAM_F_ApplicationCenter_005</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_ApplicationCenter_006' level='P1' result='f'
+                tested='n'>
+        <name>支持按应用名称模糊查询 IAM_F_ApplicationCenter_006</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_ApplicationCenter_007' level='P1' result='f'
+                tested='n'>
+        <name>支持按应用名称精确查询 IAM_F_ApplicationCenter_007</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_ApplicationCenter_008' level='P1' result='f'
+                tested='n'>
+        <name>支持按提供方模糊查询 IAM_F_ApplicationCenter_008</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_ApplicationCenter_009' level='P1' result='f'
+                tested='n'>
+        <name>支持按提供方精确查询 IAM_F_ApplicationCenter_009</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_ApplicationCenter_010' level='P1' result='f'
+                tested='n'>
+        <name>绑定应用 IAM_F_ApplicationCenter_010</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_ApplicationCenter_011' level='P2' result='f'
+                tested='n'>
+        <name>绑定多个应用 IAM_F_ApplicationCenter_011</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_ApplicationCenter_012' level='P1' result='f'
+                tested='n'>
+        <name>解绑应用 IAM_F_ApplicationCenter_012</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_ApplicationCenter_013' level='P3' result='f'
+                tested='n'>
+        <name>绑定应用后管理员将应用禁用 IAM_F_ApplicationCenter_013</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_ApplicationCenter_014' level='P3' result='f'
+                tested='n'>
+        <name>绑定应用后管理员将应用再次启用 IAM_F_ApplicationCenter_014</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_ApplicationCenter_015' level='P1' result='f'
+                tested='n'>
+        <name>我的应用-内容信息准确性测试 IAM_F_ApplicationCenter_015</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_ApplicationCenter_016' level='P1' result='f'
+                tested='n'>
+        <name>我的应用-绑定应用 IAM_F_ApplicationCenter_016</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_ApplicationCenter_017' level='P2' result='f'
+                tested='n'>
+        <name>我的应用-绑定多个应用 IAM_F_ApplicationCenter_017</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_ApplicationCenter_018' level='P1' result='f'
+                tested='n'>
+        <name>我的应用-解绑应用 IAM_F_ApplicationCenter_018</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_ApplicationCenter_019' level='P3' result='f'
+                tested='n'>
+        <name>我的应用-绑定应用后管理员将应用禁用 IAM_F_ApplicationCenter_019</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_ApplicationCenter_020' level='P3' result='f'
+                tested='n'>
+        <name>我的应用-绑定应用后管理员将应用再次启用 IAM_F_ApplicationCenter_020</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_OAuth_019' level='P1' result='f' tested='n'>
+        <name>获取user_id接口认证 IAM_F_OAuth_019</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_OAuth_020' level='P1' result='f' tested='n'>
+        <name>获取code接口认证 IAM_F_OAuth_020</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_OAuth_021' level='P4' result='f' tested='n'>
+        <name>code有效期测试 IAM_F_OAuth_021</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_OAuth_022' level='P1' result='f' tested='n'>
+        <name>获取access_token接口认证 IAM_F_OAuth_022</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_OAuth_023' level='P4' result='f' tested='n'>
+        <name>access_token有效期测试 IAM_F_OAuth_023</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_OAuth_024' level='P1' result='f' tested='n'>
+        <name>获取用户资料接口测试 IAM_F_OAuth_024</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_OAuth_025' level='P3' result='f' tested='n'>
+        <name>错误码60001(E_RESPONSE_TYPE_ERROR) IAM_F_OAuth_025</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_OAuth_026' level='P3' result='f' tested='n'>
+        <name>错误码60002(E_CLIENT_ID_ERROR) IAM_F_OAuth_026</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_OAuth_027' level='P3' result='f' tested='n'>
+        <name>错误码60003(E_ACCESS_TOKEN_NULL) IAM_F_OAuth_027</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_OAuth_028' level='P3' result='f' tested='n'>
+        <name>错误码60004(E_RESPONSE_TYPE_ERROR) IAM_F_OAuth_028</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_OAuth_029' level='P3' result='f' tested='n'>
+        <name>错误码60005(E_ACCESS_TOKEN_EXPIRE) IAM_F_OAuth_029</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_013' level='P1' result='f'
+                tested='n'>
+        <name>查询业务进程文件 IAM_F_DeviceOperation_013</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_015' level='P1' result='f'
+                tested='n'>
+        <name>确认删除用户业务进程文件 IAM_F_DeviceOperation_015</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_018' level='P1' result='f'
+                tested='n'>
+        <name>确认删除已被设备关联的应用 IAM_F_DeviceOperation_018</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_020' level='P4' result='f'
+                tested='n'>
+        <name>删除业务进程后再创建同样的业务进程 IAM_F_DeviceOperation_020</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_023' level='P1' result='f'
+                tested='n'>
+        <name>添加设备添加设备MAC地址为单播地址 IAM_F_DeviceOperation_023</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_024' level='P2' result='f'
+                tested='n'>
+        <name>添加设备MAC地址为多播地址 IAM_F_DeviceOperation_024</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_025' level='P3' result='f'
+                tested='n'>
+        <name>添加设备MAC地址为广播地址 IAM_F_DeviceOperation_025</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_026' level='P3' result='f'
+                tested='n'>
+        <name>添加设备MAC地址间隔符测试 IAM_F_DeviceOperation_026</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_027' level='P4' result='f'
+                tested='n'>
+        <name>添加设备MAC地址位数异常测试 IAM_F_DeviceOperation_027</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_028' level='P4' result='f'
+                tested='n'>
+        <name>添加设备MAC地址格式异常测试 IAM_F_DeviceOperation_028</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_029' level='P4' result='f'
+                tested='n'>
+        <name>添加设备MAC地址大小写适配测试 IAM_F_DeviceOperation_029</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_030' level='P4' result='f'
+                tested='n'>
+        <name>添加设备MAC地址带空格测试 IAM_F_DeviceOperation_030</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_031' level='P4' result='f'
+                tested='n'>
+        <name>添加设备MAC地址重复性测试 IAM_F_DeviceOperation_031</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_032' level='P1' result='f'
+                tested='n'>
+        <name>设备名称范围内正常输入测试_最小值测试 IAM_F_DeviceOperation_032</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_033' level='P1' result='f'
+                tested='n'>
+        <name>设备名称范围内正常输入测试_最大值测试 IAM_F_DeviceOperation_033</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_034' level='P4' result='f'
+                tested='n'>
+        <name>设备名称输入值为空 IAM_F_DeviceOperation_034</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_035' level='P3' result='f'
+                tested='n'>
+        <name>设备名称输入值超出限制范围 IAM_F_DeviceOperation_035</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_036' level='P4' result='f'
+                tested='n'>
+        <name>设备名称输入值带空格 IAM_F_DeviceOperation_036</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_037' level='P3' result='f'
+                tested='n'>
+        <name>设备名称重复性测试 IAM_F_DeviceOperation_037</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_038' level='P1' result='f'
+                tested='n'>
+        <name>用户添加在云平台上已存在的设备 IAM_F_DeviceOperation_038</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_039' level='P1' result='f'
+                tested='n'>
+        <name>用户添加在云平台上不存在的设备 IAM_F_DeviceOperation_039</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_040' level='P3' result='f'
+                tested='n'>
+        <name>用户添加在云平台上已删除的设备 IAM_F_DeviceOperation_040</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_043' level='P1' result='f'
+                tested='n'>
+        <name>确定删除未绑定应用的设备 IAM_F_DeviceOperation_043</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_046' level='P1' result='f'
+                tested='n'>
+        <name>确认删除已绑定应用的设备 IAM_F_DeviceOperation_046</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_047' level='P3' result='f'
+                tested='n'>
+        <name>删除绑定业务的设备后再新建同样的设备 IAM_F_DeviceOperation_047</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_048' level='P1' result='f'
+                tested='n'>
+        <name>编辑设备名称范围内正常输入测试_最小值测试 IAM_F_DeviceOperation_048</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_049' level='P1' result='f'
+                tested='n'>
+        <name>编辑设备名称范围内正常输入测试_最大值测试 IAM_F_DeviceOperation_049</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_050' level='P4' result='f'
+                tested='n'>
+        <name>编辑设备名称输入值为空 IAM_F_DeviceOperation_050</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_051' level='P3' result='f'
+                tested='n'>
+        <name>编辑设备名称输入值超出限制范围 IAM_F_DeviceOperation_051</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_052' level='P4' result='f'
+                tested='n'>
+        <name>编辑设备名称输入值带空格 IAM_F_DeviceOperation_052</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_053' level='P3' result='f'
+                tested='n'>
+        <name>编辑设备名称重复性测试 IAM_F_DeviceOperation_053</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_057' level='P1' result='f'
+                tested='n'>
+        <name>支持按设备名称精确查询设备 IAM_F_DeviceOperation_057</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_058' level='P1' result='f'
+                tested='n'>
+        <name>支持按设备名称模糊查询设备 IAM_F_DeviceOperation_058</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_062' level='P1' result='f'
+                tested='n'>
+        <name>查询输入框中输入内容为空 IAM_F_DeviceOperation_062</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_063' level='P4' result='f'
+                tested='n'>
+        <name>输入特殊字符进行查询 IAM_F_DeviceOperation_063</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_064' level='P4' result='f'
+                tested='n'>
+        <name>输入超长查询内容进行查询 IAM_F_DeviceOperation_064</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_065' level='P2' result='f'
+                tested='n'>
+        <name>输入带空格内容进行查询 IAM_F_DeviceOperation_065</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_066' level='P3' result='f'
+                tested='n'>
+        <name>输入最大长度进行查询 IAM_F_DeviceOperation_066</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_068' level='P1' result='f'
+                tested='n'>
+        <name>设备绑定时应用查询 IAM_F_DeviceOperation_068</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_070' level='P1' result='f'
+                tested='n'>
+        <name>设备应用单个添加 IAM_F_DeviceOperation_070</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_071' level='P3' result='f'
+                tested='n'>
+        <name>设备授权应用最大值测试 IAM_F_DeviceOperation_071</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+      <TestCase auto='n' beginTime='' endTime='' executed='n' id='IAM_F_DeviceOperation_072' level='P3' result='f'
+                tested='n'>
+        <name>设备应用为空 IAM_F_DeviceOperation_072</name>
+        <path>../../iam_testcases/manager</path>
+        <module>manager</module>
+      </TestCase>
+    </TestCases>
+  </TestSuite>
+</TestSuites>

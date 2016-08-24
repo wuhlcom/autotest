@@ -1,0 +1,27 @@
+[2016-08-18 17:19:33] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-18 17:19:33] 2¡¢»ñÈ¡ÖªÂ·¹ÜÀíÔ±tokenÖµ£»
+[2016-08-18 17:19:33] 3¡¢´´½¨Ó¦ÓÃ£¬providerÊäÈëÒì³£ÊäÈë£»
+´´½¨Ó¦ÓÃÃûÎª'ÌØÊâ·ûºÅÓ¦ÓÃ',Ó¦ÓÃÌá¹©·½Ãû³ÆÎª:'={|""%@#-)'
+RESULT err_msg:'Ó¦ÓÃÌá¹©·½¸ñÊ½´íÎó'
+RESULT err_code:'22009'
+RESULT err_desc:'E_APP_PROVIDER_FORMAT_ERROR'
+´´½¨Ó¦ÓÃÃûÎª'È«½ÇÊı×ÖÓ¦ÓÃ',Ó¦ÓÃÌá¹©·½Ãû³ÆÎª:'£±£²£³£¹£¸£·'
+RESULT err_msg:'Ó¦ÓÃÌá¹©·½¸ñÊ½´íÎó'
+RESULT err_code:'22009'
+RESULT err_desc:'E_APP_PROVIDER_FORMAT_ERROR'
+[2016-08-18 17:19:33] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.00 s
+Slowest tests:
+0.13 s	IAM::IamManager#test_Ìá¹©·½Òì³£ÊäÈë²âÊÔ IAM_F_Application_013
+Slowest suites:
+0.13 s	IAM::IamManager
+
+
+[32mFinished tests in 0.162294s, 6.1617 tests/s, 36.9700 assertions/s.[0m
+
+
+[32m1 tests, 6 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160818
+Writing XML reports to E:/autotest/iam_testcases/reports/20160818

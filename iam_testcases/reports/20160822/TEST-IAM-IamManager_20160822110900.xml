@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="IAM::IamManager" skipped="0" failures="1" errors="0" tests="1" assertions="1" time="0.29083121700023185">
+  <testcase name="test_添加设备MAC地址为多播地址 IAM_F_DeviceOperation_024" classname="IAM::IamManager" assertions="1" time="0.29083121700023185">
+    <failure type="test_添加设备MAC地址为多播地址 IAM_F_DeviceOperation_024" message="用户添加多播设备mac33:88:00:00:00:01返回错误消息不正确!....">
+Failure:
+test_添加设备MAC地址为多播地址 IAM_F_DeviceOperation_024(IAM::IamManager) [(eval):37]:
+用户添加多播设备mac33:88:00:00:00:01返回错误消息不正确!.
+Expected: # encoding: UTF-8
+"AccessToken\u8FC7\u671F"
+  Actual: # encoding: UTF-8
+"\u8BE5\u8BBE\u5907\u4E3A\u65E0\u6548\u8BBE\u5907"
+    </failure>
+  </testcase>
+</testsuite>

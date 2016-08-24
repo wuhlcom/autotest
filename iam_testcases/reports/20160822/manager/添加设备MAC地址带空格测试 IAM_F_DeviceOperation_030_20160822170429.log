@@ -1,0 +1,29 @@
+[2016-08-22 17:04:29] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+User existed!
+[2016-08-22 17:04:29] 2¡¢ÓÃ»§µÇÂ¼»ñÈ¡ÓÃ»§uidºÅ£»
+[2016-08-22 17:04:29] 3¡¢ÓÃ»§Ìí¼ÓÉè±¸mac£¨macµØÖ·´øÓĞ¿Õ¸ñ£©£»
+ÓÃ»§Ìí¼ÓÉè±¸mac' 00:88:A1:BB:CC:DD'
+[2016-08-22 17:04:29] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.01 s
+Slowest tests:
+0.95 s	IAM::IamManager#test_Ìí¼ÓÉè±¸MACµØÖ·´ø¿Õ¸ñ²âÊÔ IAM_F_DeviceOperation_030
+Slowest suites:
+0.95 s	IAM::IamManager
+
+
+[31mFinished tests in 0.979094s, 1.0214 tests/s, 3.0641 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_Ìí¼ÓÉè±¸MACµØÖ·´ø¿Õ¸ñ²âÊÔ IAM_F_DeviceOperation_030 [(eval):37]
+Minitest::Assertion: ÓÃ»§Ìí¼ÓÉè±¸mac' 00:88:A1:BB:CC:DD'Ê§°Ü!.
+Expected: # encoding: UTF-8
+" 00:88:A1:BB:CC:DD"
+  Actual: # encoding: UTF-8
+"00:88:A1:BB:CC:DD"[0m
+
+[31m1 tests, 3 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160822
+Writing XML reports to E:/autotest/iam_testcases/reports/20160822

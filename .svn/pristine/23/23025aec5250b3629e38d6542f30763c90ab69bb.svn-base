@@ -1,0 +1,270 @@
+#encoding:utf-8
+#
+# 路由器WAN设置
+# author:liluping
+# date:2016-02-24
+# modify:
+#
+file_path1 =File.expand_path('../router_main_page', __FILE__)
+file_path2 =File.expand_path('../router_systatus_page', __FILE__)
+require file_path1
+require file_path2
+module RouterPageObject
+    ##定义WAN设置中的tag
+    module Wan_Page
+        include PageObject
+        in_iframe(:src => @@ts_tag_netset_src) do |frame|
+            span(:wire, :id => @@ts_tag_wired_mode_span, :frame => frame) ###网线连接
+            link(:tab_ip, :id => @@ts_tag_wired_mode_link, :frame => frame) ##tab_name
+            radio_button(:dhcp_dial, :id => @@ts_tag_wired_dhcp, :frame => frame) ##自动方式(DHCP)
+            radio_button(:pppoe_dial, :id => @@ts_tag_wired_pppoe, :frame => frame) ##宽带拨号(PPPOE)
+            text_field(:pppoe_user, :id => @@ts_tag_pppoe_usr, :frame => frame) #账号
+            text_field(:pppoe_pwd, :id => @@ts_tag_pppoe_pw, :frame => frame) #密码
+            checkbox(:show_pppoe_pwd, :id => @@ts_pwdshow, :frame => frame) #pppoe密码显示
+            paragraph(:pppoe_err_msg, :id => @@ts_tag_wan_err, :frame => frame) #pppoe输入错误提示
+
+            radio_button(:static_dial, :id => @@ts_tag_wired_static, :frame => frame) ##手动方式(静态IP)
+            text_field(:static_ip, :id => @@ts_wired_static_ip, :frame => frame) #IP地址
+            text_field(:static_netmask, :id => @@ts_tag_staticNetmask, :frame => frame) #子网掩码
+            text_field(:static_gateway, :id => @@ts_tag_staticGateway, :frame => frame) #网关地址
+            text_field(:static_dns, :id => @@ts_tag_staticPriDns, :frame => frame) #DNS地址
+            paragraph(:static_err_msg, :id => @@ts_tag_wan_err, :frame => frame) #静态IP输入错误提示
+
+            span(:wireless, :id => @@ts_wireless_id, :frame => frame) ###无线wifi
+            radio_button(:repeater_pattern, :id => @@ts_tag_repeater_radio, :frame => frame) ##中继模式
+            radio_button(:bridge_pattern, :id => @@ts_tag_bridge_radio, :frame => frame) ##桥接模式
+
+            text_field(:wifi_name, :id => @@ts_dut_wifi_ssid, :frame => frame) #无线名称
+            select_list(:security_type, :id => @@ts_tag_sec_select_list, :frame => frame) #加密类型
+            text_field(:wifi_pwd, :id => @@ts_dut_wifi_ssid_pwd, :frame => frame) #无线密码
+            checkbox(:show_pwd, :id => @@ts_tag_showpwd, :frame => frame) #显示密码
+            button(:scan_network, :id => @@ts_search_net, :frame => frame) #扫描网络
+            select_list(:network_name, :id => @@ts_ssid_list, :frame => frame) #网络名称(ssid)
+            text_field(:network_pwd, :id => @@ts_net_pwd, :frame => frame) #网络密码(ssid_pwd)
+            checkbox(:show_network_pwd, :id => @@ts_pwdshow2, :frame => frame) #显示网络密码
+
+            span(:dial_3g, :id => @@ts_tag_3g_mode_span, :frame => frame) ###3G/4G拨号
+            radio_button(:dial_3g_auto, :id => @@ts_tag_3g_auto, :frame => frame) ##自动方式
+            radio_button(:dial_3g_manual, :id => @@ts_tag_3g_hand_type, :frame => frame) ##手动方式
+            text_field(:dial_3g_manual_apn, :id => @@ts_tag_3g_handtype_apn, :frame => frame) #APN
+            text_field(:dial_3g_manual_pin, :id => @@ts_tag_3g_handtype_pin, :frame => frame) #PIN
+            text_field(:dial_3g_manual_num, :id => @@ts_tag_3g_handtype_num, :frame => frame) #拨号号码
+            text_field(:dial_3g_manual_user, :id => @@ts_tag_3g_handtype_user, :frame => frame) #用户名
+            text_field(:dial_3g_manual_pwd, :id => @@ts_tag_3g_handtype_pwd, :frame => frame) #密码
+            button(:save, :id => @@ts_remote_save_btn, :frame => frame) ###保存
+            button(:cancel, :id => @@ts_tag_cancel, :frame => frame) ###取消
+
+            link(:close_wan, class_name: @@ts_tag_aui_close, text: @@ts_tag_aui_clsignal) #close wanset
+        end
+    end
+
+    class WanPage < MainPage
+        include Wan_Page
+
+        #打开WAN设置页面
+        def open_wan_page(url)
+            # self.navigate_to url
+            self.refresh
+            sleep 2
+            5.times do
+                break if dev_list? && !(dev_list_element.parent.em_element.text.nil?)
+                self.refresh
+                sleep 2
+            end
+            self.wan_span_obj.click #点击WAN连接
+            sleep 5
+        end
+
+        #关闭WAN设置界面
+        def close_wan_page
+            self.close_wan if self.close_wan?
+        end
+
+        #保存
+        def wan_save(time=70)
+            puts "sleeping #{time} seconds for net reseting..."
+            self.save
+            sleep time
+            unless self.wan?
+                refresh
+                sleep 1
+                refresh
+                sleep 1
+            end
+        end
+
+        #pppoe连接输入
+        def pppoe_input(user, pwd)
+            self.pppoe_user_element.click
+            self.pppoe_user = user
+            self.pppoe_pwd_element.click
+            self.pppoe_pwd = pwd
+        end
+
+        #静态连接输入
+        def static_input(ip, mask, gateway, dns)
+            static_ip_element.click #增加元素点击操作以防输入失败
+            self.static_ip = ip
+
+            static_netmask_element.click
+            self.static_netmask = mask
+
+            static_gateway_element.click
+            self.static_gateway = gateway
+
+            static_dns_element.click
+            self.static_dns = dns
+        end
+
+        #3G/4G拨号输入
+        def dial_3g_input(apn, pin, num, user, pwd)
+            self.dial_3g_manual_apn  = apn
+            self.dial_3g_manual_pin  = pin
+            self.dial_3g_manual_num  = num
+            self.dial_3g_manual_user = user
+            self.dial_3g_manual_pwd  = pwd
+        end
+
+        #设置dhcp连接
+        def set_dhcp(browserobj, url)
+            #设置dhcp连接前先查询状态设置中的连接方式
+            sys_page = SystatusPage.new(browserobj)
+            sys_page.open_systatus_page(url)
+            wan_type = sys_page.get_wan_type
+            unless wan_type == @@ts_wan_mode_dhcp
+                set_dhcp_mode(url)
+            end
+        end
+
+        def set_dhcp_mode(url)
+            open_wan_page(url)
+            wire_element.click #选择网线连接
+            dhcp_dial_element.click #选择DHCP
+            wan_save #保存
+        end
+
+        def select_pppoe(url)
+            open_wan_page(url)
+            wire_element.click #选择网线连接
+            pppoe_dial_element.click #选择pppoe
+        end
+
+        #设置pppoe连接
+        def set_pppoe(user, pwd, url)
+            select_pppoe(url)
+            pppoe_input(user, pwd) #输入账号密码
+            wan_save #保存
+        end
+
+        def select_static(url)
+            open_wan_page(url)
+            wire_element.click #选择网线连接
+            static_dial_element.click #选择静态IP
+        end
+
+        #设置静态连接
+        def set_static(ip, mask, gateway, dns, url)
+            select_static(url)
+            static_input(ip, mask, gateway, dns) #输入
+            wan_save #保存
+        end
+
+        #中继模式
+        def set_repeater_pattern(url)
+            open_wan_page(url)
+            wireless_element.click #选择无线wifi连接
+            repeater_pattern_element.click #选择中继模式
+            #后续添加。。。
+        end
+
+        #桥模式扫描上层AP
+        def bridge_scan(ssid, pw=nil)
+            n         = 0
+            gap       = 5
+            ssid_flag = false
+            until ssid_flag
+                self.scan_network #扫描网络
+                sleep gap
+                ssid_arr  = network_name_options
+                ssid_flag = true if ssid_arr.any? { |ssid_name| ssid_name==ssid }
+                n         += 1
+                puts "scanning network #{n*gap} seconds..."
+                break if n == 10 #最多只查询10次
+            end
+            return ssid_flag unless ssid_flag
+            self.network_name=ssid #选择上行AP的ssid
+            #此处不能用页面元素是否存在来判断是否输入密码，因为密码页面元素一直存在，只是加密方式为无时，该页面元素是隐藏状态
+            self.network_pwd = pw  unless pw.nil?  #输入密码
+            ssid_flag
+        end
+
+        def set_wpa_mode
+            unless self.security_type == @@ts_sec_mode_wpa
+                self.security_type = @@ts_sec_mode_wpa
+            end
+        end
+
+        def set_open_mode
+            unless self.security_type == @@ts_tag_wifiopen
+                self.security_type = @@ts_tag_wifiopen
+            end
+        end
+
+        def modify_router_wifi(ssid, secmode, pw=nil)
+            self.wifi_name==ssid
+            if secmode==@@ts_sec_mode_wpa
+                set_wpa_mode
+                self.wifi_pwd = pw unless pw.nil?
+            elsif secmode==@@ts_tag_wifiopen
+                set_open_mode
+            end
+        end
+
+        #选择无线WAN模式
+        def choice_wifiwan_pattern(url)
+            open_wan_page(url)
+            wireless_element.click #选择无线wifi连接
+            unless bridge_pattern_selected? #选择桥接模式
+                select_bridge_pattern
+            end
+        end
+
+        #桥接模式
+        #参数ssid是上行AP的ssid, 参数pwd是上行AP的密码
+        #返回值为false时表示未扫描到上行AP的ssid
+        def set_bridge_pattern(url, ssid, pw=nil)
+            choice_wifiwan_pattern(url)
+            rs_bridge = bridge_scan(ssid, pw)
+            if rs_bridge
+                wan_save(70) #保存
+            end
+            rs_bridge #返回一个值在脚本中判断该步骤是否成功
+        end
+
+        #桥接的同时修改本身WIFI
+        def bridge_modify_wifi(url, wifi_ssid, wifi_secmode, upssid, uppw=nil, wifi_pw=nil)
+            choice_wifiwan_pattern(url)
+            bridge_scan(upssid, uppw)
+            modify_router_wifi(wifi_ssid, wifi_secmode, wifi_pw)
+            wan_save(70) #保存
+        end
+
+        #设置3G/4G自动拨号
+        def set_3g_auto_dial(url)
+            open_wan_page(url)
+            dial_3g_element.click #选择3G/4G拨号
+            dial_3g_auto_element.click #选择自动方式
+            wan_save(120) #保存
+        end
+
+        #设置3G/4G手动拨号
+        def set_3g_hand_dial(apn, pin, num, user, pwd, url)
+            open_wan_page(url)
+            dial_3g_element.click #选择3G/4G拨号
+            dial_3g_manual_element.click #选择手动方式
+            dial_3g_input(apn, pin, num, user, pwd) #输入
+            wan_save #保存
+        end
+    end
+
+end

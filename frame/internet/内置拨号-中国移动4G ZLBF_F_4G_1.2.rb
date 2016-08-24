@@ -51,8 +51,8 @@ testcase {
 
 						sim_status = @status_page.sim_status_element.element.image(src: @ts_tag_img_normal)
 						assert(sim_status.exists?, "SIM卡状态不正常")
-						signal_status = @status_page.signal_strength_element.element.image(src: @ts_tag_signal_normal)
-						assert(signal_status.exists?, "SIM卡信号不稳定")
+						signal_status = @status_page.signal_strength_element.element.image(src: @ts_tag_signal_fail)
+						refute(signal_status.exists?, "3G/4G 信号强度状态异常")
 						signal = signal_status.alt
 						puts "信号强度为：#{signal}".to_gbk
 						reg_status = @status_page.reg_status_element.element.image(src: @ts_tag_img_normal)
@@ -99,8 +99,8 @@ testcase {
 
 						sim_status = @status_page.sim_status_element.element.image(src: @ts_tag_img_normal)
 						assert(sim_status.exists?, "SIM卡状态不正常")
-						signal_status = @status_page.signal_strength_element.element.image(src: @ts_tag_signal_normal)
-						assert(signal_status.exists?, "SIM卡信号不稳定")
+						signal_status = @status_page.signal_strength_element.element.image(src: @ts_tag_signal_fail)
+						refute(signal_status.exists?, "3G/4G 信号强度状态异常")
 						signal = signal_status.alt
 						puts "信号强度为：#{signal}".to_gbk
 						reg_status = @status_page.reg_status_element.element.image(src: @ts_tag_img_normal)

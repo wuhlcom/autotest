@@ -1,0 +1,41 @@
+[2016-08-23 15:11:56] 1°¢sshµ«¬ºIAM∑˛ŒÒ∆˜£ª
+User existed!
+[2016-08-23 15:11:56] 2°¢”√ªßµ«¬ºªÒ»°”√ªßuid∫≈£ª
+[2016-08-23 15:11:56] 3°¢”√ªßÃÌº”…Ë±∏mac£¨…Ë±∏√˚≥∆¥¯”–ø’∏Ò£ª
+…Ë±∏√˚≥∆Œ™' Device1'◊÷∑˚
+{"err_code"=>"40009", "err_msg"=>"\u8BBE\u5907\u540D\u79F0\u5DF2\u5B58\u5728", "err_desc"=>"E_DEVICE_NAME_EXISTS"}
+RESULT err_msg:'…Ë±∏√˚≥∆“—¥Ê‘⁄'
+RESULT err_code:'40009'
+RESULT err_desc:'E_DEVICE_NAME_EXISTS'
+…Ë±∏√˚≥∆Œ™'Device2 '◊÷∑˚
+{"err_code"=>"40004", "err_msg"=>"\u8BBE\u5907MAC\u5DF2\u5B58\u5728", "err_desc"=>"E_DEV_MAC_EXISTS"}
+RESULT err_msg:'…Ë±∏MAC“—¥Ê‘⁄'
+RESULT err_code:'40004'
+RESULT err_desc:'E_DEV_MAC_EXISTS'
+…Ë±∏√˚≥∆Œ™'Dev ice3'◊÷∑˚
+{"err_code"=>"40004", "err_msg"=>"\u8BBE\u5907MAC\u5DF2\u5B58\u5728", "err_desc"=>"E_DEV_MAC_EXISTS"}
+RESULT err_msg:'…Ë±∏MAC“—¥Ê‘⁄'
+RESULT err_code:'40004'
+RESULT err_desc:'E_DEV_MAC_EXISTS'
+[2016-08-23 15:11:57] 1.ª÷∏¥ƒ¨»œ…Ë÷√
+"gggggggggggggggggggggggggggggg"
+nil
+"gggggggggggggggggggggggggggggg"
+nil
+"gggggggggggggggggggggggggggggg"
+nil
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.01 s
+Slowest tests:
+0.60 s	IAM::IamManager#test_…Ë±∏√˚≥∆ ‰»Î÷µ¥¯ø’∏Ò IAM_F_DeviceOperation_036
+Slowest suites:
+0.60 s	IAM::IamManager
+
+
+[32mFinished tests in 0.625455s, 1.5988 tests/s, 0.0000 assertions/s.[0m
+
+
+[32m1 tests, 0 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160823
+Writing XML reports to E:/autotest/iam_testcases/reports/20160823

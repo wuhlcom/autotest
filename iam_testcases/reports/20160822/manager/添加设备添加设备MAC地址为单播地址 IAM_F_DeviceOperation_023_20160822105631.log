@@ -1,0 +1,20 @@
+[2016-08-22 10:56:31] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-22 10:56:31] 2¡¢ÓÃ»§µÇÂ¼»ñÈ¡ÓÃ»§uidºÅ£»
+User existed!
+[2016-08-22 10:56:31] 3¡¢ÓÃ»§Ìí¼ÓÉè±¸mac£¨µ¥²¥µØÖ·£©£»
+[2016-08-22 10:56:31] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.00 s
+Slowest tests:
+0.28 s	IAM::IamManager#test_Ìí¼ÓÉè±¸Ìí¼ÓÉè±¸MACµØÖ·Îªµ¥²¥µØÖ· IAM_F_DeviceOperation_023
+Slowest suites:
+0.28 s	IAM::IamManager
+
+
+[32mFinished tests in 0.307350s, 3.2536 tests/s, 0.0000 assertions/s.[0m
+
+
+[32m1 tests, 0 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160822
+Writing XML reports to E:/autotest/iam_testcases/reports/20160822

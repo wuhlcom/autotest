@@ -1,0 +1,53 @@
+1¡¢AP¹¤×÷ÔÚÂ·ÓÉÄ£Ê½ÏÂ,¿ÉÒÔ·ÃÎÊÍâÍø£»
+WAN×´Ì¬ÏÔÊ¾»ñÈ¡µÄIPµØÖ·Îª£º10.10.10.26
+WAN×´Ì¬ÏÔÊ¾½ÓÈëÀàĞÍÎª£ºDHCP
+Frame::WebTestInternet#test_MAC¹ıÂË-¿ª¹ØÎª¿ªÆô ZLBF_28.1.1->method_name:ping
+Frame::WebTestInternet#test_MAC¹ıÂË-¿ª¹ØÎª¿ªÆô ZLBF_28.1.1->method_name:arp_clear
+
+ÕıÔÚ Ping www.a.shifen.com [14.215.177.38] ¾ßÓĞ 32 ×Ö½ÚµÄÊı¾İ:
+À´×Ô 14.215.177.38 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä=7ms TTL=53
+À´×Ô 14.215.177.38 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä=7ms TTL=53
+À´×Ô 14.215.177.38 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä=7ms TTL=53
+À´×Ô 14.215.177.38 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä=7ms TTL=53
+À´×Ô 14.215.177.38 µÄ»Ø¸´: ×Ö½Ú=32 Ê±¼ä=7ms TTL=53
+
+14.215.177.38 µÄ Ping Í³¼ÆĞÅÏ¢:
+    Êı¾İ°ü: ÒÑ·¢ËÍ = 5£¬ÒÑ½ÓÊÕ = 5£¬¶ªÊ§ = 0 (0% ¶ªÊ§)£¬
+Íù·µĞĞ³ÌµÄ¹À¼ÆÊ±¼ä(ÒÔºÁÃëÎªµ¥Î»):
+    ×î¶Ì = 7ms£¬×î³¤ = 7ms£¬Æ½¾ù = 7ms
+PC1 TCP server connect
+[SERVER] TCP server time is 2016-02-27 14:04:59 +0800!
+[SERVER] TCP server IP 192.168.0.57,server port 16801
+[SERVER] TCP client connect to tcp server succeed!
+[CLIENT] TCP client disconnect tcp
+2 ÎŞÏß¿Í»§¶ËÁ¬½ÓÂ·ÓÉÆ÷£¬²¢pingÍâÍø
+µ±Ç°SSIDÃûÎª£ºWIFI_762009
+3¡¢ÔÚ·À»ğÇ½ÅäÖÃÒ³Ãæ£¬¿ªÆô·À»ğÇ½ºÍMACµØÖ·¹ıÂË£¬ĞÂÔöÒ»¸ömac¹ıÂË¹æÔò£¬ÊäÈëPC1µÄMACµØÖ·£»
+PC MAC address : BC:EE:7B:75:EB:4F
+4¡¢²é¿´PC1£¬PC2ÊÇ·ñ¶¼¿ÉÒÔ·ÃÎÊµ½ÍâÍøPC3µÄFTP·şÎñ£»
+Frame::WebTestInternet#test_MAC¹ıÂË-¿ª¹ØÎª¿ªÆô ZLBF_28.1.1->method_name:ping
+Frame::WebTestInternet#test_MAC¹ıÂË-¿ª¹ØÎª¿ªÆô ZLBF_28.1.1->method_name:arp_clear
+
+ÕıÔÚ Ping www.a.shifen.com [14.215.177.38] ¾ßÓĞ 32 ×Ö½ÚµÄÊı¾İ:
+ÇëÇó³¬Ê±¡£
+ÇëÇó³¬Ê±¡£
+ÇëÇó³¬Ê±¡£
+ÇëÇó³¬Ê±¡£
+ÇëÇó³¬Ê±¡£
+
+14.215.177.38 µÄ Ping Í³¼ÆĞÅÏ¢:
+    Êı¾İ°ü: ÒÑ·¢ËÍ = 5£¬ÒÑ½ÓÊÕ = 0£¬¶ªÊ§ = 5 (100% ¶ªÊ§)£¬
+¹ıÂËºóPC1 TCP server connect
+A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. - connect(2)
+1¡¢»Ö¸´·À»ğÇ½Ä¬ÈÏÉèÖÃ
+[31mF[0m
+
+[31mFinished tests in 476.125780s, 0.0042 tests/s, 0.0945 assertions/s.[0m
+
+
+[31mFailure:
+Frame::WebTestInternet#test_MAC¹ıÂË-¿ª¹ØÎª¿ªÆô ZLBF_28.1.1 [(eval):186]
+Minitest::Assertion: ¹ıÂËÓĞÏß¿Í»§¶Ëµ¼ÖÂWIFI¿Í»§¶ËÒ²ÎŞ·¨Á¬½ÓÍâÍø[0m
+
+[31m2 tests, 45 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing XML reports to E:/auto_sdk/frame/reports/20160227

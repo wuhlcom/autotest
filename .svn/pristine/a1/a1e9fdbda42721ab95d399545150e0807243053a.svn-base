@@ -1,0 +1,16 @@
+Initialize TCP Server!
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/htmltags-1.1.8/lib/htmltags/socket.rb:34:in `initialize'C:/Ruby193/lib/ruby/gems/1.9.1/gems/htmltags-1.1.8/lib/htmltags/socket.rb:34:in `initialize'
+: : 
+Only one usage of each socket address (protocol/network address/port) is normally permitted. - bind(2)Only one usage of each socket address (protocol/network address/port) is normally permitted. - bind(2)
+ ( (
+Errno::EADDRINUSEErrno::EADDRINUSE
+)
+)
+	from C:/Ruby193/lib/ruby/gems/1.9.1/gems/htmltags-1.1.8/lib/htmltags/socket.rb:34:in `new'
+	from C:/Ruby193/lib/ruby/gems/1.9.1/gems/htmltags-1.1.8/lib/htmltags/socket.rb:34:in `new'
+	from C:/Ruby193/lib/ruby/gems/1.9.1/gems/htmltags-1.1.8/lib/htmltags/socket.rb:34:in `initialize'
+	from C:/Ruby193/lib/ruby/gems/1.9.1/gems/htmltags-1.1.8/lib/htmltags/socket.rb:34:in `initialize'
+	from E:/AutoTest/TCPServer/TcpServer.rb:9:in `new'
+	from E:/AutoTest/TCPServer/TcpServer.rb:9:in `new'
+	from E:/AutoTest/TCPServer/TcpServer.rb:9:in `<main>'
+	from E:/AutoTest/TCPServer/TcpServer.rb:9:in `<main>'

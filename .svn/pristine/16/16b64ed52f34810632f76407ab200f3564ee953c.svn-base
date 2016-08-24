@@ -1,0 +1,162 @@
+#encoding:utf-8
+gem 'minitest'
+require 'minitest/autorun'
+
+file_path =File.expand_path('../../lib/iam', __FILE__)
+require file_path
+class MyTestString < MiniTest::Unit::TestCase
+  # include IAMAPI::Manager
+  # include IAMAPI::Oauth
+  # Called before every ftp_test method runs. Can be used
+  # to set up fixture information.
+  def setup
+    @iam_obj = IAMAPI::IAM.new
+    # Do nothing
+  end
+
+  # Called after every ftp_test method runs. Can be used to tear
+  # down fixture information.
+
+  def teardown
+    # Do nothing
+  end
+
+  def test_manager_login
+    admin = "admin@zhilutec.com"
+    admin = "manager@zhilutec.com"
+    pw    = "zhilutec"
+    rs    = @iam_obj.manager_login(admin, pw) #管理员登录->得到uid和token
+    assert_equal(admin, rs["name"], "manager name error!")
+  end
+
+  def test_userid
+    manager_url = "http://192.168.10.9:8082/admins/dologin"
+    rs          = @iam_obj.manager_login #管理员登录->得到uid和token
+    app_url     = "http://192.168.10.9:8082/apps?"
+    rs["nickname"].encode("GBK")
+    appname     = "IAMAPI_IAM_F_OAuth_019"
+    args        = {"type" => "name", "cond" => "IAMAPI_IAM_F_OAuth_019"}
+    rs_app      = @iam_obj.get_spec_app_info(rs["token"], appname, app_url, rs["uid"]) #获取指定应用ID和密钥->输入uid和token，得到secret和client_id
+    oauth_url   = "http://192.168.10.9:8082/index.php/Oauth/authorize"
+    username    = "13760281579" #注册用户名
+    encrypt_pwd = "9c76736d8a993299e155c797861d14ef7cd3507c900527e11da5d3357872ba9fb9e2db9511fe2bfafe7a6d4c6f8efdac40425414639e4815069c380c86ef4a7dd121e7db0418919a3ca8de77d745269ad19ea117154411df35f840eb1af5e82383c2d6dc627b3654f15596959e1643707995e9ef3db2847c0ca60de50ac43fc0" #用户密码
+    client_id   = rs_app["client_id"]
+    secret      = rs_app["client_secret"]
+    # print user_login(oauth_url, username, encrypt_pwd, secret, clientid) #用户oauth登录
+    p @iam_obj.user_oauth(username, encrypt_pwd, secret, client_id, oauth_url) ##用户oauth登录,输入secret和client_id得到用户的userid
+    check_url = "http://192.168.10.9:8082/userid.txt"
+    # get_userid(check_url) #获取userid
+  end
+
+
+  def test_oauth_userid
+    p @iam_obj.oauth_get_userid
+  end
+
+  def test_code_error
+    p @iam_obj.oauth_get_code("cod")
+  end
+
+  def test_code
+    @iam_obj.oauth_get_code("code")
+  end
+
+  def test_get_usr_all
+    pp @iam_obj.get_mlist_all
+  end
+
+  def test_get_mlist_byname
+    @tc_man_name    = "managertest@zhilutec.com"
+    @tc_subman_name = "submanagertest@zhilutec.com"
+    @tc_passwd      = "zhilutec"
+    print @iam_obj.get_mlist_byname(@tc_subman_name, @tc_man_name, @tc_passwd)
+  end
+
+  def test_del_manager
+    @tc_man_name    = "managertest@zhilutec.com"
+    @tc_subman_name = "submanagertest@zhilutec.com"
+    @tc_passwd      = "zhilutec"
+    p @iam_obj.del_manager(@tc_subman_name, @tc_man_name, @tc_passwd)
+  end
+
+  def test_manager_add
+    admin_usr= "wuhongliang@zhilutec.com"
+    admin_pw = "123456"
+    usr      ="klwn202233@163.com"
+    nickname = "autotest"
+    comments = "1111"
+    # print @iam_obj.manager_add(admin_usr, nickname, admin_pw)
+    p @iam_obj.manager_add(usr, nickname, admin_pw, rcode="3", comments, admin_usr, admin_pw)
+  end
+
+  def test_manager_add_err
+    str           = "ＺＨＩＬＵ".encode("utf-8")
+    @tc_man_name1 = "#{str}@zhilutec.com"
+    @tc_nickname  = "autotest_whl"
+    @tc_passwd    = "123456"
+    puts "添加超级管理员账户为:#{@tc_man_name1}".to_gbk
+    print rs = @iam_obj.manager_add(@tc_man_name1, @tc_nickname, @tc_passwd)
+    # {"err_code":"5003","err_msg":"\u5e10\u53f7\u683c\u5f0f\u9519\u8bef","err_desc":"E_ACCOUNT_FORMAT_ERROR"}
+    puts "RESULT err_msg:#{rs['err_msg']}".encode("GBK")
+    puts "RESULT err_code:#{rs['err_code']}".encode("GBK")
+    puts "RESULT err_desc:#{rs['err_desc']}".encode("GBK")
+  end
+
+  def test_mobile_manager_modpw()
+    phone    = "18900001111"
+    mod_pw   = "123456222"
+    nickname = "123456"
+    p @iam_obj.mobile_manager_modpw(phone, mod_pw, nickname)
+  end
+
+  def test_mobile_modpw
+    phone = "18900001111"
+    p @iam_obj.request_mobile_code(phone)
+  end
+
+  def test_em_token
+    account = "378433855@qq.com"
+    passwd  = "123456"
+    nickname="hahaha"
+    p @iam_obj.manager_del_add(account, passwd, nickname)
+    p @iam_obj.get_em_token(account)
+  end
+
+  def test_modify_empw
+    account = "378433825@qq.com"
+    passwd  = "1234567"
+    modpw   = "45678944"
+    nickname= "hahaha"
+    p @iam_obj.manager_add_login(account, passwd, nickname)
+    p @iam_obj.modify_emailmana_pw(account, modpw)
+  end
+
+  def test_create_app
+    args ={"name"         => "newapp1",
+           "provider"     => "provider",
+           "redirect_uri" => "http://192.168.10.9",
+           "comments"     => "comments"}
+    p @iam_obj.mana_create_app(args)
+  end
+
+  def test_edit_submana_info
+    admin_usr = "wuhongliang@zhilutec.com"
+    admin_pw  = "123456"
+    account   = "submanager@zhilutec.com"
+    args      ={"nickname" => "subma1", "comments" => "subma1"}
+    p @iam_obj.edit_submana_info(account, args, admin_usr, admin_pw)
+  end
+
+  def test_edit_mana_info
+    admin_usr = "wuhongliang@zhilutec.com"
+    admin_pw  = "123456"
+    args      ={"nickname" => "myself", "comments" => "myself"}
+    p @iam_obj.edit_mana_info(args, admin_usr, admin_pw)
+  end
+  # Fake ftp_test
+  # def test_fail
+  #
+  #   fail('Not implemented')
+  # end
+
+end

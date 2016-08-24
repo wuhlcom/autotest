@@ -1,0 +1,43 @@
+[2016-07-26 11:18:40] 1¡¢sshµÇÂ¼µ½IAM·şÎñÆ÷£»
+[2016-07-26 11:18:40] 2¡¢»ñÈ¡ÖªÂ·¹ÜÀíÔ±tokenÖµ£»
+[2016-07-26 11:18:40] 2¡¢ĞÂÔö³¬¼¶¹ÜÀíÔ±£»
+{"result"=>1, "msg"=>"\u6DFB\u52A0\u6210\u529F"}
+[2016-07-26 11:18:41] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[32m.[0m[32m.[0m
+                | 0.00 s
+Slowest tests:
+0.44 s	IAM::IamManager#test_ĞÂÔö³¬¼¶¹ÜÀíÔ± IAM_F_SysManager_008
+Slowest suites:
+0.44 s	IAM::IamManager
+
+
+[32mFinished tests in 0.478397s, 2.0903 tests/s, 2.0903 assertions/s.[0m
+
+
+[32m1 tests, 1 assertions, 0 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports
+There was an error writing the HTML report
+This may have been caused by cancelling the test run
+Use mode => :terse in the HTML reporters constructor to see less detail
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-reporters-1.1.9/lib/minitest/reporters/html_reporter.rb:87:in `read'C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-reporters-1.1.9/lib/minitest/reporters/html_reporter.rb:87:in `read'
+: : 
+No such file or directory @ rb_sysopen - C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/iam-1.0.0/lib/iam/templates/index.html.erbNo such file or directory @ rb_sysopen - C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/iam-1.0.0/lib/iam/templates/index.html.erb
+ ( (
+Errno::ENOENTErrno::ENOENT
+)
+)
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-reporters-1.1.9/lib/minitest/reporters/html_reporter.rb:87:in `report'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-reporters-1.1.9/lib/minitest/reporters/html_reporter.rb:87:in `report'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-reporters-1.1.9/lib/minitest/minitest_reporter_plugin.rb:26:in `each'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-reporters-1.1.9/lib/minitest/minitest_reporter_plugin.rb:26:in `each'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-reporters-1.1.9/lib/minitest/minitest_reporter_plugin.rb:26:in `report'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-reporters-1.1.9/lib/minitest/minitest_reporter_plugin.rb:26:in `report'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:658:in `each'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:658:in `each'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:658:in `report'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:658:in `report'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:140:in `run'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:140:in `run'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:62:in `block in autorun'
+	from C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/minitest-5.9.0/lib/minitest.rb:62:in `block in autorun'

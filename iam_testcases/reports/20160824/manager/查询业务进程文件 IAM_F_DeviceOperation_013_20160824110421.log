@@ -1,0 +1,27 @@
+[2016-08-24 11:04:21] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+´´½¨Ó¦ÓÃÃûÎª'IAM_F_DeviceOperation_013'
+create app...
+create and active the new app...
+{"err_code"=>"22001", "err_msg"=>"\u5E94\u7528ID\u4E3A\u7A7A", "err_desc"=>"E_APP_ID_NULL"}
+[2016-08-24 11:04:22] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.00 s
+Slowest tests:
+27.29 s	IAM::IamManager#test_²éÑ¯ÒµÎñ½ø³ÌÎÄ¼ş IAM_F_DeviceOperation_013
+Slowest suites:
+27.29 s	IAM::IamManager
+
+
+[31mFinished tests in 27.303858s, 0.0366 tests/s, 0.0366 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_²éÑ¯ÒµÎñ½ø³ÌÎÄ¼ş IAM_F_DeviceOperation_013 [(eval):32]
+Minitest::Assertion: ĞÂÔöÒ»¸öÓ¦ÓÃÊ§°Ü!.
+Expected: 1
+  Actual: nil[0m
+
+[31m1 tests, 1 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160824
+Writing XML reports to E:/autotest/iam_testcases/reports/20160824

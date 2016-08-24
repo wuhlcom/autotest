@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="IAM::IamManager" skipped="0" failures="12" errors="0" tests="49" assertions="285" time="39.41587135303416">
+  <testcase name="test_新增超级管理员 IAM_F_SysManager_008" classname="IAM::IamManager" assertions="2" time="0.3663609549985267">
+  </testcase>
+  <testcase name="test_新增系统管理员 IAM_F_SysManager_009" classname="IAM::IamManager" assertions="2" time="0.4261968150094617">
+  </testcase>
+  <testcase name="test_新增配置管理员 IAM_F_SysManager_010" classname="IAM::IamManager" assertions="2" time="0.34879536301014014">
+  </testcase>
+  <testcase name="test_新增监视管理员 IAM_F_SysManager_011" classname="IAM::IamManager" assertions="2" time="0.4037111130019184">
+  </testcase>
+  <testcase name="test_邮箱账号正常值输入测试 IAM_F_SysManager_013" classname="IAM::IamManager" assertions="18" time="3.523540304013295">
+  </testcase>
+  <testcase name="test_邮箱账号长度范围外输入测试 IAM_F_SysManager_014" classname="IAM::IamManager" assertions="1" time="0.4319976409897208">
+    <failure type="test_邮箱账号长度范围外输入测试 IAM_F_SysManager_014" message="784: unexpected token at '&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;...">
+Failure:
+test_邮箱账号长度范围外输入测试 IAM_F_SysManager_014(IAM::IamManager) [E:/autotest/iam_testcases/iam_manager.rb:62]:
+784: unexpected token at '&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;&lt;head&gt;
+&lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type"&gt;
+&lt;title&gt;系统发生错误&lt;/title&gt;
+&lt;style type="text/css"&gt;
+*{ padding: 0; margin: 0; }
+html{ overflow-y: scroll; }
+body{ background: #fff; font-family: '微软雅黑'; color: #333; font-size: 16px; }
+img{ border: 0; }
+.error{ padding: 24px 48px; }
+.face{ font-size: 100px; font-weight: normal; line-height: 120px; margin-bottom: 12px; }
+h1{ font-size: 32px; line-height: 48px; }
+.error .content{ padding-top: 10px}
+.error .info{ margin-bottom: 12px; }
+.error .info .title{ margin-bottom: 3px; }
+.error .info .title h3{ color: #000; font-weight: 700; font-size: 16px; }
+.error .info .text{ line-height: 24px; }
+.copyright{ padding: 12px 48px; color: #999; }
+.copyright a{ color: #000; text-decoration: none; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class="error"&gt;
+&lt;p class="face"&gt;:(&lt;/p&gt;
+&lt;h1&gt;1406:Data too long for column 'name' at row 1
+ [ SQL语句 ] : INSERT INTO `zl_user_system_tbl` (`nickname`,`password`,`role_code`,`comments`,`pid`,`token`,`status`,`create_time`,`name`) VALUES ('autotest_whl','e10adc3949ba59abbe56e057f20f883e','2','autotest','2','zVOxRVrrKaPcicOclFkav3zYiPpUBujA','1','1472036173','zhilukeji1zhilukeji1@zhilutec.com')&lt;/h1&gt;
+&lt;div class="content"&gt;
+	&lt;div class="info"&gt;
+		&lt;div class="title"&gt;
+			&lt;h3&gt;错误位置&lt;/h3&gt;
+		&lt;/div&gt;
+		&lt;div class="text"&gt;
+			&lt;p&gt;FILE: /var/www/html/zlapi/ThinkPHP/Library/Think/Db/Driver.class.php &amp;#12288;LINE: 350&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="info"&gt;
+		&lt;div class="title"&gt;
+			&lt;h3&gt;TRACE&lt;/h3&gt;
+		&lt;/div&gt;
+		&lt;div class="text"&gt;
+			&lt;p&gt;#0 /var/www/html/zlapi/ThinkPHP/Library/Think/Db/Driver.class.php(350): E('1406:Data too l...')&lt;br /&gt;
+#1 /var/www/html/zlapi/ThinkPHP/Library/Think/Db/Driver.class.php(237): Think\Db\Driver-&gt;error()&lt;br /&gt;
+#2 /var/www/html/zlapi/ThinkPHP/Library/Think/Db/Driver.class.php(824): Think\Db\Driver-&gt;execute('INSERT INTO `zl...', false)&lt;br /&gt;
+#3 /var/www/html/zlapi/ThinkPHP/Library/Think/Model.class.php(320): Think\Db\Driver-&gt;insert(Array, Array, false)&lt;br /&gt;
+#4 /var/www/html/zlapi/API/iam/Controller/AdminsController.class.php(193): Think\Model-&gt;add()&lt;br /&gt;
+#5 [internal function]: iam\Controller\AdminsController-&gt;add()&lt;br /&gt;
+#6 /var/www/html/zlapi/ThinkPHP/Library/Think/App.class.php(173): ReflectionMethod-&gt;invoke(Object(iam\Controller\AdminsController))&lt;br /&gt;
+#7 /var/www/html/zlapi/ThinkPHP/Library/Think/App.class.php(110): Think\App::invokeAction(Object(iam\Controller\AdminsController), 'add')&lt;br /&gt;
+#8 /var/www/html/zlapi/ThinkPHP/Library/Think/App.class.php(204): Think\App::exec()&lt;br /&gt;
+#9 /var/www/html/zlapi/ThinkPHP/Library/Think/Think.class.php(120): Think\App::run()&lt;br /&gt;
+#10 /var/www/html/zlapi/ThinkPHP/ThinkPHP.php(97): Think\Think::start()&lt;br /&gt;
+#11 /var/www/html/zlapi/index.php(25): require('/var/www/html/z...')&lt;br /&gt;
+#12 {main}&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="copyright"&gt;
+&lt;p&gt;&lt;a title="官方网站" href="http://www.thinkphp.cn"&gt;ThinkPHP&lt;/a&gt;&lt;sup&gt;3.2.3&lt;/sup&gt; { Fast &amp; Simple OOP PHP Framework } -- [ WE CAN DO IT JUST THINK ]&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+'
+    </failure>
+  </testcase>
+  <testcase name="test_邮箱账号格式不规范输入测试 IAM_F_SysManager_015" classname="IAM::IamManager" assertions="19" time="1.3863224840024486">
+    <failure type="test_邮箱账号格式不规范输入测试 IAM_F_SysManager_015" message="784: unexpected token at '&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;...">
+Failure:
+test_邮箱账号格式不规范输入测试 IAM_F_SysManager_015(IAM::IamManager) [E:/autotest/iam_testcases/iam_manager.rb:62]:
+784: unexpected token at '&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;&lt;head&gt;
+&lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type"&gt;
+&lt;title&gt;系统发生错误&lt;/title&gt;
+&lt;style type="text/css"&gt;
+*{ padding: 0; margin: 0; }
+html{ overflow-y: scroll; }
+body{ background: #fff; font-family: '微软雅黑'; color: #333; font-size: 16px; }
+img{ border: 0; }
+.error{ padding: 24px 48px; }
+.face{ font-size: 100px; font-weight: normal; line-height: 120px; margin-bottom: 12px; }
+h1{ font-size: 32px; line-height: 48px; }
+.error .content{ padding-top: 10px}
+.error .info{ margin-bottom: 12px; }
+.error .info .title{ margin-bottom: 3px; }
+.error .info .title h3{ color: #000; font-weight: 700; font-size: 16px; }
+.error .info .text{ line-height: 24px; }
+.copyright{ padding: 12px 48px; color: #999; }
+.copyright a{ color: #000; text-decoration: none; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class="error"&gt;
+&lt;p class="face"&gt;:(&lt;/p&gt;
+&lt;h1&gt;1146:Table 'iam3.zl_user_system_tbl' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `zl_user_system_tbl` INNER JOIN zl_auth_group a on zl_user_system_tbl.role_code = a.id  WHERE `name` LIKE '%zhilu123@@zhilutec\\.com%' LIMIT 1  &lt;/h1&gt;
+&lt;div class="content"&gt;
+	&lt;div class="info"&gt;
+		&lt;div class="title"&gt;
+			&lt;h3&gt;错误位置&lt;/h3&gt;
+		&lt;/div&gt;
+		&lt;div class="text"&gt;
+			&lt;p&gt;FILE: /var/www/html/zlapi/ThinkPHP/Library/Think/Db/Driver.class.php &amp;#12288;LINE: 350&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="info"&gt;
+		&lt;div class="title"&gt;
+			&lt;h3&gt;TRACE&lt;/h3&gt;
+		&lt;/div&gt;
+		&lt;div class="text"&gt;
+			&lt;p&gt;#0 /var/www/html/zlapi/ThinkPHP/Library/Think/Db/Driver.class.php(350): E('1146:Table 'iam...')&lt;br /&gt;
+#1 /var/www/html/zlapi/ThinkPHP/Library/Think/Db/Driver.class.php(180): Think\Db\Driver-&gt;error()&lt;br /&gt;
+#2 /var/www/html/zlapi/ThinkPHP/Library/Think/Db/Driver.class.php(946): Think\Db\Driver-&gt;query('SELECT COUNT(*)...', false)&lt;br /&gt;
+#3 /var/www/html/zlapi/ThinkPHP/Library/Think/Model.class.php(970): Think\Db\Driver-&gt;select(Array)&lt;br /&gt;
+#4 /var/www/html/zlapi/ThinkPHP/Library/Think/Model.class.php(227): Think\Model-&gt;getField('COUNT(*) AS tp_...')&lt;br /&gt;
+#5 /var/www/html/zlapi/API/iam/Controller/AdminsController.class.php(46): Think\Model-&gt;__call('count', Array)&lt;br /&gt;
+#6 /var/www/html/zlapi/API/iam/Controller/AdminsController.class.php(46): Think\Model-&gt;count()&lt;br /&gt;
+#7 [internal function]: iam\Controller\AdminsController-&gt;index()&lt;br /&gt;
+#8 /var/www/html/zlapi/ThinkPHP/Library/Think/App.class.php(173): ReflectionMethod-&gt;invoke(Object(iam\Controller\AdminsController))&lt;br /&gt;
+#9 /var/www/html/zlapi/ThinkPHP/Library/Think/App.class.php(110): Think\App::invokeAction(Object(iam\Controller\AdminsController), 'index')&lt;br /&gt;
+#10 /var/www/html/zlapi/ThinkPHP/Library/Think/App.class.php(204): Think\App::exec()&lt;br /&gt;
+#11 /var/www/html/zlapi/ThinkPHP/Library/Think/Think.class.php(120): Think\App::run()&lt;br /&gt;
+#12 /var/www/html/zlapi/ThinkPHP/ThinkPHP.php(97): Think\Think::start()&lt;br /&gt;
+#13 /var/www/html/zlapi/index.php(25): require('/var/www/html/z...')&lt;br /&gt;
+#14 {main}&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="copyright"&gt;
+&lt;p&gt;&lt;a title="官方网站" href="http://www.thinkphp.cn"&gt;ThinkPHP&lt;/a&gt;&lt;sup&gt;3.2.3&lt;/sup&gt; { Fast &amp; Simple OOP PHP Framework } -- [ WE CAN DO IT JUST THINK ]&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+'
+    </failure>
+  </testcase>
+  <testcase name="test_邮箱账号异常输入测试 IAM_F_SysManager_016" classname="IAM::IamManager" assertions="3" time="0.09537072599050589">
+  </testcase>
+  <testcase name="test_邮箱账号前后带空格输入测试 IAM_F_SysManager_017" classname="IAM::IamManager" assertions="4" time="0.9964119920041412">
+  </testcase>
+  <testcase name="test_邮箱账号中间带空格输入测试 IAM_F_SysManager_017_01" classname="IAM::IamManager" assertions="9" time="0.28629119499237277">
+  </testcase>
+  <testcase name="test_邮箱账号大小写输入测试 IAM_F_SysManager_018" classname="IAM::IamManager" assertions="6" time="1.2795178380038124">
+  </testcase>
+  <testcase name="test_邮箱账号重复值输入测试 IAM_F_SysManager_019" classname="IAM::IamManager" assertions="5" time="0.5066004980180878">
+  </testcase>
+  <testcase name="test_手机账号号码输入正常测试 IAM_F_SysManager_020" classname="IAM::IamManager" assertions="70" time="14.426040880993241">
+  </testcase>
+  <testcase name="test_手机账号号长度在范围外测试 IAM_F_SysManager_021" classname="IAM::IamManager" assertions="6" time="0.3787145749956835">
+  </testcase>
+  <testcase name="test_手机账号号不输入 IAM_F_SysManager_022" classname="IAM::IamManager" assertions="3" time="0.09578569399309345">
+  </testcase>
+  <testcase name="test_手机账号号异常测试 IAM_F_SysManager_023" classname="IAM::IamManager" assertions="21" time="0.5834674669895321">
+  </testcase>
+  <testcase name="test_手机账号带空格测试 IAM_F_SysManager_024" classname="IAM::IamManager" assertions="7" time="0.7861860429984517">
+  </testcase>
+  <testcase name="test_手机账号号重复测试 IAM_F_SysManager_025" classname="IAM::IamManager" assertions="5" time="0.2942566230194643">
+  </testcase>
+  <testcase name="test_账号昵称输入正常测试 IAM_F_SysManager_026" classname="IAM::IamManager" assertions="8" time="1.553424123005243">
+  </testcase>
+  <testcase name="test_账号昵称长度在范围外测试 IAM_F_SysManager_027" classname="IAM::IamManager" assertions="3" time="0.270953296974767">
+  </testcase>
+  <testcase name="test_账号昵称为空 IAM_F_SysManager_028" classname="IAM::IamManager" assertions="3" time="0.2359821499849204">
+  </testcase>
+  <testcase name="test_账号昵称异常输入测试 IAM_F_SysManager_029" classname="IAM::IamManager" assertions="6" time="0.3413767279998865">
+  </testcase>
+  <testcase name="test_账号昵称带空格输入测试 IAM_F_SysManager_030" classname="IAM::IamManager" assertions="7" time="0.8078936160018202">
+  </testcase>
+  <testcase name="test_账号昵称重复测试 IAM_F_SysManager_031" classname="IAM::IamManager" assertions="4" time="0.7470303400186822">
+  </testcase>
+  <testcase name="test_管理员角色类型不能为空 IAM_F_SysManager_034" classname="IAM::IamManager" assertions="3" time="0.25985381298232824">
+  </testcase>
+  <testcase name="test_密码正常输入测试 IAM_F_SysManager_035" classname="IAM::IamManager" assertions="6" time="1.1789725839917082">
+  </testcase>
+  <testcase name="test_密码长度在限制范围外 IAM_F_SysManager_036" classname="IAM::IamManager" assertions="6" time="0.48904208702151664">
+  </testcase>
+  <testcase name="test_密码为空 IAM_F_SysManager_037" classname="IAM::IamManager" assertions="3" time="0.3142053289921023">
+  </testcase>
+  <testcase name="test_密码异常输入测试 IAM_F_SysManager_038" classname="IAM::IamManager" assertions="9" time="0.8346772330114618">
+  </testcase>
+  <testcase name="test_密码输入框带空格 IAM_F_SysManager_040" classname="IAM::IamManager" assertions="4" time="0.8476756169984583">
+    <failure type="test_密码输入框带空格 IAM_F_SysManager_040" message="密码为' 123456'应提示失败!....">
+Failure:
+test_密码输入框带空格 IAM_F_SysManager_040(IAM::IamManager) [(eval):39]:
+密码为' 123456'应提示失败!.
+Expected: # encoding: UTF-8
+"5005"
+  Actual: nil
+    </failure>
+  </testcase>
+  <testcase name="test_范围内正常输入测试_最小值测试 IAM_F_SysManager_041" classname="IAM::IamManager" assertions="2" time="0.4225436639972031">
+  </testcase>
+  <testcase name="test_范围内正常输入测试_最大值测试 IAM_F_SysManager_042" classname="IAM::IamManager" assertions="2" time="0.3868328589887824">
+  </testcase>
+  <testcase name="test_输入值为空 IAM_F_SysManager_043" classname="IAM::IamManager" assertions="2" time="0.39037316301255487">
+  </testcase>
+  <testcase name="test_输入值超出限制范围 IAM_F_SysManager_044" classname="IAM::IamManager" assertions="2" time="0.40037290600594133">
+  </testcase>
+  <testcase name="test_输入值带空格 IAM_F_SysManager_045" classname="IAM::IamManager" assertions="2" time="0.3588104939844925">
+  </testcase>
+  <testcase name="test_登陆后默认进入到主页面 IAM_F_SysManager_050" classname="IAM::IamManager" assertions="2" time="0.08122900201124139">
+    <failure type="test_登陆后默认进入到主页面 IAM_F_SysManager_050" message="管理员返回name信息错误!....">
+Failure:
+test_登陆后默认进入到主页面 IAM_F_SysManager_050(IAM::IamManager) [(eval):27]:
+管理员返回name信息错误!.
+Expected: # encoding: UTF-8
+"admin2@zhilutec.com"
+  Actual: # encoding: UTF-8
+"admin@zhilutec.com"
+    </failure>
+  </testcase>
+  <testcase name="test_账号为空登录测试 IAM_F_SysManager_056" classname="IAM::IamManager" assertions="3" time="0.021492652012966573">
+  </testcase>
+  <testcase name="test_密码为空登录测试 IAM_F_SysManager_057" classname="IAM::IamManager" assertions="1" time="0.020291349006583914">
+    <failure type="test_密码为空登录测试 IAM_F_SysManager_057" message="can't dup NilClass">
+Failure:
+test_密码为空登录测试 IAM_F_SysManager_057(IAM::IamManager) [E:/autotest/iam_testcases/iam_manager.rb:62]:
+can't dup NilClass
+    </failure>
+  </testcase>
+  <testcase name="test_错误账号登录测试 IAM_F_SysManager_058" classname="IAM::IamManager" assertions="3" time="0.021484445984242484">
+  </testcase>
+  <testcase name="test_错误密码登录测试 IAM_F_SysManager_059" classname="IAM::IamManager" assertions="1" time="0.0358139059972018">
+    <failure type="test_错误密码登录测试 IAM_F_SysManager_059" message="can't dup NilClass">
+Failure:
+test_错误密码登录测试 IAM_F_SysManager_059(IAM::IamManager) [E:/autotest/iam_testcases/iam_manager.rb:62]:
+can't dup NilClass
+    </failure>
+  </testcase>
+  <testcase name="test_不输入账号密码登录测试 IAM_F_SysManager_060" classname="IAM::IamManager" assertions="1" time="0.048298837995389476">
+    <failure type="test_不输入账号密码登录测试 IAM_F_SysManager_060" message="can't dup NilClass">
+Failure:
+test_不输入账号密码登录测试 IAM_F_SysManager_060(IAM::IamManager) [E:/autotest/iam_testcases/iam_manager.rb:62]:
+can't dup NilClass
+    </failure>
+  </testcase>
+  <testcase name="test_账号密码特殊字符测试 IAM_F_SysManager_061" classname="IAM::IamManager" assertions="1" time="0.051675514987437055">
+    <failure type="test_账号密码特殊字符测试 IAM_F_SysManager_061" message="bad URI(is not URI?): p_%^:?&gt;23">
+Failure:
+test_账号密码特殊字符测试 IAM_F_SysManager_061(IAM::IamManager) [E:/autotest/iam_testcases/iam_manager.rb:62]:
+bad URI(is not URI?): p_%^:?&gt;23
+    </failure>
+  </testcase>
+  <testcase name="test_手机账号找回 IAM_F_SysManager_070" classname="IAM::IamManager" assertions="1" time="0.1274263290106319">
+    <failure type="test_手机账号找回 IAM_F_SysManager_070" message="undefined method `empty?' for nil:NilClass">
+Failure:
+test_手机账号找回 IAM_F_SysManager_070(IAM::IamManager) [E:/autotest/iam_testcases/iam_manager.rb:62]:
+undefined method `empty?' for nil:NilClass
+    </failure>
+  </testcase>
+  <testcase name="test_手机账号以新的密码登陆 IAM_F_SysManager_071" classname="IAM::IamManager" assertions="2" time="0.26596599200274795">
+    <failure type="test_手机账号以新的密码登陆 IAM_F_SysManager_071" message="undefined method `empty?' for nil:NilClass">
+Failure:
+test_手机账号以新的密码登陆 IAM_F_SysManager_071(IAM::IamManager) [E:/autotest/iam_testcases/iam_manager.rb:62]:
+undefined method `empty?' for nil:NilClass
+    </failure>
+  </testcase>
+  <testcase name="test_输入错误的手机账号 IAM_F_SysManager_072" classname="IAM::IamManager" assertions="1" time="1.7011043580132537">
+    <failure type="test_输入错误的手机账号 IAM_F_SysManager_072" message="修改密码后使用旧密码不应该登录成功!....">
+Failure:
+test_输入错误的手机账号 IAM_F_SysManager_072(IAM::IamManager) [(eval):30]:
+修改密码后使用旧密码不应该登录成功!.
+Expected: nil
+  Actual: # encoding: UTF-8
+"\u624B\u673A\u9A8C\u8BC1\u7801\u53D1\u9001\u5931\u8D25"
+    </failure>
+  </testcase>
+  <testcase name="test_输入手机账号为空 IAM_F_SysManager_073" classname="IAM::IamManager" assertions="3" time="0.02965043199947104">
+  </testcase>
+  <testcase name="test_输入不存在的手机账号 IAM_F_SysManager_074" classname="IAM::IamManager" assertions="3" time="0.07334205400547944">
+  </testcase>
+  <testcase name="test_输入空的验证码 IAM_F_SysManager_075" classname="IAM::IamManager" assertions="2" time="0.276345823018346">
+    <failure type="test_输入空的验证码 IAM_F_SysManager_075" message="验证码为空返回错误消息不正确!....">
+Failure:
+test_输入空的验证码 IAM_F_SysManager_075(IAM::IamManager) [(eval):34]:
+验证码为空返回错误消息不正确!.
+Expected: # encoding: UTF-8
+"\u9A8C\u8BC1\u7801\u9519\u8BEF\u6216\u5DF2\u5931\u6548"
+  Actual: # encoding: UTF-8
+"\u9A8C\u8BC1\u7801\u5931\u6548"
+    </failure>
+  </testcase>
+  <testcase name="test_输入错误的验证码 IAM_F_SysManager_076" classname="IAM::IamManager" assertions="4" time="0.20616244699340314">
+  </testcase>
+</testsuite>

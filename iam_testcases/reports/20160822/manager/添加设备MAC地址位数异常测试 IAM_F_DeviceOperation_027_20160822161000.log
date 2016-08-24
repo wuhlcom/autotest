@@ -1,0 +1,33 @@
+[2016-08-22 16:10:00] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+[2016-08-22 16:10:00] 2¡¢ÓÃ»§µÇÂ¼»ñÈ¡ÓÃ»§uidºÅ£»
+User existed!
+[2016-08-22 16:10:01] 3¡¢ÓÃ»§Ìí¼ÓµÄ³¤¶ÈÒì³£Éè±¸MACµØÖ·£»
+ÓÃ»§Ìí¼ÓÉè±¸mac''
+RESULT err_msg:'Éè±¸MACÎª¿Õ'
+RESULT err_code:'40005'
+RESULT err_desc:'E_DEV_MAC_NULL'
+=============================================
+[2016-08-22 16:10:01] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamManager | [0m[31mF[0m[31mF[0m
+                | 0.00 s
+Slowest tests:
+1.03 s	IAM::IamManager#test_Ìí¼ÓÉè±¸MACµØÖ·Î»ÊıÒì³£²âÊÔ IAM_F_DeviceOperation_027
+Slowest suites:
+1.03 s	IAM::IamManager
+
+
+[31mFinished tests in 1.054221s, 0.9486 tests/s, 1.8971 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamManager#test_Ìí¼ÓÉè±¸MACµØÖ·Î»ÊıÒì³£²âÊÔ IAM_F_DeviceOperation_027 [(eval):41]
+Minitest::Assertion: ÓÃ»§Ìí¼ÓÉè±¸mac''·µ»Ø´íÎóÏûÏ¢²»ÕıÈ·!.
+Expected: # encoding: UTF-8
+"\u8BE5\u8BBE\u5907\u4E3A\u65E0\u6548\u8BBE\u5907"
+  Actual: # encoding: UTF-8
+"\u8BBE\u5907MAC\u4E3A\u7A7A"[0m
+
+[31m1 tests, 2 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160822
+Writing XML reports to E:/autotest/iam_testcases/reports/20160822

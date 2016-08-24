@@ -163,7 +163,7 @@ module IAMAPI
     end
 
     # curl -X POST http://192.168.10.9:8082/index.php/Admins/modPersonPwd -d 'uid=11&oldpwd=123123&newpwd=654321&token=01e7cbf4fa19d6a7d0ed2b3622605686'
-    # MANAGER_MODPW_URL     = "#{API_ADDR}index.php/Admins/modPersonPwd" #修改管理员密码
+    # MANAGER_MODPW_URL     = "#{API_ADDR}index.php/Admins/modPersonPwd" #管理员修改自身密码
     def manager_modpw(oldpw, newpw, uid, token, url=MANAGER_MODPW_URL)
       data = "uid=#{uid}&oldpwd=#{oldpw}&newpwd=#{newpw}&token=#{token}"
       rs   = post_data(url, data)
@@ -176,7 +176,7 @@ module IAMAPI
     end
 
     #管理员登录->修改密码
-    def mana_modpw(oldpw, newpw, usr)
+    def mana_modpw(oldpw, newpw, usr) #管理员修改自身密码
       rs    = manager_login(usr, oldpw)
       uid   = rs["uid"]
       token = rs["token"]
@@ -397,10 +397,19 @@ module IAMAPI
       JSON.parse(rs)
     end
 
+    #登录管理员 -> 获取应用ID -> 查看应用详情
+    def check_app_details(appname, args=nil, admin_usr=ADMIN_USR, admin_pw=ADMIN_PW)
+      rs_login     = manager_login(admin_usr, admin_pw)
+      token        = rs_login["token"]
+      uid          = rs_login["uid"]
+      rs_client_id = get_client_id(appname, token, uid, args)
+      apply_details(rs_client_id, uid, token)
+    end
+
     #修改应用
     #curl -X PUT "http://192.168.10.9:8082/apps?admin_id=1&token=34d5aeb4b075ef65f6aa156f202127e4&id=160512231520" -d '{"name":"test_put","provider":"zhilu","redirect_uri":"http://www.zhilutec.com","comments":""}'
     #args,Hash
-    # args = {"name": name, "provider": provider, "redirect_uri": re_uri, "comments": comments}
+    # args = {"name"=> "name", "provider"=> "provider", "redirect_uri"=> "re_uri", "comments"=> "comments"}
     def modify_apply(admin_id, token, client_id, args, app_url=APP_URL)
       url = "#{app_url}admin_id=#{admin_id}&token=#{token}&id=#{client_id}"
       rs  = http_put(url, args.to_json)
@@ -463,11 +472,12 @@ module IAMAPI
       id = get_client_id(appname, token, uid)
       if id.nil?
         puts "create app..."
-        create_apply(uid, token, args)
+        rs = create_apply(uid, token, args)
         if status.to_s=="1"
           puts "create and active the new app..."
-          get_client_active_app(appname, token, uid, status)
+          rs = get_client_active_app(appname, token, uid, status)
         end
+        rs
       else
         puts "app exists..."
         app_args={"id" => id, "status" => status}
@@ -538,7 +548,7 @@ module IAMAPI
     # curl -X GET "http://192.168.10.9:8091/users?admin_id=1&token=f4f2fd3697a4b9f72368081765e5be67&listRows=3&p=2" // 分页查询
     # curl -X GET "http://192.168.10.9:8091/users?admin_id=1&token=f4f2fd3697a4b9f72368081765e5be67&type=account&cond=test" // 模糊查询
     #args,hash,{"type"=>"account","cond"=>"xxx"}
-    #args,hash,{"listRows"=>"account","p"=>"2"}
+    #args,hash,{"listRows"=>"3","p"=>"2"}
     def data_user_list(admin_id, token, args)
       data    =""
       args_arr=[]
@@ -561,7 +571,7 @@ module IAMAPI
     # curl -X GET "http://192.168.10.9:8091/users?admin_id=1&token=f4f2fd3697a4b9f72368081765e5be67&listRows=3&p=2" // 分页查询
     # curl -X GET "http://192.168.10.9:8091/users?admin_id=1&token=f4f2fd3697a4b9f72368081765e5be67&type=account&cond=test" // 模糊查询
     #args,hash,{"type"=>"account","cond"=>"xxx"}
-    #args,hash,{"listRows"=>"account","p"=>"2"}
+    #args,hash,{"listRows"=>"3","p"=>"2"}
     #return,hash
     #  {"totalRows"=>"1", "listRows"=>10, "nowPage"=>1,
     #   "users"=>[{"id"=>"498f62de-d807-4496-b4f0-a0215b365f56", "account"=>"13103158888", "name"=>nil, "
@@ -591,6 +601,38 @@ module IAMAPI
       path = url.slice(/\d+\.\d+\.\d+\.\d+:\d+?(\/.+)/, 1)
       rs   = get(ip, path, port)
       JSON.parse(rs)
+    end
+
+    #管理员登录 -> 获取应用id
+    def mana_get_client_id(appname, args=nil, admin_usr=ADMIN_USR, admin_pw=ADMIN_PW)
+      rs_login = manager_login(admin_usr, admin_pw)
+      token    = rs_login["token"]
+      uid      = rs_login["uid"]
+      get_client_id(appname, token, uid, args)
+    end
+
+    # curl -X DELETE "http://192.168.10.9:8082/appFiles?client_id=160517937222&file_name=xxx"
+    #删除应用进程文件
+    #client_id,应用id
+    #file_name,进程文件
+    def delete_app_file(client_id, file_name, url=APPFILES_URL)
+      url="#{url}client_id=#{client_id}&file_name=#{file_name}"
+      rs = http_del(url)
+      JSON.parse(rs)
+    end
+
+    #获取应用id->删除应用进程文件
+    def gd_app_file(apply_name, token, uid, file_name)
+      client_id = get_client_id(apply_name, token, uid)
+      delete_app_file(client_id, file_name)
+    end
+
+    #获取应用id->删除应用进程文件
+    def mana_del_app_file(apply_name, file_name, usr=ADMIN_USR, pw=ADMIN_PW)
+      rs   = manager_login(usr, pw)
+      token=rs["token"]
+      uid  =rs["uid"]
+      gd_app_file(apply_name, token, uid, file_name)
     end
 
   end

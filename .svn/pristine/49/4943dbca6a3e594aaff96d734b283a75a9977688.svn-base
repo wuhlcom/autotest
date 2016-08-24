@@ -1,0 +1,21 @@
+file_path = File.expand_path('../manager', __FILE__)
+require file_path
+module IAMAPI
+  module DevAuth
+
+    # curl -X GET "http://192.168.10.9:8082/appFiles?client_id=160517937222"
+    #[{"file_name"=>"test.so", "file_module"=>"2"}]
+    def get_app_file(client_id, url=APPFILES_URL)
+      url = "#{url}client_id=#{client_id}"
+      rs  = get(url)
+      JSON.parse(rs)
+    end
+
+    #获取应用id->查询应用进程
+    def get_app_files(apply_name, token, uid, args=nil, url=APP_URL)
+      id = get_client_id(apply_name, token, uid, args)
+      get_app_file(id)
+    end
+
+  end
+end

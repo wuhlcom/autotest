@@ -1,0 +1,7 @@
+Http server started!
+Current Time is 2015-09-29 10:28:02 +0800!
+Http server address 192.168.0.57,port 80
+{:method=>"GET"@0,
+ :uri=>{:path=>"/"@4},
+ :version=>"1.1"@11,
+ :headers=>{"Accept"=>"*/*", "User-Agent"=>"Ruby", "Host"=>"192.168.0.57:80"}}

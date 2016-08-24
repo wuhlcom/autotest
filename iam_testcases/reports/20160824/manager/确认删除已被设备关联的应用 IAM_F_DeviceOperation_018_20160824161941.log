@@ -1,0 +1,31 @@
+[2016-08-24 16:19:41] 1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»
+´´½¨Ó¦ÓÃÃûÎª'IAM_F_DeviceOperation_018'
+create app...
+create and active the new app...
+ÉÏ´«Ó¦ÓÃ½ø³ÌÎÄ¼ş'E:/autotest/iam_testcases/process_files/autotest_01.so'
+¹ÜÀíÔ±»ñÈ¡Ó¦ÓÃID
+User existed!
+ÓÃ»§µÇÂ¼
+ÓÃ»§Ìí¼ÓÉè±¸
+[2016-08-24 16:21:23] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamDevauth | [0m[31mF[0m[31mF[0m
+                | 0.00 s
+Slowest tests:
+120.32 s	IAM::IamDevauth#test_È·ÈÏÉ¾³ıÒÑ±»Éè±¸¹ØÁªµÄÓ¦ÓÃ IAM_F_DeviceOperation_018
+Slowest suites:
+120.32 s	IAM::IamDevauth
+
+
+[31mFinished tests in 120.333338s, 0.0083 tests/s, 0.0332 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamDevauth#test_È·ÈÏÉ¾³ıÒÑ±»Éè±¸¹ØÁªµÄÓ¦ÓÃ IAM_F_DeviceOperation_018 [(eval):54]
+Minitest::Assertion: ÓÃ»§Ìí¼ÓÉè±¸Ê§°Ü!.
+Expected: 1
+  Actual: nil[0m
+
+[31m1 tests, 4 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160824
+Writing XML reports to E:/autotest/iam_testcases/reports/20160824

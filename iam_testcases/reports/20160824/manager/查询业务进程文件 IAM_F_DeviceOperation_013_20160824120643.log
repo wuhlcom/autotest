@@ -1,0 +1,28 @@
+[2016-08-24 12:06:43] 1¡¢sshµÇÂ¼IAM·þÎñÆ÷£»
+´´½¨Ó¦ÓÃÃûÎª'IAM_F_DeviceOperation_013'
+create app...
+create and active the new app...
+ÉÏ´«Ó¦ÓÃ½ø³ÌÎÄ¼þ'E:/autotest/iam_testcases/process_files/autotest_01.ko'
+[2016-08-24 12:08:05] 2¡¢»ñÈ¡Ó¦ÓÃÁÐ±íÖÐÓ¦ÓÃidºÅ£»£»
+[2016-08-24 12:08:05] 3¡¢²éÑ¯Ä³¸öÓ¦ÓÃµÄÒµÎñ½ø³ÌÎÄ¼þ£»
+[2016-08-24 12:08:06] 1.»Ö¸´Ä¬ÈÏÉèÖÃ
+[0m
+IAM::IamDevauth | [0m[31mF[0m[31mF[0m
+                | 0.00 s
+Slowest tests:
+102.72 s	IAM::IamDevauth#test_²éÑ¯ÒµÎñ½ø³ÌÎÄ¼þ IAM_F_DeviceOperation_013
+Slowest suites:
+102.72 s	IAM::IamDevauth
+
+
+[31mFinished tests in 102.729576s, 0.0097 tests/s, 0.0292 assertions/s.[0m
+
+
+[31mFailure:
+IAM::IamDevauth#test_²éÑ¯ÒµÎñ½ø³ÌÎÄ¼þ IAM_F_DeviceOperation_013 [(eval):42]
+Minitest::Assertion: ²éÑ¯Ó¦ÓÃÒµÎñ½ø³ÌÎÄ¼þÎª¿Õ!.
+Expected [{"file_name"=>"autotest_01.ko", "file_module"=>"2"}] to be empty.[0m
+
+[31m1 tests, 3 assertions, 1 failures, 0 errors, 0 skips[0m
+Writing HTML reports to E:/autotest/iam_testcases/html_reports/20160824
+Writing XML reports to E:/autotest/iam_testcases/reports/20160824

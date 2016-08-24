@@ -25,8 +25,10 @@ class MyTestString < MiniTest::Unit::TestCase
 
   def test_post
     # curl -X POST http://192.168.10.9:8082/mobileCode/18676710461
-    url  = "http://192.168.10.9:8082/mobileCode/13544042762"
-    data = ""
+    # curl -X POST "http://192.168.10.9/zlapi/index.php/Acdev/dologin" -d 'username=admin&password=123123'
+    # url  = "http://192.168.10.9:8082/mobileCode/13544042762"
+    url = "http://192.168.10.9/zlapi/index.php/Acdev/dologin"
+    data = "username=admin&password=123123"
     p @iam_obj.post_data(url, data)
   end
 

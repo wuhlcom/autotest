@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Frame::WebTestInternet" skipped="0" failures="1" errors="0" tests="1" assertions="5" time="83.251762">
+  <testcase name="test_IP地址段冲突测试 ZLBF_27.1.14" classname="Frame::WebTestInternet" assertions="5" time="83.251762">
+    <failure type="test_IP地址段冲突测试 ZLBF_27.1.14" message="提示信息内容错误!....">
+Failure:
+test_IP地址段冲突测试 ZLBF_27.1.14(Frame::WebTestInternet) [(eval):95]:
+提示信息内容错误!.
+Expected: "IP\u5730\u5740\u6BB5\u6709\u4EA4\u96C6"
+  Actual: ""
+    </failure>
+  </testcase>
+</testsuite>

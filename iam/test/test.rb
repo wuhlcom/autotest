@@ -1,7 +1,16 @@
-context='window.opener.location.href="http://192.168.10.9:8083/index.php/Login/index?code=047310ff3abd8ae9e41725efb42c04de&ssid=MmVnYzgzYWRya2M1Yzd2OGxrNXUzdXViYWsyMWxtaDU=";window.
-    close()'
-/code=(?<code>.+)&ssid/i=~context
-p code
+#encoding:utf-8
+p @tc_devmac    = "00:88:00:00:00:01"
+p @tc_devmac.gsub(":","-")
+p @tc_devmac.sub(":","-")
+p @tc_devmac.delete(":")
+p %w(G2:10:18:01:01:01 02:G0:18:01:01:01 02:10:G8:01:01:01 02:10:18:G1:01:01 02:10:18:01:G1:01 02:10:18:01:01:G1)
 
-p s ="fa754177ef40979706d8e78275c22c1f"
-p s.reverse
+devmac1       = %w(G2:10:18:01:01:01 02:G0:18:01:01:01 02:10:G8:01:01:01 02:10:18:G1:01:01 02:10:18:01:G1:01 02:10:18:01:01:G1)
+devmac2       = %w(中2:10:18:01:01:01 02:中0:18:01:01:01 02:10:中8:01:01:01 02:10:18:中1:01:01 02:10:18:01:中1:01 02:10:18:01:01:中1)
+devmac3       = %w(~2:10:18:01:01:01 02:!0:18:01:01:01 02:10:@8:01:01:01 02:10:18:#1:01:01 02:10:18:01:$1:01 02:10:18:01:01:%1 02::10:18:01:01:01:02)
+p @tc_devmac_arr=devmac1+devmac2+devmac3
+p @tc_devmac_arr.size
+
+p "qwertHHHHHqwertHHHHHqwertHHHHH111".size
+p __FILE__
+p File.expand_path("../process_files",__FILE__)

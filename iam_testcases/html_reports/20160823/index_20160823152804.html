@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>测试结果</title>
+  <link href="../../style/bootstrap334.css" rel="stylesheet">
+  <script src="../../style/jquery334.js"></script>
+  <script src="../../style/jquery214.js"></script>
+  <script src="../../style/jqueryUI1103.js"></script>
+</head>
+
+<body>
+<div class="container">
+  <div class="jumbotron">
+    <h3>测试结果：</h3>
+
+    <p>
+      执行总时长 0.89s, 平均执行速率 0.89 per/s
+      <!--平均断言速率 3.37 assertions/s-->
+    </p>
+
+    <p>
+      <strong>
+        <span class="">执行脚本总数:1</span>,
+        <span class=""> 通过脚本数:0</span>,
+        <span class="text-danger">失败脚本数:1</span>,
+        <span class=""> 出错脚本数:0 </span>,
+        <span class=""> 忽略脚本数:0</span>
+        <!--<span class="">断言数:3</span>-->
+      </strong>
+    </p>
+
+    <div class="progress">
+      <div class="progress-bar progress-bar-info" style="width: 0.0%">
+        0% passed
+      </div>
+      <div class="progress-bar progress-bar-danger" style="width: 100.0%">
+        100% failed
+      </div>
+      <div class="progress-bar progress-bar-warning" style="width: 0.0%">
+        0% skipped
+      </div>
+    </div>
+
+
+  </div>
+
+  
+      <div class="panel panel-default">
+        <div class="panel-heading"><strong>IAM::IamManager</strong>
+                <span class="pull-right">
+                    <span class="">执行脚本数：1
+                      </span>,
+                   <span class="text-info">通过脚本数：0
+                      </span>,
+                    <span class="text-danger"> 失败脚本数：1
+                      </span>,
+                    <span class="">出错误脚本数：0
+                      </span>,
+                    <span class=""> 忽略脚本数0
+                      </span>,
+                  <!--  <span class="">断言数：3
+                      </span>,-->
+                  <span> 测试集执行时长： 0.8493s</span>
+                </span>
+        </div>
+        <div class="panel-body">
+          <div class="list-group">
+            
+                <div class="list-group-item">
+                  <h5 class="list-group-item-heading">
+                    
+                        <span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"></span>
+                    
+                    test_设备名称输入值带空格 IAM_F_DeviceOperation_036
+                    <span class="pull-right">
+                                    assertions： 3, time： 0.849344s
+                                </span>
+                  </h5>
+                  
+                      <pre class="list-group-item-text">(eval):43
+
+设备名称为'Dev ice3'返回错误消息不正确!.
+Expected: # encoding: UTF-8
+"\u8BE5\u8BBE\u5907\u4E3A\u65E0\u6548\u8BBE\u5907"
+  Actual: # encoding: UTF-8
+"\u8BBE\u5907\u540D\u79F0\u5DF2\u5B58\u5728"</pre>
+                  
+                </div>
+            
+          </div>
+        </div>
+      </div>
+  
+</div>
+</body>
+</html>

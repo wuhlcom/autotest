@@ -31,8 +31,8 @@ class MyTestString < MiniTest::Unit::TestCase
 
   def test_get_app_info
     p rs = @iam_obj.manager_login #管理员登录->得到uid和token
-    uid  = rs["uid"]
-    token=rs["token"]
+    uid    = rs["uid"]
+    token  =rs["token"]
     appname="test_app"
     p @iam_obj.get_spec_app_info(token, appname, uid)
   end
@@ -175,6 +175,13 @@ class MyTestString < MiniTest::Unit::TestCase
     app  = "test_app3"
     args ={"name" => app, "provider" => "whl", "redirect_uri" => "http://192.168.10.9", "comments" => "whl"}
     p @iam_obj.qca_app(app, args, "1")
+  end
+
+  def test_mana_modpw
+    admin_usr = "wuhongliang@zhilutec.com"
+    admin_pw  = "123456"
+    newpw     = "12345678"
+    p @iam_obj.mana_modpw(newpw, admin_pw, admin_usr)
   end
 
 end
