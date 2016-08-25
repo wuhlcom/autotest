@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Frame::WebTestInternet" skipped="0" failures="0" errors="0" tests="1" assertions="21" time="213.603761">
-  <testcase name="test_MAC过滤-开关为开启 ZLBF_28.1.1" classname="Frame::WebTestInternet" assertions="21" time="213.603761">
-  </testcase>
-</testsuite>

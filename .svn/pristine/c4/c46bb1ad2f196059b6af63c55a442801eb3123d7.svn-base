@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Frame::WebTestInternet" skipped="0" failures="0" errors="0" tests="1" assertions="6" time="53.022406">
-  <testcase name="test_DHCP服务器-租约时长输入特殊字符测试 ZLBF_8.1.27" classname="Frame::WebTestInternet" assertions="6" time="53.022406">
-  </testcase>
-</testsuite>

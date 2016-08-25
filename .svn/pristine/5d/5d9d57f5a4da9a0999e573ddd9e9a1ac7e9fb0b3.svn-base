@@ -1,4 +1,0 @@
-p @tc_devmac    = "00:88:00:00:00:01"
-p @tc_devmac.gsub(":","-")
-p @tc_devmac.sub(":","-")
-p @tc_devmac.delete(":")

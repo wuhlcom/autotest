@@ -1,2 +1,0 @@
-file="a.ko"
-p File.basename(file)
