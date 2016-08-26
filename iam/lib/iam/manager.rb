@@ -74,6 +74,11 @@ module IAMAPI
     #查询账户是否存在-存在的话先删除再添加账户，不存在直接添加
     def manager_del_add(account, passwd, nickname, rcode="2", comments="autotest", admin_usr=ADMIN_USR, admin_pw=ADMIN_PW)
       rs_admin = manager_login(admin_usr, admin_pw)
+     if rs_admin.has_key?("err_code")
+       puts "manager:#{admin_usr} not exists!"
+       return rs_admin
+     end
+
       token    = rs_admin["token"]
       uid      = rs_admin["uid"]
       rs_mlist = get_manager_list_byname(account, token, uid)
@@ -150,9 +155,14 @@ module IAMAPI
     def del_manager(name, admin_usr=ADMIN_USR, admin_pw=ADMIN_PW)
       rs_del   = {}
       rs_login = manager_login(admin_usr, admin_pw)
-      uid      = rs_login["uid"]
-      token    = rs_login["token"]
-      rs       = get_manager_list_byname(name, token, uid)
+      if rs_login.has_key?("err_code")
+        puts "login failed,manager #{name} not exists!"
+        return rs_login
+      else
+        uid   = rs_login["uid"]
+        token = rs_login["token"]
+      end
+      rs = get_manager_list_byname(name, token, uid)
       if rs==false||rs["res"].empty?
         puts "#{name} is not exists!"
       else
@@ -344,13 +354,18 @@ module IAMAPI
       JSON.parse(rs)
     end
 
-    #管理员登录->创建应用
+    #管理员登录->创建应用->激活/禁用
     # args ={"name"=>"name", "provider"=>"provider", "redirect_uri"=>"redirect_uri", "comments"=>"comments"}
-    def mana_create_app(args, usr=ADMIN_USR, pw=ADMIN_PW, app_url=APP_URL)
+    #status,1 激活,0，禁用
+    def mana_create_app(args, status="0", usr=ADMIN_USR, pw=ADMIN_PW, app_url=APP_URL)
       rs       = manager_login(usr, pw)
       admin_id = rs["uid"]
       token    = rs["token"]
       create_apply(admin_id, token, args, app_url)
+
+      id = get_client_id(args["name"], token, admin_id)
+      app_args={"id" => id, "status" => status}
+      active_app(app_args, admin_id, token)
     end
 
     # 返回应用ID

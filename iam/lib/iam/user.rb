@@ -150,6 +150,14 @@ module IAMAPI
       http_del_data(url, data)
     end
 
+    #用户登录 =》 用户解绑应用
+    def login_unbinding_app(usr, pwd, data)
+      rs   = user_login(usr, pwd)
+      id   =rs["uid"]
+      token=rs["access_token"]
+      usr_unbinding_app(token, id, data)
+    end
+
     #用户查询应用-->用户绑定应用
     # data = {"client_id"=>"123"} 单个绑定
     # data = {"client_id"=>"123", "client_id"=>"234"} #批量绑定

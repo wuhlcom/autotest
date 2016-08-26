@@ -27,9 +27,31 @@ class MyTestString < MiniTest::Unit::TestCase
     # curl -X POST http://192.168.10.9:8082/mobileCode/18676710461
     # curl -X POST "http://192.168.10.9/zlapi/index.php/Acdev/dologin" -d 'username=admin&password=123123'
     # url  = "http://192.168.10.9:8082/mobileCode/13544042762"
-    url = "http://192.168.10.9/zlapi/index.php/Acdev/dologin"
+    url  = "http://192.168.10.9/zlapi/index.php/Acdev/dologin"
     data = "username=admin&password=123123"
-    p @iam_obj.post_data(url, data)
+    # curl -X POST http://192.168.10.9:8082/mobileCode/13823 652367
+    url  = "http://192.168.10.9:8082/mobileCode/13823652367"
+    path = "/mobileCode/138236 52367"
+    data = "13823 652367"
+    # p @iam_obj.post_data(url, data)
+    ip   = "192.168.10.9"
+    port = "8082"
+    res  = Net::HTTP.start(ip, port) do |http|
+      # http.request_post("/mobileCode/#{data}", "") { |response|
+      #   # p response.status
+      #   # p response['content-type']
+      #   # p response
+      #   p "11111111111111111111"
+      #   p response.read_body
+      #   # response.read_body do |str| # read body now
+      #   #    print str
+      #   # end
+      p rs = http.send_request("POST", path)
+      p rs.body
+      # }
+
+    end
+      # p res.body
   end
 
   def test_phone_code
@@ -61,6 +83,7 @@ class MyTestString < MiniTest::Unit::TestCase
     def uri(url)
       uri = URI(url)
     end
+
     p uri =uri(url)
     uri.hostname
     uri.port
@@ -71,6 +94,18 @@ class MyTestString < MiniTest::Unit::TestCase
     #     http.get(uri, initheader, dest, &block)
     # end
     # res.body
+  end
+
+  def test_get
+    # GET http://192.168.10.9:8092/index.php/admins/index/uid/1/name/dengfei/token/34d5aeb4b075ef65f6aa156f202127e4
+    admin ="admin@zhilutec.com"
+    pw    ="123123"
+    rs    = @iam_obj.manager_login(admin, pw) #管理员登录->得到uid和token
+    token = rs["token"]
+    uid   = rs["uid"]
+    name  = "zhilu123@@zhilutec.com"
+    url   = "http://192.168.10.9:8082/index.php/admins/index/uid/#{uid}/name/#{name}/token/#{token}"
+    p @iam_obj.get(url)
   end
   # Fake ftp_test
   # def test_fail
