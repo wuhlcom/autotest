@@ -1,0 +1,35 @@
+#
+# description:
+# author:liluping
+# date:2016-07-25 10:00:17
+# modify:
+#
+testcase {
+    attr = {"id" => "IAM_F_UserLogin_001", "level" => "P4", "auto" => "n"}
+
+    def prepare
+        @tc_usr_name = "~!@#$%^&*()_+{}:\"|<>?-=[];'\\,./"
+        @tc_usr_pwd = "~!@#$%^&*()_+{}:\"|<>?-=[];'\\,./"
+        @tc_err_code = "10001"
+    end
+
+    def process
+
+        operate("1、ssh登录IAM服务器；") {
+        }
+
+        operate("2、用户登录，账号、密码输入为特殊符号；") {
+            rs = @iam_obj.user_login(@tc_usr_name, @tc_usr_pwd)
+            assert_equal(@tc_err_code, rs["err_code"], "账号密码都为特殊字符登录时登录成功或者是登录失败但是返回的错误码不正确")
+        }
+
+
+    end
+
+    def clearup
+        operate("1.恢复默认设置") {
+
+        }
+    end
+
+}

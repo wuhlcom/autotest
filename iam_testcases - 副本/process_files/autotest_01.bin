@@ -1,4 +1,0 @@
-require 'watir-webdriver'
-@browser        = Watir::Browser.new
-@browser.cookies.clear
-@browser.goto("www.baidu.com")
