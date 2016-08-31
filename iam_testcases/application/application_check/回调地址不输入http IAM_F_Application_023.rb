@@ -35,7 +35,6 @@ testcase {
       assert_equal(@ts_err_appurl_desc, rs_app["err_desc"], "#{tip}返回错误desc不正确!")
     }
 
-
   end
 
   def clearup

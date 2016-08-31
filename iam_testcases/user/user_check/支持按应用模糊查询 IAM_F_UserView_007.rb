@@ -5,50 +5,58 @@
 # modify:
 #
 testcase {
-    attr = {"id" => "IAM_F_UserView_007", "level" => "P2", "auto" => "n"}
+  attr = {"id" => "IAM_F_UserView_007", "level" => "P2", "auto" => "n"}
 
-    def prepare
+  def prepare
+    @tc_phone_usr   = "13788114444"
+    @tc_usr_pw      = "123456"
+    @tc_usr_regargs = {type: "account", cond: @tc_phone_usr}
 
-    end
+    @tc_app_name     = "wuhl001_capp"
+    @tc_app_provider = "whlcom"
+    @tc_args         = {name: @tc_app_name, provider: @tc_app_provider, redirect_uri: @ts_app_redirect_uri, comments: "whl"}
+  end
 
-    def process
+  def process
 
-        operate("1、ssh登录IAM服务器；") {
-            rs         = @iam_obj.user_login(@ts_usr_name, @ts_usr_pwd)
-            @usr_token = rs["access_token"]
-            @usr_id    = rs["uid"]
+    operate("1、ssh登录IAM服务器；") {
+      rs= @iam_obj.phone_usr_reg(@tc_phone_usr, @tc_usr_pw, @tc_usr_regargs)
+      assert_equal(@ts_add_rs, rs["result"], "用户#{@tc_phone_usr}注册失败")
 
-            @res = @iam_obj.manager_login #管理员登录->得到uid和token
-            assert_equal(@ts_admin_usr, @res["name"], "manager name error!")
-            @admin_id    = @res["uid"]
-            @admin_token = @res["token"]
-        }
+    }
 
-        operate("2、获取知路管理员token值；") {
-            p "用户绑定应用".encode("GBK")
-            @client_id = @iam_obj.get_client_id(@ts_app_name_001, @admin_token, @admin_id)
-            data       = {"client_id" => @client_id}
-            @rs_bind   = @iam_obj.usr_binding_app(@usr_token, @usr_id, data)
-            assert_equal(1, @rs_bind["result"], "用户绑定应用失败")
-        }
+    operate("2、获取知路管理员token值；") {
+      #管理员登录
+      rs3    = @iam_obj.manager_login
+      @uid   = rs3["uid"]
+      @token = rs3["token"]
 
-        operate("3、按应用模糊查询；") {
-            data = @ts_app_name_001.slice(/(.+)_\d+/, 1)
-            args = {"type" => "client_name", "cond" => data}
-            rs   = @iam_obj.get_user_list(@admin_id, @admin_token, args)
-            assert_equal(@ts_usr_name, rs["users"][0]["account"], "未查询到该用户")
-        }
+      #管理员创建应用
+      tip    ="创建应用'#{@tc_app_name}'"
+      puts tip.to_gbk
+      rs4 = @iam_obj.qc_app(@tc_app_name, @token, @uid, @tc_args, "1")
+      assert_equal(1, rs4["result"], "#{tip}失败")
 
+      tip="用户'#{@tc_phone_usr}'绑定应用'#{@tc_app_name}'"
+      p tip.encode("GBK")
+      rs = @iam_obj.usr_qb_app(@tc_phone_usr, @tc_usr_pw, @tc_app_name)
+      assert_equal(1, rs["result"], "#{tip}失败")
+    }
 
-    end
+    operate("3、按应用模糊查询；") {
+      data = @tc_app_name.slice(/(.+)_\d+/, 1)
+      args = {"type" => "client_name", "cond" => data}
+      rs   = @iam_obj.get_user_list(@uid, @token, args)
+      assert_equal(@tc_phone_usr, rs["users"][0]["account"], "未查询到该用户")
+    }
 
-    def clearup
-        operate("1.恢复默认设置") {
-            if @rs_bind["result"] == 1
-                data = {"client_id" => @client_id}
-                @iam_obj.usr_unbinding_app(@usr_token, @usr_id, data)
-            end
-        }
-    end
+  end
+
+  def clearup
+    operate("1.恢复默认设置") {
+      @iam_obj.usr_delete_usr(@tc_phone_usr, @tc_usr_pw)
+      @iam_obj.mana_del_app(@tc_app_name)
+    }
+  end
 
 }

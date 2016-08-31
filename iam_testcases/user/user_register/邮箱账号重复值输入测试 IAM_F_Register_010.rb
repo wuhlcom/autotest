@@ -8,9 +8,7 @@ testcase {
     attr = {"id" => "IAM_F_Register_010", "level" => "P3", "auto" => "n"}
 
     def prepare
-        @tc_user_name_1   = "liluping@zhilutec.com"
-        @tc_user_pwd      = "123123"
-        @tc_err_code      = "5006"
+
     end
 
     def process
@@ -19,13 +17,19 @@ testcase {
         }
 
         operate("2、使用邮箱注册用户；") {
-            @rs1 = @iam_obj.register_emailusr(@tc_user_name_1, @tc_user_pwd, 1)
+            p @rs1 = @iam_obj.register_emailusr(@ts_email_usr, @ts_email_pw, 1)
             assert_equal(1, @rs1["result"], "使用正确字符注册时，注册失败")
         }
 
         operate("3、再次注册一个用户，邮箱还使用步骤2的邮箱") {
-            @rs2 = @iam_obj.register_emailusr(@tc_user_name_1, @tc_user_pwd, 1)
-            assert_equal(@tc_err_code, @rs2["err_code"], "使用相同字符注册时，注册成功或者错误码不正确")
+            tip = "再次注册一个用户，邮箱还使用步骤2的邮箱"
+            p rs  = @iam_obj.register_emailusr(@ts_email_usr, @ts_email_pw, 1)
+            puts "RESULT err_msg:#{rs['err_msg']}".encode("GBK")
+            puts "RESULT err_code:#{rs['err_code']}".encode("GBK")
+            puts "RESULT err_desc:#{rs['err_desc']}".encode("GBK")
+            assert_equal(@ts_err_acc_exists_code, rs["err_code"], "#{tip}返回code错误!")
+            assert_equal(@ts_err_acc_exists, rs["err_msg"], "#{tip}返回msg错误")
+            assert_equal(@ts_err_acc_exists_desc, rs["err_desc"], "#{tip}返回desc错误!")
         }
 
 
@@ -33,9 +37,7 @@ testcase {
 
     def clearup
         operate("1.恢复默认设置") {
-            if @rs1["result"] == 1
-                @iam_obj.usr_delete_usr(@tc_user_name_1, @tc_user_pwd)
-            end
+            @iam_obj.usr_delete_usr(@ts_email_usr, @ts_email_pw)
         }
     end
 

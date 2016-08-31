@@ -5,63 +5,58 @@
 # modify:
 #
 testcase {
-    attr = {"id" => "IAM_F_FindPassword_017", "level" => "P4", "auto" => "n"}
+  attr = {"id" => "IAM_F_FindPassword_017", "level" => "P4", "auto" => "n"}
 
-    def prepare
-        @tc_usr_name1    = "2194938072@qq.com"
-        @tc_usr_pwd1     = "123456"
-        @tc_usr_pwd1_new = "123123"
-        @tc_usr_name2    = "liluping@zhilutec.com"
-        @tc_usr_pwd2     = "123456"
-        @tc_usr_pwd2_new = "123123"
-    end
+  def prepare
+    @tc_email_usr   = %w(2194938072@qq.com gaohui@zhilutec.com auto001@163.com auto002@126.com auto003@sina.com.cn auto003@sohu.com auto004@yahoo.com.cn auto004@gmail.com auto005@hotmail.com)
+    @tc_usr_pwd     = "123456"
+    @tc_usr_pwd_new = "123123"
+  end
 
-    def process
+  def process
 
-        operate("1、ssh登录IAM服务器；") {
-            rs1     = @iam_obj.user_login(@tc_usr_name1, @tc_usr_pwd1)
-            @uid1   = rs1["uid"]
-            @token1 = rs1["access_token"]
-            rs2     = @iam_obj.user_login(@tc_usr_name2, @tc_usr_pwd2)
-            @uid2   = rs2["uid"]
-            @token2 = rs2["access_token"]
-        }
+    operate("1、ssh登录IAM服务器；") {
+      @tc_email_usr.each do |email|
+        tip = "注册邮箱用户'#{email}'"
+        puts tip.to_gbk
+        rs = @iam_obj.register_emailusr(email, @tc_usr_pwd, 1)
+        assert_equal(1, rs["result"], "#{tip}失败")
+        rs2  = @iam_obj.user_login(email, @tc_usr_pwd)
+        tip1 = "邮箱用户'#{email}'注册后登录"
+        puts tip1.to_gbk
+        assert_equal(1, rs2["result"], "#{tip1}失败")
+      end
+    }
 
-        operate("2、使用不同邮箱进行注册用户，然后进行密码找回测试；如qq邮箱") {
-            rs = @iam_obj.find_pwd_for_email(@tc_usr_name1)
-            assert_equal(1, rs["result"], "密码找回失败")
+    operate("2、使用不同邮箱进行注册用户，然后进行密码找回测试；如qq邮箱") {
 
-            rs = @iam_obj.find_pwd_for_email(@tc_usr_name2)
-            assert_equal(1, rs["result"], "密码找回失败")
-        }
+    }
 
-        operate("3、密码修改；") {
-            @rs1 = @iam_obj.mofify_user_pwd(@tc_usr_pwd1, @tc_usr_pwd1_new, @uid1, @token1)
-            assert_equal(1, @rs1["result"], "密码修改失败")
+    operate("3、密码修改；") {
+      @tc_email_usr.each do |email|
+        tip = "邮箱用户'#{email}'找回密码"
+        puts tip.to_gbk
+        rs1 = @iam_obj.usr_find_mod_emailpw(email, @tc_usr_pwd_new)
+        assert_equal(1, rs1["result"], "#{tip}失败")
+        tip1 = "邮箱用户'#{email}'找回密码后使用新密码登录"
+        puts tip1.to_gbk
+        rs2= @iam_obj.user_login(email, @tc_usr_pwd_new)
+        assert_equal(1, rs2["result"], "#{tip1}失败")
+      end
 
-            @rs2 = @iam_obj.mofify_user_pwd(@tc_usr_pwd2, @tc_usr_pwd2_new, @uid2, @token2)
-            assert_equal(1, @rs2["result"], "密码修改失败")
-        }
+    }
 
+  end
 
-    end
-
-    def clearup
-        operate("1.恢复默认设置") {
-            if @rs1["result"] == 1
-                rs1     = @iam_obj.user_login(@tc_usr_name1, @tc_usr_pwd1_new)
-                @uid1   = rs1["uid"]
-                @token1 = rs1["access_token"]
-                @iam_obj.mofify_user_pwd(@tc_usr_pwd1_new, @tc_usr_pwd1, @uid1, @token1)
-            end
-
-            if @rs2["result"] == 1
-                rs2     = @iam_obj.user_login(@tc_usr_name2, @tc_usr_pwd2_new)
-                @uid2   = rs2["uid"]
-                @token2 = rs2["access_token"]
-                @iam_obj.mofify_user_pwd(@tc_usr_pwd2_new, @tc_usr_pwd2, @uid2, @token2)
-            end
-        }
-    end
+  def clearup
+    operate("1.恢复默认设置") {
+      @tc_email_usr.each do |email|
+        tip = "删除邮箱用户'#{email}'"
+        puts tip.to_gbk
+        @iam_obj.usr_delete_usr(email, @tc_usr_pwd)
+        @iam_obj.usr_delete_usr(email, @tc_usr_pwd_new)
+      end
+    }
+  end
 
 }

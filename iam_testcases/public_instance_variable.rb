@@ -16,7 +16,7 @@ class IamTestNameSpace<MiniTest::Unit::TestCase
     @ts_url_userid         = "http://192.168.10.9:8082/userid.txt"
     #get code
     @ts_url_usercode       = "http://192.168.10.9:8082/code.txt"
-    @ts_admin_usr          = "admin2@zhilutec.com"
+    @ts_admin_usr          = "admin@zhilutec.com"
     @ts_admin_pw           = "123123"
     @ts_admin_code         = "1234"
     @ts_admin_login        = "http://192.168.10.9:8080/index.php/Login/index.html"
@@ -31,22 +31,26 @@ class IamTestNameSpace<MiniTest::Unit::TestCase
     # {"result":1,"name":"admin@zhilutec.com","nickname":"\u77e5\u8def\u7ba1\u7406\u5458","uid":"1","role_code":"1","token":"e4f0326fa441186b18dcd66dc4509466"}
     @ts_login_url          = "http://192.168.10.9:8082/admins/dologin"
     @ts_admin_log_rs       = 1
-    @ts_admin_log_name     = "admin2@zhilutec.com"
-    @ts_admin_log_pw       = "123123"
+    # @ts_admin_log_name     = "admin@zhilutec.com"
+    # @ts_admin_log_pw       = "123123"
     @ts_admin_log_nickname = "知路管理员"
     @ts_admin_log_uid      = "1"
     @ts_admin_rcode        = "1"
 
-    @ts_err_accformat         = "帐号格式错误"
-    @ts_err_accformat_code    = "5003"
-    @ts_err_accformat_desc    = "E_ACCOUNT_FORMAT_ERROR"
+    @ts_err_accformat      = "帐号格式错误"
+    @ts_err_accformat_code = "5003"
+    @ts_err_accformat_desc = "E_ACCOUNT_FORMAT_ERROR"
 
     #manager add
-    @ts_add_rs                = 1
-    @ts_msg_ok                = "OK"
-    @ts_add_msg               = "添加成功"
-    @ts_modify_msg            = "修改成功"
-    @ts_delete_msg            = "删除成功"
+    @ts_add_rs             = 1
+    @ts_msg_ok             = "OK"
+    @ts_add_msg            = "添加成功"
+    @ts_modify_msg         = "修改成功"
+    @ts_delete_msg         = "删除成功"
+
+    @ts_phone_usr             = "13700004444"
+    @ts_usr_pw                = "123456"
+    @ts_usr_regargs           = {type: "account", cond: @ts_phone_usr}
 
     # {"err_code" => "5006", "err_msg" => "\u5E10\u53F7\u5DF2\u5B58\u5728", "err_desc" => "E_ACCOUNT_EXISTS_ERROR"}
     @ts_err_acc_exists        = "帐号已存在"
@@ -127,78 +131,125 @@ class IamTestNameSpace<MiniTest::Unit::TestCase
     @ts_err_appexists_code = "22007"
     @ts_err_appexists_desc = "E_APP_NAME_EXIST"
 
-    @ts_err_apppro_msg           = "应用提供方格式错误"
-    @ts_err_apppro_code          = "22009"
-    @ts_err_apppro_desc          = "E_APP_PROVIDER_FORMAT_ERROR"
+    @ts_err_apppro_msg             = "应用提供方格式错误"
+    @ts_err_apppro_code            = "22009"
+    @ts_err_apppro_desc            = "E_APP_PROVIDER_FORMAT_ERROR"
     # {"err_code"=>"22008", "err_msg"=>"\u5E94\u7528\u63D0\u4F9B\u65B9\u4E3A\u7A7A", "err_desc"=>"E_APP_PROVIDER_NULL"}
-    @ts_err_appnulpro_msg        = "应用提供方为空"
-    @ts_err_appnulpro_code       = "22008"
-    @ts_err_appnulpro_desc       = "E_APP_PROVIDER_NULL"
+    @ts_err_appnulpro_msg          = "应用提供方为空"
+    @ts_err_appnulpro_code         = "22008"
+    @ts_err_appnulpro_desc         = "E_APP_PROVIDER_NULL"
     # {"err_code"=>"22011", "err_msg"=>"\u5E94\u7528\u56DE\u8C03\u5730\u5740\u683C\u5F0F\u9519\u8BEF", "err_desc"=>"E_REDIRECT_URI_FORMAT_ERROR"}
-    @ts_err_appurl_msg           = "应用回调地址格式错误"
-    @ts_err_appurl_code          = "22011"
-    @ts_err_appurl_desc          = "E_REDIRECT_URI_FORMAT_ERROR"
+    @ts_err_appurl_msg             = "应用回调地址格式错误"
+    @ts_err_appurl_code            = "22011"
+    @ts_err_appurl_desc            = "E_REDIRECT_URI_FORMAT_ERROR"
     # {"err_code"=>"22010", "err_msg"=>"\u5E94\u7528\u63D0\u4F9B\u65B9\u4E3A\u7A7A", "err_desc"=>"E_APP_REDIRECT_URI_NULL"}
-    @ts_err_appnulurl_msg        = "应用提供方为空"
-    @ts_err_appnulurl_code       = "22010"
-    @ts_err_appnulurl_desc       = "E_APP_REDIRECT_URI_NULL"
+    @ts_err_appnulurl_msg          = "应用回调地址为空"
+    @ts_err_appnulurl_code         = "22010"
+    @ts_err_appnulurl_desc         = "E_APP_REDIRECT_URI_NULL"
     # {"error"=>"expired_code", "error_code"=>50000}
-    @ts_err_oauth_code           = 50000
-    @ts_err_oauth_msg            = "expired_code"
+    @ts_err_oauth_code             = 50000
+    @ts_err_oauth_msg              = "expired_code"
     # {"err_code"=>"60004", "err_msg"=>"AccessToken\u9519\u8BEF", "err_desc"=>"E_ACCESS_TOKEN_ERROR"}
-    @ts_err_oauthtoken_msg       = "AccessToken错误"
-    @ts_err_oauthtoken_code      = "60004"
-    @ts_err_oauthtoken_desc      = "E_ACCESS_TOKEN_ERROR"
+    @ts_err_oauthtoken_msg         = "AccessToken错误"
+    @ts_err_oauthtoken_code        = "60004"
+    @ts_err_oauthtoken_desc        = "E_ACCESS_TOKEN_ERROR"
     # {"err_code"=>"60003", "err_msg"=>"AccessToken\u4E3A\u7A7A", "err_desc"=>"E_ACCESS_TOKEN_NULL"}
-    @ts_err_oauthtokennul_msg    = "AccessToken为空"
-    @ts_err_oauthtokennul_code   = "60003"
-    @ts_err_oauthtokennul_desc   = "E_ACCESS_TOKEN_NULL"
+    @ts_err_oauthtokennul_msg      = "AccessToken为空"
+    @ts_err_oauthtokennul_code     = "60003"
+    @ts_err_oauthtokennul_desc     = "E_ACCESS_TOKEN_NULL"
     # E_CLIENT_ID_ERROR	60002	应用ID错误
-    @ts_err_oauthappid_msg       = "应用ID错误"
-    @ts_err_oauthappid_code      = "60002"
-    @ts_err_oauthappid_desc      = "E_CLIENT_ID_ERROR"
+    @ts_err_oauthappid_msg         = "应用ID错误"
+    @ts_err_oauthappid_code        = "60002"
+    @ts_err_oauthappid_desc        = "E_CLIENT_ID_ERROR"
     # {"err_code":"60005","err_msg":"AccessToken\u8fc7\u671f","err_desc":"E_ACCESS_TOKEN_EXPIRE"}
-    @ts_err_oautokenex_msg       = "AccessToken过期"
-    @ts_err_oautokenex_code      = "60005"
-    @ts_err_oautokenex_desc      = "E_ACCESS_TOKEN_EXPIRE"
+    @ts_err_oautokenex_msg         = "AccessToken过期"
+    @ts_err_oautokenex_code        = "60005"
+    @ts_err_oautokenex_desc        = "E_ACCESS_TOKEN_EXPIRE"
     # {"err_code"=>"40007", "err_msg"=>"\u8BE5\u8BBE\u5907\u4E3A\u65E0\u6548\u8BBE\u5907", "err_desc"=>"E_QUERY_DEVICE_ID_FAIL"}
-    @ts_err_devauth_msg          = "该设备为无效设备"
-    @ts_err_devauth_code         = "40007"
-    @ts_err_devauth_desc         = "E_QUERY_DEVICE_ID_FAIL"
-    @ts_err_devmac_msg           = "设备MAC已存在"
-    @ts_err_devmac_code          = "40004"
-    @ts_err_devmac_desc          = "E_DEV_MAC_EXISTS"
+    @ts_err_devauth_msg            = "该设备为无效设备"
+    @ts_err_devauth_code           = "40007"
+    @ts_err_devauth_desc           = "E_QUERY_DEVICE_ID_FAIL"
+    @ts_err_devmac_msg             = "设备MAC已存在"
+    @ts_err_devmac_code            = "40004"
+    @ts_err_devmac_desc            = "E_DEV_MAC_EXISTS"
     # RESULT err_msg:'设备名称为空'
-    @ts_err_devnul_msg           = "设备名称为空"
-    @ts_err_devnul_code          = "40006"
-    @ts_err_devnul_desc          = "E_DEV_NAME_NULL"
+    @ts_err_devnul_msg             = "设备名称为空"
+    @ts_err_devnul_code            = "40006"
+    @ts_err_devnul_desc            = "E_DEV_NAME_NULL"
     # E_DEVICE_NAME_EXISTS	40009	设备名称已存在
-    @ts_err_devexists_msg        = "设备名称已存在"
-    @ts_err_devexists_code       = "40009"
-    @ts_err_devexists_desc       = "E_DEVICE_NAME_EXISTS"
+    @ts_err_devexists_msg          = "设备名称已存在"
+    @ts_err_devexists_code         = "40009"
+    @ts_err_devexists_desc         = "E_DEVICE_NAME_EXISTS"
     # {"err_code"=>"11005", "err_msg"=>"\u65E7\u5BC6\u7801\u9519\u8BEF", "err_desc"=>"E_OLDPWD_ERROR"}
-    @ts_err_oldpw_msg            = "旧密码错误"
-    @ts_err_oldpw_code           = "11005"
-    @ts_err_oldpw_desc           = "E_OLDPWD_ERROR"
+    @ts_err_oldpw_msg              = "旧密码错误"
+    @ts_err_oldpw_code             = "11005"
+    @ts_err_oldpw_desc             = "E_OLDPWD_ERROR"
     #
-    @ts_err_pwsame_msg           = "新密码和旧密码相同"
-    @ts_err_pwsame_code          = "11006"
-    @ts_err_pwsame_desc          = "E_NEWPWD_EQUAL_OLDPWD"
+    @ts_err_pwsame_msg             = "新密码和旧密码相同"
+    @ts_err_pwsame_code            = "11006"
+    @ts_err_pwsame_desc            = "E_NEWPWD_EQUAL_OLDPWD"
+    # {"err_code"=>"40008", "err_msg"=>"\u6700\u591A\u9009\u62E9\u56DB\u4E2A\u5E94\u7528", "err_desc"=>"E_DEVICE_APP_COUNT"}
+    @ts_err_mulapp_msg             = "最多选择四个应用"
+    @ts_err_mulapp_code            = "40008"
+    @ts_err_mulapp_desc            = "E_DEVICE_APP_COUNT"
+    # {"err_code"=>"40002", "err_msg"=>"\u8BBE\u5907ID\u4E3A\u7A7A", "err_desc"=>"E_DEV_ID_NULL"}
+    @ts_err_appid_msg              = "设备ID为空"
+    @ts_err_appid_code             = "40002"
+    @ts_err_appid_desc             = "E_DEV_ID_NULL"
     #############################wuhongliang############################
     #############################liluping##############################################
-    @ts_admin_usr                = "admin@zhilutec.com"
-    @ts_app_redirect_uri         = "http://192.168.10.9"
-    @ts_app_id_001               = "160727126008"
-    @ts_app_name_001             = "IAMAPI_AutoTest_001"
-    @ts_app_provider_001         = "IAMAPI_TEST自动化测试专用"
-    @ts_app_comments_default_001 = "IAMAPI_TEST自动化测试专用"
-    @ts_app_system_manage        = "system@zhilutec.com" # 系统管理员
-    @ts_usr_name                 = "15814037400"
-    @ts_usr_pwd                  = "123123"
-    @ts_usr_name_config          = "config@zhilutec.com"
-    @ts_usr_pwd_config           = "123456"
-    @ts_usr_name_monitor         = "monitor@zhilutec.com"
-    @ts_usr_pwd_monitor          = "123456"
+    @ts_admin_usr                  = "admin@zhilutec.com"
+    @ts_app_redirect_uri           = "http://192.168.10.9"
+    @ts_app_id_001                 = "160727126008"
+    @ts_app_name_001               = "IAMAPI_AutoTest_001"
+    @ts_app_provider_001           = "IAMAPI_TEST自动化测试专用"
+    @ts_app_comments_default_001   = "IAMAPI_TEST自动化测试专用"
+    @ts_app_manage_pwd             = "123456"
+    @ts_app_super_manage           = "super@zhilutec.com" # 超级管理员
+    @ts_app_super_manage_nickname  = "super"
+    @ts_app_system_manage          = "system@zhilutec.com" # 系统管理员
+    @ts_app_system_manage_nickname = "system"
+    @ts_usr_name                   = "15814038400"
+    @ts_usr_pwd                    = "123123"
+    @ts_usr_name_config            = "config@zhilutec.com"
+    @ts_app_super_config_nickname  = "config"
+    @ts_usr_pwd_config             = "123456"
+    @ts_usr_name_monitor           = "monitor@zhilutec.com"
+    @ts_app_super_monitor_nickname = "monitor"
+    @ts_usr_pwd_monitor            = "123456"
+
+    @ts_mobilecode_url = "curl -X POST http://192.168.10.9:8082/mobileCode/"
+    @ts_ssh_host          = "192.168.10.9"
+    @ts_ssh_usr           = "root"
+    @ts_ssh_pwd           = "zhilu@2015"
+    #email_usr
+    @ts_email_usr = "dadan@qq.com"
+    @ts_email_pw = "123123"
+    @ts_email_regargs = {type: "account", cond: @ts_email_usr}
+    # {"err_code"=>"22013", "err_msg"=>"\u65E7\u5BC6\u7801\u9519\u8BEF", "err_desc"=>"E_OLDPWD_ERROR"}
+    @ts_err_delapp_msg              = "删除应用失败"
+    @ts_err_delapp_code             = "22013"
+    @ts_err_delapp_desc             = "E_DELETE_APP_ERROR"
+
+    # {"err_code"=>"10005", "err_msg"=>"\u5E10\u53F7\u672A\u6FC0\u6D3B,\u8BF7\u767B\u5F55\u90AE\u7BB1\u6FC0\u6D3B", "err_desc" =>"E_NOT_ACTIVE"}
+    @ts_err_noactive_msg              = "帐号未激活,请登录邮箱激活"
+    @ts_err_noactive_code             = "10005"
+    @ts_err_noactive_desc             = "E_NOT_ACTIVE"
+
+    # {"err_code"=>"22015", "err_msg"=>"\u65E7\u5BC6\u7801\u9519\u8BEF", "err_desc"=>"E_DELETE_ASSOCIATED_APP_ERROR"}
+    @ts_err_delapp_msg              = "应用正在使用，不允许被删除"
+    @ts_err_delapp_code             = "22015"
+    @ts_err_delapp_desc             = "E_DELETE_ASSOCIATED_APP_ERROR"
+
+    # {"err_code"=>"11007", "err_msg"=>"\u65E7\u5BC6\u7801\u9519\u8BEF", "err_desc"=>"E_NEWPWD_FORMAT_ERROR"}
+    @ts_err_newpw_format_msg              = "新密码格式错误"
+    @ts_err_newpw_format_code             = "11007"
+    @ts_err_newpw_format_desc             = "E_NEWPWD_FORMAT_ERROR"
+
+    # {"err_code"=>"5002", "err_msg"=>"\u65E7\u5BC6\u7801\u9519\u8BEF", "err_desc"=>"E_MOBILE_FORMAT_ERROR"}
+    @ts_err_phoneerr_msg              = "手机号格式错误"
+    @ts_err_phoneerr_code             = "5002"
+    @ts_err_phoneerr_desc             = "E_MOBILE_FORMAT_ERROR"
 
   end
 

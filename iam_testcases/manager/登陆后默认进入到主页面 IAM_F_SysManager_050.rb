@@ -17,14 +17,14 @@ testcase {
         }
 
         operate("2、登录知路管理员；") {
-            rs = @iam_obj.manager_login(@ts_admin_log_name,@ts_admin_log_pw)
+            rs = @iam_obj.manager_login(@ts_admin_usr,@ts_admin_pw)
             # {"result":1,"name":"admin@zhilutec.com","nickname":"\u77e5\u8def\u7ba1\u7406\u5458",
             # "uid":"1","role_code":"1","token":"e4f0326fa441186b18dcd66dc4509466"}
             puts "RESULT result:#{rs['result']}".encode("GBK")
             assert_equal(@ts_admin_log_rs, rs["result"], "管理员返回信息错误!")
 
             puts "RESULT name:#{rs['name']}".encode("GBK")
-            assert_equal(@ts_admin_log_name, rs["name"], "管理员返回name信息错误!")
+            assert_equal(@ts_admin_usr, rs["name"], "管理员返回name信息错误!")
 
             puts "RESULT nickname:#{rs['nickname']}".encode("GBK")
             assert_equal(@ts_admin_log_nickname, rs["nickname"], "管理员返回nickname信息错误!")

@@ -57,6 +57,26 @@ module IAMAPI
       JSON.parse(rs)
     end
 
+    # curl -X POST http://192.168.10.9:8091/index.php/users/modpwd -d'name=895344033@qq.com&token=6C1GAWdn6EaYruv14z9vzE9oxLj3sUhY&password=654321'
+    def data_usr_modpw_email(email, token, newpw)
+      data = "name=#{email}&token=#{token}&password=#{newpw}"
+    end
+
+    # curl -X POST http://192.168.10.9:8091/index.php/users/modpwd -d'name=895344033@qq.com&token=6C1GAWdn6EaYruv14z9vzE9oxLj3sUhY&password=654321'
+    def usr_modpw_email(email, token, newpw, url=USER_MODPW_EMAIL_URL)
+      data = data_usr_modpw_email(email, token, newpw)
+      rs   = post_data(url, data)
+      JSON.parse(rs)
+    end
+
+    #找到email token-》修改密码
+    def usr_find_mod_emailpw(email, newpw)
+      rs = find_pwd_for_email(email)
+      return rs if rs.has_key?("err_code")
+      token = rs["token"]
+      usr_modpw_email(email, token, newpw,)
+    end
+
     #用户登录
     # curl -X POST http://192.168.10.9:8082/index.php/users/userlogin -d 'account=349160920@qq.com&pwd=123123&client_id=100000000000'
     # return,hash
@@ -292,20 +312,25 @@ module IAMAPI
     #删除用户
     # curl -X POST http://192.168.10.9:8082/users/deluser -d '{"ids":"480f30b6-0f51-44e8-b3c0-d9db22557b6a,828a6550-4173-4ffa-805d-f71c4b86ec02"}'
     def delete_usr(uid, url=USER_DEL_URL)
-        uids = uid
-        if uid.kind_of?(Array)
-            uids = uid.join(",")
-        end
-        data = "{\"ids\":\"" + uids + "\"}"
-        rs   = post_data(url, data)
-        JSON.parse(rs)
+      uids = uid
+      if uid.kind_of?(Array)
+        uids = uid.join(",")
+      end
+      data = "{\"ids\":\"" + uids + "\"}"
+      rs   = post_data(url, data)
+      JSON.parse(rs)
     end
 
     #用户登录 =》 删除用户
     def usr_delete_usr(usr, pwd, url=USER_DEL_URL)
-        rs_login = user_login(usr, pwd)
-        uid    =rs_login["uid"]
+      rs_login = user_login(usr, pwd)
+      if rs_login.has_key?("err_code")
+        puts "user '#{usr}' login failed,err_desc:#{rs_login["err_desc"]}"
+      else
+        uid =rs_login["uid"]
         delete_usr(uid, url)
+      end
+
     end
   end
 end

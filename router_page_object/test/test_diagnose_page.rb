@@ -4,25 +4,33 @@ require 'minitest/autorun'
 require 'minitest/reporters'
 file_path =File.expand_path('../../lib/router_page_object', __FILE__)
 require file_path
-# require 'router_page_object'
 
 class Test<MiniTest::Unit::TestCase
 
-		def test_diag
-				ip       = "192.168.100.1"
-				usrname  = "admin"
-				userpw   = "admin"
-				@browser = Watir::Browser.new :ff, :profile => "default"
-				@browser.goto(ip)
-				@browser.text_field(:name, 'admuser').set(usrname)
-				@browser.text_field(:name, 'admpass').set(userpw)
-				@browser.button(:value, '登录').click
-				tag_lan="set_wifi"
-				@browser.span(:id => tag_lan).wait_until_present(5)
-				@diagnose_page = RouterPageObject::DiagnosePage.new(@browser)
-				@diagnose_page.initialize_diag(@browser)
-				p @diagnose_page.detect_rs.encode("GBK")
-				@diagnose_page.rediagnose
-				p @diagnose_page.detect_rs.encode("GBK")
-		end
+    def test_systatus
+        url            = "192.168.100.1"
+        usrname        = "admin"
+        passwd         = "admin"
+        @browser       = Watir::Browser.new :firefox, :profile => "default"
+        @diagnose_page = RouterPageObject::DiagnoseAdvPage.new(@browser)
+        @diagnose_page.login_with(usrname, passwd, url)
+        ##############################################################################################
+        @diagnose_page.initialize_diagadv(@browser)
+        # @diagnose_page.switch_page(1) #切换到诊断窗口
+        # @diagnose_page.url_addr = "http://www.zhilu.com "
+        # sleep 1
+        # @diagnose_page.advdiag(30)
+        # p rs = @diagnose_page.wan_type
+        # # p rs.encode("GBK")
+        # # p rs.slice(/\(.+\)\s*:(.+)/, 1)
+        # # p rs.slice(/\p{Han}(.+)/, 1)
+        # p "1111" if rs =~ /dhcp/i
+        # p ts = @diagnose_page.net_status
+        # p "22222" if ts =~ /正常/i
+        #
+        # # p @diagnose_page.wan_conn.encode("GBK")
+        # # p @diagnose_page.cpu_status
+
+    end
+
 end

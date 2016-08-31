@@ -8,7 +8,7 @@ testcase {
     attr = {"id" => "IAM_F_UserView_004", "level" => "P1", "auto" => "n"}
 
     def prepare
-        @tc_email_account = "liluping@zhilutec.com"
+        @tc_email_account = "nidayede@qq.com"
         @tc_email_pw      = "123456"
     end
 
@@ -31,6 +31,7 @@ testcase {
             args = {"type" => "account", "cond" => @tc_email_account}
             rs   = @iam_obj.get_user_list(@admin_id, @admin_token, args)
             assert_equal("1", rs["totalRows"], "未查询到用户信息")
+            assert_equal(@tc_email_account, rs["users"][0]["account"], "未查询到#{@tc_email_account}的用户信息")
         }
 
 
@@ -38,9 +39,7 @@ testcase {
 
     def clearup
         operate("1.恢复默认设置") {
-            if @re["result"] == 1
-                @iam_obj.usr_delete_usr(@tc_email_account, @tc_email_pw)
-            end
+            @iam_obj.usr_delete_usr(@tc_email_account, @tc_email_pw)
         }
     end
 

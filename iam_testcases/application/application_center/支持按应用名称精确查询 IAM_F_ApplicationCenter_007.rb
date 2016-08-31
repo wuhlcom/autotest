@@ -15,6 +15,15 @@ testcase {
         @tc_app_provider     = "zhilutest"
         @tc_app_redirect_uri = "http://192.168.10.9"
         @tc_app_comments     = ""
+
+        @tc_usr_names        = [@tc_app_name1, @tc_app_name2, @tc_app_name3, @tc_app_name4]
+        @tc_usr_part         = {provider: @tc_app_provider, redirect_uri: @tc_app_redirect_uri, comments: @tc_app_comments}
+        @tc_usr_args         = []
+        @tc_usr_names.each do |tc_usr_name|
+            args = {name: tc_usr_name}
+            args = args.merge(@tc_usr_part)
+            @tc_usr_args<<args
+        end
     end
 
     def process
@@ -23,24 +32,19 @@ testcase {
         }
 
         operate("2、获取登录用户的token值和id号；") {
-            args1 = {"name" => @tc_app_name1, "provider" => @tc_app_provider, "redirect_uri" => @tc_app_redirect_uri, "comments" => @tc_app_comments}
-            args2 = {"name" => @tc_app_name2, "provider" => @tc_app_provider, "redirect_uri" => @tc_app_redirect_uri, "comments" => @tc_app_comments}
-            args3 = {"name" => @tc_app_name3, "provider" => @tc_app_provider, "redirect_uri" => @tc_app_redirect_uri, "comments" => @tc_app_comments}
-            args4 = {"name" => @tc_app_name4, "provider" => @tc_app_provider, "redirect_uri" => @tc_app_redirect_uri, "comments" => @tc_app_comments}
-            @rs1 = @iam_obj.qca_app(@tc_app_name1, args1, "1")
-            assert_equal(1, @rs1["result"], "创建应用1失败")
-            @rs2 = @iam_obj.qca_app(@tc_app_name2, args2, "1")
-            assert_equal(1, @rs2["result"], "创建应用2失败")
-            @rs3 = @iam_obj.qca_app(@tc_app_name3, args3, "1")
-            assert_equal(1, @rs3["result"], "创建应用3失败")
-            @rs4 = @iam_obj.qca_app(@tc_app_name4, args4, "1")
-            assert_equal(1, @rs4["result"], "创建应用4失败")
+            rs= @iam_obj.phone_usr_reg(@ts_phone_usr, @ts_usr_pw, @ts_usr_regargs)
+            assert_equal(@ts_add_rs, rs["result"], "用户#{@ts_phone_usr}注册失败")
+
+            @tc_usr_args.each do |args|
+                rs = @iam_obj.qca_app(args[:name], args, "1")
+                assert_equal(@ts_add_rs, rs["result"], "创建应用#{args[:name]}并激活失败")
+            end
         }
 
         operate("3、按应用名称精确查询") {
-            rs3 = @iam_obj.usr_login_list_app_bytype(@ts_usr_name, @ts_usr_pwd, @tc_app_name3, false)
+            rs3 = @iam_obj.usr_login_list_app_bytype(@ts_phone_usr, @ts_usr_pw, @tc_app_name3, false)
             assert_equal(@tc_app_name3, rs3["apps"][0]["name"], "查询应用3失败")
-            rs4 = @iam_obj.usr_login_list_app_bytype(@ts_usr_name, @ts_usr_pwd, @tc_app_name4, false)
+            rs4 = @iam_obj.usr_login_list_app_bytype(@ts_phone_usr, @ts_usr_pw, @tc_app_name4, false)
             assert_equal(@tc_app_name4, rs4["apps"][0]["name"], "查询应用4失败")
         }
 
@@ -49,17 +53,9 @@ testcase {
 
     def clearup
         operate("1.恢复默认设置") {
-            if @rs1["result"] == 1
-                @iam_obj.mana_del_app(@tc_app_name1)
-            end
-            if @rs2["result"] == 1
-                @iam_obj.mana_del_app(@tc_app_name2)
-            end
-            if @rs3["result"] == 1
-                @iam_obj.mana_del_app(@tc_app_name3)
-            end
-            if @rs4["result"] == 1
-                @iam_obj.mana_del_app(@tc_app_name4)
+            @iam_obj.usr_delete_usr(@ts_phone_usr, @ts_usr_pw)
+            @tc_usr_args.each do |args|
+                @iam_obj.mana_del_app(args[:name])
             end
         }
     end

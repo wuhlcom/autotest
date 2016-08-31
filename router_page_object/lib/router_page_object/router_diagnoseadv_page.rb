@@ -42,7 +42,7 @@ module RouterPageObject
 						@tc_handles = @browserobj.driver.window_handles
 				end
 
-				def advdiag(detect_time=30)
+				def advdiag(detect_time=70)
 						self.check
 						puts "sleeping #{detect_time} seconds for adv diagnose..."
 						sleep detect_time

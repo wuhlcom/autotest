@@ -8,15 +8,20 @@ testcase {
     attr = {"id" => "IAM_F_UserCenter_020", "level" => "P4", "auto" => "n"}
 
     def prepare
-        @tc_newPwd1  = "中国中国中国"
-        @tc_newPwd2  = "!@\#$*("
-        @tc_newPwd3  = "１２３４５６"
-        @tc_err_code = "11007"
+        @tc_phone_usr   = "15858031512"
+        @tc_usr_pw      = "123456"
+        @tc_usr_regargs = {type: "account", cond: @tc_phone_usr}
+        @tc_newPwd1     = "中国中国中国"
+        @tc_newPwd2     = "!@\#$*("
+        @tc_newPwd3     = "１２３４５６"
+        @tc_err_code    = "11007"
     end
 
     def process
 
         operate("1、ssh登录IAM服务器；") {
+            rs= @iam_obj.phone_usr_reg(@tc_phone_usr, @tc_usr_pw, @tc_usr_regargs)
+            assert_equal(@ts_add_rs, rs["result"], "用户#{@tc_phone_usr}注册失败")
         }
 
         operate("2、登录用户获取access_token值和uid号；") {
@@ -24,15 +29,39 @@ testcase {
         }
 
         operate("3、修改密码，新密码输入异常；") {
+            rs    = @iam_obj.user_login(@tc_phone_usr, @tc_usr_pw)
+            token = rs["access_token"]
+            uid   = rs["uid"]
+
             p "密码输入中文".encode("GBK")
-            @rs1 = @iam_obj.usr_modify_pw_step(@ts_usr_name, @ts_usr_pwd, @ts_usr_pwd, @tc_newPwd1)
-            assert_equal(@tc_err_code, @rs1["err_code"], "修改密码成功")
+            tip  = "密码输入中文"
+            p rs = @iam_obj.mofify_user_pwd(@tc_usr_pw, @tc_newPwd1, uid, token)
+            puts "RESULT err_msg:#{rs['err_msg']}".encode("GBK")
+            puts "RESULT err_code:#{rs['err_code']}".encode("GBK")
+            puts "RESULT err_desc:#{rs['err_desc']}".encode("GBK")
+            assert_equal(@ts_err_newpw_format_code, rs["err_code"], "#{tip}返回code错误!")
+            assert_equal(@ts_err_newpw_format_msg, rs["err_msg"], "#{tip}返回msg错误")
+            assert_equal(@ts_err_newpw_format_desc, rs["err_desc"], "#{tip}返回desc错误!")
+
             p "密码输入特殊字符".encode("GBK")
-            @rs2 = @iam_obj.usr_modify_pw_step(@ts_usr_name, @ts_usr_pwd, @ts_usr_pwd, @tc_newPwd2)
-            assert_equal(@tc_err_code, @rs2["err_code"], "修改密码成功")
+            tip  = "密码输入特殊字符"
+            p rs = @iam_obj.mofify_user_pwd(@tc_usr_pw, @tc_newPwd2, uid, token)
+            puts "RESULT err_msg:#{rs['err_msg']}".encode("GBK")
+            puts "RESULT err_code:#{rs['err_code']}".encode("GBK")
+            puts "RESULT err_desc:#{rs['err_desc']}".encode("GBK")
+            assert_equal(@ts_err_newpw_format_code, rs["err_code"], "#{tip}返回code错误!")
+            assert_equal(@ts_err_newpw_format_msg, rs["err_msg"], "#{tip}返回msg错误")
+            assert_equal(@ts_err_newpw_format_desc, rs["err_desc"], "#{tip}返回desc错误!")
+
             p "密码输入全角格式数字".encode("GBK")
-            @rs3 = @iam_obj.usr_modify_pw_step(@ts_usr_name, @ts_usr_pwd, @ts_usr_pwd, @tc_newPwd3)
-            assert_equal(@tc_err_code, @rs3["err_code"], "修改密码成功")
+            tip  = "密码输入全角格式数字"
+            p rs = @iam_obj.mofify_user_pwd(@tc_usr_pw, @tc_newPwd3, uid, token)
+            puts "RESULT err_msg:#{rs['err_msg']}".encode("GBK")
+            puts "RESULT err_code:#{rs['err_code']}".encode("GBK")
+            puts "RESULT err_desc:#{rs['err_desc']}".encode("GBK")
+            assert_equal(@ts_err_newpw_format_code, rs["err_code"], "#{tip}返回code错误!")
+            assert_equal(@ts_err_newpw_format_msg, rs["err_msg"], "#{tip}返回msg错误")
+            assert_equal(@ts_err_newpw_format_desc, rs["err_desc"], "#{tip}返回desc错误!")
         }
 
 
@@ -40,13 +69,10 @@ testcase {
 
     def clearup
         operate("1.恢复默认设置") {
-            if @rs3["result"] == 1
-                @iam_obj.usr_modify_pw_step(@ts_usr_name, @tc_newPwd3, @tc_newPwd3, @ts_usr_pwd)
-            elsif @rs2["result"] == 1
-                @iam_obj.usr_modify_pw_step(@ts_usr_name, @tc_newPwd2, @tc_newPwd2, @ts_usr_pwd)
-            elsif @rs1["result"] == 1
-                @iam_obj.usr_modify_pw_step(@ts_usr_name, @tc_newPwd1, @tc_newPwd1, @ts_usr_pwd)
-            end
+            @iam_obj.usr_delete_usr(@tc_phone_usr, @tc_usr_pw)
+            @iam_obj.usr_delete_usr(@tc_phone_usr, @tc_newPwd1)
+            @iam_obj.usr_delete_usr(@tc_phone_usr, @tc_newPwd2)
+            @iam_obj.usr_delete_usr(@tc_phone_usr, @tc_newPwd3)
         }
     end
 

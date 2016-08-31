@@ -7,17 +7,25 @@ require file_path
 # require 'router_page_object'
 
 class Test<MiniTest::Unit::TestCase
-		# def testset_dhcp
-		# 		url      = "192.168.100.1"
-		# 		usrname  = "admin"
-		# 		passwd   = "admin"
-		# 		@browser = Watir::Browser.new :firefox, :profile => "default"
-		# 		operate  = RouterPageObject::WanPage.new(@browser)
-		# 		#登录
-		# 		operate.login_with(usrname, passwd, url)
-		# 		# #设置dhcp
-		# 		# operate.set_dhcp(@browser.url)
-		# end
+		def test_set_dhcp
+				url      = "192.168.100.1"
+				usrname  = "admin"
+				passwd   = "admin"
+				@browser = Watir::Browser.new :firefox, :profile => "default"
+				@wan_page  = RouterPageObject::WanPage.new(@browser)
+				@sys_page = RouterPageObject::SystatusPage.new(@browser)
+				#登录
+				@wan_page.login_with(usrname, passwd, url)
+				#设置dhcp
+				# operate.set_dhcp(@browser, @browser.url)
+				# operate.open_wan_page(@browser.url)
+				@wan_page.select_pppoe(@browser.url)
+				@wan_page.pppoe_input("pppoe@163.gd", "PPPOETEST") #输入账号密码
+				@wan_page.save
+				sleep 60
+				@sys_page.open_systatus_page(@browser.url)
+				p @sys_page.get_wan_ip
+		end
 		#
 		# def test_wireless_wan
 		# 		url       = "192.168.100.1"

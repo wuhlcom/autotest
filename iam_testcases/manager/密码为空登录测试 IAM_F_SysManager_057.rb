@@ -8,7 +8,7 @@ testcase {
     attr = {"id" => "IAM_F_SysManager_057", "level" => "P2", "auto" => "n"}
 
     def prepare
-        @tc_admin_log_pw=""
+        @ts_admin_pw=""
     end
 
     def process
@@ -17,7 +17,7 @@ testcase {
         }
 
         operate("2、管理员登录，密码为空；") {
-            rs = @iam_obj.manager_login(@ts_admin_log_name, @tc_admin_log_pw)
+            rs = @iam_obj.manager_login(@ts_admin_usr, @ts_admin_pw)
             # {"err_code"=>"10001", "err_msg"=>"\u5E10\u53F7\u6216\u5BC6\u7801\u9519\u8BEF", "err_desc"=>"E_USER_PWD_ERROR"}
             puts "RESULT err_code:#{rs['err_code']}".encode("GBK")
             puts "RESULT err_msg:#{rs['err_msg']}".encode("GBK")

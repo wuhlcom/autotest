@@ -16,8 +16,8 @@ testcase {
 
         operate("1、ssh登录IAM服务器；") {
             p "创建手机号用户".encode("GBK")
-            @re = @iam_obj.register_phoneusr(@tc_phone_number, @tc_phone_pw)
-            assert_equal(1, @re["result"], "注册手机用户失败")
+            @rs= @iam_obj.phone_usr_reg(@ts_phone_usr, @ts_usr_pw, @ts_usr_regargs)
+            assert_equal(@ts_add_rs, @rs["result"], "用户#{@ts_phone_usr}注册失败")
         }
 
         operate("2、获取知路管理员token值；") {
@@ -28,9 +28,11 @@ testcase {
         }
 
         operate("3、按手机号码精确查询；") {
-            args = {"type" => "account", "cond" => @tc_phone_number}
+            args = {"type" => "account", "cond" => @ts_phone_usr}
             rs   = @iam_obj.get_user_list(@admin_id, @admin_token, args)
-            assert_equal("1", rs["totalRows"], "未查询到用户信息")
+            assert_equal(@ts_phone_usr, rs["users"][0]["account"], "未查询到#{@ts_phone_usr}用户信息")
+
+            # assert_equal("1", rs["totalRows"], "未查询到用户信息")
         }
 
 
@@ -38,8 +40,8 @@ testcase {
 
     def clearup
         operate("1.恢复默认设置") {
-            if @re["result"] == 1
-                @iam_obj.usr_delete_usr(@tc_phone_number, @tc_phone_pw)
+            if @rs["result"] == 1
+                @iam_obj.usr_delete_usr(@ts_phone_usr, @ts_usr_pw)
             end
         }
     end

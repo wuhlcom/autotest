@@ -5,121 +5,126 @@
 # modify:
 #
 testcase {
-    attr = {"id" => "IAM_F_ApplicationCenter_005", "level" => "P3", "auto" => "n"}
+  attr = {"id" => "IAM_F_ApplicationCenter_005", "level" => "P3", "auto" => "n"}
 
-    def prepare
-        @tc_manager_name     = "super@zhilutec.com"
-        @tc_manager_nickname = "SUPER_MAN"
-        @tc_manager_pwd      = "123456"
+  def prepare
+    @tc_phone_usr   = "13700114444"
+    @tc_usr_pw      = "123456"
+    @tc_usr_regargs = {type: "account", cond: @tc_phone_usr}
 
-        @tc_app_name1        = "autotest_app1"
-        @tc_app_name2        = "autotest_app2"
-        @tc_app_name3        = "autotest_app3"
-        @tc_app_name4        = "autotest_app4"
-        @tc_app_provider     = "zhilutest"
-        @tc_app_redirect_uri = "http://192.168.10.9"
-        @tc_app_comments     = ""
+    @tc_app_name1    = "whl_app1"
+    @tc_app_name2    = "whl_app2"
+    @tc_app_name3    = "whl_app3"
+    @tc_app_name4    = "whl_app4"
+    @tc_app_provider = "zhilutest"
+    @tc_app_comments = "whl"
+
+    @tc_app_names =[@tc_app_name1, @tc_app_name2, @tc_app_name3, @tc_app_name4].sort
+    @tc_app_part  ={provider: @tc_app_provider, redirect_uri: @ts_app_redirect_uri, comments: @tc_app_comments}
+    @tc_app_infos = []
+    @tc_app_names.each do |appname|
+      args1 = {name: appname}
+      args  = args1.merge(@tc_app_part)
+      @tc_app_infos<<args
     end
+  end
 
-    def process
+  def process
 
-        operate("1、ssh登录IAM服务器；") {
-            @rs  = {}
-            @rs1 = {}
-            @rs2 = {}
-            @rs3 = {}
-            @rs4 = {}
-        }
+    operate("1、ssh登录IAM服务器；") {
 
-        operate("2、获取登录用户的token值和id号；") {
-            @rs = @iam_obj.manager_add(@tc_manager_name, @tc_manager_nickname, @tc_manager_pwd)
-            assert_equal(1, @rs["result"], "创建超级管理员失败")
+    }
 
-            p "知路超级管理员创建应用，并激活".encode("GBK")
-            args1 = {"name" => @tc_app_name1, "provider" => @tc_app_provider, "redirect_uri" => @tc_app_redirect_uri, "comments" => @tc_app_comments}
-            args2 = {"name" => @tc_app_name2, "provider" => @tc_app_provider, "redirect_uri" => @tc_app_redirect_uri, "comments" => @tc_app_comments}
-            @rs1 = @iam_obj.qca_app(@tc_app_name1, args1, "1")
-            assert_equal(1, @rs1["result"], "创建应用1失败")
-            @rs2 = @iam_obj.qca_app(@tc_app_name2, args2, "1")
-            assert_equal(1, @rs2["result"], "创建应用2失败")
+    operate("2、获取登录用户的token值和id号；") {
+      rs1= @iam_obj.phone_usr_reg(@tc_phone_usr, @tc_usr_pw, @tc_usr_regargs)
+      assert_equal(@ts_add_rs, rs1["result"], "用户#{@tc_phone_usr}注册失败")
 
-            p "超级管理员创建应用，并激活".encode("GBK")
-            args3 = {"name" => @tc_app_name3, "provider" => @tc_app_provider, "redirect_uri" => @tc_app_redirect_uri, "comments" => @tc_app_comments}
-            args4 = {"name" => @tc_app_name4, "provider" => @tc_app_provider, "redirect_uri" => @tc_app_redirect_uri, "comments" => @tc_app_comments}
-            @rs3 = @iam_obj.qca_app(@tc_app_name3, args3, "1", @tc_manager_name, @tc_manager_pwd)
-            assert_equal(1, @rs3["result"], "创建应用3失败")
-            @rs4 = @iam_obj.qca_app(@tc_app_name4, args4, "1", @tc_manager_name, @tc_manager_pwd)
-            assert_equal(1, @rs4["result"], "创建应用4失败")
+      #管理员登录
+      rs2    = @iam_obj.manager_login
+      @uid   = rs2["uid"]
+      @token = rs2["token"]
 
-            app_name_arr = []
-            flag         = false
-            rs           = @iam_obj.usr_login_list_app_all(@ts_usr_name, @ts_usr_pwd)
-            rs["apps"].each do |item|
-                app_name_arr << item["name"]
-            end
-            flag = true if app_name_arr.include?(@tc_app_name1) && app_name_arr.include?(@tc_app_name2) && app_name_arr.include?(@tc_app_name3) && app_name_arr.include?(@tc_app_name4)
-            assert(flag, "用户未查询到已激活的应用")
-        }
+      #管理员创建应用
+      @tc_app_infos.each do |app|
+        tip ="创建应用'#{app[:name]}'"
+        puts tip.to_gbk
+        rs3 = @iam_obj.qc_app(app[:name], @token, @uid, app, "1")
+        assert_equal(1, rs3["result"], "#{tip}失败")
+      end
 
-        operate("3、用户查询待绑定的应用列表；") {
-            rs1 = @iam_obj.mana_active_app(@tc_app_name1, "0")
-            assert_equal(1, rs1["result"], "应用1禁用失败")
-            rs2 = @iam_obj.mana_active_app(@tc_app_name2, "0")
-            assert_equal(1, rs2["result"], "应用2禁用失败")
-            rs3 = @iam_obj.mana_active_app(@tc_app_name3, "0", nil, @tc_manager_name, @tc_manager_pwd)
-            assert_equal(1, rs3["result"], "应用3禁用失败")
-            rs4 = @iam_obj.mana_active_app(@tc_app_name4, "0", nil, @tc_manager_name, @tc_manager_pwd)
-            assert_equal(1, rs4["result"], "应用4禁用失败")
+      #用户查询应用
+      app_name_arr = []
+      rs3          = @iam_obj.usr_login_list_app_all(@tc_phone_usr, @tc_usr_pw)
+      rs3["apps"].each do |item|
+        app_name_arr << item["name"]
+      end
+      app_name_arr.sort!
+      flag= false
+      @tc_app_names.each do |appname|
+        tip2 ="用户查询应用'#{appname}'"
+        puts tip2.to_gbk
+        flag = app_name_arr.include?(appname)
+        assert(flag, "#{tip2}失败")
+      end
+    }
 
-            app_name_arr = []
-            flag         = true
-            rs           = @iam_obj.usr_login_list_app_all(@ts_usr_name, @ts_usr_pwd)
-            rs["apps"].each do |item|
-                app_name_arr << item["name"]
-            end
-            flag = false if app_name_arr.include?(@tc_app_name1) || app_name_arr.include?(@tc_app_name2) || app_name_arr.include?(@tc_app_name3) || app_name_arr.include?(@tc_app_name4)
-            assert(flag, "用户查询到未激活的应用")
+    operate("3、用户查询待绑定的应用列表；") {
+      #管理员禁用应用
+      @tc_app_names.each do |appname|
+        tip1 ="管理员禁用应用'#{appname}'"
+        puts tip1.to_gbk
+        rs1 = @iam_obj.get_client_active_app(appname, @token, @uid, 0)
+        assert_equal(1, rs1["result"], "#{tip1}失败")
+      end
 
-            rs1 = @iam_obj.mana_active_app(@tc_app_name1, "1")
-            assert_equal(1, rs1["result"], "应用1激活失败")
-            rs2 = @iam_obj.mana_active_app(@tc_app_name2, "1")
-            assert_equal(1, rs2["result"], "应用2激活失败")
-            rs3 = @iam_obj.mana_active_app(@tc_app_name3, "1", nil, @tc_manager_name, @tc_manager_pwd)
-            assert_equal(1, rs3["result"], "应用3激活失败")
-            rs4 = @iam_obj.mana_active_app(@tc_app_name4, "1", nil, @tc_manager_name, @tc_manager_pwd)
-            assert_equal(1, rs4["result"], "应用4激活失败")
+      #用户查询应用
+      app_name_arr1 = []
+      rs2           = @iam_obj.usr_login_list_app_all(@tc_phone_usr, @tc_usr_pw)
+      rs2["apps"].each do |item|
+        app_name_arr1 << item["name"]
+      end
+      app_name_arr1.sort!
 
-            app_name_arr = []
-            flag         = false
-            rs           = @iam_obj.usr_login_list_app_all(@ts_usr_name, @ts_usr_pwd)
-            rs["apps"].each do |item|
-                app_name_arr << item["name"]
-            end
-            flag = true if app_name_arr.include?(@tc_app_name1) && app_name_arr.include?(@tc_app_name2) && app_name_arr.include?(@tc_app_name3) && app_name_arr.include?(@tc_app_name4)
-            assert(flag, "用户未查询到已激活的应用")
-        }
+      flag= false
+      @tc_app_names.each do |appname|
+        tip2 ="管理员禁用应用'#{appname}'后，用户查询应用'#{appname}'"
+        puts tip2.to_gbk
+        flag = app_name_arr1.include?(appname)
+        refute(flag, "#{tip2}失败")
+      end
 
+      #管理员启用应用
+      @tc_app_names.each do |appname|
+        tip3 ="管理员重新启用应用'#{appname}'"
+        puts tip3.to_gbk
+        rs3 = @iam_obj.get_client_active_app(appname, @token, @uid, 1)
+        assert_equal(1, rs3["result"], "#{tip3}失败")
+      end
 
-    end
+      #用户查询应用
+      app_name_arr = []
+      rs4          = @iam_obj.usr_login_list_app_all(@tc_phone_usr, @tc_usr_pw)
+      rs4["apps"].each do |item|
+        app_name_arr << item["name"]
+      end
+      app_name_arr.sort!
 
-    def clearup
-        operate("1.恢复默认设置") {
-            if @rs1["result"] == 1
-                @iam_obj.mana_del_app(@tc_app_name1)
-            end
-            if @rs2["result"] == 1
-                @iam_obj.mana_del_app(@tc_app_name2)
-            end
-            if @rs3["result"] == 1
-                @iam_obj.mana_del_app(@tc_app_name3)
-            end
-            if @rs4["result"] == 1
-                @iam_obj.mana_del_app(@tc_app_name4)
-            end
-            if @rs["result"] == 1
-                @iam_obj.del_manager(@tc_manager_name)
-            end
-        }
-    end
+      flag= false
+      @tc_app_names.each do |appname|
+        tip4="管理员重新启用应用'#{appname}'后，用户查询应用'#{appname}'"
+        puts tip4.to_gbk
+        flag = app_name_arr.include?(appname)
+        assert(flag, "#{tip4}失败")
+      end
+    }
+
+  end
+
+  def clearup
+    operate("1.恢复默认设置") {
+      @iam_obj.usr_delete_usr(@tc_phone_usr, @tc_usr_pw)
+      @iam_obj.mana_del_app(@tc_app_names)
+    }
+  end
 
 }

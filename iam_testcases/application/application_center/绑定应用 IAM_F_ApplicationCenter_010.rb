@@ -5,67 +5,63 @@
 # modify:
 #
 testcase {
-    attr = {"id" => "IAM_F_ApplicationCenter_010", "level" => "P1", "auto" => "n"}
+  attr = {"id" => "IAM_F_ApplicationCenter_010", "level" => "P1", "auto" => "n"}
 
-    def prepare
-        @tc_app_name1        = "application1"
-        @tc_app_name2        = "application12"
-        @tc_app_name3        = "app3"
-        @tc_app_name4        = "lication4"
-        @tc_app_provider     = "zhilutest"
-        @tc_app_redirect_uri = "http://192.168.10.9"
-        @tc_app_comments     = ""
+  def prepare
+    @tc_phone_usr    = "13700004444"
+    @tc_usr_pw       = "123456"
+    @tc_usr_regargs  = {type: "account", cond: @tc_phone_usr}
+    @tc_app_name1    = "application1"
+    @tc_app_name2    = "application12"
+    @tc_app_name3    = "app3"
+    @tc_app_name4    = "lication4"
+    @tc_app_provider = "zhilutest"
+    @tc_app_comments = ""
+    @tc_app_names    = [@tc_app_name1, @tc_app_name2, @tc_app_name3, @tc_app_name4]
+    @tc_usr_part     = {provider: @tc_app_provider, redirect_uri: @ts_app_redirect_uri, comments: @tc_app_comments}
+    @tc_usr_args     = []
+    @tc_app_names.each do |tc_usr_name|
+      args = {name: tc_usr_name}
+      args = args.merge(@tc_usr_part)
+      @tc_usr_args<<args
     end
+  end
 
-    def process
+  def process
 
-        operate("1、ssh登录服务器；") {
-        }
+    operate("1、ssh登录服务器；") {
+      rs= @iam_obj.phone_usr_reg(@tc_phone_usr, @tc_usr_pw, @tc_usr_regargs)
+      assert_equal(@ts_add_rs, rs["result"], "用户#{@tc_phone_usr}注册失败")
+    }
 
-        operate("2、获取应用的ID号；") {
-            args1 = {"name" => @tc_app_name1, "provider" => @tc_app_provider, "redirect_uri" => @tc_app_redirect_uri, "comments" => @tc_app_comments}
-            args2 = {"name" => @tc_app_name2, "provider" => @tc_app_provider, "redirect_uri" => @tc_app_redirect_uri, "comments" => @tc_app_comments}
-            args3 = {"name" => @tc_app_name3, "provider" => @tc_app_provider, "redirect_uri" => @tc_app_redirect_uri, "comments" => @tc_app_comments}
-            args4 = {"name" => @tc_app_name4, "provider" => @tc_app_provider, "redirect_uri" => @tc_app_redirect_uri, "comments" => @tc_app_comments}
-            @rs1 = @iam_obj.qca_app(@tc_app_name1, args1, "1")
-            assert_equal(1, @rs1["result"], "创建应用1失败")
-            @rs2 = @iam_obj.qca_app(@tc_app_name2, args2, "1")
-            assert_equal(1, @rs2["result"], "创建应用2失败")
-            @rs3 = @iam_obj.qca_app(@tc_app_name3, args3, "1")
-            assert_equal(1, @rs3["result"], "创建应用3失败")
-            @rs4 = @iam_obj.qca_app(@tc_app_name4, args4, "1")
-            assert_equal(1, @rs4["result"], "创建应用4失败")
-        }
+    operate("2、获取应用的ID号；") {
+      rs    = @iam_obj.manager_login
+      uid   = rs["uid"]
+      token = rs["token"]
+      @tc_usr_args.each do |args|
+        rs  = @iam_obj.qc_app(args[:name], token, uid, args, "1")
+        tip = "创建并激活应用‘#{args[:name]}’"
+        puts tip.to_gbk
+        assert_equal(@ts_add_rs, rs["result"], "#{tip}失败")
+      end
+    }
 
-        operate("3、获取登录用户的token值和id号；") {
-        }
+    operate("3、获取登录用户的token值和id号；") {
+    }
 
-        operate("4、用户绑定应用；") {
-            @rs = @iam_obj.usr_qb_app(@ts_usr_name, @ts_usr_pwd, @tc_app_name1)
-            assert_equal(1, @rs["result"], "用户绑定应用失败")
-        }
+    operate("4、用户绑定应用；") {
+     @rs = @iam_obj.usr_qb_app(@tc_phone_usr, @ts_usr_pw, @tc_app_name1)
+      assert_equal(@ts_add_rs, @rs["result"], "用户绑定应用失败")
+    }
 
 
-    end
+  end
 
-    def clearup
-        operate("1.恢复默认设置") {
-            if @rs["result"] == 1
-                @iam_obj.usr_qub_app(@ts_usr_name, @ts_usr_pwd, @tc_app_name1)
-            end
-            if @rs1["result"] == 1
-                @iam_obj.mana_del_app(@tc_app_name1)
-            end
-            if @rs2["result"] == 1
-                @iam_obj.mana_del_app(@tc_app_name2)
-            end
-            if @rs3["result"] == 1
-                @iam_obj.mana_del_app(@tc_app_name3)
-            end
-            if @rs4["result"] == 1
-                @iam_obj.mana_del_app(@tc_app_name4)
-            end
-        }
-    end
+  def clearup
+    operate("1.恢复默认设置") {
+      @iam_obj.usr_delete_usr(@tc_phone_usr, @tc_usr_pw)
+      @iam_obj.mana_del_app(@tc_app_names)
+    }
+  end
 
 }

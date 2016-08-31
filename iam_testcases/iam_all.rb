@@ -5,7 +5,7 @@ require './parser_frame_xml'
 t1        = Time.now()
 curr_path = File.dirname(File.expand_path(__FILE__))
 begin
-  xml_all        = "frame_all.xml"
+  xml_all        = "iam_all.xml"
   xml_obj        = TestTool::XML.new(xml_all)
   statistics     = xml_obj.statistics_testcase
   file_tc_autoy  = File.new("d:/tc_iam_autoy.txt", "w")

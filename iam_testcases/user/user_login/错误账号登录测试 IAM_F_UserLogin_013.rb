@@ -5,30 +5,35 @@
 # modify:
 #
 testcase {
-    attr = {"id" => "IAM_F_UserLogin_001", "level" => "P4", "auto" => "n"}
+  attr = {"id" => "IAM_F_UserLogin_001", "level" => "P4", "auto" => "n"}
 
-    def prepare
-        @tc_err_usrname = "err10086"
-        @tc_err_code    = "10001"
-    end
+  def prepare
+    @tc_usr_name    = "lilup@zhilutec.com"
+    @tc_usr_pwd     = "123456"
+    @tc_err_usrname = "err10086@zhilutec.com"
+    @tc_err_code    = "10001"
+    @tc_args        ={type: "account", cond: @tc_usr_name}
+  end
 
-    def process
+  def process
 
-        operate("1、ssh登录IAM服务器；") {
-        }
+    operate("1、ssh登录IAM服务器；") {
+    }
 
-        operate("2、用户登录，账号输入错误；") {
-            rs = @iam_obj.user_login(@tc_err_usrname, @ts_usr_pwd)
-            assert_equal(@tc_err_code, rs["err_code"], "使用错误账号登录时登录成功或者是登录失败但是返回的错误码不正确")
-        }
+    operate("2、用户登录，账号输入错误；") {
+      @iam_obj.email_usr_reg(@tc_usr_name, @tc_usr_pwd, @tc_args)
+
+      rs = @iam_obj.user_login(@tc_err_usrname, @ts_usr_pwd)
+      assert_equal(@tc_err_code, rs["err_code"], "使用错误账号登录时登录成功或者是登录失败但是返回的错误码不正确")
+    }
 
 
-    end
+  end
 
-    def clearup
-        operate("1.恢复默认设置") {
-
-        }
-    end
+  def clearup
+    operate("1.恢复默认设置") {
+      @iam_obj.usr_delete_usr(@tc_usr_name, @tc_usr_pwd)
+    }
+  end
 
 }

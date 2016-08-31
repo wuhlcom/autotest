@@ -13,10 +13,7 @@ testcase {
     @tc_nickname = "hualaxiang"
     @tc_commnets = "sub manager"
     @tc_app_name = "SubAPPCome"
-    @tc_args     ={"name"         => @tc_app_name,
-                   "provider"     => "autotest",
-                   "redirect_uri" => @ts_app_redirect_uri,
-                   "comments"     => "autotest"}
+    @tc_args     ={name: @tc_app_name, provider: "autotest", redirect_uri: @ts_app_redirect_uri, comments: "autotest"}
   end
 
   def process
@@ -44,7 +41,7 @@ testcase {
     }
 
     operate("5、超级管理员下新增一个应用：") {
-      rs_app = @iam_obj.mana_create_app(@tc_args, @tc_account1, @tc_passwd)
+     p rs_app = @iam_obj.mana_create_app(@tc_args, @tc_account1, @tc_passwd)
       assert_equal(@ts_admin_log_rs, rs_app["result"], "新增一个应用失败!")
       assert_equal(@ts_msg_ok, rs_app["msg"], "新增一个应用失败!")
     }

@@ -8,11 +8,22 @@ testcase {
     attr = {"id" => "IAM_F_Application_068", "level" => "P1", "auto" => "n"}
 
     def prepare
-        @tc_superapp_usr  = "autotest_super"
-        @tc_systemapp_usr = "autotest_system"
+        @tc_app_usr1 = "autotest_app1"
+        @tc_app_usr2 = "autotest_app2"
         @tc_app_provider  = "autotest"
         @tc_app_red_uri   = "http://192.168.10.9"
+        @tc_app_comments  = ""
         @tc_err_code      = "22013"
+
+        @tc_app_names     = [@tc_app_usr1, @tc_app_usr2]
+        @tc_account_arr   = [@ts_app_super_manage, @ts_app_system_manage]
+        @tc_usr_part      = {provider: @tc_app_provider, redirect_uri: @tc_app_red_uri, comments: @tc_app_comments}
+        @tc_usr_args      = []
+        @tc_app_names.each do |tc_usr_name|
+            args = {name: tc_usr_name}
+            args = args.merge(@tc_usr_part)
+            @tc_usr_args<<args
+        end
     end
 
     def process
@@ -23,25 +34,22 @@ testcase {
         operate("2、获取知路管理员token值；") {
             p "创建一个超级管理员账户".encode("GBK")
             rs = @iam_obj.manager_del_add(@ts_app_super_manage, @ts_app_manage_pwd, @ts_app_super_manage_nickname)
-            assert_equal(1, rs["result"], "创建超级管理员失败！")
+            assert_equal(@ts_add_rs, rs["result"], "创建超级管理员#{@ts_app_super_manage}失败！")
             p "创建一个系统管理员账户".encode("GBK")
             rs = @iam_obj.manager_del_add(@ts_app_system_manage, @ts_app_manage_pwd, @ts_app_system_manage_nickname, "3")
-            assert_equal(1, rs["result"], "创建系统管理员失败！")
+            assert_equal(@ts_add_rs, rs["result"], "创建系统管理员#{@ts_app_system_manage}失败！")
         }
 
         operate("3、获取要删除应用ID号；") {
-            p "创建一个新应用".encode("GBK")
-            args = {"name" => @tc_superapp_usr, "provider" => @tc_app_provider, "redirect_uri" => @tc_app_red_uri, "comments" => ""}
-            rs   = @iam_obj.mana_create_app(args, "0", @ts_app_super_manage, @ts_app_manage_pwd)
-            assert_equal(1, rs["result"], "超级管理员创建应用失败！")
-
-            args = {"name" => @tc_systemapp_usr, "provider" => @tc_app_provider, "redirect_uri" => @tc_app_red_uri, "comments" => ""}
-            rs   = @iam_obj.mana_create_app(args, "0", @ts_app_system_manage, @ts_app_manage_pwd)
-            assert_equal(1, rs["result"], "系统管理员创建应用失败！")
+            p "创建两个新应用".encode("GBK")
+            @tc_usr_args.each do |args|
+                rs = @iam_obj.qca_app(args[:name], args, "0", @ts_app_super_manage, @ts_app_manage_pwd)
+                assert_equal(@ts_add_rs, rs["result"], "管理员创建应用#{args[:name]}失败")
+            end
         }
 
         operate("4、知路管理员删除该应用；") {
-            rs = @iam_obj.mana_del_app(@tc_superapp_usr, nil, @ts_app_super_manage, @ts_app_manage_pwd)
+            rs = @iam_obj.mana_del_app(@tc_app_usr1, nil, @ts_app_super_manage, @ts_app_manage_pwd)
             assert_equal(1, rs["result"], "超级管理员删除应用失败！")
         }
 
@@ -50,8 +58,15 @@ testcase {
         }
 
         operate("6、系统管理员删除一个应用；") {
-            rs = @iam_obj.mana_del_app(@tc_systemapp_usr, nil, @ts_app_system_manage, @ts_app_manage_pwd)
-            assert_equal(@tc_err_code, rs["err_code"], "系统管理员删除应用失败后返回的错误码不正确！")
+            tip  = "系统管理员删除一个应用"
+            rs = @iam_obj.mana_del_app(@tc_app_usr2, nil, @ts_app_system_manage, @ts_app_manage_pwd)
+            puts "RESULT err_msg:#{rs['err_msg']}".encode("GBK")
+            puts "RESULT err_code:#{rs['err_code']}".encode("GBK")
+            puts "RESULT err_desc:#{rs['err_desc']}".encode("GBK")
+            assert_equal(@ts_err_delapp_code, rs["err_code"], "#{tip}返回code错误!")
+            assert_equal(@ts_err_delapp_msg, rs["err_msg"], "#{tip}返回msg错误")
+            assert_equal(@ts_err_delapp_desc, rs["err_desc"], "#{tip}返回desc错误!")
+
         }
 
 
@@ -59,8 +74,8 @@ testcase {
 
     def clearup
         operate("1.恢复默认设置") {
-            @iam_obj.mana_del_app(@tc_superapp_usr)
-            @iam_obj.mana_del_app(@tc_systemapp_usr)
+            @iam_obj.mana_del_app(@tc_app_usr1)
+            @iam_obj.mana_del_app(@tc_app_usr2)
 
             @iam_obj.del_manager(@ts_app_super_manage)
             @iam_obj.del_manager(@ts_app_system_manage)

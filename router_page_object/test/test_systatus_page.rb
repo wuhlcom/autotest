@@ -50,6 +50,7 @@ class Test<MiniTest::Unit::TestCase
 				systatus_page.login_with(usrname, passwd, url)
 				systatus_page.open_systatus_page(@browser.url)
 				sleep t
+				p systatus_page.get_wifi_ssid
 				p systatus_page.get_wifi_switch
 				p systatus_page.get_wifi_switch_5g
 		end
@@ -74,7 +75,7 @@ class Test<MiniTest::Unit::TestCase
 				# # p "\n"=~/\s/
 		end
 
-		def test_laninfo
+		def testlaninfo
 				url            = "192.168.100.1"
 				usrname        = "admin"
 				passwd         = "admin"
@@ -100,6 +101,25 @@ class Test<MiniTest::Unit::TestCase
 				p wifi_info = @systatus_page.wifi_info_element.visible?
 				puts "#{@systatus_page.wifi_info}".encode("GBK")
 				# assert(wifi_info, "未显示WIFI信息")
+		end
+
+		def test_3g_info
+				url            = "192.168.100.1"
+				usrname        = "admin"
+				passwd         = "admin"
+				t              = 10
+				@browser       = Watir::Browser.new :firefox, :profile => "default"
+				@systatus_page = RouterPageObject::SystatusPage.new(@browser)
+				#登录
+				@systatus_page.login_with(usrname, passwd, url)
+				@systatus_page.open_systatus_page(@browser.url)
+
+				# p net_type= @systatus_page.net_type
+				# net_type=~/([34]G)/
+				# p $1
+				# p Regexp.last_match(1)
+				# p sysversion = @systatus_page.get_current_software_ver
+				@systatus_page.more_obj
 		end
 
 end

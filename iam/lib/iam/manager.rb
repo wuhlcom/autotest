@@ -74,10 +74,10 @@ module IAMAPI
     #查询账户是否存在-存在的话先删除再添加账户，不存在直接添加
     def manager_del_add(account, passwd, nickname, rcode="2", comments="autotest", admin_usr=ADMIN_USR, admin_pw=ADMIN_PW)
       rs_admin = manager_login(admin_usr, admin_pw)
-     if rs_admin.has_key?("err_code")
-       puts "manager:#{admin_usr} not exists!"
-       return rs_admin
-     end
+      if rs_admin.has_key?("err_code")
+        puts "manager:#{admin_usr} not exists!"
+        return rs_admin
+      end
 
       token    = rs_admin["token"]
       uid      = rs_admin["uid"]
@@ -219,7 +219,8 @@ module IAMAPI
       fail "phone number must be 11 size" if phone.to_s.size != 11
       rs_login = manager_login(admin_usr, admin_pw) #超级管理登录
       token    = rs_login["token"]
-      rs_mlist = get_manager_list_byname(phone, token)
+      uid      = rs_login["uid"]
+      rs_mlist = get_manager_list_byname(phone, token, uid)
       if rs_mlist["res"].empty? #如果管理员不存在则先添加管理员
         puts "add phone manager #{phone}"
         rs_mana = mana_add(token, phone, nickname, add_pw)
@@ -356,16 +357,11 @@ module IAMAPI
 
     #管理员登录->创建应用->激活/禁用
     # args ={"name"=>"name", "provider"=>"provider", "redirect_uri"=>"redirect_uri", "comments"=>"comments"}
-    #status,1 激活,0，禁用
-    def mana_create_app(args, status="0", usr=ADMIN_USR, pw=ADMIN_PW, app_url=APP_URL)
+    def mana_create_app(args, usr=ADMIN_USR, pw=ADMIN_PW, app_url=APP_URL)
       rs       = manager_login(usr, pw)
       admin_id = rs["uid"]
       token    = rs["token"]
       create_apply(admin_id, token, args, app_url)
-
-      id = get_client_id(args["name"], token, admin_id)
-      app_args={"id" => id, "status" => status}
-      active_app(app_args, admin_id, token)
     end
 
     # 返回应用ID
@@ -486,21 +482,21 @@ module IAMAPI
     def qc_app(appname, token, uid, args, status="0")
       id = get_client_id(appname, token, uid)
       if id.nil?
-        puts "create app..."
+        puts "creating app ..."
         rs = create_apply(uid, token, args)
         if status.to_s=="1"
-          puts "create and active the new app..."
+          puts "activing the new app..."
           rs = get_client_active_app(appname, token, uid, status)
         end
         rs
       else
-        puts "app exists..."
+        puts "app existed..."
         app_args={"id" => id, "status" => status}
         if status.to_s=="1"
-          puts "active exidsted app..."
+          puts "activing exidsted app..."
           active_app(app_args, uid, token)
         else
-          puts "fobidden exidsted app..."
+          puts "fobidding exidsted app..."
           active_app(app_args, uid, token)
         end
       end

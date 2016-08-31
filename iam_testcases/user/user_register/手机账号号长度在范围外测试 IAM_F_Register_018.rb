@@ -10,7 +10,7 @@ testcase {
     def prepare
         @tc_phone_num_12 = "158140374001"
         @tc_phone_num_10 = "1581403740"
-        @tc_err_code     = "5002"
+        @tc_phone_num    = [@tc_phone_num_12, @tc_phone_num_10]
     end
 
     def process
@@ -19,12 +19,16 @@ testcase {
         }
 
         operate("2、手机号码长度大于11位或者小于11位；") {
-            p "使用12位号码".encode("GBK")
-            rs = @iam_obj.request_mobile_code(@tc_phone_num_12)
-            assert_equal(@tc_err_code, rs["err_code"], "使用手机号码长度大于11位注册用户成功或者注册失败但错误码不正确")
-            p "使用10位号码".encode("GBK")
-            rs = @iam_obj.request_mobile_code(@tc_phone_num_10)
-            assert_equal(@tc_err_code, rs["err_code"], "使用手机号码长度小于11位注册用户成功或者注册失败但错误码不正确")
+            @tc_phone_num.each do |num|
+                tip  = "手机号码长度大于11位或者小于11位"
+                rs = @iam_obj.request_mobile_code(num)
+                puts "RESULT err_msg:#{rs['err_msg']}".encode("GBK")
+                puts "RESULT err_code:#{rs['err_code']}".encode("GBK")
+                puts "RESULT err_desc:#{rs['err_desc']}".encode("GBK")
+                assert_equal(@ts_err_phoneerr_code, rs["err_code"], "#{tip}返回code错误!")
+                assert_equal(@ts_err_phoneerr_msg, rs["err_msg"], "#{tip}返回msg错误")
+                assert_equal(@ts_err_phoneerr_desc, rs["err_desc"], "#{tip}返回desc错误!")
+            end
         }
 
 

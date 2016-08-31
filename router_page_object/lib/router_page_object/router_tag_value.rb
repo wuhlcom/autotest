@@ -114,7 +114,7 @@ module PageObject
 		@@ts_ap_mask_static         = "staip_netmask"
 		@@ts_ap_gateway_static      = "staip_gateway"
 		@@ts_ap_dns1_static         = "wan_dns1"
-		@@ts_ap_ver_info            = "top_product" 
+		@@ts_ap_ver_info            = "top_product"
 		############### dut内网 ################
 		@@ts_wifi_switch            = "wifiswitch"
 		############### dut外网 ################
@@ -160,7 +160,7 @@ module PageObject
 		@@ts_ip_hint_close          = "aui_close"
 		@@ts_tag_aui_close          = "aui_close"
 		@@ts_tag_aui_clsignal       = "×"
-		@@ts_tag_aui_titbar = "aui_titleBar"
+		@@ts_tag_aui_titbar         = "aui_titleBar"
 		############### dut 系统状态 ################
 		@@ts_sys_status             = "systatus"
 		@@ts_sys_status_src         = "systatus.asp"
@@ -446,21 +446,21 @@ module PageObject
 		@@ts_tag_diag_internet_status = "checking2"
 		@@ts_tag_diag_hardware        = "hardware-status"
 		@@ts_tag_diag_hardware_text   = "路由硬件状态"
-		@@ts_tag_diag_hardware_status = "checking3"
+		@@ts_tag_diag_hardware_status = "checking4"
 		@@ts_tag_diag_netspeed        = "network-speed"
 		@@ts_tag_diag_netspeed_text   = "连接速度状态"
-		@@ts_tag_diag_netspeed_status = "checking4"
+		@@ts_tag_diag_netspeed_status = "checking3"
 
 		@@ts_tag_diag_cpu       = "cpu"
 		@@ts_tag_diag_cpu_text  = "处理器信息"
-		@@ts_tag_diag_cpu_xpath = "/html/body/div[2]/div[6]/div[2]"
+		@@ts_tag_diag_cpu_xpath = "/html/body/div[2]/div[5]/div[2]"
 		@@ts_tag_cpu_type_reg   = /处理器类型：.+/im
 		@@ts_tag_cpu_name_reg   = /处理器型号：.+/im
 		@@ts_tag_cpu_load_reg   = /系统负载：\d+\.\d+/im
 
 		@@ts_tag_diag_mem       = "ram"
 		@@ts_tag_diag_mem_text  = "内存信息"
-		@@ts_tag_diag_mem_xpath = "/html/body/div[2]/div[7]/div[2]"
+		@@ts_tag_diag_mem_xpath = "/html/body/div[2]/div[6]/div[2]"
 		@@ts_tag_mem_total_reg  = /内存总量\s*：\s*[1-9]+\d*\s*M/m
 		@@ts_tag_mem_useful_reg = /可用内存\s*：\s*[1-9]+\d*\s*M/m
 		@@ts_tag_mem_cache_reg  = /缓存内存\s*：\s*[1-9]+\d*\s*M/m
@@ -821,5 +821,5 @@ module PageObject
 		@@ts_tag_map3             = "Map3"
 		@@ts_tag_step4            = "images/step5.png"
 		@@ts_tag_map4             = "Map4"
-
+		@@ts_tag_update_box       ="update_box"
 end

@@ -8,12 +8,15 @@ testcase {
     attr = {"id" => "IAM_F_FindPassword_002", "level" => nil, "auto" => "n"}
 
     def prepare
-        @tc_usr_name = "liluping@zhilutec.com"
+        @tc_usr_name = "nihaoma@qq.com"
+        @tc_usr_pwd  = "123456"
     end
 
     def process
 
         operate("1¡¢sshµÇÂ¼IAM·şÎñÆ÷£»") {
+            rs = @iam_obj.register_emailusr(@tc_usr_name, @tc_usr_pwd, "1")
+            assert_equal(1, rs["result"], "×¢²áÓÊÏäÕË»§Ê§°Ü")
         }
 
         operate("2¡¢ÊäÈë´æÔÚÓÊÏäÕÒ»ØÃÜÂë£»") {
@@ -26,7 +29,7 @@ testcase {
 
     def clearup
         operate("1.»Ö¸´Ä¬ÈÏÉèÖÃ") {
-
+            @iam_obj.usr_delete_usr(@tc_usr_name, @tc_usr_pwd)
         }
     end
 

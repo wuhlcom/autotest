@@ -15,6 +15,7 @@ module IAMAPI
   require 'fileutils'
   gem 'minitest'
   require 'minitest/autorun'
+  require 'net/ssh'
  libs = Dir.glob(File.expand_path(File.dirname(__FILE__))+"/**/*")
   libs.each { |lib|
     next unless File.extname(lib)==".rb"

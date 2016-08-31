@@ -31,9 +31,9 @@ testcase {
             puts "RESULT err_msg:#{rs['err_msg']}".encode("GBK")
             puts "RESULT err_code:#{rs['err_code']}".encode("GBK")
             puts "RESULT err_desc:#{rs['err_desc']}".encode("GBK")
-            assert_equal(@ts_err_pcodnul_msg, rs["err_msg"], "验证码为空返回错误消息不正确!")
-            assert_equal(@ts_err_pcodnul_code, rs["err_code"], "验证码为空返回错误code不正确!")
-            assert_equal(@ts_err_pcodnul_desc, rs["err_desc"], "验证码为空返回错误desc不正确!")
+            assert_equal( @ts_err_pcoderr_msg, rs["err_msg"], "验证码为空返回错误消息不正确!")
+            assert_equal( @ts_err_pcoderr_code, rs["err_code"], "验证码为空返回错误code不正确!")
+            assert_equal( @ts_err_pcoderr_desc, rs["err_desc"], "验证码为空返回错误desc不正确!")
         }
 
 

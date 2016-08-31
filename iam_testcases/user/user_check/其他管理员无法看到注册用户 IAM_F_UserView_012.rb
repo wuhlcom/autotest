@@ -14,6 +14,14 @@ testcase {
     def process
 
         operate("1、ssh登录IAM服务器；") {
+            p "创建配置管理员".to_gbk
+            rs = @iam_obj.manager_del_add(@ts_usr_name_config, @ts_usr_pwd_config, @ts_app_super_config_nickname, "4")
+            assert_equal(1, rs["result"], "创建配置管理员失败！")
+
+            p "创建监视管理员".to_gbk
+            rs = @iam_obj.manager_del_add(@ts_usr_name_monitor, @ts_usr_pwd_monitor, @ts_app_super_monitor_nickname, "5")
+            assert_equal(1, rs["result"], "创建监视管理员失败！")
+
             p "配置管理员登录".encode("GBK")
             @res = @iam_obj.manager_login(@ts_usr_name_config, @ts_usr_pwd_config) #管理员登录->得到uid和token
             assert_equal(@ts_usr_name_config, @res["name"], "manager name error!")
@@ -46,7 +54,8 @@ testcase {
 
     def clearup
         operate("1.恢复默认设置") {
-
+            @iam_obj.del_manager(@ts_usr_name_config)
+            @iam_obj.del_manager(@ts_usr_name_monitor)
         }
     end
 

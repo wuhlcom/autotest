@@ -46,43 +46,54 @@ class MyTestString < MiniTest::Unit::TestCase
   end
 
   def test_get_usr_app_bytype
-    usr="13760281579"
-    pwd="123456"
+    usr  ="13760281579"
+    pwd  ="123456"
     # p rs=@iam_obj.user_login(usr, pwd)
     # uid  =rs["uid"]
     # token=rs["access_token"]
     cond = "test"
-   p @iam_obj.usr_login_list_app_bytype(usr, pwd, cond)
+    p @iam_obj.usr_login_list_app_bytype(usr, pwd, false, cond)
   end
 
   def test_get_usr_app_name
-    usr="13760281579"
+    usr="13760281570"
     pwd="123456"
     app="test_app"
     p rs=@iam_obj.user_login(usr, pwd)
-    uid  =rs["uid"]
-    token=rs["access_token"]
-    p @iam_obj.user_app_list_bytype(app, uid, token)
+    # uid  =rs["uid"]
+    # token=rs["access_token"]
+    # p @iam_obj.user_app_list_bytype(app, uid, token)
   end
 
   def test_ubinding_app
-    usr="13760281579"
-    pwd="123456"
-    app="test_app"
-    rs=@iam_obj.user_login(usr, pwd)
+    usr  ="13760281579"
+    pwd  ="123456"
+    app  ="test_app"
+    rs   =@iam_obj.user_login(usr, pwd)
     uid  =rs["uid"]
     token=rs["access_token"]
     p @iam_obj.qub_app(app, uid, token)
   end
 
   def test_binding_app
-    usr="13760281579"
-    pwd="123456"
-    app="test_app"
-    rs=@iam_obj.user_login(usr, pwd)
+    usr  ="13760281579"
+    pwd  ="123456"
+    app  ="test_app"
+    rs   =@iam_obj.user_login(usr, pwd)
     uid  =rs["uid"]
     token=rs["access_token"]
     p @iam_obj.qb_app(app, uid, token)
+  end
+
+  def test_find_pwd_for_email
+    usr  ="378433855@qq.com"
+    pw   = "123456"
+    newpw="123123"
+    # @iam_obj.register_emailusr(usr, pw, 1)
+    # p @iam_obj.find_pwd_for_email(usr)
+    # p @iam_obj.usr_find_mod_emailpw(usr, newpw)
+    # p rs =@iam_obj.user_login(usr, newpw)
+  p  @iam_obj.usr_delete_usr(usr, newpw)
   end
   # Fake ftp_test
   # def test_fail

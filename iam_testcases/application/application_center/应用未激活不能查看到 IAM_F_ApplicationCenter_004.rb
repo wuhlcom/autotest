@@ -8,9 +8,12 @@ testcase {
     attr = {"id" => "IAM_F_ApplicationCenter_004", "level" => "P2", "auto" => "n"}
 
     def prepare
-        @tc_manager_name     = "super@zhilutec.com"
+        @tc_manager_name     = "super@qq.com"
         @tc_manager_nickname = "SUPER_MAN"
         @tc_manager_pwd      = "123456"
+        @tc_phone_usr        = "15814031512"
+        @tc_usr_pw           = "123456"
+        @tc_usr_regargs      = {type: "account", cond: @tc_phone_usr}
 
         @tc_app_name1        = "autotest_app1"
         @tc_app_name2        = "autotest_app2"
@@ -19,16 +22,29 @@ testcase {
         @tc_app_provider     = "zhilutest"
         @tc_app_redirect_uri = "http://192.168.10.9"
         @tc_app_comments     = ""
+        @tc_zhilu_manage     = [@tc_app_name1, @tc_app_name2]
+        @tc_super_manage     = [@tc_app_name3, @tc_app_name4]
+        @tc_usr_part         = {provider: @tc_app_provider, redirect_uri: @tc_app_redirect_uri, comments: @tc_app_comments}
+        @tc_zhilu_args       = []
+        @tc_super_args       = []
+        @tc_zhilu_manage.each do |tc_usr_name|
+            args = {name: tc_usr_name}
+            args = args.merge(@tc_usr_part)
+            @tc_zhilu_args<<args
+        end
+        @tc_super_manage.each do |tc_usr_name|
+            args = {name: tc_usr_name}
+            args = args.merge(@tc_usr_part)
+            @tc_super_args<<args
+        end
+        @tc_manage_name = @tc_zhilu_manage + @tc_super_manage
     end
 
     def process
 
         operate("1、ssh登录IAM服务器；") {
-            @rs  = {}
-            @rs1 = {}
-            @rs2 = {}
-            @rs3 = {}
-            @rs4 = {}
+            rs= @iam_obj.phone_usr_reg(@tc_phone_usr, @tc_usr_pw, @tc_usr_regargs)
+            assert_equal(@ts_add_rs, rs["result"], "用户#{@tc_phone_usr}注册失败")
         }
 
         operate("2、知路管理员新建一个应用；") {
@@ -36,20 +52,16 @@ testcase {
             assert_equal(1, @rs["result"], "创建超级管理员失败")
 
             p "知路超级管理员创建应用，不激活".encode("GBK")
-            args1 = {"name" => @tc_app_name1, "provider" => @tc_app_provider, "redirect_uri" => @tc_app_redirect_uri, "comments" => @tc_app_comments}
-            args2 = {"name" => @tc_app_name2, "provider" => @tc_app_provider, "redirect_uri" => @tc_app_redirect_uri, "comments" => @tc_app_comments}
-            @rs1 = @iam_obj.qca_app(@tc_app_name1, args1, "0")
-            assert_equal(1, @rs1["result"], "创建应用1失败")
-            @rs2 = @iam_obj.qca_app(@tc_app_name2, args2, "0")
-            assert_equal(1, @rs2["result"], "创建应用2失败")
+            @tc_zhilu_args.each do |args|
+                rs = @iam_obj.qca_app(args[:name], args, "0")
+                assert_equal(@ts_add_rs, rs["result"], "知路管理员创建应用#{args[:name]}失败")
+            end
 
             p "超级管理员创建应用，不激活".encode("GBK")
-            args3 = {"name" => @tc_app_name3, "provider" => @tc_app_provider, "redirect_uri" => @tc_app_redirect_uri, "comments" => @tc_app_comments}
-            args4 = {"name" => @tc_app_name4, "provider" => @tc_app_provider, "redirect_uri" => @tc_app_redirect_uri, "comments" => @tc_app_comments}
-            @rs3 = @iam_obj.qca_app(@tc_app_name3, args3, "0", @tc_manager_name, @tc_manager_pwd)
-            assert_equal(1, @rs3["result"], "创建应用3失败")
-            @rs4 = @iam_obj.qca_app(@tc_app_name4, args4, "0", @tc_manager_name, @tc_manager_pwd)
-            assert_equal(1, @rs4["result"], "创建应用4失败")
+            @tc_super_args.each do |args|
+                rs = @iam_obj.qca_app(args[:name], args, "0", @tc_manager_name, @tc_manager_pwd)
+                assert_equal(@ts_add_rs, rs["result"], "超级管理员创建应用#{args[:name]}失败")
+            end
         }
 
         operate("3、获取登录用户的token值和id号；") {
@@ -58,7 +70,7 @@ testcase {
         operate("4、用户查询待绑定的应用列表；") {
             app_name_arr = []
             flag         = true
-            rs           = @iam_obj.usr_login_list_app_all(@ts_usr_name, @ts_usr_pwd)
+            rs           = @iam_obj.usr_login_list_app_all(@tc_phone_usr, @tc_usr_pw)
             rs["apps"].each do |item|
                 app_name_arr << item["name"]
             end
@@ -71,21 +83,14 @@ testcase {
 
     def clearup
         operate("1.恢复默认设置") {
-            if @rs1["result"] == 1
-                @iam_obj.mana_del_app(@tc_app_name1)
+            rs_login = @iam_obj.manager_login(@ts_admin_usr, @ts_admin_pw)
+            token    = rs_login["token"]
+            uid      = rs_login["uid"]
+            @tc_manage_name.each do |name|
+                @iam_obj.del_apply(name, token, uid)
             end
-            if @rs2["result"] == 1
-                @iam_obj.mana_del_app(@tc_app_name2)
-            end
-            if @rs3["result"] == 1
-                @iam_obj.mana_del_app(@tc_app_name3)
-            end
-            if @rs4["result"] == 1
-                @iam_obj.mana_del_app(@tc_app_name4)
-            end
-            if @rs["result"] == 1
-                @iam_obj.del_manager(@tc_manager_name)
-            end
+            @iam_obj.del_manager(@tc_manager_name)
+            @iam_obj.usr_delete_usr(@tc_phone_usr, @tc_usr_pw)
         }
     end
 

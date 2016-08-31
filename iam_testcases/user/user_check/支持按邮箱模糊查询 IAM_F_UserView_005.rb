@@ -8,7 +8,7 @@ testcase {
     attr = {"id" => "IAM_F_UserView_005", "level" => "P2", "auto" => "n"}
 
     def prepare
-        @tc_email_account = "liluping@zhilutec.com"
+        @tc_email_account = "nidaye@qq.com"
         @tc_email_pw      = "123456"
     end
 
@@ -28,10 +28,15 @@ testcase {
         }
 
         operate("3、按邮箱模糊查询；") {
-            str = @tc_email_account.slice(/(.+)@/, 1)
+            p str  = @tc_email_account.slice(/(.+)@/, 1)
             args = {"type" => "account", "cond" => str}
             rs   = @iam_obj.get_user_list(@admin_id, @admin_token, args)
             refute(rs["users"].empty?, "未查询到用户信息")
+            acc_arr = []
+            rs["users"].each do |usr|
+                acc_arr << usr["account"]
+            end
+            assert(acc_arr.include?(@tc_email_account), "未查询到#{@tc_email_account}的用户信息")
         }
 
 
@@ -39,9 +44,7 @@ testcase {
 
     def clearup
         operate("1.恢复默认设置") {
-            if @re["result"] == 1
-                @iam_obj.usr_delete_usr(@tc_email_account, @tc_email_pw)
-            end
+            @iam_obj.usr_delete_usr(@tc_email_account, @tc_email_pw)
         }
     end
 

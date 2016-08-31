@@ -62,19 +62,19 @@ class MyTestString < MiniTest::Unit::TestCase
 
   def test_del_manager
     @tc_man_name    = "managertest@zhilutec.com"
-    @tc_subman_name = "submanagertest@zhilutec.com"
+    @tc_subman_name = "wuhongliang@zhilutec.com"
     @tc_passwd      = "zhilutec"
-    p @iam_obj.del_manager(@tc_subman_name, @tc_man_name, @tc_passwd)
+    p @iam_obj.del_manager(@tc_subman_name)
   end
 
   def test_manager_add
     admin_usr= "wuhongliang@zhilutec.com"
     admin_pw = "123456"
-    usr      ="klwn202233@163.com"
+    # usr      ="klwn202233@163.com"
     nickname = "autotest"
     comments = "1111"
     # print @iam_obj.manager_add(admin_usr, nickname, admin_pw)
-    p @iam_obj.manager_add(usr, nickname, admin_pw, rcode="3", comments, admin_usr, admin_pw)
+    p @iam_obj.manager_add(admin_usr, nickname, admin_pw)
   end
 
   def test_manager_add_err

@@ -58,6 +58,7 @@ testcase {
   def clearup
     operate("1.»Ö¸´Ä¬ÈÏÉèÖÃ") {
       @iam_obj.mana_del_app(@tc_app_name1)
+      @iam_obj.mana_del_app(@tc_app_name2)
     }
   end
 

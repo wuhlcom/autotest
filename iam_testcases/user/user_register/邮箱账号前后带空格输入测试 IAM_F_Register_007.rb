@@ -28,17 +28,12 @@ testcase {
             assert_equal(1, @rs2["result"], "使用后面带有空格的邮箱注册时，注册失败")
         }
 
-
     end
 
     def clearup
         operate("1.恢复默认设置") {
-            if @rs1["result"] == 1
-                @iam_obj.usr_delete_usr(@tc_user_name_1, @tc_user_pwd)
-            end
-            if @rs2["result"] == 1
-                @iam_obj.usr_delete_usr(@tc_user_name_2, @tc_user_pwd)
-            end
+                @iam_obj.usr_delete_usr(@tc_user_name_1.strip, @tc_user_pwd)
+                @iam_obj.usr_delete_usr(@tc_user_name_2.strip, @tc_user_pwd)
         }
     end
 

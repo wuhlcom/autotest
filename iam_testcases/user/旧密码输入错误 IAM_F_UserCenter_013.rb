@@ -5,40 +5,46 @@
 # modify:
 #
 testcase {
-    attr = {"id" => "IAM_F_UserCenter_013", "level" => "P3", "auto" => "n"}
+  attr = {"id" => "IAM_F_UserCenter_013", "level" => "P3", "auto" => "n"}
 
-    def prepare
-        @tc_new_pwd  = "123456"
-        @tc_err_code = "11005"
-    end
+  def prepare
+    @tc_phone_usr   = "13700004444"
+    @tc_usr_pw      = "123456"
+    @tc_usr_regargs = {type: "account", cond: @tc_phone_usr}
+    @tc_new_pwd     = "1234567"
+  end
 
-    def process
+  def process
 
-        operate("1、ssh登录IAM服务器；") {
-        }
+    operate("1、ssh登录IAM服务器；") {
+      rs= @iam_obj.phone_usr_reg(@tc_phone_usr, @tc_usr_pw, @tc_usr_regargs)
+      assert_equal(@ts_add_rs, rs["result"], "用户#{@tc_phone_usr}注册失败")
+    }
 
-        operate("2、获取登录用户access_token值和uid号；") {
-            rs     = @iam_obj.user_login(@ts_usr_name, @ts_usr_pwd)
-            @uid   = rs["uid"]
-            @token = rs["access_token"]
-        }
+    operate("2、获取登录用户access_token值和uid号；") {
+      rs     = @iam_obj.user_login(@tc_phone_usr, @tc_usr_pw)
+      @uid   = rs["uid"]
+      @token = rs["access_token"]
+    }
 
-        operate("3、修改密码，旧密码输入有误") {
-            @tc_old_pwd = @ts_usr_pwd + "err"
-            @rs         = @iam_obj.mofify_user_pwd(@tc_old_pwd, @tc_new_pwd, @uid, @token)
-            assert_equal(@tc_err_code, @rs["err_code"], "旧密码输入有误时，修改密码成功，或者修改失败但是返回错误码不正确")
-        }
+    operate("3、修改密码，旧密码输入有误") {
+      tip = "修改密码，旧密码输入有误"
+      @tc_old_pwd = @tc_usr_pw + "err"
+      rs         = @iam_obj.mofify_user_pwd(@tc_old_pwd, @tc_new_pwd, @uid, @token)
+      puts "RESULT err_msg:#{rs['err_msg']}".encode("GBK")
+      puts "RESULT err_code:#{rs['err_code']}".encode("GBK")
+      puts "RESULT err_desc:#{rs['err_desc']}".encode("GBK")
+      assert_equal( @ts_err_oldpw_code, rs["err_code"], "#{tip}返回code错误!")
+      assert_equal( @ts_err_oldpw_msg, rs["err_msg"], "#{tip}返回msg错误")
+      assert_equal( @ts_err_oldpw_desc, rs["err_desc"], "#{tip}返回desc错误!")
+    }
 
+  end
 
-    end
-
-    def clearup
-        operate("1.恢复默认设置") {
-            if @rs["result"] == 1
-                rs = @iam_obj.user_login(@ts_usr_name, @tc_new_pwd)
-                @iam_obj.mofify_user_pwd(@tc_new_pwd, @ts_usr_pwd, rs["uid"], rs["access_token"])
-            end
-        }
-    end
+  def clearup
+    operate("1.恢复默认设置") {
+      @iam_obj.usr_delete_usr(@tc_phone_usr, @tc_usr_pw)
+    }
+  end
 
 }

@@ -20,43 +20,6 @@ module IAMAPI
     include IAMAPI::Oauth
     include IAMAPI::User
     include IAMAPI::Device
-    # #oauth 获取userid
-    # #管理员登录，获取管理员Id和token-->查询应用获取应用id和应用密钥-->用户登录返回userid
-    # def oauth_login_get_userid(username, pw, appname, admin_usr=ADMIN_USR, admin_pw=ADMIN_PW)
-    #   rs_admin = manager_login(admin_usr, admin_pw) #管理员登录->得到uid和token
-    #   token    = rs_admin["token"]
-    #   uid      = rs_admin["uid"]
-    #   oauth_get_userid(username, pw, appname, token, uid)
-    # end
-    #
-    # #管理员查询应用获取应用id和应用密钥-->用户登录返回userid
-    # def oauth_get_userid(username, pw, appname, mana_token, mana_uid, response_type=RESPONSE_TYPE)
-    #   rs_app    = get_spec_app_info(mana_token, appname, mana_uid) #获取指定应用ID和密钥->输入uid和token，得到secret和client_id
-    #   client_id = rs_app["client_id"]
-    #   secret    = rs_app["client_secret"]
-    #   user_oauth(username, pw, secret, client_id, response_type) ##用户oauth登录,输入secret和client_id得到用户的userid
-    # end
-    #
-    # #oauth 获取code
-    # #管理员登录，获取管理员Id和token-->查询应用获取应用id和应用密钥-->用户登录获取oauthcode
-    # def oauth_login_get_code(appname, admin_usr=ADMIN_USR, admin_pw=ADMIN_PW, response_type=RESPONSE_TYPE)
-    #   rs   = manager_login(admin_usr, admin_pw) #管理员登录->得到uid和token
-    #   token=rs["token"]
-    #   uid  =rs["uid"]
-    #   oauth_get_code(appname, token, uid, response_type)
-    # end
-    #
-    # #管理员查询应用获取应用id和应用密钥-->用户登录获取oauthcode
-    # def oauth_get_code(appname, mana_token, mana_uid, response_type=RESPONSE_TYP)
-    #   rs=@iam_obj.user_login(usr, pwd)
-    #   uid  =rs["uid"]
-    #   token=rs["access_token"]
-    #   rs_app    = get_spec_app_info(mana_token, appname, mana_uid) #获取指定应用ID和密钥->输入uid和token，得到secret和client_id
-    #   client_id = rs_app["client_id"]
-    #   secret    = rs_app["client_secret"]
-    #   user_id   = get(USERID_URL) #用户ID
-    #   get_code(user_id, client_id, secret, response_type)
-    # end
 
     #用户登录 =》添加设备
     def usr_add_devices(dev_name, dev_mac, usr, pw)
@@ -80,14 +43,15 @@ module IAMAPI
     end
 
     #用户登录 =》 查看设备列表
-    def usr_get_devlist(usr, pw, args =nil)
+    def usr_get_devlist(usr, pw, args =nil, flag=false)
       rs  = user_login(usr, pw)
       uid = rs["uid"]
-      get_dev_list(uid, args)
+      get_dev_list(uid, args, flag)
     end
 
     #查询用户，如果用户不存在则注册用户
-    #args{"type"=>"account","cond"="13712341234"}
+    #args,hash,{"type"=>"account","cond"=>"xxx"}
+    #args={"type"=>"account","cond"=>"13712341234"}
     def phone_usr_reg(phone, pw, args, admin_usr=ADMIN_USR, admin_pw=ADMIN_PW)
       rs     = manager_login(admin_usr, admin_pw)
       uid    =rs["uid"]
@@ -96,7 +60,22 @@ module IAMAPI
       if rs_usr["users"].empty?
         register_phoneusr(phone, pw)
       else
-        puts "User existed!"
+        puts "User '#{phone}' existed!"
+      end
+    end
+    
+    #args,hash,{"type"=>"account","cond"=>"xxx"}
+    #args={"type"=>"account","cond"=>"13712341234"}
+    #cs=0,不激活，cs=1激活邮箱
+    def email_usr_reg(email, pw, args, cs=1, admin_usr=ADMIN_USR, admin_pw=ADMIN_PW)
+      rs     = manager_login(admin_usr, admin_pw)
+      uid    =rs["uid"]
+      token  = rs["token"]
+      rs_usr = get_user_list(uid, token, args)
+      if rs_usr["users"].empty?
+        register_emailusr(email, pw, cs)
+      else
+        puts "User '#{email}' existed!"
       end
     end
 
@@ -116,9 +95,9 @@ module IAMAPI
     end
 
     ##用户登录 =》 编辑设备
-    def usr_device_editor(usr, pw, device_name, editor_name,args=nil)
-      rs    = user_login(usr, pw)
-      uid   = rs["uid"]
+    def usr_device_editor(usr, pw, device_name, editor_name, args=nil)
+      rs        = user_login(usr, pw)
+      uid       = rs["uid"]
       device_id = get_dev_id_for_name(device_name, uid, args)
       device_editor(uid, device_id, editor_name)
     end

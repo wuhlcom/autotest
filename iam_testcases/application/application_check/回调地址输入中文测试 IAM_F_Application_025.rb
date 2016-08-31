@@ -25,7 +25,7 @@ testcase {
     }
 
     operate("3、创建应用，redirect_uri输入中文；") {
-      tip    = "创建应用名为'#{@tc_args1["name"]}"
+      tip    = "创建应用名为'#{@tc_args1["name"]}'"
       rs_app = @iam_obj.mana_create_app(@tc_args1)
       puts "RESULT err_msg:'#{rs_app['err_msg']}'".encode("GBK")
       puts "RESULT err_code:'#{rs_app['err_code']}'".encode("GBK")

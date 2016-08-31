@@ -8,31 +8,32 @@ testcase {
     attr = {"id" => "IAM_F_Register_021", "level" => "P4", "auto" => "n"}
 
     def prepare
-        # @tc_phone_num1 = " 13823652368"
+        @tc_phone_num1 = " 13823652368"
         @tc_phone_num2 = "13823 652367"
-        # @tc_phone_num3 = "13823652367 "
-        @tc_err_code   = "5002"
+        @tc_phone      = [@tc_phone_num1, @tc_phone_num2]
     end
 
     def process
 
 
         operate("1、ssh登录IAM服务器；") {
-
         }
 
         operate("2、输入手机号码带有空格；") {
-            # p "手机号前面带空格".encode("GBK")
-            # p @rs1 = @iam_obj.request_mobile_code(@tc_phone_num1)
-            # assert(@rs1["code"], "使用手机号前面带空格注册用户失败")
-
-            p "手机号中间带空格".encode("GBK")
-            p @rs2 = @iam_obj.request_mobile_code(@tc_phone_num2)
-            assert(@rs2["code"], "使用手机号中间带空格注册用户成功或者注册失败但错误码不正确")
-
-            # p "手机号后面带空格".encode("GBK")
-            # p @rs3 = @iam_obj.request_mobile_code(@tc_phone_num3)
-            # assert(@rs3["code"], "使用手机号后面带空格注册用户失败")
+            @tc_phone.each do |phone|
+                p cmd = @ts_mobilecode_url + phone
+                tip = "输入手机号码#{phone}"
+                Net::SSH.start(@ts_ssh_host, @ts_ssh_usr, :password => @ts_ssh_pwd) do |ssh|
+                    rs = ssh.exec!(cmd)
+                    rs=~/\{"err_code":"(\d+)","err_msg":"(.+)","err_desc":"(.+)"\}/
+                    puts "RESULT err_msg:#{$1}".encode("GBK")
+                    puts "RESULT err_code:#{$2}".encode("GBK")
+                    puts "RESULT err_desc:#{$3}".encode("GBK")
+                    assert_equal(@ts_err_phoneerr_code, $1, "#{tip}返回code错误!")
+                    assert_equal(@ts_err_phoneerr_msg, $2, "#{tip}返回msg错误")
+                    assert_equal(@ts_err_phoneerr_desc, $3, "#{tip}返回desc错误!")
+                end
+            end
         }
 
 
